@@ -7,13 +7,16 @@ from bs4 import BeautifulSoup
 base_url = "https://developer.mozilla.org/"
 
 urls = [
+'https://developer.mozilla.org/en-US/docs/Mozilla/Tech',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/APNG',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Manipulating_bookmarks_using_Places',
+'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Guide/Creating_components/Using_XPCOM_Utilities_to_Make_Things_Easier',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/amIWebInstaller',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIAsyncFavicons',
+'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/chromemargin',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/conditions',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Tutorial/Anonymous_Content'
@@ -50,7 +53,7 @@ for url in urls:
     pieces = file_path.split("/")
     file_name = pieces[-1] + ".html"
     path = "/".join((pieces[:-1]))
-    path = "/".join([os.getcwd(), "pages", path])
+    path = "/".join([os.getcwd(), path])
 
     if not os.path.exists(path):
         os.makedirs(path)
