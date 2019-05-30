@@ -7,7 +7,10 @@ from bs4 import BeautifulSoup
 base_url = "https://developer.mozilla.org/"
 
 urls = [
-'https://developer.mozilla.org/en-US/docs/Mozilla/Tech',
+'https://developer.mozilla.org/en-US/docs/Mozilla/Tech'
+]
+
+more_urls = [
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/APNG',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Manipulating_bookmarks_using_Places',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM',
@@ -42,12 +45,34 @@ def get_contributors(url):
     contributors_list += "</ul>"
     return contributors_list
 
+def wrap_in_page(content):
+    preamble = """<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>example page</title>
+  </head>
+
+  <body>
+    <div class="content">
+"""
+
+    postamble = """
+    </div>
+  </body>
+</html>"""
+
+    return preamble + content + postamble
+
 for url in urls:
 
     title = "<h1>" + get_title(url)+ "</h1>\n"
     contributors_list = "<hr/><strong>Contributors to this page:</strong><br/>" + get_contributors(url)
     file_text_raw = get_file_raw(url)
-    file_contents_out = title + file_text_raw + contributors_list
+    page_content = title + file_text_raw + contributors_list
+    complete_page = wrap_in_page(page_content)
 
     file_path = url.replace(base_url, "")
     pieces = file_path.split("/")
@@ -59,7 +84,7 @@ for url in urls:
         os.makedirs(path)
 
     out = open(os.path.join(path, file_name), 'w')
-    print >>out, file_contents_out.encode('utf-8')
+    print >>out, complete_page.encode('utf-8')
     out.close()
     print(file_path)
     time.sleep(1)
