@@ -7,10 +7,7 @@ from bs4 import BeautifulSoup
 base_url = "https://developer.mozilla.org/"
 
 urls = [
-'https://developer.mozilla.org/en-US/docs/Mozilla/Tech'
-]
-
-more_urls = [
+'https://developer.mozilla.org/en-US/docs/Mozilla/Tech',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/APNG',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Manipulating_bookmarks_using_Places',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM',
