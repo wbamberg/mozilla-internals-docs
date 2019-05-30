@@ -68,7 +68,7 @@ def wrap_in_page(content):
 
 for url in urls:
 
-    title = "<h1>" + get_title(url)+ "</h1>\n"
+    title = "<div class=\"content-heading\"><h1>" + get_title(url)+ "</h1></div>\n"
     contributors_list = "<hr/><strong>Contributors to this page:</strong><br/>" + get_contributors(url)
     file_text_raw = get_file_raw(url)
     page_content = title + file_text_raw + contributors_list
