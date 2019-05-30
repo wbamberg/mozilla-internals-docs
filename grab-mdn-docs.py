@@ -51,6 +51,7 @@ def wrap_in_page(content):
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
     <link rel="stylesheet" href="/css/page.css"/>
     <title>example page</title>
   </head>
