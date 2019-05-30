@@ -8,7 +8,7 @@ body {
     padding: 1rem;
 }
 
-.content p {
+.content p, .content dd {
     max-width: 42rem;
 }
 
