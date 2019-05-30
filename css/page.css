@@ -26,9 +26,12 @@ a:active, a:focus, a:hover {
 }
 
 .content-heading {
-    font-family: 'Zilla Slab', Arial, sans-serif;
     background-color: #f5f9fa;
     padding: 10px;
+}
+
+h1, h2, h3 {
+    font-family: 'Zilla Slab', Arial, sans-serif;
 }
 
 .warning, .note {
@@ -45,4 +48,10 @@ a:active, a:focus, a:hover {
 .note {
     background: #fff3d4;
     border-color: #f6b73c;
+}
+
+pre {
+    background: #eee;
+    border-left: solid #3d7e9a 5px;
+    padding: 1rem;
 }
