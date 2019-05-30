@@ -56,11 +56,9 @@ def wrap_in_page(content):
   </head>
 
   <body>
-    <div class="content">
 """
 
     postamble = """
-    </div>
   </body>
 </html>"""
 
@@ -71,8 +69,9 @@ for url in urls:
     title = "<div class=\"content-heading\"><h1>" + get_title(url)+ "</h1></div>\n"
     contributors_list = "<hr/><strong>Contributors to this page:</strong><br/>" + get_contributors(url)
     file_text_raw = get_file_raw(url)
-    page_content = title + file_text_raw + contributors_list
-    complete_page = wrap_in_page(page_content)
+    page_content = "<div class=\"content\">" + file_text_raw + "</div>"
+    body = title + page_content + contributors_list
+    complete_page = wrap_in_page(body)
 
     file_path = url.replace(base_url, "")
     pieces = file_path.split("/")

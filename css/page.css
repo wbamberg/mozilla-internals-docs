@@ -21,3 +21,8 @@ a:active, a:focus, a:hover {
 .content dd {
     margin-bottom: 24px;
 }
+
+.content-heading {
+    background-color: #f5f9fa;
+    padding: 10px;
+}
