@@ -5,8 +5,11 @@ body {
 }
 
 .content {
-    max-width: 42rem;
     padding: 1rem;
+}
+
+.content p {
+    max-width: 42rem;
 }
 
 a {
