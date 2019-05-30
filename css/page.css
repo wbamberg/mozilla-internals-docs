@@ -1,3 +1,9 @@
 body {
-    background-color: pink;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.content {
+    max-width: 42rem;
 }
