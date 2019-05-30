@@ -6,4 +6,18 @@ body {
 
 .content {
     max-width: 42rem;
+    padding: 1rem;
+}
+
+a {
+    color: #3d7e9a;
+    text-decoration: none;
+}
+
+a:active, a:focus, a:hover {
+    text-decoration: underline;
+}
+
+.text-content dd {
+    margin-bottom: 24px;
 }
