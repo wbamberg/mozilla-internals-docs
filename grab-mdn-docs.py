@@ -7,7 +7,10 @@ from bs4 import BeautifulSoup
 base_url = "https://developer.mozilla.org/"
 
 urls = [
-'https://developer.mozilla.org/en-US/docs/Mozilla/Tech',
+"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Property/alwaysOpenPopup"
+]
+
+more_urls = [
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/APNG',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Manipulating_bookmarks_using_Places',
 'https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM',
@@ -35,11 +38,11 @@ def get_contributors(url):
     soup = BeautifulSoup(r.text, "html.parser")
     contributors_div = soup.find_all("div", class_="contributors-sub")[1]
     contributors = contributors_div.find_all("a")
-    contributors_list = "<ul>"
+    contributors_array = []
     for contributor in contributors:
         contributor_href = "https://developer.mozilla.org" + contributor["href"]
-        contributors_list += "<li><a href=\"" + contributor_href + "\">" + contributor.string+ "</a></li>"
-    contributors_list += "</ul>"
+        contributors_array.push("<a href=\"" + contributor_href + "\">" + contributor.string+ "</a>")
+    contributors_list += contributors_array.join(",")
     return contributors_list
 
 def wrap_in_page(content):
