@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>Components.utils.setGCZeal</title>
+  </head>
+
+  <body><div class="content-heading"><h1>Components.utils.setGCZeal</h1></div>
+<div class="content"><p></p>
+<p>This method lets scripts set the zeal level for garbage collection. You can get details on what this method does in <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetGCZeal" title="JS_SetGCZeal sets the level of additional garbage collection to perform for a runtime, for the purpose of finding or reproducing bugs."><code>JS_SetGCZeal</code></a>. This method calls through to that thusly:</p>
+<pre>JS_SetGCZeal(&lt;current context&gt;, zeal, JS_DEFAULT_ZEAL_FREQ, false);
+</pre>
+<h2 id="Syntax">Syntax</h2>
+<pre>Components.utils.setGCZeal(<em>zeal</em>);
+</pre>
+<p>Where zeal is the zeal value you wish to use. This method has no effect unless running in a debug build.</p>
+<h2 id="See_also">See also</h2>
+<ul> <li><a href="/en/Components.utils.forceGC" title="en/Components.utils.forceGC"><code>Components.utils.forceGC()</code></a></li> <li><code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#garbageCollect()">nsIDOMWindowUtils.garbageCollect()</a></code></li> <li><a href="/en-US/docs/Mozilla/Projects/SpiderMonkey/JSAPI_reference/JS_SetGCZeal" title="JS_SetGCZeal sets the level of additional garbage collection to perform for a runtime, for the purpose of finding or reproducing bugs."><code>JS_SetGCZeal</code></a></li>
+</ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>.</p></div></body>
+</html>

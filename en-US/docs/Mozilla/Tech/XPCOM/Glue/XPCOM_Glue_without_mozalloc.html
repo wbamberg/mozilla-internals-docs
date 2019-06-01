@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>XPCOM Glue without mozalloc</title>
+  </head>
+
+  <body><div class="content-heading"><h1>XPCOM Glue without mozalloc</h1></div>
+<div class="content"><p>Starting with XULRunner 2.0, the frozen linkage dependent glue (xpcomglue_s.lib on Windows, libxpcomglue_s.a on Linux and Mac) is dependent on the new infallible memory allocation routines (mozalloc).  Since these routines didn't exist prior to XULRunner 2.0, XPCOM components that link against the frozen linkage dependent glue will not be compatible with XULRunner applications prior to 2.0.</p>
+<p>The solution is to link against xpcomglue_s_nomozalloc instead (xpcomglue_s_nomozalloc.lib on Windows, libxpcomglue_s_nomozalloc.a on Linux and Mac).  This library is new in XULRunner 2.0, and it's identical to xpcomglue_s, except that it's compiled without mozalloc.  Simply change all references to "xpcomglue_s" in your compiler and linker flags to "xpcomglue_s_nomozalloc".  Resulting XPCOM components will no longer have a dependency on mozalloc, and will thus be compatible with XULRunner applications prior to 2.0 as well.</p>
+<p>Comment: You might also need to build your component with the MOZ_NO_MOZALLOC flag (-DMOZ_NO_MOZALLOC) </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
+</html>

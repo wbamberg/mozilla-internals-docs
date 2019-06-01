@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsMsgSearchWidgetValue</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsMsgSearchWidgetValue</h1></div>
+<div class="content"><p>Defined in <strong><a class="external" href="http://mxr.mozilla.org/comm-central/source/" rel="external" title="http://mxr.mozilla.org/comm-central/source/">comm-central</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/">mailnews</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/">base</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">search</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">public</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsMsgSearchCore.idl" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsMsgSearchCore.idl">nsMsgSearchCore.idl</a> </strong></p>
+<p lang="en"><span id="the-code"><span class="c">FEs use this to help build the search dialog box</span></span></p>
+<pre class="brush: cpp">typedef long nsMsgSearchWidgetValue;
+
+/* FEs use this to help build the search dialog box */
+[scriptable,uuid(903dd2e8-304e-11d3-92e6-00a0c900d445)]
+interface nsMsgSearchWidget {
+    const nsMsgSearchWidgetValue Text = 0;
+    const nsMsgSearchWidgetValue Date = 1;
+    const nsMsgSearchWidgetValue Menu = 2;
+    const nsMsgSearchWidgetValue Int = 3;   /* added to account for age in days which requires an integer field */
+    const nsMsgSearchWidgetValue None = 4;
+};
+</pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000">RealRaven2000</a>.</p></div></body>
+</html>

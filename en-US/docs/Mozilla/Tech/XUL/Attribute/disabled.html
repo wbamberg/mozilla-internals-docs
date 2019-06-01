@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>disabled</title>
+  </head>
+
+  <body><div class="content-heading"><h1>disabled</h1></div>
+<div class="content"><div class="noinclude"><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/en-US/docs/XUL/XUL_Reference">XUL Reference home</a></span></div>
+
+<dl>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code></dt>
+ <dd>Type: <em>boolean</em></dd>
+ <dd>Indicates whether the element is disabled or not. If this attribute is set, the element is disabled. Disabled elements are usually drawn with grayed-out text. If the element is disabled, it does not respond to user actions, it cannot be focused, and the <code>command</code> event will not fire. In the case of form elements, it will not be submitted. Do not set the attribute to <code>true</code>, as this will suggest you can set it to <code>false</code> to enable the element again, which is not the case.
+
+ <div>The <code>disabled</code> attribute is allowed only for form controls. Using it with an anchor tag (an <code>&lt;a&gt;</code> link) will have no effect.</div>
+
+ <div>
+ The element will, however, still respond to mouse events. To enable the element, leave this attribute out entirely.</div>
+ </dd>
+ <dd>Visible controls have a <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/disabled">disabled</a></span></code> property which, except for menus and menuitems, is normally preferred to use of the attribute, as it may need to update additional state.</dd>
+</dl>
+
+<div class="noinclude"><img alt="Image:XUL_ref_attr_disabled.png" class="internal" src="/@api/deki/files/1807/=XUL_ref_attr_disabled.png">
+<pre class="brush: js">// Disabling an element
+document.getElementById('buttonRemove').setAttribute("disabled", "disabled");
+
+// Enabling back an element by removing the "disabled" attribute
+document.getElementById('buttonRemove').removeAttribute("disabled");
+</pre>
+
+<p></p><div class="blockIndicator standardNote">
+    <p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>
+    <p style="font-weight: 400;">For <a class="internal" href="/en-US/docs/XUL/keyset" title="en/XUL/Keyset"><code>keyset</code></a> elements, support for this attribute was added in Firefox 3.5.</p>
+</div><p></p>
+</div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, <a href="https://developer.mozilla.org/en-US/profiles/asiby">asiby</a>, <a href="https://developer.mozilla.org/en-US/profiles/edwinm">edwinm</a>, <a href="https://developer.mozilla.org/en-US/profiles/ThomasRedstone">ThomasRedstone</a>, <a href="https://developer.mozilla.org/en-US/profiles/Allasso">Allasso</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, <a href="https://developer.mozilla.org/en-US/profiles/MattBrubeck">MattBrubeck</a>, <a href="https://developer.mozilla.org/en-US/profiles/Neil">Neil</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sevenspade">Sevenspade</a>, <a href="https://developer.mozilla.org/en-US/profiles/kup">kup</a>, <a href="https://developer.mozilla.org/en-US/profiles/madarche">madarche</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/J%C3%BCrgen%20Jeka">Jürgen Jeka</a>, <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, <a href="https://developer.mozilla.org/en-US/profiles/Marsf">Marsf</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Taken">Taken</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
+</html>

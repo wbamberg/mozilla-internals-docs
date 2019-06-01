@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>NS_ShutdownXPCOM</title>
+  </head>
+
+  <body><div class="content-heading"><h1>NS_ShutdownXPCOM</h1></div>
+<div class="content"><p> « <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a>
+</p>
+<h3 id="Summary" name="Summary"> Summary </h3>
+<p>The <code>NS_ShutdownXPCOM</code> function terminates use of XPCOM in the calling process.
+</p>
+<pre class="eval">#include "nsXPCOM.h"
+ 
+nsresult NS_ShutdownXPCOM(
+  nsIServiceManager* <var>aSvcManager</var>
+);
+</pre>
+<h3 id="Parameters" name="Parameters"> Parameters </h3>
+<dl><dt> aSvcManager
+</dt><dd> [in] The <code><a href="en/NsIServiceManager">nsIServiceManager</a></code> instance that was returned by <code><a href="en/NS_InitXPCOM2">NS_InitXPCOM2</a></code> (or <code><a href="en/NS_InitXPCOM3">NS_InitXPCOM3</a></code>) or null.
+</dd></dl>
+<h3 id="Return_Values" name="Return_Values"> Return Values </h3>
+<p>The NS_ShutdownXPCOM function returns <code>NS_OK</code> if successful. Otherwise, it returns an error code.
+</p>
+<h3 id="Remarks" name="Remarks"> Remarks </h3>
+<p>You must call this method once you are finished using XPCOM.
+</p><p>Calling this method triggers the "xpcom-shutdown" notification to be dispatched to observers. Once this function has been called, the <code><a href="en/NsIComponentManager">nsIComponentManager</a></code> and <code><a href="en/NsIServiceManager">nsIServiceManager</a></code> will refuse to return object instances.
+</p>
+<h3 id="History" name="History"> History </h3>
+<p>This function was finalized for Mozilla 0.9.6. See bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=99147" title="FIXED: nsIServiceManager needs to be frozen">bug 99147</a> for details.
+</p>
+<h3 id="See_Also" name="See_Also"> See Also </h3>
+<p><code><a href="en/NS_InitXPCOM2">NS_InitXPCOM2</a></code>,
+<code><a href="en/NS_InitXPCOM3">NS_InitXPCOM3</a></code>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/DarinFisher">DarinFisher</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Tom">Tom</a>.</p></div></body>
+</html>

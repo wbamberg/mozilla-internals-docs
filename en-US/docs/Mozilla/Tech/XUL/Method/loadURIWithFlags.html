@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>loadURIWithFlags</title>
+  </head>
+
+  <body><div class="content-heading"><h1>loadURIWithFlags</h1></div>
+<div class="content"><div class="noinclude"><span class="breadcrumbs XULRefMeth_breadcrumbs">« <a href="/en-US/docs/XUL_Reference" title="/en-US/docs/XUL_Reference">XUL Reference home</a></span></div>
+
+<dl>
+ <dt><span id="m-loadURIWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/loadURIWithFlags">loadURIWithFlags( uri, flags, referrer, charset, postData )</a></code></span></dt>
+ <dd>Return type: <em>no return value</em></dd>
+ <dd>Load a URL into the document, with the specified load flags, the given referrer, character set, and POST data. In addition to the flags allowed for the <span id="m-reloadWithFlags"><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/reloadWithFlags">reloadWithFlags</a></code></span> method, the following flags are also valid:
+ <ul>
+  <li><code>LOAD_FLAGS_IS_REFRESH</code>: This flag is used when the URL is loaded because of a meta tag refresh or redirect.</li>
+  <li><code>LOAD_FLAGS_IS_LINK</code>: This flag is used when the URL is loaded because a user clicked on a link. The HTTP Referer header is set accordingly.</li>
+  <li><code>LOAD_FLAGS_BYPASS_HISTORY</code>: Do not add the URL to the session history.</li>
+  <li><code>LOAD_FLAGS_REPLACE_HISTORY</code>: Replace the current URL in the session history with a new one. This flag might be used for a redirect.</li>
+ </ul>
+ </dd>
+</dl>
+
+<p>(See <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIWebNavigation#loadURI()">nsIWebNavigation.loadURI()</a></code> for details on the <code>referrer</code> and <code>postData</code> parameters.)</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/Marsf">Marsf</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Marcoos">Marcoos</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
+</html>

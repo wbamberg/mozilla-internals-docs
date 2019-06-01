@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsIMsgSearchValue</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsIMsgSearchValue</h1></div>
+<div class="content"><div class="pageText" id="pageText"> <p>Defined in <strong><a class="external" href="http://mxr.mozilla.org/comm-central/source/" rel="external" title="http://mxr.mozilla.org/comm-central/source/">comm-central</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/">mailnews</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/">base</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">search</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">public</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchValue.idl" rel="external" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchValue.idl">nsIMsgSearchValue.idl</a> </strong></p> <pre class="eval">#include "nsMsgSearchCore.idl"
+
+interface <a class="new " href="../../nsIMsgFolder" rel="internal" title="nsIMsgFolder">nsIMsgFolder</a>;
+
+[scriptable, uuid(783758a0-cdb5-11dc-95ff-0800200c9a66)]
+interface <strong>nsIMsgSearchValue</strong> : <a href="nsISupports" rel="internal" title="nsISupports">nsISupports</a> {
+    // type of object
+    attribute <a href="nsMsgSearchAttribValue" rel="internal" title="nsMsgSearchAttribValue">nsMsgSearchAttribValue</a> attrib;
+
+    // accessing these will throw an exception if the above
+    // attribute does not match the type!
+    attribute AString str;
+    attribute <a href="../../nsMsgPriorityValue" rel="internal" title="nsMsgPriorityValue">nsMsgPriorityValue</a> priority;
+    attribute PRTime date;
+     // see <a href="../nsMsgMessageFlags" rel="internal" title="nsMsgMessageFlags">nsMsgMessageFlags.idl</a> and <a href="../../nsMsgFolderFlags.idl" rel="internal" title="nsMsgFolderFlags.idl">nsMsgFolderFlags.idl</a>
+    attribute unsigned long status;
+    attribute unsigned long size;
+    attribute <a href="/en/XPCOM_Interface_Reference/nsMsgKey" rel="internal" title="nsMsgKey">nsMsgKey </a>msgKey;
+    attribute long age; // in days
+    attribute <a href="nsIMsgFolder" rel="internal" title="nsIMsgFolder">nsIMsgFolder</a> folder;
+    attribute <a href="../../nsMsgLabelValue" rel="internal" title="nsMsgLabelValue">nsMsgLabelValue</a> label;
+    attribute <a href="../../nsMsgJunkStatus" rel="internal" title="nsMsgJunkStatus">nsMsgJunkStatus</a> junkStatus;
+    /*
+     * junkPercent is set by the message filter plugin, and is approximately
+     *             proportional to the probability that a message is junk.
+     *             (range 0-100, 100 is junk)
+     */
+    attribute unsigned long junkPercent;
+
+    AString toString();
+};
+</pre>
+</div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000">RealRaven2000</a>.</p></div></body>
+</html>

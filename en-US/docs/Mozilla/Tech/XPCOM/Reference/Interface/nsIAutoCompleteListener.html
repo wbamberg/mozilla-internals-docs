@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsIAutoCompleteListener</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsIAutoCompleteListener</h1></div>
+<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpfe/components/autocomplete/public/nsIAutoCompleteListener.idl" rel="custom">xpfe/components/autocomplete/public/nsIAutoCompleteListener.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface is deprecated. It only exists for legacy LDAP autocomplete session support. New code should use toolkit autocomplete interfaces.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.7 </span></div>
+</div><p></p>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table"> <tbody> <tr> <td><code>void <a href="#onAutoComplete()">onAutoComplete</a>(in nsIAutoCompleteResults result, in AutoCompleteStatus status);</code></td> </tr> <tr> <td><code>void <a href="#onStatus()">onStatus</a>(in wstring statusText);</code></td> </tr> </tbody>
+</table>
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+<table class="standard-table"> <tbody> <tr> <td class="header">Attribute</td> <td class="header">Type</td> <td class="header">Description</td> </tr> <tr> <td><code>param</code></td> <td><code><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></code></td> <td>Private parameter used by the autocomplete widget.</td> </tr> </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="onAutoComplete()" name="onAutoComplete()">onAutoComplete()</h3>
+<p>Called by the autocomplete session when the search is done or over. As of Gecko 1.9.1, can also be called with partial results, in a similar manner to the toolkit autocomplete interface.</p>
+<pre class="eval">void onAutoComplete(
+  in nsIAutoCompleteResults result,
+  in nsIAutoCompleteStatus status
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl> <dt><code>result</code></dt> <dd>An <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteResults" title="">nsIAutoCompleteResults</a></code> object containing the (partial) results of the autocomplete.</dd> <dt><code>status</code></dt> <dd>One of the constants defined in the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteStatus" title="">nsIAutoCompleteStatus</a></code> interface.</dd>
+</dl>
+<h3 id="onStatus()" name="onStatus()">onStatus()</h3>
+<p>Called by the autocomplete session during the search. This method does not seem to have ever been implemented.</p>
+<pre class="eval">void onStatus(
+  in wstring statusText
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl> <dt><code>statusText</code></dt> <dd>
+</dd></dl></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Neil">Neil</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>.</p></div></body>
+</html>

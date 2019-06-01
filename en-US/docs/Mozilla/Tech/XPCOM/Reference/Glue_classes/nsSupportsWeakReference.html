@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsSupportsWeakReference</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsSupportsWeakReference</h1></div>
+<div class="content"><p>« <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a></p>
+<h3 id="Summary" name="Summary">Summary</h3>
+<p>Inherit from this C++ class to add canonical support for <code><a href="en/NsISupportsWeakReference">nsISupportsWeakReference</a></code>.</p>
+<p>See <a href="en/Weak_reference">Weak reference</a> for detailed description of weak references.</p>
+<pre class="brush: cpp">#include "nsWeakReference.h"
+
+class nsSupportsWeakReference { ... };
+</pre>
+<h3 id="Remarks" name="Remarks">Remarks</h3>
+<p>In addition to inheriting from this class, you will need to ensure that your <code><a href="en/NsISupports/QueryInterface">nsISupports::QueryInterface</a></code> implementation exposes <code><a href="en/NsISupportsWeakReference">nsISupportsWeakReference</a></code> as a supported interface.</p>
+<p>To use this class, you must link your component or application against the <a href="en/XPCOM_Glue">XPCOM Glue</a> library.</p>
+<h3 id="Example_code" name="Example_code">Example code</h3>
+<pre class="brush: cpp"> // Supporting weak references to a hypothetical implementation
+ // of the nsIFoo interface...
+
+ #include "nsWeakReference.h"
+ #include "nsIFoo.h"
+
+ class MyFoo : public nsIFoo, public nsSupportsWeakReference
+ {
+ public:
+   NS_DECL_ISUPPORTS
+   NS_DECL_NSIFOO
+
+   ...
+ };
+
+ NS_IMPL_ISUPPORTS2(MyFoo, nsIFoo, nsISupportsWeakReference)
+
+ ...
+</pre>
+<h3 id="See_also" name="See_also">See also</h3>
+<p><code><a href="en/NsISupports/QueryInterface">nsISupports::QueryInterface</a></code> , <code><a href="en/NsISupportsWeakReference">nsISupportsWeakReference</a></code></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/gsvelto">gsvelto</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>.</p></div></body>
+</html>

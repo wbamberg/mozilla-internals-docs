@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>BeginReading</title>
+  </head>
+
+  <body><div class="content-heading"><h1>BeginReading</h1></div>
+<div class="content"><p>
+« <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a>
+</p>
+<h3 id="Summary" name="Summary">Summary</h3>
+<p>The <code>BeginReading</code> function returns a const pointer to the first element of the string's internal buffer.
+</p>
+<pre class="eval"> const char_type* BeginReading() const;
+</pre>
+<h3 id="Remarks" name="Remarks">Remarks</h3>
+<p>The resulting character array is not necessarily null-terminated. The length of the array is determined by the result of the Length method.
+</p>
+<h3 id="Example_Code" name="Example_Code">Example Code</h3>
+<pre>  // count the number of times a particular character appears in the string
+
+  PRUint32 CountChar(const nsACString&amp; str, char c)
+  {
+    const char* start = str.BeginReading();
+    const char* end = str.EndReading();
+
+    PRUint32 count = 0;
+    while (start != end)
+    {
+      if (*start++ == c)
+        ++count;
+    }
+
+    return count;
+  }
+</pre>
+<h3 id="See_Also" name="See_Also">See Also</h3>
+<p><code><a href="en/NsACString/Length">Length</a></code>, <code><a href="en/NsACString/EndReading">EndReading</a></code>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>.</p></div></body>
+</html>

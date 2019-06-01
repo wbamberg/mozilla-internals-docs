@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsIMsgRuleAction</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsIMsgRuleAction</h1></div>
+<div class="content"><p>Defined in <strong><a class="external" href="http://mxr.mozilla.org/comm-central/source/">comm-central</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">mailnews</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">base</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">search</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">public</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgFilter.idl">nsIMsgFilter.idl</a> </strong></p>
+
+<pre> [scriptable, uuid(190A2A18-D245-473a-A402-9F0814598C7F)]
+interface nsIMsgRuleAction : <a title="nsISupports">nsISupports</a> {
+
+  attribute <a title="nsMsgRuleActionType">nsMsgRuleActionType</a> type;
+
+  // target priority.. throws an exception if the action is not priority
+  attribute <a title="nsMsgPriorityValue">nsMsgPriorityValue</a> priority;
+
+  // target folder.. throws an exception if the action is not move to folder
+  attribute ACString targetFolderUri;
+
+  // target label. throws an exception if the action is not label
+  attribute <a title="nsMsgLabelValue">nsMsgLabelValue</a> label;
+
+  // junkScore throws an exception if the action type is not JunkScore
+  attribute long junkScore;
+
+  attribute AUTF8String strValue;
+
+  // action id if type is Custom
+  attribute ACString customId;
+
+  // custom action associated with customId
+  // (which must be set prior to reading this attribute)
+  readonly attribute <a title="nsIMsgFilterCustomAction">nsIMsgFilterCustomAction</a> customAction;
+ 
+};
+</pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000">RealRaven2000</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>.</p></div></body>
+</html>

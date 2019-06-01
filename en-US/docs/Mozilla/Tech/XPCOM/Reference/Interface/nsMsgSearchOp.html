@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsMsgSearchOp</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsMsgSearchOp</h1></div>
+<div class="content"><p>Defined in <strong><a class="external" href="http://mxr.mozilla.org/comm-central/source/">comm-central</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">mailnews</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">base</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">search</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">public</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsMsgSearchCore.idl">nsMsgSearchCore.idl</a> </strong></p>
+<pre class="brush: cpp">typedef long nsMsgSearchOpValue;
+ 
+[scriptable, uuid(9160b196-6fcb-4eba-aaaf-6c806c4ee420)]
+interface nsMsgSearchOp {
+     const nsMsgSearchOpValue Contains = 0; /* for text attributes      */
+     const nsMsgSearchOpValue DoesntContain = 1;
+     const nsMsgSearchOpValue Is = 2; /* is and isn't also apply to some non-text attrs */
+     const nsMsgSearchOpValue Isnt = 3;
+     const nsMsgSearchOpValue IsEmpty = 4;
+ 
+     const nsMsgSearchOpValue IsBefore = 5; /* for date attributes              */
+     const nsMsgSearchOpValue IsAfter = 6;
+ 
+     const nsMsgSearchOpValue IsHigherThan = 7; /* for priority. Is also applies  */
+     const nsMsgSearchOpValue IsLowerThan = 8;
+ 
+     const nsMsgSearchOpValue BeginsWith = 9;
+     const nsMsgSearchOpValue EndsWith = 10;
+ 
+     const nsMsgSearchOpValue SoundsLike = 11; /* for LDAP phoenetic matching      */
+     const nsMsgSearchOpValue LdapDwim = 12; /* Do What I Mean for simple search */
+ 
+     const nsMsgSearchOpValue IsGreaterThan = 13;
+     const nsMsgSearchOpValue IsLessThan = 14;
+ 
+     const nsMsgSearchOpValue NameCompletion = 15; /* Name Completion operator...as the name implies =) */
+     const nsMsgSearchOpValue IsInAB = 16;
+     const nsMsgSearchOpValue IsntInAB = 17;
+     const nsMsgSearchOpValue IsntEmpty = 18; /* primarily for tags */
+     const nsMsgSearchOpValue Matches = 19; /* generic term for use by custom terms */
+     const nsMsgSearchOpValue DoesntMatch = 20; /* generic term for use by custom terms */
+     const nsMsgSearchOpValue kNumMsgSearchOperators  = 21;     /* must be last operator */
+};
+</pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000">RealRaven2000</a>.</p></div></body>
+</html>

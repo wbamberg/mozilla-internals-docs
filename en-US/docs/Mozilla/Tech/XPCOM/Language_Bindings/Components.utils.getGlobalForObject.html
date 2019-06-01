@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>Components.utils.getGlobalForObject</title>
+  </head>
+
+  <body><div class="content-heading"><h1>Components.utils.getGlobalForObject</h1></div>
+<div class="content"><p></p>
+<p>This method is used to determine the global object with which an object is associated. This is the global object in place at the time the object was created, which is to say the global object used when executing the script that created the object.</p>
+<h3 id="Syntax">Syntax</h3>
+<pre class="eval">var global = Components.utils.getGlobalForObject(<em>obj</em>);
+</pre>
+<h3 id="Parameters">Parameters</h3>
+<dl> <dt><code>obj</code></dt> <dd>an object whose corresponding global object is to be retrieved; non-optional, must be object-valued</dd>
+</dl>
+<h3 id="Example">Example</h3>
+<pre class="eval">var obj = {};
+function foo() { }
+var global = this;
+
+var g1 = Components.utils.getGlobalForObject(foo);
+var g2 = Components.utils.getGlobalForObject(obj);
+// g1 === global, g2 === global, g1 === g2
+
+// In a script in another window
+var global2 = this;
+function bar() { }
+var obj2 = {};
+
+// Then, assuming bar refers to the function defined in that other window:
+var o1 = Components.utils.getGlobalForObject(bar);
+var o2 = Components.utils.getGlobalForObject(obj2);
+// o1 === global2, o2 === global2
+</pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/Waldo">Waldo</a>.</p></div></body>
+</html>

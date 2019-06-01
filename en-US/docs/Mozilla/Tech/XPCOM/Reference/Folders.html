@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>Folders</title>
+  </head>
+
+  <body><div class="content-heading"><h1>Folders</h1></div>
+<div class="content"><p>The folder classes all implement the <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgFolder.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/public/nsIMsgFolder.idl">nsIMsgFolder</a> interface. There are currently three folder classes - <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/local/src/nsLocalMailFolder.cpp" title="http://mxr.mozilla.org/comm-central/source/mailnews/local/src/nsLocalMailFolder.cpp">nsLocalMailFolder</a>, <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/imap/src/nsImapMailFolder.cpp" title="http://mxr.mozilla.org/comm-central/source/mailnews/imap/src/nsImapMailFolder.cpp">nsImapMailFolder</a>, and <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/news/src/nsNewsFolder.cpp" title="http://mxr.mozilla.org/comm-central/source/mailnews/news/src/nsNewsFolder.cpp">nsNewsFolder</a>. They all inherit from <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/util/nsMsgDBFolder.cpp" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/util/nsMsgDBFolder.cpp">nsMsgDBFolder</a>, which implements a lot of the core functionality. RSS feeds are implemented by <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/local/src/nsLocalMailFolder.cpp" title="http://mxr.mozilla.org/comm-central/source/mailnews/local/src/nsLocalMailFolder.cpp">nsLocalMailFolder</a>.</p>
+<p>Each line in the folder pane corresponds to a folder object.</p>
+<p>Folders have a number of interesting attributes:</p>
+<ul> <li>parent</li> <li>subfolder</li> <li>server</li> <li>uri</li> <li><a href="/en/flags" title="en/flags">flags</a></li>
+</ul>
+<p>and methods</p>
+<ul> <li>getDatabase ( how to get a <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/db/msgdb/public/nsIMsgDatabase.idl" title="http://mxr.mozilla.org/comm-central/source/mailnews/db/msgdb/public/nsIMsgDatabase.idl">database</a> of the messages in the folder.)</li> <li><a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/util/nsMsgDBFolder.cpp#2958" title="http://mxr.mozilla.org/comm-central/source/mailnews/base/util/nsMsgDBFolder.cpp#2958">updateFolder</a> (gets new messages for that folder, if applicable, e.g., pop3 inboxes, imap folders, news folders, rss folders)</li>
+</ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/jenzed">jenzed</a>, <a href="https://developer.mozilla.org/en-US/profiles/DavidBienvenu">DavidBienvenu</a>.</p></div></body>
+</html>

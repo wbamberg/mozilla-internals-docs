@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>NS_IF_RELEASE</title>
+  </head>
+
+  <body><div class="content-heading"><h1>NS_IF_RELEASE</h1></div>
+<div class="content"><p>
+</p><p><i>This page still needs some work, help to improve it!</i>
+</p>
+<h3 id="Summary"> Summary </h3>
+<p><b>Macro</b>
+</p><p>Decrements the reference count of a pointer by one. This macro also sets the pointer to NULL. <code>NS_IF_RELEASE</code> has no effect when the pointer is NULL. This macro should only be used when the pointer might be NULL; otherwise, use <a href="en/NS_RELEASE">NS_RELEASE</a>.
+</p><p><code>NS_IF_RELEASE</code> is exactly equivalent to the following function:
+</p>
+<pre class="eval">inline void NS_IF_RELEASE(nsISupports* foo)
+{
+  if (foo)
+    foo-&gt;Release();
+  foo = 0;
+}
+</pre>
+<h3 id="Syntax"> Syntax </h3>
+<pre class="eval">NS_IF_RELEASE(foo);
+</pre>
+<h3 id="See_Also"> See Also </h3>
+<p><a href="en/NS_ADDREF">NS_ADDREF</a>, <a href="en/NS_RELEASE">NS_RELEASE</a>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/Waldo">Waldo</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ehsan">Ehsan</a>, <a href="https://developer.mozilla.org/en-US/profiles/Editmonkey">Editmonkey</a>, <a href="https://developer.mozilla.org/en-US/profiles/cbiesinger">cbiesinger</a>.</p></div></body>
+</html>

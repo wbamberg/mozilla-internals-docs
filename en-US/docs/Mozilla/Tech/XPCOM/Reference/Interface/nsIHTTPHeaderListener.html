@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsIHTTPHeaderListener</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsIHTTPHeaderListener</h1></div>
+<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/modules/plugin/base/public/nsIHTTPHeaderListener.idl" rel="custom">modules/plugin/base/public/nsIHTTPHeaderListener.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+This interface allows plugin authors to access HTTP Response headers after issuing an <a href="/en-US/docs/XPCOM_Interface_Reference/nsIPluginHost">nsIPluginHost.GetURL</a> or <a href="/en-US/docs/XPCOM_Interface_Reference/nsIPluginHost">nsIPluginHost.PostURL</a> call.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
+</div><p></p>
+<div class="note">
+ <strong>Note:</strong> The plugin author must provide an instance to {GetURL,PostURL}() that implements both <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPluginStreamListener" title="">nsIPluginStreamListener</a></code> and <code>nsIHTTPHeaderListener</code>. This instance is passed in through {GetURL,PostURL}()'s streamListener parameter. The browser will then QI this streamListener to see if it implements <code>nsIHTTPHeaderListener</code>.</div>
+<p> </p>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#newResponseHeader()">newResponseHeader</a>(in string headerName, in string headerValue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#statusLine()">statusLine</a>(in string line);</code> </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="newResponseHeader()" name="newResponseHeader()">newResponseHeader()</h3>
+<p>Called for each HTTP Response header.</p>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> You must copy the values of the params.</div><p></p>
+<pre class="eval">void newResponseHeader(
+  in string headerName,
+  in string headerValue
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>headerName</code></dt>
+ <dd>
+   </dd>
+ <dt>
+  <code>headerValue</code></dt>
+ <dd>
+   </dd>
+</dl>
+<p></p><h3 id="statusLine()">statusLine()</h3><p></p>
+<p>Called once for the HTTP Response status line. Value does <strong>not</strong> include a terminating newline.</p>
+<p></p><div class="blockIndicator note"><strong>Note:</strong> You must copy this value.</div><p></p>
+<pre class="eval">void statusLine(
+  in string line
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl>
+ <dt>
+  <code>line</code></dt>
+ <dd>
+   </dd>
+</dl></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>.</p></div></body>
+</html>

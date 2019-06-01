@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>NS_Alloc</title>
+  </head>
+
+  <body><div class="content-heading"><h1>NS_Alloc</h1></div>
+<div class="content"><div>
+  « <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a></div>
+<h2 id="Summary" name="Summary">Summary</h2>
+<p>Infallibly allocates a block of memory using the XPCOM memory manager.</p>
+<pre class="syntaxbox">#include "nsXPCOM.h"
+ 
+void* NS_Alloc(
+  PRSize <var>aSize</var>
+);
+</pre>
+<h3 id="Parameters" name="Parameters">Parameters</h3>
+<dl>
+  <dt>
+    aSize</dt>
+  <dd>
+    [in] The size in bytes of the block to allocate.</dd>
+</dl>
+<h3 id="Return_Values" name="Return_Values">Return Values</h3>
+<p>This function returns a pointer to the allocated block of memory, which is suitably aligned for any kind of variable, or null if the allocation failed.</p>
+<h2 id="Remarks" name="Remarks">Remarks</h2>
+<p>This function provides a convenient way to access the XPCOM memory manager. It is equivalent to calling <code>alloc</code> on the <code><a href="/en-US/docs/NsIMemory">nsIMemory</a></code> instance returned from <code><a href="/en-US/docs/NS_GetMemoryManager">NS_GetMemoryManager</a></code>.</p>
+<h2 id="History" name="History">History</h2>
+<p>This function was finalized for Mozilla 1.8. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=267767" title="FIXED: Make XPCOM memory management functions frozen exports">bug 267767</a> for details.</p>
+<h2 id="See_also" name="See_also">See also</h2>
+<ul>
+  <li><a href="/en-US/docs/NS_Free"><code>NS_Free</code></a>, <a href="/en-US/docs/NsIMemory"><code>nsIMemory</code></a>, <a href="/en-US/docs/NS_GetMemoryManager"><code>NS_GetMemoryManager</code></a></li>
+</ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, <a href="https://developer.mozilla.org/en-US/profiles/amccreight">amccreight</a>, <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mook">Mook</a>, <a href="https://developer.mozilla.org/en-US/profiles/DarinFisher">DarinFisher</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>.</p></div></body>
+</html>

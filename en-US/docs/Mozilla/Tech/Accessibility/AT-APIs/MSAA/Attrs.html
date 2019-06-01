@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>MSAA Object Attributes </title>
+  </head>
+
+  <body><div class="content-heading"><h1>MSAA Object Attributes </h1></div>
+<div class="content"><p> </p><p><a href="/en-US/docs/Accessibility:AT-APIs#Supported_Object_Attributes">« AT APIs Support Page</a>
+</p>
+<h2 id="Introduction" name="Introduction">Introduction</h2>
+<p>MSAA doesn't have a way to expose object attributes. In Gecko some object attributes are still exposed via the text in IAccessible::getDescription(). This technique is only used to support <a href="en/Accessibility/AT-APIs/Gecko/Attrs#Group_Attributes">group attributes</a>. This is a terrible hack that Mozilla still supports because older screen readers depend on it, but in the future it may be removed in favor of IA2 object attributes and groupPosition().
+</p>
+<ul><li> if accessible object has group attributes and children then the accDescription is in the format of "L:level, :posinset of :setsize with :childcount"
+</li><li> if accessible object has group attributes but hasn't children then the accDescription is in the format of "L:level, :posinset of :setsize"
+</li><li> if accessible object has <code>posinset</code> and <code>setsize</code> attributes then the accDescription is in the format of ":posinset of :setsize"
+</li><li> otherwise a normal description is used
+</li></ul>
+</div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Aaronlev">Aaronlev</a>, <a href="https://developer.mozilla.org/en-US/profiles/Surkov.alexander">Surkov.alexander</a>.</p></div></body>
+</html>

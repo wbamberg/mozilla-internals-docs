@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>smileIApplication</title>
+  </head>
+
+  <body><div class="content-heading"><h1>smileIApplication</h1></div>
+<div class="content"><div class="blockIndicator smMinVerHeader standardNote">
+<p>This article covers features introduced in <a href="/en-US/docs/Mozilla/SeaMonkey/Releases/2">SeaMonkey 2</a></p>
+</div>
+
+<p>The <code>smileIApplication</code> interface is used for managing and accessing the applications systems. <code>smileIApplication</code> is defined in <a href="http://mxr.mozilla.org/comm-central/source/suite/smile/public/smileIApplication.idl">http://mxr.mozilla.org/comm-central/source/suite/smile/public/smileIApplication.idl</a>.</p>
+
+<p>Implemented via XPCOM service for <a class="internal" href="/en/Toolkit_API/extIApplication" title="en/Toolkit API/extIApplication"><code>extIApplication</code></a>: see the instructions on the <a class="internal" href="/en/Toolkit_API/FUEL" title="en/FUEL">FUEL</a> (Firefox), <a class="internal" href="/en/Toolkit_API/STEEL" title="en/Thunderbird/STEEL">STEEL</a> (Thunderbird) and <a class="internal" href="/en/Toolkit_API/SMILE" title="en/SeaMonkey/SMILE">SMILE</a> (SeaMonkey) pages.</p>
+
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>windows</code></td>
+   <td><code>readonly attribute </code><code>nsIVariant</code></td>
+   <td>An array of browser windows within the application.</td>
+  </tr>
+  <tr>
+   <td><code>activeWindow</code></td>
+   <td><code>readonly attribute </code><code><a class="internal" href="/en/Toolkit_API/SMILE/smileIWindow" title="en/Toolkit API/SMILE/smileIWindow">smileIWindow</a></code></td>
+   <td>The currently active browser window.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<p> <a class="internal" href="/en/Toolkit_API/FUEL" title="en/FUEL">FUEL</a> (Firefox), <a class="internal" href="/en/Toolkit_API/STEEL" title="en/Thunderbird/STEEL">STEEL</a> (Thunderbird) and <a class="internal" href="/en/Toolkit_API/SMILE" title="en/SeaMonkey/SMILE">SMILE</a> (SeaMonkey)</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/jenzed">jenzed</a>.</p></div></body>
+</html>

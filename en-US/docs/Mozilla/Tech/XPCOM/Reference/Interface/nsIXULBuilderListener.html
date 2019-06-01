@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>nsIXULBuilderListener</title>
+  </head>
+
+  <body><div class="content-heading"><h1>nsIXULBuilderListener</h1></div>
+<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/content/xul/templates/public/nsIXULBuilderListener.idl" rel="custom">content/xul/templates/public/nsIXULBuilderListener.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+This object is a listener that will be notified when a template builder rebuilds its content.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.7 </span></div>
+</div><p></p>
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<table class="standard-table"> <tbody> <tr> <td><code>void <a href="#didRebuild()">didRebuild</a>(in nsIXULTemplateBuilder aBuilder);</code></td> </tr> <tr> <td><code>void <a href="#willRebuild()">willRebuild</a>(in nsIXULTemplateBuilder aBuilder);</code></td> </tr> </tbody>
+</table>
+<h2 id="Methods" name="Methods">Methods</h2>
+<h3 id="didRebuild()" name="didRebuild()">didRebuild()</h3>
+<p>Called after a template builder has rebuilt its content.</p>
+<pre class="eval">void didRebuild(
+  in nsIXULTemplateBuilder aBuilder
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl> <dt><code>aBuilder</code></dt> <dd>The template builder that has rebuilt the content.</dd>
+</dl>
+<h3 id="willRebuild()" name="willRebuild()">willRebuild()</h3>
+<p>Called before a template builder rebuilds its content.</p>
+<pre class="eval">void willRebuild(
+  in nsIXULTemplateBuilder aBuilder
+);
+</pre>
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+<dl> <dt><code>aBuilder</code></dt> <dd>The template builder that rebuilds the content.</dd>
+</dl>
+<h2 id="Example" name="Example">Example</h2>
+<ol> <li>Create an object which implements <code>nsIXULBuilderListener</code>: <pre class="deki-transform">var myListener =
+{
+ QueryInterface: function(aIID)
+  {
+   if (aIID.equals(Components.interfaces.nsIXULBuilderListener) ||
+       aIID.equals(Components.interfaces.nsISupports))
+     return this;
+   throw Components.results.NS_NOINTERFACE;
+
+  },
+  willRebuild : function(builder) {},
+  didRebuild : function(builder) { }
+  }
+</pre> </li> <li>Attach the listener to a element: <pre class="deki-transform">myElement.addListener(myListener);
+</pre> </li>
+</ol></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/julienfabre">julienfabre</a>.</p></div></body>
+</html>
