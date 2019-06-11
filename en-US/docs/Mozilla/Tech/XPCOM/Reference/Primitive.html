@@ -8,7 +8,7 @@
     <title>XPCOM primitive</title>
   </head>
 
-  <body><div class="content-heading"><h1>XPCOM primitive</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XPCOM.html">XPCOM</a>&raquo;<a href="../Reference.html">Reference</a></nav><div class="content-heading"><h1>XPCOM primitive</h1></div>
 <div class="content"><p>An <b>XPCOM primitive</b> is an XPCOM object that "boxes" a value of a primitive type. All XPCOM primitives are scriptable, and they all implement an XPCOM interface from the table below.
 </p><p>Primitives are rarely useful. The main use case is to store primitive values in a data structure that can only store XPCOM objects, such as <code><a href="en/NsIArray">nsIArray</a></code>. Also, certain APIs, such as <code><a href="en/NsITransferable">nsITransferable</a>.setTransferData()</code>, require primitives. (However, if you are designing that kind of API today, you should probably use <a href="en/NsIVariant">nsIVariant</a> instead.)
 </p>

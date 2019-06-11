@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n<dl> <dt><code id=\"a-showimagecolumn\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/showimagecolumn\">showimagecolumn</a></code></dt> <dd>Type: <em>boolean</em></dd> <dd>If <code>true</code>, an image column appears in the popup. There is no default styling of this image, but the class name returned by the results appears in the property list for the column. If this attribute is not specified, the image column doesn't appear.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Neil\">Neil</a>",
+    "title": "showimagecolumn"
+}

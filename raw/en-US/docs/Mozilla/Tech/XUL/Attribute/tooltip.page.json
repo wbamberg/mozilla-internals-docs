@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\">\n <span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n<dl>\n <dt>\n  <code id=\"a-tooltip.page\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tooltip.page\">page</a></code></dt>\n <dd>\n  Type: <em>boolean</em></dd>\n <dd>\n  Setting the <code>page</code> attribute to true will result in the tooltip being filled automatically as appropriate for a <code>browser</code> content area tooltip, i.e. the tooltip text is set according to the DOM element in the browser that the user hovered over.</dd>\n</dl>\n<h3 id=\"Example\">Example</h3>\n<pre class=\"brush: xml\" id=\"comment_text_1\">&lt;tooltip id=\"pageTooltip\" page=\"true\"/&gt;\n&lt;browser tooltip=\"pageTooltip\"/&gt;</pre>\n<dl>\n <dt>\n   </dt>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>",
+    "title": "page"
+}

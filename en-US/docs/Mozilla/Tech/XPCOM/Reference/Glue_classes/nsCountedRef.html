@@ -8,7 +8,7 @@
     <title>nsCountedRef</title>
   </head>
 
-  <body><div class="content-heading"><h1>nsCountedRef</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Glue_classes.html">Glue_classes</a></nav><div class="content-heading"><h1>nsCountedRef</h1></div>
 <div class="content"><p>nsCountedRef&lt;T&gt; is a template class implementing an object that takes a strong reference to a reference-counted resource that must be released, typically on destruction of the object.</p>
 <p>nsCountedRef has a role similar to <a class="internal" href="/en/nsRefPtr" title="En/NsRefPtr">nsRefPtr</a> but does not require that the handle is a pointer to an object that has AddRef() and Release() methods. nsCountedRef is therefore useful for managing references to foreign objects.</p>
 <p>nsCountedRef&lt;T&gt; is derived from <a class="internal" href="/En/NsAutoRef" title="En/NsAutoRef">nsAutoRef</a>&lt;T&gt; and so inherits its methods. nsCountedRef differs from nsAutoRef in that nsCountedRef constructors add a reference to the resource, and in that nsCountedRef provides copy construction&lt; and assignment operators enabling more than one concurrent reference to the same resource.</p>

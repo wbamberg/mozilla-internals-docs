@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n\n<dl>\n <dt><code id=\"a-query.name\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/query.name\">name</a></code></dt>\n <dd>Type: <em>string</em></dd>\n <dd>The name of a parameter within the SQL statement. This name should appear within the query preceded by a colon.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/SphinxKnight\">SphinxKnight</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Marsf\">Marsf</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Ptak82\">Ptak82</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Enn\">Enn</a>",
+    "title": "query.name"
+}

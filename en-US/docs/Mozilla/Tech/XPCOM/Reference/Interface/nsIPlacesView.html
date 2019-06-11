@@ -8,7 +8,7 @@
     <title>nsIPlacesView</title>
   </head>
 
-  <body><div class="content-heading"><h1>nsIPlacesView</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIPlacesView</h1></div>
 <div class="content"><p>The <code>nsIPlacesView</code> interface provides a view-agnostic way to access information about a <a class="internal" href="/en-US/docs/Displaying_Places_information_using_views" title="Displaying Places information using views">Places view</a>.</p>
 
 <p>For example, the representation of selection differs between trees, menus, and other such lists. Controllers should not be concerned with these details; controller code should not be required to decode the meaning of a selection depending on what kind of view produced the selection. Rather, each view is responsible for translating its own selection format into one the controller can understand. Views do this, and other things, by implementing the <code>nsIPlacesView</code> interface.</p>

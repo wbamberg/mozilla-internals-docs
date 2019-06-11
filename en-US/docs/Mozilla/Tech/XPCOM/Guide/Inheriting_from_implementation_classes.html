@@ -8,7 +8,7 @@
     <title>Inheriting from implementation classes</title>
   </head>
 
-  <body><div class="content-heading"><h1>Inheriting from implementation classes</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XPCOM.html">XPCOM</a>&raquo;<a href="../Guide.html">Guide</a></nav><div class="content-heading"><h1>Inheriting from implementation classes</h1></div>
 <div class="content"><p>Given that IDL interfaces map to abstract classes in C++, a common problem when dealing with IDL is when you have an IDL inheritance hierarchy, and a corresponding C++ implementation hierarchy, you run into <strong>multiple inheritance</strong>. That's not inherently multiple inheritance, though, because you only mix in interfaces (i.e. the problem would not exist with Java's <code>interface</code>s).</p>
 <h2 id="Example_problem" name="Example_problem">Example problem</h2>
 <p>You have interfaces A and B, B inherits from A, and you have implementation classes for

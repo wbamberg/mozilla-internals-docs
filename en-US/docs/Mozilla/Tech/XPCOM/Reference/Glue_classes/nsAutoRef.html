@@ -8,7 +8,7 @@
     <title>nsAutoRef</title>
   </head>
 
-  <body><div class="content-heading"><h1>nsAutoRef</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Glue_classes.html">Glue_classes</a></nav><div class="content-heading"><h1>nsAutoRef</h1></div>
 <div class="content"><p>nsAutoRef&lt;T&gt; is a template class implementing an object that holds a handle to a resource that must be released, typically on destruction of the object.</p>
 <p>nsAutoRef has a role similar to nsAutoPtr and <a class="internal" href="/en/nsRefPtr" title="En/NsRefPtr">nsRefPtr</a> but does not require that the handle is a pointer to an object that was created with new or has AddRef() and Release() methods.  nsAutoRef is therefore useful for managing a reference to a foreign object.</p>
 <p>No copy constructor nor copy assignment operators are available, so the handle to the resource will be held until released on destruction of the nsAutoRef or until explicitly reset() or transferred through provided methods.</p>

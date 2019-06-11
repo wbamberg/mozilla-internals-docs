@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n\n<dl>\n <dt><code id=\"a-clicktoscroll\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/clicktoscroll\">clicktoscroll</a></code></dt>\n <dd>Type: <em>boolean</em></dd>\n <dd>If true, the up or down arrow(s) must be clicked to scroll the content. If false, the content will scroll automatically when the cursor hovers over either arrow.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/chrisdavidmills\">chrisdavidmills</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/garwoodpr\">garwoodpr</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/EnnDeakin\">EnnDeakin</a>",
+    "title": "clicktoscroll"
+}

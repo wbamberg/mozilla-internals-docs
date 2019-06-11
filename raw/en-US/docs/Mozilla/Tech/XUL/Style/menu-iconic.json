@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><a href=\"/en-US/docs/XUL_Reference\" title=\"« XUL Reference home\">« XUL Reference home</a></div>\n<dl> <dt><code><a href=\"https://developer.mozilla.org/en-US/docs/XUL/Style/menu-iconic\">menu-iconic</a></code></dt> <dd>Use this class to have an image appear on the <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/menu\" title=\"menu\">menu</a></code>. Specify the image using the <code id=\"a-image\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/image\">image</a></code> attribute.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/gilesburdett\">gilesburdett</a>",
+    "title": "menu-iconic"
+}

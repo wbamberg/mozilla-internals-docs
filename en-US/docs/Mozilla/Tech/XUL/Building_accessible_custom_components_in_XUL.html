@@ -8,7 +8,7 @@
     <title>Building accessible custom components in XUL</title>
   </head>
 
-  <body><div class="content-heading"><h1>Building accessible custom components in XUL</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XUL.html">XUL</a></nav><div class="content-heading"><h1>Building accessible custom components in XUL</h1></div>
 <div class="content"><h3 id="Introduction">Introduction</h3>
 <p><a href="/en/ARIA/Accessible_Rich_Internet_Applications" title="en/ARIA/Accessible_Rich_Internet_Applications">DHTML Accessibility</a> is a new technology which enables developers to construct accessible controls within (X)HTML pages. Developers have been doing this for some time, but the resulting controls were never as accessible as similar controls in desktop applications. Assistive technologies could only see the generic HTML markup used to build the control; they had no way of knowing that a particular collection of <code>div</code> and <code>span</code> elements should be treated as a single cohesive control (such as a tab bar or a treeview).</p>
 <p>By implementing DHTML Accessibility techniques, web developers can declare that generic HTML elements are really acting as specific GUI controls (such as a treeitem within a treeview). Firefox 1.5 is the first browser to support DHTML Accessibility; it maps the declarations within the HTML page to the underlying accessibility architecture so that assistive technologies can "read" a web page and know how to present these complex controls to the end user.</p>

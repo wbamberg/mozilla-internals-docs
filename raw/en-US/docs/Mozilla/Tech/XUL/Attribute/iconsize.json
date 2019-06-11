@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n<dl> <dt><code id=\"a-iconsize\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/iconsize\">iconsize</a></code></dt> <dd>Type: <em>string</em></dd> <dd>Indicates whether the toolbar should display large icons or small icons; this should be the string \"large\" or \"small\", respectively. These can vary from one toolbar to another within a given <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/toolbox\" title=\"toolbox\">toolbox</a></code>, whose <code>iconsize</code> attribute defines the default for all toolbars that don't specify an icon size.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/pippijn\">pippijn</a>",
+    "title": "iconsize"
+}

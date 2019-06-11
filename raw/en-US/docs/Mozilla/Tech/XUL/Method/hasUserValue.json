@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\">\n  <span class=\"breadcrumbs XULRefMeth_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"/en-US/docs/XUL_Reference\">XUL Reference home</a></span></div>\n<dl>\n  <dt>\n    <span id=\"m-hasUserValue\"><code><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/hasUserValue\">hasUserValue()</a></code></span></dt>\n  <dd>\n    Return type: <em>boolean</em></dd>\n  <dd>\n    Returns <code>true</code> if the preference has been changed from its default value.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/trevorh\">trevorh</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Marsf\">Marsf</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/BenoitL\">BenoitL</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Dria\">Dria</a>",
+    "title": "hasUserValue"
+}

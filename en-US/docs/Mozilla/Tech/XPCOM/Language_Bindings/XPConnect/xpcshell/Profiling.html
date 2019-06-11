@@ -8,7 +8,7 @@
     <title>Profiling XPCShell</title>
   </head>
 
-  <body><div class="content-heading"><h1>Profiling XPCShell</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../../Tech.html">Tech</a>&raquo;<a href="../../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../../Language_Bindings.html">Language_Bindings</a>&raquo;<a href="../../XPConnect.html">XPConnect</a>&raquo;<a href="../xpcshell.html">xpcshell</a></nav><div class="content-heading"><h1>Profiling XPCShell</h1></div>
 <div class="content"><h3 id="Introduction" name="Introduction">Introduction</h3>
 <p>Sometimes, you might want to get a performance profile of a certain piece of JavaScript (like an XPCOM module), to see which part takes the most time. You could use <a href="en/Venkman">Venkman</a> for that. But sometimes, Venkman gives too much noise (because it also profiles chrome code). Or you might want to have a more reproducible testcase. In those cases, an <a href="en/Xpcshell">xpcshell</a> script can help. You can just call the code you want to test. But then, you can't use the Venkman UI.</p>
 <h3 id="XPCTools" name="XPCTools">XPCTools</h3>

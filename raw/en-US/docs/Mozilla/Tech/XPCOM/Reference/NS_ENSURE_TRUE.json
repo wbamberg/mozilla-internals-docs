@@ -1,0 +1,5 @@
+{
+    "content": "<h3 id=\"Summary\"> Summary </h3>\n<p><b>Macro</b>\n</p><p>Returns <i>return-value</i> if <i>expr</i> evaluates to <b>false</b>.\n</p>\n<h3 id=\"Syntax\"> Syntax </h3>\n<pre>NS_ENSURE_TRUE( expr, return-value );\n</pre>\n<p><br>\n</p>\n<h3 id=\"Usage\"> Usage </h3>\n<pre>nsresult mozMyClass::MozStringMucking()\n{\n  char *foo = new char[123];\n  NS_ENSURE_TRUE(foo, NS_ERROR_OUT_OF_MEMORY);\n\n  // This is equivalent to doing:\n  if (!foo)\n    return NS_ERROR_OUT_OF_MEMORY;\n\n  // Thou shalt not return NS_ERROR_FAILURE..\n  int i = 3;\n  NS_ENSURE_TRUE(i == 3, NS_ERROR_FAILURE);\n\n  return NS_OK;\n}\n\nchar* mozMyClass::DoStuff()\n{\n  char* bar = new char[321];\n  NS_ENSURE_TRUE(bar, nsnull);\n  \n  return bar;\n}\n</pre>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Bastiaan%20Jacques\">Bastiaan Jacques</a>",
+    "title": "NS ENSURE TRUE"
+}

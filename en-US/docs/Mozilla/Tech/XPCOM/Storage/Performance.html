@@ -8,7 +8,7 @@
     <title>Performance</title>
   </head>
 
-  <body><div class="content-heading"><h1>Performance</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XPCOM.html">XPCOM</a>&raquo;<a href="../Storage.html">Storage</a></nav><div class="content-heading"><h1>Performance</h1></div>
 <div class="content"><p><a href="/en-US/docs/Storage" title="/en-US/docs/Storage">mozStorage</a> uses <a href="https://en.wikipedia.org/wiki/SQLite" title="SQLite">SQLite</a> as the database backend. It has generally good performance for a small embedded database. However, many things cause various database operations to be slow.</p>
 <h3 id="Transactions" name="Transactions">Transactions</h3>
 <p>There is overhead associated with each transaction. When you execute a SQL statement in isolation, an implicit transaction is created around that statement. When transactions are committed, sqlite does journaling which requires syncing data to disk. This operation is extremely slow. Therefore, if you are doing many transactions in a row, you will get significant performance improvements by surrounding them in a transaction.</p>

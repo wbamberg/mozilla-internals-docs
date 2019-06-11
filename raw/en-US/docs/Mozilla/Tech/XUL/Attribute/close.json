@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\">\n  <span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n<dl>\n  <dt>\n    <code id=\"a-close\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/close\">close</a></code> </dt>\n  <dd>\n    Type: <em>boolean</em></dd>\n  <dd>\n    If the panel has a titlebar, set the panel's close attribute to <code>true</code> to have a close button appear on the titlebar. Pressing the close button will close the panel.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/ethertank\">ethertank</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Enn\">Enn</a>",
+    "title": "close"
+}

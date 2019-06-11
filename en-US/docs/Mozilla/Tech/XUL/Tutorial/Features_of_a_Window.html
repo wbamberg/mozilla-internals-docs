@@ -8,16 +8,20 @@
     <title>Features of a Window</title>
   </head>
 
-  <body><div class="content-heading"><h1>Features of a Window</h1></div>
-<div class="content"><p></p><div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/XUL_Tutorial:XBL_Example" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial:Creating_Dialogs">Next  »</a></p>
-</div><p></p>
+  <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Tutorial.html">Tutorial</a></nav><div class="content-heading"><h1>Features of a Window</h1></div>
+<div class="content"><p> </p>
+
+<div class="prevnext" style="text-align: right;">
+<p><a href="/en-US/docs/XUL_Tutorial:XBL_Example" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial:Creating_Dialogs">Next »</a></p>
+</div>
+
+<p> </p>
 
 <p>We've already seen some features of windows. We'll look at some more in this section.</p>
 
 <h3 id="Creating_Another_Window" name="Creating_Another_Window">Creating Another Window</h3>
 
-<p>You can create a second window for your application in the same manner as you would create the first one. Just create a second XUL file with the window code in it. As in HTML, you can use the <a href="/en-US/docs/Web/API/Window/open" title="The {{domxref(&quot;Window&quot;)}} interface's open() method loads the specified resource into the browsing context (window, {{HTMLElement(&quot;iframe&quot;)}} or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context."><code>Window.open()</code></a> function to open the second window. This function will return a reference to the newly opened window. You can use this reference to call functions of the other window.</p>
+<p>You can create a second window for your application in the same manner as you would create the first one. Just create a second XUL file with the window code in it. As in HTML, you can use the <a href="/en-US/docs/Web/API/Window/open" title="The &lt;a href="><code>Window</code></a> interface's open() method loads the specified resource into the browsing context (window, <a href="/en-US/docs/Web/HTML/Element/iframe" title="The HTML Inline Frame element (&lt;iframe>) represents a nested browsing context, embedding another HTML page into the current one."><code>&lt;iframe&gt;</code></a> or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context."&gt;<code>Window.open()</code> function to open the second window. This function will return a reference to the newly opened window. You can use this reference to call functions of the other window.</p>
 
 <p>The open function takes three arguments. The first is the URL of the file you wish to open. The second is an internal name of the window. The third is a list of display flags. The flag 'chrome' is important to open the window as a <a href="en/DOM/window.open#Toolbar_and_chrome_features">chrome</a> file. If you do not add the 'chrome' flag, the file will open up as the content in a browser window.</p>
 
@@ -29,10 +33,15 @@
 
 <p>You should have noticed that whenever elements were added to a window, the window's width expanded to fit the new elements. The window is really just a box which is flexible and defaults to vertical orientation. You can also specify the width and height directly on the <code><a href="/en-US/docs/Mozilla/Tech/XUL/window" title="window">window</a></code> tag. This, of course, causes the window to be displayed in a specific size. If you leave it out, the size is determined by the elements that are in it.</p>
 
-<p></p><div class="blockIndicator geckoMinVer standardNote">
-  <div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.2 note</div>
-  <div>Starting in Gecko 1.9.2 (Firefox 3.6), overriding the position of a window using window features will not change the persisted values saved by the session store feature. That means the next time the window is opened, it will still open in the saved location.</div>
-</div><p></p>
+<p> </p>
+
+<div class="blockIndicator geckoMinVer standardNote">
+<div style="text-align: center; font-weight: bold; padding-bottom: 0.5em;">Gecko 1.9.2 note</div>
+
+<div>Starting in Gecko 1.9.2 (Firefox 3.6), overriding the position of a window using window features will not change the persisted values saved by the session store feature. That means the next time the window is opened, it will still open in the saved location.</div>
+</div>
+
+<p> </p>
 
 <pre class="brush: xml;">&lt;window
   id="findfile-window"
@@ -68,12 +77,16 @@
  <dd>The user can resize the window.</dd>
 </dl>
 
-<p><small>See also <a href="/en-US/docs/Web/API/Window/open" title="The {{domxref(&quot;Window&quot;)}} interface's open() method loads the specified resource into the browsing context (window, {{HTMLElement(&quot;iframe&quot;)}} or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context."><code>Window.open()</code></a></small></p>
+<p><small>See also <a href="/en-US/docs/Web/API/Window/open" title="The &lt;a href="><code>Window</code></a> interface's open() method loads the specified resource into the browsing context (window, <a href="/en-US/docs/Web/HTML/Element/iframe" title="The HTML Inline Frame element (&lt;iframe>) represents a nested browsing context, embedding another HTML page into the current one."><code>&lt;iframe&gt;</code></a> or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context."&gt;<code>Window.open()</code></small></p>
 
 <p>Next, we'll look at how to <a href="/en/XUL_Tutorial:Creating_Dialogs">open secondary dialogs</a>.</p>
 
-<p></p><div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/XUL_Tutorial:XBL_Example" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial:Creating_Dialogs">Next  »</a></p>
-</div><p></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
-<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/arndissler">arndissler</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/Chbok">Chbok</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, <a href="https://developer.mozilla.org/en-US/profiles/Morishoji">Morishoji</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+<p><a href="/en-US/docs/XUL_Tutorial:XBL_Example" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial:Creating_Dialogs">Next »</a></p>
+</div>
+
+<p> </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/Fernandolrs">Fernandolrs</a>, <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/arndissler">arndissler</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/Chbok">Chbok</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, <a href="https://developer.mozilla.org/en-US/profiles/Morishoji">Morishoji</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
 </html>

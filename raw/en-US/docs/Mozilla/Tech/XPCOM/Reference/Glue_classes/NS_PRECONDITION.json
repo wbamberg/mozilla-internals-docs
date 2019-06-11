@@ -1,0 +1,5 @@
+{
+    "content": "<p>\n</p>\n<h3 id=\"Summary\"> Summary </h3>\n<p><b>Macro</b>\n</p><p>Has the same effect as <a href=\"en/NS_ASSERTION\">NS_ASSERTION</a>. Should be used to test conditions that the caller of a method ought to ensure.\n</p>\n<h3 id=\"Syntax\"> Syntax </h3>\n<pre class=\"eval\">NS_PRECONDITION(expressionToTest, \"error text\");\n</pre>\n<h3 id=\"See_also\"> See also </h3>\n<ul><li> <a href=\"en/NS_ASSERTION\">NS_ASSERTION</a>\n</li><li> <a href=\"en/NS_POSTCONDITION\">NS_POSTCONDITION</a>\n</li></ul>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Nickolay\">Nickolay</a>",
+    "title": "NS_PRECONDITION"
+}

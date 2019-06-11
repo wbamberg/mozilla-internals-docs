@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs XULRefProp_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"XUL_Reference\">XUL Reference</a></span></div>\n\n<dl>\n <dt><code><span><a href=\"https://developer.mozilla.org/en-US/docs/XUL/Property/hasUserValue\">hasUserValue</a></span></code></dt>\n <dd>Type: <em>boolean</em></dd>\n <dd><code>True</code> if the preference has been changed from its default value.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>",
+    "title": "hasUserValue"
+}

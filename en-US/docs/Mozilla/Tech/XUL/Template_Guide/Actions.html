@@ -8,11 +8,11 @@
     <title>Actions</title>
   </head>
 
-  <body><div class="content-heading"><h1>Actions</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Template_Guide.html">Template_Guide</a></nav><div class="content-heading"><h1>Actions</h1></div>
 <div class="content"><p></p><div class="prevnext" style="text-align: right;">
     <p><a href="/en-US/docs/XUL/Template_Guide/RDF_Query_Syntax" style="float: left;">« Previous</a><a href="/en-US/docs/XUL/Template_Guide/Recursive_Generation">Next  »</a></p>
 </div><p></p>
-<p>The content to generate in a template is specified using the <code><a href="/en-US/docs/Mozilla/Tech/XUL/action" title="action">action</a></code> element which should either be the next sibling of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/query" title="query">query</a></code> element (if no rules need be specified) or be a direct child of a <code><a href="/en-US/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> element. The content to generate goes directly inside the <code>action</code> element. This content will be copied for each matching result (though see below for an exception) and inserted into the document. Let's look at a simple example first.</p>
+<p>The content to generate in a template is specified using the <code><a href="/en-US/docs/Mozilla/Tech/XUL/action">&lt;xul:action&gt;</a></code> element which should either be the next sibling of the <code><a href="/en-US/docs/Mozilla/Tech/XUL/query">&lt;xul:query&gt;</a></code> element (if no rules need be specified) or be a direct child of a <code><a href="/en-US/docs/Mozilla/Tech/XUL/rule">&lt;xul:rule&gt;</a></code> element. The content to generate goes directly inside the <code>action</code> element. This content will be copied for each matching result (though see below for an exception) and inserted into the document. Let's look at a simple example first.</p>
 <pre>&lt;vbox datasources="http://www.xulplanet.com/ds/sample.rdf"
          ref="http://www.xulplanet.com/rdf/A"&gt;
   &lt;template&gt;
@@ -28,7 +28,7 @@
   &lt;/template&gt;
 &lt;/vbox&gt;
 </pre>
-<p>In this example, we omit the <code><a href="/en-US/docs/Mozilla/Tech/XUL/rule" title="rule">rule</a></code> element around the <code><a href="/en-US/docs/Mozilla/Tech/XUL/action" title="action">action</a></code> as it is optional when we want to generate content unconditionally. Instead, the <code>action</code> element is placed directly inside the <code><a href="/en-US/docs/Mozilla/Tech/XUL/template" title="template">template</a></code> element after the query is defined. This action contains only one element, but you can put as many or as few elements as you need. In this case, a button will be created for each result. There are three results, so three buttons will be created. Here is the [<a href="/samples/xultemp/template-guide-ex1.xul">example</a>], and an image of what it looks like:</p>
+<p>In this example, we omit the <code><a href="/en-US/docs/Mozilla/Tech/XUL/rule">&lt;xul:rule&gt;</a></code> element around the <code><a href="/en-US/docs/Mozilla/Tech/XUL/action">&lt;xul:action&gt;</a></code> as it is optional when we want to generate content unconditionally. Instead, the <code>action</code> element is placed directly inside the <code><a href="/en-US/docs/Mozilla/Tech/XUL/template">&lt;xul:template&gt;</a></code> element after the query is defined. This action contains only one element, but you can put as many or as few elements as you need. In this case, a button will be created for each result. There are three results, so three buttons will be created. Here is the [<a href="/samples/xultemp/template-guide-ex1.xul">example</a>], and an image of what it looks like:</p>
 <p><img alt="Image:template-guide-p8.png" src="/samples/xultemp/template-guide-p8.png"></p>
 <p>The template builder iterates through the three results, processing the body of the action for each one in turn. The uri attribute on the button is used to specify the ending or member variable. In this example, there's only one variable to use, ?relateditem, since ?start is the starting point and the start and end points cannot be the same. There are a number of things that will happen for each result. Let's look at the results again:</p>
 <pre>(?start = http://www.xulplanet.com/rdf/A, ?relateditem = http://www.xulplanet.com/rdf/B)

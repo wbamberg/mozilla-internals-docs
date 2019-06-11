@@ -1,0 +1,5 @@
+{
+    "content": "<p>Defined in <strong><a class=\" external\" href=\"http://mxr.mozilla.org/comm-central/source/\">comm-central</a>/ <a class=\" external\" href=\"http://mxr.mozilla.org/comm-central/source/mailnews/\">mailnews</a>/ <a class=\" external\" href=\"http://mxr.mozilla.org/comm-central/source/mailnews/base/\">base</a>/ <a class=\" external\" href=\"http://mxr.mozilla.org/comm-central/source/mailnews/base/public/\">public</a>/ <a class=\" external\" href=\"http://mxr.mozilla.org/comm-central/source/mailnews/base/public/MailNewsTypes2.idl\">MailNewsTypes2.idl</a> </strong></p>\n<pre>typedef unsigned long nsMsgLabelValue;\n</pre>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/RealRaven2000\">RealRaven2000</a>",
+    "title": "nsMsgLabelValue"
+}

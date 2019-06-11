@@ -1,0 +1,5 @@
+{
+    "content": "<p>\n« <a href=\"/en-US/docs/XPCOM_API_Reference\">XPCOM API Reference</a>\n</p>\n<h3 id=\"Summary\" name=\"Summary\">Summary</h3>\n<p>The <code>Length</code> function returns the number of storage units in the string's internal buffer (not including the null-terminator if present).\n</p>\n<pre class=\"eval\"> size_type Length() const;\n</pre>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Pmash\">Pmash</a>",
+    "title": "Length"
+}

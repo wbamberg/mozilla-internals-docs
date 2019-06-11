@@ -8,7 +8,7 @@
     <title>mozIStorageStatementWrapper</title>
   </head>
 
-  <body><div class="content-heading"><h1>mozIStorageStatementWrapper</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>mozIStorageStatementWrapper</h1></div>
 <div class="content"><p> The <code>mozIStorageStatementWrapper</code> interface is a storage statement wrapper. When you call the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code> interface's <code><a href="/en/mozIStorageConnection#createStatement" title="en/mozIStorageConnection#createStatement">createStatement()</a></code> method, you get a <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> which has just direct bindings to SQLITE. You can then wrap that statement with a wrapper, which implements <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXPCScriptable" title="">nsIXPCScriptable</a></code> and provides scriptable helpers letting you execute the statement as a function, access bind variables by name as properties, etc.</p>
 <p></p><div class="blockIndicator standardNote">
     <p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3.5">Firefox 3.5 note</a></p>

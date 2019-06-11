@@ -1,0 +1,5 @@
+{
+    "content": "<p>\n</p><p><a href=\"/en-US/docs/Accessibility:AT-APIs:Gecko:Roles\">« Gecko Roles Page</a>\n</p>\n<h2 id=\"Description\" name=\"Description\">Description</h2>\n<p>A text entry having dialog or list containing items for insertion into an entry widget, for instance a list of words for completion of a text entry.\n</p>\n<h2 id=\"Mapped_to\" name=\"Mapped_to\">Mapped to</h2>\n<ul><li> AT-SPI: ROLE_AUTOCOMPLETE\n</li><li> ATK: NSAccessibilityComboBoxRole\n</li><li> UA: @\"AXRuler\"\n</li><li> MSAA/IA2: ROLE_SYSTEM_COMBOBOX\n</li></ul>\n<h2 id=\"Used_by\" name=\"Used_by\">Used by</h2>\n<ul><li> XUL: &lt;<code><a href=\"/en-US/docs/Mozilla/Tech/XUL/textbox\" title=\"textbox\">textbox</a></code> type=\"autocomplete\"/&gt;\n</li></ul>\n",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/ExE-Boss\">ExE-Boss</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Michael%20Evil\">Michael Evil</a>",
+    "title": "ROLE AUTOCOMPLETE"
+}

@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\">\n <span class=\"breadcrumbs XULRefProp_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"XUL_Reference\">XUL Reference</a></span></div>\n<dl>\n <dt>\n  <code><span><a href=\"https://developer.mozilla.org/en-US/docs/XUL/Property/editable\">editable</a></span></code> </dt>\n <dd>\n  Type: <em>boolean</em></dd>\n <dd>\n  Returns <code>true</code> if the element is editable. Autocomplete fields are editable so this property always returns <code>true</code> for those.</dd>\n</dl>\n<p> </p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Marsf\">Marsf</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Mgjbot\">Mgjbot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Dria\">Dria</a>",
+    "title": "editable"
+}

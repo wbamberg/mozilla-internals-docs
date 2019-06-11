@@ -8,7 +8,7 @@
     <title>nsIXULTemplateBuilder</title>
   </head>
 
-  <body><div class="content-heading"><h1>nsIXULTemplateBuilder</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIXULTemplateBuilder</h1></div>
 <div class="content"><p>The <code>nsITemplateBuilder</code> interface controls the display of elements using a XUL template element and is automatically attached to an element containing a <code>datasources</code> attribute. A template builder, given an input source of data, a template, and a reference point, generates a list of results from the input, and copies part of the template for each result. Templates may generate content recursively, using the same template, but with the previous iteration's results as the reference point. As an example, for an XML data source the initial reference point would be a specific node in the DOM tree and a template might generate a list of all child nodes. For the next iteration, those children would be used to generate output for their child nodes and so forth.</p>
 <p>A template builder is attached to a single DOM node; this node is called the <strong>root node</strong> and is expected to contain a XUL <code>template</code> element as a direct child. Different template builders may be specialized in the manner in which they generate and display the resulting content from the template.</p>
 <p>The structure of a template is as follows:</p>

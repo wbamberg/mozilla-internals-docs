@@ -1,0 +1,5 @@
+{
+    "content": "<p><a href=\"/en-US/docs/Accessibility:AT-APIs:Gecko:Roles\">« Gecko Roles Page</a></p>\n<p>Represents a menu item, which is an entry in a menu that a user can choose to display another menu.</p>\n<h2 id=\"Mapped_to\" name=\"Mapped_to\">Mapped to</h2>\n<ul>\n <li>AT-SPI: <code>ROLE_MENU</code></li>\n <li>ATK: <code>ATK_ROLE_MENU</code></li>\n <li>UA: <code>NSAccessibilityMenuItemRole</code></li>\n <li>MSAA/IA2: <code>ROLE_SYSTEM_MENUITEM</code></li>\n</ul>\n<h2 id=\"Used_by\" name=\"Used_by\">Used by</h2>\n<ul>\n <li>XUL: <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/menuitem\" title=\"menuitem\">menuitem</a></code></li>\n</ul>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/ExE-Boss\">ExE-Boss</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Michael%20Evil\">Michael Evil</a>",
+    "title": "ROLE_PARENT_MENUITEM"
+}

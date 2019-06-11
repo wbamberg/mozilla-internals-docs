@@ -1,0 +1,5 @@
+{
+    "content": "<p>Quitting Mozilla:\n</p>\n<pre class=\"eval\">var Cc = Components.classes;\nvar Ci = Components.interfaces;\nshell = Cc[\"@mozilla.org/appshell/appShellService;1\"];\nshell = shell.getService(Ci.nsIAppShellService);\nshell.quit(3); // eForceQuit\n</pre>\n<p>Bam! There goes Mozilla.\n</p><p>Then again, there's a much easier way; One of the <a href=\"en/Xpcshell\">xpcshell</a> <a class=\"external\" href=\"http://www.mozilla.org/scriptable/XPCShell.html\">extensions</a> is a quit function:\n</p>\n<pre class=\"eval\">quit(3)\n</pre>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/groovecoder\">groovecoder</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Nickolay\">Nickolay</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/LionKimbro\">LionKimbro</a>",
+    "title": "appShellService"
+}

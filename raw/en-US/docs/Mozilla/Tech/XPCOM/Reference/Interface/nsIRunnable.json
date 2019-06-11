@@ -1,0 +1,5 @@
+{
+    "content": "<div>\n nsIRunnable is generated from  nsIRunnable.idl</div>\n<div>\n  </div>\n<div>\n Here is the prototype of nsIRunnable.idl</div>\n<div>\n  </div>\n<div>\n /**</div>\n<div>\n  * Represents a task which can be dispatched to a thread for execution.</div>\n<div>\n  */</div>\n<div>\n  </div>\n<div>\n <div>\n  interface nsIRunnable : nsISupports</div>\n <div>\n  {</div>\n <div>\n      /**</div>\n <div>\n       * The function implementing the task to be run.</div>\n <div>\n       */</div>\n <div>\n      void run();</div>\n <div>\n  };</div>\n <div>\n   </div>\n</div>\n<p> </p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>",
+    "title": "nsIRunnable"
+}

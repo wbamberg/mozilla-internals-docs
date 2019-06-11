@@ -1,0 +1,5 @@
+{
+    "content": "<p>\n</p>\n<h3 id=\"Summary\"> Summary </h3>\n<p><b>Macro</b>\n</p><p>Shows a warning on the console (stderr) and in debug logs (NSPR logging). Contrary to <a href=\"en/NS_ERROR\">NS_ERROR</a> this is meant for noncritical errors.\n</p>\n<h3 id=\"Syntax\"> Syntax </h3>\n<pre class=\"eval\">NS_WARNING(\"warning text\");\n</pre>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Editmonkey\">Editmonkey</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/cbiesinger\">cbiesinger</a>",
+    "title": "NS_WARNING"
+}

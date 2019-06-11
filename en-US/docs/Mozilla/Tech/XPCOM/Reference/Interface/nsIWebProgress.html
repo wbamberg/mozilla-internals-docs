@@ -8,7 +8,7 @@
     <title>nsIWebProgress</title>
   </head>
 
-  <body><div class="content-heading"><h1>nsIWebProgress</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIWebProgress</h1></div>
 <div class="content"><p>The <code>nsIWebProgress</code> interface is used to add or remove <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener" title="">nsIWebProgressListener</a></code> instances to observe the loading of asynchronous requests (usually in the context of a DOM window).</p>
 <p><code>nsIWebProgress</code> instances may be arranged in a parent-child configuration, corresponding to the parent-child configuration of their respective DOM windows. However, in some cases a <code>nsIWebProgress</code> instance may not have an associated DOM window. The parent-child relationship of <code>nsIWebProgress</code> instances is not made explicit by this interface, but the relationship may exist in some implementations.</p>
 <p>A <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebProgressListener" title="">nsIWebProgressListener</a></code> instance receives notifications for the <code>nsIWebProgress</code> instance to which it added itself, and it may also receive notifications from any <code>nsIWebProgress</code> instances that are children of that <code>nsIWebProgress</code> instance.</p>

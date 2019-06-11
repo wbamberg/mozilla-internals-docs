@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n\n<dl>\n <dt><code id=\"a-progressmeter.max\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/progressmeter.max\">max</a></code> </dt>\n <dd>Type: <em>integer</em></dd>\n</dl>\n\n<dl>\n <dd>The maximum value that progressmeter may have. The default value if not specified is 100 such that the value may be used as a percentage.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>",
+    "title": "progressmeter.max"
+}

@@ -1,0 +1,5 @@
+{
+    "content": "<h3 id=\"Summary\"> Summary </h3>\n<p><b>Macro</b>\n</p><p>Returns <i>return-value</i> if <a href=\"en/NS_FAILED\">NS_FAILED</a>(<i>nsresult</i>) evaluates to <b>true</b>, and shows a warning on stderr in that case.\n</p>\n<h3 id=\"Syntax\"> Syntax </h3>\n<pre>NS_ENSURE_SUCCESS(nsresult, return-value);\n</pre>\n<p><br>\n</p>\n<h3 id=\"Usage\"> Usage </h3>\n<pre>nsresult mozMyClass::MozStringMucking()\n{\n  nsresult rv = NS_CStringCopy(mDestString, mSrcString);\n  NS_ENSURE_SUCCESS(rv, rv);\n\n  // this is the same as doing:\n  nsresult rv = NS_CStringCopy(mDestString, mSrcString);\n  if (NS_FAILED(rv))\n    return rv;\n\n  return NS_OK;\n}\n</pre>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/cbiesinger\">cbiesinger</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Callek\">Callek</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Bastiaan%20Jacques\">Bastiaan Jacques</a>",
+    "title": "NS ENSURE SUCCESS"
+}

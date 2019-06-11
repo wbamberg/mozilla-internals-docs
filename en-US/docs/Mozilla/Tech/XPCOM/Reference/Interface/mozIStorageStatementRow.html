@@ -8,7 +8,7 @@
     <title>mozIStorageStatementRow</title>
   </head>
 
-  <body><div class="content-heading"><h1>mozIStorageStatementRow</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>mozIStorageStatementRow</h1></div>
 <div class="content"><p>This interface has no defined properties, but has properties based on the name of the columns in the SQL result from the statement it was accessed off of.  For example, say you create a statement like so:</p>
 <pre class="brush: js"><span><span class="keyword">var</span><span> statement = dbConn.createStatement(</span><span class="string">"SELECT id, name FROM table_name"</span><span>);  </span></span></pre>
 <p>The object would have two properties, <code>id</code> and <code>name</code>, that can be used to get the value of the column after you have called <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeStep()">mozIStorageStatement.executeStep()</a></code> like so:</p>

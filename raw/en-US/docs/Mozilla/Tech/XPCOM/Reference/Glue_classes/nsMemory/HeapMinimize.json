@@ -1,0 +1,5 @@
+{
+    "content": "<p>\n« <a href=\"/en-US/docs/XPCOM_API_Reference\">XPCOM API Reference</a>\n</p>\n<h3 id=\"Summary\" name=\"Summary\">Summary</h3>\n<p>The <code>HeapMinimize</code> function attempts to shrink the size of the heap.\n</p>\n<pre class=\"eval\"> static nsresult HeapMinimize(\n   PRBool aImmediate\n );\n</pre>\n<h3 id=\"Parameters\" name=\"Parameters\">Parameters</h3>\n<dl><dt>aImmediate\n</dt><dd> [in] If true, heap minimization will occur immediately if the call was made on the main thread. If false, the flush will be scheduled to happen when the app is idle. </dd></dl>\n<h3 id=\"Return_Values\" name=\"Return_Values\">Return Values</h3>\n<p>This function return NS_OK if successful. Otherwise, it returns an error code.\n</p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Pmash\">Pmash</a>",
+    "title": "HeapMinimize"
+}

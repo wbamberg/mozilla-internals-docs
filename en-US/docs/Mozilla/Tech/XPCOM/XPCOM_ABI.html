@@ -8,7 +8,7 @@
     <title>XPCOM ABI</title>
   </head>
 
-  <body><div class="content-heading"><h1>XPCOM ABI</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XPCOM.html">XPCOM</a></nav><div class="content-heading"><h1>XPCOM ABI</h1></div>
 <div class="content"><p><a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> <abbr title="Application Binary Interface">ABI</abbr> is the binary interface of XPCOM components. While XPCOM components written in a scripting language (such as <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a>) can be moved across platforms (such as Windows and OS X) without adaptation, those written in a compiled language (such as C++) require recompilation when moving to a different platform. Often, compiled XPCOM components are called 'binary' or 'native'.</p>
 
 <p>A binary XPCOM component consists of an <code>.xpt</code> file which fits all platforms and a <abbr title="Dynamic Link Library">DLL</abbr> (<code>.dll</code> on Windows, <code>.so</code> on Unix) which is platform-specific and has a certain ABI. Only applications which use this ABI could use this XPCOM component. To put it simply, an XPCOM component built for a specific ABI would only be compatible with Firefox, Thunderbird or other XULRunner application built for the same ABI.</p>

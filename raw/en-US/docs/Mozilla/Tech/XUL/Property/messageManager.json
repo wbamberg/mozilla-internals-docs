@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\">\n  <span class=\"breadcrumbs XULRefProp_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"XUL_Reference\">XUL Reference</a></span></div>\n<dl>\n  <dt>\n    <code><span><a href=\"https://developer.mozilla.org/en-US/docs/XUL/Property/messageManager\">messageManager</a></span></code> </dt>\n  <dd>\n    Type: <em>message manager object</em></dd>\n  <dd>\n    This read-only property returns the <a href=\"/en/The_message_manager\" title=\"en/The message manager\">message manager</a> object for the <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/browser\" title=\"browser\">browser</a></code> element.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/ethertank\">ethertank</a>",
+    "title": "messageManager"
+}

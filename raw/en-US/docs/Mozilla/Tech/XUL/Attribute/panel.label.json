@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\">\n  <span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n<dl>\n  <dt><code id=\"a-panel.label\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/panel.label\">label</a></code> </dt>\n  <dd>Type: <em>string</em></dd>\n  <dd>For panels with titlebars, the label on the titlebar.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/ethertank\">ethertank</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/pippijn\">pippijn</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Enn\">Enn</a>",
+    "title": "panel.label"
+}

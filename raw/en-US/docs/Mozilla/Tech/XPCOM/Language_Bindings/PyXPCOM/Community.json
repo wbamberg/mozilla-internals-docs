@@ -1,0 +1,5 @@
+{
+    "content": "<p>\n</p><p>If you know of useful mailing lists, newsgroups, forums, or other communities related to <a href=\"en/PyXPCOM\">PyXPCOM</a>, please link to them here.\n</p>\n<dl><dt> <a class=\"external\" href=\"http://listserv.activestate.com/mailman/listinfo/pyxpcom\">ActiveState Python XPCOM bindings mailing list</a>\n</dt><dd> Discussion of the bindings between the Python language and the XPCOM (cross-platform COM) technology from the Mozilla project.\n</dd></dl>\n<dl><dt> <a class=\"link-irc\" href=\"irc://irc.mozilla.org:6667/pyxpcom\">#pyxpcom on irc.mozilla.org</a>\n</dt><dd> Chat with other PyXPCOM developers on Mozilla's IRC network.\n</dd></dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Nickolay\">Nickolay</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Alex%20Tarkovsky\">Alex Tarkovsky</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Andreas%20Wuest\">Andreas Wuest</a>",
+    "title": "Community"
+}

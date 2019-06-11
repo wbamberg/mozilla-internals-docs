@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n\n<dl>\n <dt><code id=\"a-prefwindow.onload\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/prefwindow.onload\">prefwindow.onload</a></code></dt>\n <dd>Type: <em>script code</em></dd>\n <dd>When a window finishes loading, it calls this event handler on the <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/prefwindow\" title=\"prefwindow\">prefwindow</a></code> element.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>",
+    "title": "prefwindow.onload"
+}

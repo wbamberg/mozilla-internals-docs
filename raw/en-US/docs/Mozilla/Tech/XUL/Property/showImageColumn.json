@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs XULRefProp_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"XUL_Reference\">XUL Reference</a></span></div>\n<dl> <dt><code><span><a href=\"https://developer.mozilla.org/en-US/docs/XUL/Property/showImageColumn\">showImageColumn</a></span></code></dt> <dd>Type: <em>boolean</em></dd> <dd>Gets and sets the value of the <code id=\"a-showimagecolumn\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/showimagecolumn\">showimagecolumn</a></code> attribute.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Neil\">Neil</a>",
+    "title": "showImageColumn"
+}

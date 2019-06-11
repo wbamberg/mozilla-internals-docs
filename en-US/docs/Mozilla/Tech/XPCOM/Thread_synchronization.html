@@ -8,7 +8,7 @@
     <title>XPCOM Thread Synchronization</title>
   </head>
 
-  <body><div class="content-heading"><h1>XPCOM Thread Synchronization</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XPCOM.html">XPCOM</a></nav><div class="content-heading"><h1>XPCOM Thread Synchronization</h1></div>
 <div class="content"><p>XPCOM thread synchronization primitives have the same semantics as those in NSPR, and each method of these synchronization objects (e.g. <code>Mutex::Lock()</code>) has a matching function in NSPR (<code>PR_Lock()</code>). This is no accident, as mozilla:: primitives are merely bare-minimum wrappers around NSPR's.</p>
 <p>This article covers the API of Mozilla synchronization only. For a higher-level introduction to thread synchronization, see <a href="/en/NSPR_API_Reference/Introduction_to_NSPR#NSPR_Thread_Synchronization" title="en/NSPR_API_Reference/Introduction_to_NSPR#NSPR_Thread_Synchronization">Introduction_to_NSPR</a>.</p>
 <h2 id="Quick_reference_Difference_between_nsAutoLock_API_and_new_API">Quick reference: Difference between nsAutoLock API and new API</h2>

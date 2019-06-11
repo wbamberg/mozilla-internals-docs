@@ -1,0 +1,5 @@
+{
+    "content": "<p><code>Components.manager</code> is a convenience reflection of the global native component manager service. The scriptable methods on the <code><a href=\"/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIComponentManager\" title=\"\">nsIComponentManager</a></code> interface can be called directly on this object.</p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/SphinxKnight\">SphinxKnight</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/trevorh\">trevorh</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Mgjbot\">Mgjbot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Andreas%20Wuest\">Andreas Wuest</a>",
+    "title": "Components.manager"
+}

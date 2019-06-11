@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"warning\">\n<p>FUEL is deprecated as of Firefox 40. Consider using the <a href=\"/Add-ons/SDK\">Add-ons SDK</a> instead</p>\n</div>\n\n<p>This should be redrected to <a href=\"/Toolkit_API/extIApplication\" title=\"/Toolkit_API/extIApplication\">extIApplication</a>.</p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/LouCypher\">LouCypher</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Nickolay\">Nickolay</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/jenzed\">jenzed</a>",
+    "title": "fuelIApplication"
+}

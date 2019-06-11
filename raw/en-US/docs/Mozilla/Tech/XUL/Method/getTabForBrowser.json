@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\">\n <span class=\"breadcrumbs XULRefMeth_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"/en-US/docs/XUL_Reference\">XUL Reference home</a></span></div>\n<dl>\n <dt>\n  <span id=\"m-getTabForBrowser\"><code><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/getTabForBrowser\">getTabForBrowser( browser )</a></code></span> </dt>\n <dd>\n  Return type:<em> <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/tab\" title=\"tab\">tab</a></code></em></dd>\n <dd>\n  Returns the XUL <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/tab\" title=\"tab\">tab</a></code> which contains the specified <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/browser\" title=\"browser\">browser</a></code>.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>",
+    "title": "getTabForBrowser"
+}

@@ -1,0 +1,5 @@
+{
+    "content": "<p><a href=\"/en-US/docs/Accessibility:AT-APIs:Gecko:Roles\">« Gecko Roles Page</a></p>\n\n<h2 id=\"Description\" name=\"Description\">Description</h2>\n\n<p>Represents the calendar control.</p>\n\n<h2 id=\"Mapped_to\" name=\"Mapped_to\">Mapped to</h2>\n\n<ul>\n <li>AT-SPI: <code>ROLE_COMBO_BOX</code></li>\n <li>ATK: <code>ATK_ROLE_COMBO_BOX</code></li>\n <li>UA: <code>NSAccessibilityPopUpButtonRole</code></li>\n <li>MSAA/IA2: <code>ROLE_SYSTEM_DROPLIST</code></li>\n</ul>\n\n<h2 id=\"Used_by\" name=\"Used_by\">Used by</h2>\n\n<p></p><section class=\"Quick_links\" id=\"Quick_Links\">\n\n</section><p></p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/ExE-Boss\">ExE-Boss</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Michael%20Evil\">Michael Evil</a>",
+    "title": "ROLE_DROPLIST"
+}

@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs xulRefAttr_breadcrumbs\">« <a href=\"/en-US/docs/XUL/XUL_Reference\">XUL Reference home</a></span></div>\n<dl> <dt><code id=\"a-tabmodalPromptShowing\"><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/tabmodalPromptShowing\">tabmodalPromptShowing</a></code> </dt> <dd>Type: <em>integer</em></dd> <dd>The number of tab modal prompts currently attached to the current tab.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/pippijn\">pippijn</a>",
+    "title": "tabmodalPromptShowing"
+}

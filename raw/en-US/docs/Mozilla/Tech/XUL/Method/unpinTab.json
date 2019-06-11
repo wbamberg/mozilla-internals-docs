@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs XULRefMeth_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"/en-US/docs/XUL_Reference\">XUL Reference home</a></span></div>\n<dl> <dt><span id=\"m-unpinTab\"><code><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/unpinTab\">unpinTab( tabElement )</a></code></span> </dt> <dd>Return type: <em>no return value</em></dd> <dd>Unpins the specified <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/tab\" title=\"tab\">tab</a></code> element, making it no longer an app tab.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>",
+    "title": "unpinTab"
+}

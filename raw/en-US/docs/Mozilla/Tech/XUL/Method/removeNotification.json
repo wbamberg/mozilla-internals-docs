@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs XULRefMeth_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"/en-US/docs/XUL_Reference\">XUL Reference home</a></span></div>\n\n<dl>\n <dt><span id=\"m-removeNotification\"><code><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/removeNotification\">removeNotification( item )</a></code></span></dt>\n <dd>Return type: <em>element</em></dd>\n <dd>Remove a notification, displaying the next one if the removed item is the current one.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/SphinxKnight\">SphinxKnight</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Marsf\">Marsf</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/2bass\">2bass</a>",
+    "title": "removeNotification"
+}

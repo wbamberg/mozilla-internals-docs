@@ -8,7 +8,7 @@
     <title>How to implement a custom XUL query processor component</title>
   </head>
 
-  <body><div class="content-heading"><h1>How to implement a custom XUL query processor component</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XUL.html">XUL</a></nav><div class="content-heading"><h1>How to implement a custom XUL query processor component</h1></div>
 <div class="content"><p>XUL supports templating to create a block of content from a datasource query. The <a href="en/XUL/Template_Guide"> XUL Template Guide</a> has lots of detailed information on using XUL templates. XUL provides template query processors for RDF, XML and SQL (<a href="en/Storage">mozStorage</a>). The templating system also supports building custom query processors. Custom query processors are XPCOM components, must implement the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULTemplateQueryProcessor" title="">nsIXULTemplateQueryProcessor</a></code> interface and follow some conventions for when registering the component.</p>
 
 <p>In this example, we will create a simple <a href="en/How_to_Build_an_XPCOM_Component_in_Javascript"> JavaScript XPCOM component</a>. The component will hold a small array of JavaScript objects as its datasource. In practice, you would use your own custom source of data.</p>

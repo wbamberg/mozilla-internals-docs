@@ -1,0 +1,5 @@
+{
+    "content": "<p>\n</p>\n<h3 id=\"Summary\"> Summary </h3>\n<p><b>Macro</b>\n</p><p>Returns <a href=\"en/NS_ERROR_INVALID_POINTER\">NS_ERROR_INVALID_POINTER</a> if the macro argument evaluates to false and shows a warning (<a href=\"en/NS_WARNING\">NS_WARNING</a>) in this case.\n</p><p>Refer to <code><a href=\"https://dxr.mozilla.org/mozilla-central/source/xpcom/glue/nsDebug.h\" rel=\"custom\">xpcom/glue/nsDebug.h</a></code> for details.\n</p>\n<h3 id=\"Syntax\"> Syntax </h3>\n<pre>NS_ENSURE_ARG_POINTER(aPointer);\n</pre>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/teoli\">teoli</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/cbiesinger\">cbiesinger</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/LeongChiang\">LeongChiang</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Editmonkey\">Editmonkey</a>",
+    "title": "NS_ENSURE_ARG_POINTER"
+}

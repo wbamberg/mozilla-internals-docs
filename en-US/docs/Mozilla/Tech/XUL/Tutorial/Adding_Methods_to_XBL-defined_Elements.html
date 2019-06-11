@@ -8,16 +8,20 @@
     <title>Adding Methods to XBL-defined Elements</title>
   </head>
 
-  <body><div class="content-heading"><h1>Adding Methods to XBL-defined Elements</h1></div>
-<div class="content"><p></p><div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/XUL_Tutorial/Adding_Properties_to_XBL-defined_Elements" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements">Next  »</a></p>
-</div><p></p>
+  <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Tutorial.html">Tutorial</a></nav><div class="content-heading"><h1>Adding Methods to XBL-defined Elements</h1></div>
+<div class="content"><p> </p>
+
+<div class="prevnext" style="text-align: right;">
+<p><a href="/en-US/docs/XUL_Tutorial/Adding_Properties_to_XBL-defined_Elements" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements">Next »</a></p>
+</div>
+
+<p> </p>
 
 <p>Next, we'll find out how to add custom methods to <a href="/en-US/docs/XBL" title="en/XBL">XBL</a>-defined elements.</p>
 
 <h3 id="Methods" name="Methods">Methods</h3>
 
-<p>In addition to adding script properties to the XBL-defined element, you can also add methods. These methods can be called from a script. Methods are the functions of objects, such as <a href="/en-US/docs/Web/API/Window/open" title="The {{domxref(&quot;Window&quot;)}} interface's open() method loads the specified resource into the browsing context (window, {{HTMLElement(&quot;iframe&quot;)}} or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context."><code>Window.open()</code></a>. You can define custom methods for your elements using the <code><a href="/en-US/docs/XBL/XBL_1.0_Reference/Elements#method">method</a></code> element. The general syntax of methods is as follows:</p>
+<p>In addition to adding script properties to the XBL-defined element, you can also add methods. These methods can be called from a script. Methods are the functions of objects, such as <a href="/en-US/docs/Web/API/Window/open" title="The &lt;a href="><code>Window</code></a> interface's open() method loads the specified resource into the browsing context (window, <a href="/en-US/docs/Web/HTML/Element/iframe" title="The HTML Inline Frame element (&lt;iframe>) represents a nested browsing context, embedding another HTML page into the current one."><code>&lt;iframe&gt;</code></a> or tab) with the specified name. If the name doesn't exist, then a new window is opened and the specified resource is loaded into its browsing context."&gt;<code>Window.open()</code>. You can define custom methods for your elements using the <code><a href="/en-US/docs/XBL/XBL_1.0_Reference/Elements#method">method</a></code> element. The general syntax of methods is as follows:</p>
 
 <pre class="brush: xml;">&lt;implementation&gt;
   &lt;method name="method-name"&gt;
@@ -126,7 +130,7 @@ element.getMaximum() // this will fail</pre>
 
 <p>To go the other way, and get the bound element from inside the anonymous content, you can use the <a href="/en-US/docs/XBL/XBL_1.0_Reference/DOM_Interfaces#getBindingParent" title="en/XBL/XBL_1.0_Reference/DOM_Interfaces#getBindingParent">getBindingParent</a> method of the document to get the element that the binding is bound to. You can also use the the <a href="/en-US/docs/DOM/Node.parentNode" title="En/DOM/Node.parentNode">parentNode</a> property to go up by a single node, but the <code>getBindingParent</code> method is useful for a node that is nested several levels deep. For example, we could move the Show and Hide buttons into the XBL file and do the following:</p>
 
-<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblmethods_1.xml.txt">Source</a></p>
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_xblmethods_1.xml.txt">Source</a></p>
 
 <pre class="brush: xml;">&lt;binding id="labeledbutton"&gt;
   &lt;content&gt;
@@ -197,8 +201,12 @@ element.getMaximum() // this will fail</pre>
 
 <p>The next section shows how to add event handlers to XBL-defined elements.</p>
 
-<p></p><div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/XUL_Tutorial/Adding_Properties_to_XBL-defined_Elements" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements">Next  »</a></p>
-</div><p></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
-<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/sachin.hosmani">sachin.hosmani</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mrbkap">Mrbkap</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/wellington7">wellington7</a>, <a href="https://developer.mozilla.org/en-US/profiles/H2g2bob">H2g2bob</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nalhilal">Nalhilal</a>, <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, <a href="https://developer.mozilla.org/en-US/profiles/Chbok">Chbok</a>, <a href="https://developer.mozilla.org/en-US/profiles/Morishoji">Morishoji</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Np">Np</a>, <a href="https://developer.mozilla.org/en-US/profiles/Jjinux">Jjinux</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ricky">Ricky</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
+<p> </p>
+
+<div class="prevnext" style="text-align: right;">
+<p><a href="/en-US/docs/XUL_Tutorial/Adding_Properties_to_XBL-defined_Elements" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial/Adding_Event_Handlers_to_XBL-defined_Elements">Next »</a></p>
+</div>
+
+<p> </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/Fernandolrs">Fernandolrs</a>, <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/ExE-Boss">ExE-Boss</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/sachin.hosmani">sachin.hosmani</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mrbkap">Mrbkap</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/wellington7">wellington7</a>, <a href="https://developer.mozilla.org/en-US/profiles/H2g2bob">H2g2bob</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nalhilal">Nalhilal</a>, <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, <a href="https://developer.mozilla.org/en-US/profiles/Chbok">Chbok</a>, <a href="https://developer.mozilla.org/en-US/profiles/Morishoji">Morishoji</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Np">Np</a>, <a href="https://developer.mozilla.org/en-US/profiles/Jjinux">Jjinux</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ricky">Ricky</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
 </html>

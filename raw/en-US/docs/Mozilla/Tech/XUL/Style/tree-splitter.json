@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><a href=\"/en-US/docs/XUL_Reference\" title=\"« XUL Reference home\">« XUL Reference home</a></div>\n\n<dl>\n <dt><code><a href=\"https://developer.mozilla.org/en-US/docs/XUL/Style/tree-splitter\">tree-splitter</a></code></dt>\n <dd>This splitter is intended to be used in tree columns (in-between <code><a href=\"/en-US/docs/Mozilla/Tech/XUL/treecol\" title=\"treecol\">treecol</a></code> elements). The splitter will be drawn with no width so that it isn't visible, however, the columns may still be resized.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/SphinxKnight\">SphinxKnight</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Marsf\">Marsf</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Dria\">Dria</a>",
+    "title": "tree-splitter"
+}

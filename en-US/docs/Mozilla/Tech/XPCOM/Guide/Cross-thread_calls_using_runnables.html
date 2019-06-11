@@ -8,7 +8,7 @@
     <title>Making cross-thread calls using runnables</title>
   </head>
 
-  <body><div class="content-heading"><h1>Making cross-thread calls using runnables</h1></div>
+  <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XPCOM.html">XPCOM</a>&raquo;<a href="../Guide.html">Guide</a></nav><div class="content-heading"><h1>Making cross-thread calls using runnables</h1></div>
 <div class="content"><p><span class="seoSummary">In the Mozilla platform, most activities such as layout, <a href="/en/DOM" title="DOM">DOM</a> operations, content <a href="/en/JavaScript" title="JavaScript">JavaScript</a>, and chrome JavaScript run on the main thread. However, it may be useful for C++ code in the Mozilla platform to run tasks on another thread.</span> Typically, thread activities are triggered and managed using an <a href="/en/XPCOM" title="XPCOM">XPCOM</a> event-passing framework that uses the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRunnable" title="">nsIRunnable</a></code> interface. Each runnable represents a task which can then be dispatched to another thread for execution.</p>
 <div class="note">
  <strong>Note:</strong> JavaScript code cannot use the techniques described in this article. Chrome JavaScript should instead use <a href="/en/DOM/ChromeWorker" title="en/DOM/ChromeWorker">workers</a>.</div>

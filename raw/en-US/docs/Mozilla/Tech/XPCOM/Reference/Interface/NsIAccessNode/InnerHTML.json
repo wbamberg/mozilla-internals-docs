@@ -1,0 +1,5 @@
+{
+    "content": "<p>For the DOM property, see <a href=\"/en-US/docs/Web/API/Element/innerHTML\">Element.innerHTML</a>.</p>\n\n<p>For the XPCOM interface attribute, see <a href=\"https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIAccessNode#Attributes\">nsIAccessNode.Attributes</a>.</p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>",
+    "title": "innerHTML"
+}

@@ -1,0 +1,5 @@
+{
+    "content": "<p><a href=\"/en-US/docs/Accessibility:AT-APIs:Gecko:Roles\">« Gecko Roles Page</a></p>\n<p>Represents a system sound, which is associated with various system events.</p>\n<h2 id=\"Mapped_to\" name=\"Mapped_to\">Mapped to</h2>\n<ul>\n <li>AT-SPI: <code>ROLE_UNKNOWN</code></li>\n <li>ATK: <code>ATK_ROLE_UNKNOWN</code></li>\n <li>UA: <code>NSAccessibilityUnknownRole</code></li>\n <li>MSAA/IA2: <code>ROLE_SYSTEM_SOUND</code></li>\n</ul>\n<h2 id=\"Used_by\" name=\"Used_by\">Used by</h2>\n<p>Not supported.</p>\n<p></p><section class=\"Quick_links\" id=\"Quick_Links\">\n\n</section><p></p>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/ExE-Boss\">ExE-Boss</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Surkov.alexander\">Surkov.alexander</a>",
+    "title": "ROLE_SOUND"
+}

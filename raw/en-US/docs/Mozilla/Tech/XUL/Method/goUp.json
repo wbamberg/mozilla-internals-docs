@@ -1,0 +1,5 @@
+{
+    "content": "<div class=\"noinclude\"><span class=\"breadcrumbs XULRefMeth_breadcrumbs\">« <a href=\"/en-US/docs/XUL_Reference\" title=\"/en-US/docs/XUL_Reference\">XUL Reference home</a></span></div>\n\n<dl>\n <dt><span id=\"m-goUp\"><code><a href=\"https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Method/goUp\">goUp()</a></code></span></dt>\n <dd>Return type: <em>no return value</em></dd>\n <dd>Move the selection up by one item.</dd>\n</dl>",
+    "contributors": "<a href=\"https://developer.mozilla.org/en-US/profiles/wbamberg\">wbamberg</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot\">mdnwebdocs-bot</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/SphinxKnight\">SphinxKnight</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Sheppy\">Sheppy</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Marsf\">Marsf</a>, <a href=\"https://developer.mozilla.org/en-US/profiles/Dria\">Dria</a>",
+    "title": "goUp"
+}
