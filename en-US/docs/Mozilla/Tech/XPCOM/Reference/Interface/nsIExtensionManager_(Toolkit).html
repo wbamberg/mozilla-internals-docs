@@ -9,13 +9,53 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>ExtensionManager (Toolkit)</h1></div>
-<div class="content"><p></p><div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p></div><p></p>
-<p>The ExtensionManager follows the <a class="external" href="http://mxr.mozilla.org/firefox/source/toolkit/mozapps/extensions/public/nsIExtensionManager.idl" title="http://mxr.mozilla.org/firefox/source/toolkit/mozapps/extensions/public/nsIExtensionManager.idl">nsIExtensionManager API</a>.</p>
-<div class="note">
- <p><strong>Note:</strong> This API is obsolete starting in <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">Gecko 2.0</span>, and has been replaced by the new <a href="/en/Addons/Add-on_Manager" title="en/Addons/Add-on Manager">Add-on Manager</a>.</p>
+<div class="content"><p>
+</p>
+<div class="blockIndicator obsolete obsoleteHeader">
+ <p>
+  <strong>
+   <span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work.">
+    <i class="icon-trash">
+    </i>
+   </span>
+   Obsolete
+  </strong>
+  <br>
+   This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.
+  </br>
+ </p>
 </div>
-<h3 id="Examples">Examples</h3>
-<p>Here is how to retrive all the extensions installed:</p>
+<p>
+</p>
+<p>
+ The ExtensionManager follows the
+ <a class="external" href="http://mxr.mozilla.org/firefox/source/toolkit/mozapps/extensions/public/nsIExtensionManager.idl" title="http://mxr.mozilla.org/firefox/source/toolkit/mozapps/extensions/public/nsIExtensionManager.idl">
+  nsIExtensionManager API
+ </a>
+ .
+</p>
+<div class="note">
+ <p>
+  <strong>
+   Note:
+  </strong>
+  This API is obsolete starting in
+  <span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)">
+   Gecko 2.0
+  </span>
+  , and has been replaced by the new
+  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Add-on_Manager" title="en/Addons/Add-on Manager">
+   Add-on Manager
+  </a>
+  .
+ </p>
+</div>
+<h3 id="Examples">
+ Examples
+</h3>
+<p>
+ Here is how to retrive all the extensions installed:
+</p>
 <pre>var em = Cc['@mozilla.org/extensions/manager;1']
   .getService(Ci.nsIExtensionManager);
 const nsIUpdateItem = Ci.nsIUpdateItem;

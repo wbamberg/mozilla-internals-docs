@@ -9,12 +9,14 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XPCOM.html">XPCOM</a></nav><div class="content-heading"><h1>Using nsISimpleEnumerator</h1></div>
-<div class="content"><h3 id="Using_nsISimpleEnumerator" name="Using_nsISimpleEnumerator">Using nsISimpleEnumerator</h3>
-
+<div class="content"><h3 id="Using_nsISimpleEnumerator" name="Using_nsISimpleEnumerator">
+ Using nsISimpleEnumerator
+</h3>
 <ul>
- <li>&lt;stringbundle&gt;.strings</li>
+ <li>
+  &lt;stringbundle&gt;.strings
+ </li>
 </ul>
-
 <pre class="eval">var enumerator = document.getElementById('aStringBundleID').strings;
 var s = "";
 while (enumerator.hasMoreElements()) {
@@ -23,9 +25,13 @@ while (enumerator.hasMoreElements()) {
 }
 alert(s);
 </pre>
-
-<h4 id="Example_using_JavaScript_1.7_features" name="Example_using_JavaScript_1.7_features">Example using <a href="/en/JavaScript/New_in_JavaScript/1.7" title="en/New_in_JavaScript_1.7">JavaScript 1.7</a> features</h4>
-
+<h4 id="Example_using_JavaScript_1.7_features" name="Example_using_JavaScript_1.7_features">
+ Example using
+ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7" title="en/New_in_JavaScript_1.7">
+  JavaScript 1.7
+ </a>
+ features
+</h4>
 <pre class="eval">// creates a generator iterating over enum's values
 function generatorFromSimpleEnumerator(enum, interface) {
   while (enum.hasMoreElements()) {
@@ -40,13 +46,26 @@ for (let property in props) {
 }
 alert(s);
 </pre>
-
-<h3 id="Links" name="Links">Links</h3>
-
+<h3 id="Links" name="Links">
+ Links
+</h3>
 <ul>
- <li>Code based on <a href="/en/Using_nsIPasswordManager" title="en/Using_nsIPasswordManager">Using_nsIPasswordManager</a></li>
- <li><a href="/en/XPCOM_Interface_Reference/nsISimpleEnumerator">nsISimpleEnumerator</a></li>
- <li><a href="/en/XUL/Property/strings" title="en/XUL/Property/strings">XUL:Property:strings</a></li>
+ <li>
+  Code based on
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Using_nsIPasswordManager" title="en/Using_nsIPasswordManager">
+   Using_nsIPasswordManager
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISimpleEnumerator">
+   nsISimpleEnumerator
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XUL/Property/strings" title="en/XUL/Property/strings">
+   XUL:Property:strings
+  </a>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
 </html>

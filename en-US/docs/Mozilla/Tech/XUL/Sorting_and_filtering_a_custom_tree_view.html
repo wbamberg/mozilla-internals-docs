@@ -9,10 +9,26 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XUL.html">XUL</a></nav><div class="content-heading"><h1>Sorting and filtering a custom tree view</h1></div>
-<div class="content"><p>This is example code for sorting and filtering a <a href="en/XUL_Tutorial/Custom_Tree_Views">custom tree view</a>, that is, a tree whose values are loaded via JavaScript. This will not work for other types of trees, for example RDF-backed or ones created with DOM methods.</p>
-<p>For the sake of simplicity, strings are not localized and the data loaded is hard coded.</p>
-<p>Because of <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=340478">bug 340478</a>, this code will only work from privileged script.</p>
-<p>sort.xul</p>
+<div class="content"><p>
+ This is example code for sorting and filtering a
+ <a href="en/XUL_Tutorial/Custom_Tree_Views">
+  custom tree view
+ </a>
+ , that is, a tree whose values are loaded via JavaScript. This will not work for other types of trees, for example RDF-backed or ones created with DOM methods.
+</p>
+<p>
+ For the sake of simplicity, strings are not localized and the data loaded is hard coded.
+</p>
+<p>
+ Because of
+ <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=340478">
+  bug 340478
+ </a>
+ , this code will only work from privileged script.
+</p>
+<p>
+ sort.xul
+</p>
 <pre class="brush: xml">&lt;?xml version="1.0"?&gt;
 &lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
 
@@ -44,7 +60,9 @@
 
 &lt;/window&gt;
 </pre>
-<p>sort.js</p>
+<p>
+ sort.js
+</p>
 <pre class="brush: js">var table = null;
 var data = null;
 var tree;

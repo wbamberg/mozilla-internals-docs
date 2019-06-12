@@ -10,11 +10,22 @@
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../String_functions.html">String_functions</a></nav><div class="content-heading"><h1>NS_CStringCloneData</h1></div>
 <div class="content"><p>
-</p><p>
-« <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a>
 </p>
-<h3 id="Summary" name="Summary">Summary</h3>
-<p>The <code>NS_CStringCloneData</code> function returns a null-terminated, heap allocated copy of the string's internal buffer.
+<p>
+ «
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference">
+  XPCOM API Reference
+ </a>
+</p>
+<h3 id="Summary" name="Summary">
+ Summary
+</h3>
+<p>
+ The
+ <code>
+  NS_CStringCloneData
+ </code>
+ function returns a null-terminated, heap allocated copy of the string's internal buffer.
 </p>
 <pre>  #include "nsStringAPI.h"
 
@@ -22,17 +33,64 @@
     const nsACString&amp; aString
   );
 </pre>
-<h3 id="Parameters" name="Parameters">Parameters</h3>
-<dl><dt>aString
-</dt><dd> [in] A <code><a href="en/NsACString">nsACString</a></code> instance whose data is to be cloned. </dd></dl>
-<h3 id="Return_Values" name="Return_Values">Return Values</h3>
-<p>The <code>NS_CStringCutData</code> function returns a pointer to a null-terminated, heap allocated buffer on success. On failure it returns nsnull. The resulting buffer may be freed by calling <code><a href="en/NsMemory/Free">nsMemory::Free</a></code>.
+<h3 id="Parameters" name="Parameters">
+ Parameters
+</h3>
+<dl>
+ <dt>
+  aString
+ </dt>
+ <dd>
+  [in] A
+  <code>
+   <a href="en/NsACString">
+    nsACString
+   </a>
+  </code>
+  instance whose data is to be cloned.
+ </dd>
+</dl>
+<h3 id="Return_Values" name="Return_Values">
+ Return Values
+</h3>
+<p>
+ The
+ <code>
+  NS_CStringCutData
+ </code>
+ function returns a pointer to a null-terminated, heap allocated buffer on success. On failure it returns nsnull. The resulting buffer may be freed by calling
+ <code>
+  <a href="en/NsMemory/Free">
+   nsMemory::Free
+  </a>
+ </code>
+ .
 </p>
-<h3 id="History" name="History">History</h3>
-<p>This function was frozen for Mozilla 1.7. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=239716" title="FIXED: inout wstring methods are difficult to implement with nsEmbedString">bug 239716</a> for details.
+<h3 id="History" name="History">
+ History
+</h3>
+<p>
+ This function was frozen for Mozilla 1.7. See
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=239716" title="FIXED: inout wstring methods are difficult to implement with nsEmbedString">
+  bug 239716
+ </a>
+ for details.
 </p>
-<h3 id="See_Also" name="See_Also">See Also</h3>
-<p><code><a href="en/NsMemory/Free">nsMemory::Free</a></code>, <code><a href="en/NsACString">nsACString</a></code>
+<h3 id="See_Also" name="See_Also">
+ See Also
+</h3>
+<p>
+ <code>
+  <a href="en/NsMemory/Free">
+   nsMemory::Free
+  </a>
+ </code>
+ ,
+ <code>
+  <a href="en/NsACString">
+   nsACString
+  </a>
+ </code>
 </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>.</p></div></body>
 </html>

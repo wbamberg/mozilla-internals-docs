@@ -28,6 +28,30 @@ page_template = """<!DOCTYPE html>
 contributors_preamble = """<p>This page was originally written for <a href=\"https://developer.mozilla.org\">developer.mozilla.org</a> and is used here under the <a href=\"http://creativecommons.org/licenses/by-sa/2.5/\">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: """
 
+
+link_map = {}
+with open(os.path.join(os.getcwd(), "link_map.json")) as data_file:
+    link_map = json.load(data_file)
+
+def convert_href(href):
+    if href.startswith("https://developer.mozilla.org/en-US/docs/Mozilla/Tech/"):
+        return href[len("https://developer.mozilla.org"):]
+    else:
+        return href
+
+def fix_links(page):
+    soup = BeautifulSoup(page, "html.parser")
+    links = soup.find_all("a")
+    for link in links:
+        if (link.get("href")):
+            href = link["href"]
+            if href.startswith("/"):
+                href = "https://developer.mozilla.org" + href
+            if link_map.get(href):
+                mapped_href = link_map[href]
+                link["href"] = convert_href(mapped_href)
+    return soup.prettify()
+
 def render_breadcrumbs(subdir):
     hierarchy = subdir.split(os.sep)[4:][::-1]
     prefix = ''
@@ -42,7 +66,7 @@ def render_contributors(contributors_list):
 
 def render_page(data, subdir):
     h1 = "<div class=\"content-heading\"><h1>" + data["title"] + "</h1></div>\n"
-    page_content = "<div class=\"content\">" + data["content"] + "</div>"
+    page_content = "<div class=\"content\">" + fix_links(data["content"]) + "</div>"
     body = render_breadcrumbs(subdir) + h1 + page_content + render_contributors(data["contributors"])
     complete_page = page_template.format(data["title"], body.encode('utf-8'))
     return complete_page

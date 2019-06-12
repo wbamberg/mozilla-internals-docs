@@ -9,26 +9,67 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Toolbars.html">Toolbars</a></nav><div class="content-heading"><h1>Toolbar customization events</h1></div>
-<div class="content"><p></p>
-<p>When toolbars are customized, events are sent to their parent window. You can use <a href="/en-US/docs/Web/API/Window/addEventListener" title="The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest)."><code>window.addEventListener()</code></a> to listen for these events in order to keep abreast of changes to toolbars.</p>
-<p>None of these events contain any data; if you need details, you'll need to look at the toolbar.</p>
+<div class="content"><p>
+</p>
+<p>
+ When toolbars are customized, events are sent to their parent window. You can use
+ <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest).">
+  <code>
+   window.addEventListener()
+  </code>
+ </a>
+ to listen for these events in order to keep abreast of changes to toolbars.
+</p>
+<p>
+ None of these events contain any data; if you need details, you'll need to look at the toolbar.
+</p>
 <dl>
  <dt>
-  <code>beforecustomization</code></dt>
+  <code>
+   beforecustomization
+  </code>
+ </dt>
  <dd>
-  This event is delivered when the user starts the toolbar customization process; for example, by right-clicking on a toolbar and choosing "Customize".</dd>
+  This event is delivered when the user starts the toolbar customization process; for example, by right-clicking on a toolbar and choosing "Customize".
+ </dd>
  <dt>
-  <code>customizationchange</code></dt>
+  <code>
+   customizationchange
+  </code>
+ </dt>
  <dd>
-  This event is delivered when the user makes a change to a toolbar while editing the toolbars, either by dragging an item to the toolbar or by dragging an item out of it.</dd>
+  This event is delivered when the user makes a change to a toolbar while editing the toolbars, either by dragging an item to the toolbar or by dragging an item out of it.
+ </dd>
  <dt>
-  <code>aftercustomization</code></dt>
+  <code>
+   aftercustomization
+  </code>
+ </dt>
  <dd>
-  This event is delivered when the user closes the toolbar customization panel.</dd>
+  This event is delivered when the user closes the toolbar customization panel.
+ </dd>
 </dl>
-<p>In all cases, the <a href="/en-US/docs/Web/API/Event/target" title="The target property of the Event interface is a reference to the object that dispatched the event. It is different from Event.currentTarget when the event handler is called during the bubbling or capturing phase of the event."><code>event.target</code></a> is the <code><a href="/en-US/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">toolbox</a></code> being customized. You can look at the contents of that element and its children to determine what changes were made.</p>
-<h2 id="Example">Example</h2>
-<p>In this example, we watch for toolbar changes.</p>
+<p>
+ In all cases, the
+ <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target" title="The target property of the Event interface is a reference to the object that dispatched the event. It is different from Event.currentTarget when the event handler is called during the bubbling or capturing phase of the event.">
+  <code>
+   event.target
+  </code>
+ </a>
+ is the
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XUL/toolbox" title="toolbox">
+   toolbox
+  </a>
+ </code>
+ being customized. You can look at the contents of that element and its children to determine what changes were made.
+</p>
+<h2 id="Example">
+ Example
+</h2>
+<p>
+ In this example, we watch for toolbar changes.
+</p>
 <pre class="brush: js">window.addEventListener("beforecustomization", customizeStart, false);
 window.addEventListener("aftercustomization", customizeEnd, false);
 window.addEventListener("customizationchange", customizeChange, false);

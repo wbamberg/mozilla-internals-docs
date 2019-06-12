@@ -9,55 +9,130 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsICategoryManager</h1></div>
-<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/components/nsICategoryManager.idl" rel="custom">xpcom/components/nsICategoryManager.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-This interface provides access to a data structure that holds a list of name-value pairs, called categories, where each value is a list of strings.
-</span>
-
-<div style="background: #eee; padding: 2px;">
-Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
-<span style="text-align: right; float: right;">Last changed in Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</span></div>
-</div><p></p>
-
-<p>Implemented by: <code>@mozilla.org/categorymanager;1</code>. To use this service, use:</p>
-
+<div class="content"><p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/components/nsICategoryManager.idl" rel="custom">
+    xpcom/components/nsICategoryManager.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  This interface provides access to a data structure that holds a list of name-value pairs, called categories, where each value is a list of strings.
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  Inherits from:
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">
+    nsISupports
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<p>
+ Implemented by:
+ <code>
+  @mozilla.org/categorymanager;1
+ </code>
+ . To use this service, use:
+</p>
 <pre class="eval">var categoryManager = Components.classes["@mozilla.org/categorymanager;1"]
                       .getService(Components.interfaces.nsICategoryManager);
 </pre>
-
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
-
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>string <a href="#addCategoryEntry()">addCategoryEntry</a>(in string aCategory, in string aEntry, in string aValue, in boolean aPersist, in boolean aReplace);</code></td>
+   <td>
+    <code>
+     string
+     <a href="#addCategoryEntry()">
+      addCategoryEntry
+     </a>
+     (in string aCategory, in string aEntry, in string aValue, in boolean aPersist, in boolean aReplace);
+    </code>
+   </td>
   </tr>
   <tr>
-   <td><code>void <a href="#deleteCategory()">deleteCategory</a>(in string aCategory);</code></td>
+   <td>
+    <code>
+     void
+     <a href="#deleteCategory()">
+      deleteCategory
+     </a>
+     (in string aCategory);
+    </code>
+   </td>
   </tr>
   <tr>
-   <td><code>void <a href="#deleteCategoryEntry()">deleteCategoryEntry</a>(in string aCategory, in string aEntry, in boolean aPersist);</code></td>
+   <td>
+    <code>
+     void
+     <a href="#deleteCategoryEntry()">
+      deleteCategoryEntry
+     </a>
+     (in string aCategory, in string aEntry, in boolean aPersist);
+    </code>
+   </td>
   </tr>
   <tr>
-   <td><code>nsISimpleEnumerator <a href="#enumerateCategories()">enumerateCategories</a>();</code></td>
+   <td>
+    <code>
+     nsISimpleEnumerator
+     <a href="#enumerateCategories()">
+      enumerateCategories
+     </a>
+     ();
+    </code>
+   </td>
   </tr>
   <tr>
-   <td><code>nsISimpleEnumerator <a href="#enumerateCategory()">enumerateCategory</a>(in string aCategory);</code></td>
+   <td>
+    <code>
+     nsISimpleEnumerator
+     <a href="#enumerateCategory()">
+      enumerateCategory
+     </a>
+     (in string aCategory);
+    </code>
+   </td>
   </tr>
   <tr>
-   <td><code>string <a href="#getCategoryEntry()">getCategoryEntry</a>(in string aCategory, in string aEntry);</code></td>
+   <td>
+    <code>
+     string
+     <a href="#getCategoryEntry()">
+      getCategoryEntry
+     </a>
+     (in string aCategory, in string aEntry);
+    </code>
+   </td>
   </tr>
  </tbody>
 </table>
-
-<h2 id="Methods" name="Methods">Methods</h2>
-
-<h3 id="addCategoryEntry()" name="addCategoryEntry()">addCategoryEntry()</h3>
-
-<p>This method sets the value for the given entry on the given category. The category and/or entry are created if they do not exist.</p>
-
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<h3 id="addCategoryEntry()" name="addCategoryEntry()">
+ addCategoryEntry()
+</h3>
+<p>
+ This method sets the value for the given entry on the given category. The category and/or entry are created if they do not exist.
+</p>
 <pre class="eval">string addCategoryEntry(
   in string aCategory,
   in string aEntry,
@@ -66,146 +141,303 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
   in boolean aReplace
 );
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>aCategory</code></dt>
- <dd>The name of the category being modified. ("protocol")</dd>
- <dt><code>aEntry</code></dt>
- <dd>The name of the category entry being modified. ("http")</dd>
- <dt><code>aValue</code></dt>
- <dd>The value for the category entry. ("moz.httprulez.1")</dd>
- <dt><code>aPersist</code></dt>
- <dd><strong> No longer supported.</strong> Category entries never persist across application sessions. You must pass <code>false</code> for this parameter.</dd>
- <dt><code>aReplace</code></dt>
- <dd>A flag indicating whether or not to overwrite the value of an existing category entry.</dd>
+ <dt>
+  <code>
+   aCategory
+  </code>
+ </dt>
+ <dd>
+  The name of the category being modified. ("protocol")
+ </dd>
+ <dt>
+  <code>
+   aEntry
+  </code>
+ </dt>
+ <dd>
+  The name of the category entry being modified. ("http")
+ </dd>
+ <dt>
+  <code>
+   aValue
+  </code>
+ </dt>
+ <dd>
+  The value for the category entry. ("moz.httprulez.1")
+ </dd>
+ <dt>
+  <code>
+   aPersist
+  </code>
+ </dt>
+ <dd>
+  <strong>
+   No longer supported.
+  </strong>
+  Category entries never persist across application sessions. You must pass
+  <code>
+   false
+  </code>
+  for this parameter.
+ </dd>
+ <dt>
+  <code>
+   aReplace
+  </code>
+ </dt>
+ <dd>
+  A flag indicating whether or not to overwrite the value of an existing category entry.
+ </dd>
 </dl>
-
-<h6 id="Return_value" name="Return_value">Return value</h6>
-
-<p>The previous value for the given category entry (if any).</p>
-
-<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
-
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ The previous value for the given category entry (if any).
+</p>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">
+ Exceptions thrown
+</h6>
 <dl>
- <dt><code>NS_ERROR_INVALID_ARG</code></dt>
- <dd>This error is returned if <code>aReplace</code> is false and the category entry already has a value, or if <code>aPersist</code> is true.</dd>
+ <dt>
+  <code>
+   NS_ERROR_INVALID_ARG
+  </code>
+ </dt>
+ <dd>
+  This error is returned if
+  <code>
+   aReplace
+  </code>
+  is false and the category entry already has a value, or if
+  <code>
+   aPersist
+  </code>
+  is true.
+ </dd>
 </dl>
-
-<h3 id="deleteCategory()" name="deleteCategory()">deleteCategory()</h3>
-
-<p>Delete a category and all entries.</p>
-
-<p></p><div class="blockIndicator note"><strong>Note:</strong> If the category does not exist, then this method does nothing.</div><p></p>
-
+<h3 id="deleteCategory()" name="deleteCategory()">
+ deleteCategory()
+</h3>
+<p>
+ Delete a category and all entries.
+</p>
+<p>
+</p>
+<div class="blockIndicator note">
+ <strong>
+  Note:
+ </strong>
+ If the category does not exist, then this method does nothing.
+</div>
+<p>
+</p>
 <pre class="eval">void deleteCategory(
   in string aCategory
 );
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>aCategory</code></dt>
- <dd>The name of the category being deleted.</dd>
+ <dt>
+  <code>
+   aCategory
+  </code>
+ </dt>
+ <dd>
+  The name of the category being deleted.
+ </dd>
 </dl>
-
-<h3 id="deleteCategoryEntry()" name="deleteCategoryEntry()">deleteCategoryEntry()</h3>
-
-<p>Delete an entry from the category.</p>
-
-<p></p><div class="blockIndicator note"><strong>Note:</strong> If the category does not exist, then this method does nothing.</div><p></p>
-
+<h3 id="deleteCategoryEntry()" name="deleteCategoryEntry()">
+ deleteCategoryEntry()
+</h3>
+<p>
+ Delete an entry from the category.
+</p>
+<p>
+</p>
+<div class="blockIndicator note">
+ <strong>
+  Note:
+ </strong>
+ If the category does not exist, then this method does nothing.
+</div>
+<p>
+</p>
 <pre class="eval">void deleteCategoryEntry(
   in string aCategory,
   in string aEntry,
   in boolean aPersist
 );
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>aCategory</code></dt>
- <dd>The name of the category being modified. ("protocol")</dd>
- <dt><code>aEntry</code></dt>
- <dd>The name of the category entry being deleted. ("http")</dd>
- <dt><code>aPersist</code></dt>
- <dd><strong>Ignored.</strong> Category entries never persist across sessions. You should always pass <code>false</code> for this parameter.</dd>
+ <dt>
+  <code>
+   aCategory
+  </code>
+ </dt>
+ <dd>
+  The name of the category being modified. ("protocol")
+ </dd>
+ <dt>
+  <code>
+   aEntry
+  </code>
+ </dt>
+ <dd>
+  The name of the category entry being deleted. ("http")
+ </dd>
+ <dt>
+  <code>
+   aPersist
+  </code>
+ </dt>
+ <dd>
+  <strong>
+   Ignored.
+  </strong>
+  Category entries never persist across sessions. You should always pass
+  <code>
+   false
+  </code>
+  for this parameter.
+ </dd>
 </dl>
-
-<h3 id="enumerateCategories()" name="enumerateCategories()">enumerateCategories()</h3>
-
-<p>Enumerate all existing categories.</p>
-
+<h3 id="enumerateCategories()" name="enumerateCategories()">
+ enumerateCategories()
+</h3>
+<p>
+ Enumerate all existing categories.
+</p>
 <pre class="eval">nsISimpleEnumerator enumerateCategories();
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
-<p>None.</p>
-
-<h6 id="Return_value" name="Return_value">Return value</h6>
-
-<p>A simple enumerator, each result QIs to <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsCString" title="">nsISupportsCString</a></code>.</p>
-
-<h3 id="enumerateCategory()" name="enumerateCategory()">enumerateCategory()</h3>
-
-<p>Enumerate the entries in a category.</p>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
+<p>
+ None.
+</p>
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ A simple enumerator, each result QIs to
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsCString" title="">
+   nsISupportsCString
+  </a>
+ </code>
+ .
+</p>
+<h3 id="enumerateCategory()" name="enumerateCategory()">
+ enumerateCategory()
+</h3>
+<p>
+ Enumerate the entries in a category.
+</p>
 <pre class="eval">nsISimpleEnumerator enumerateCategory(
   in string aCategory
 );
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>aCategory</code></dt>
- <dd>The category to be enumerated.</dd>
+ <dt>
+  <code>
+   aCategory
+  </code>
+ </dt>
+ <dd>
+  The category to be enumerated.
+ </dd>
 </dl>
-
-<h6 id="Return_value" name="Return_value">Return value</h6>
-
-<p>A simple enumerator, each result QIs to <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsCString" title="">nsISupportsCString</a></code>.</p>
-
-<h3 id="getCategoryEntry()" name="getCategoryEntry()">getCategoryEntry()</h3>
-
-<p>Get the value for the given category's entry.</p>
-
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ A simple enumerator, each result QIs to
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupportsCString" title="">
+   nsISupportsCString
+  </a>
+ </code>
+ .
+</p>
+<h3 id="getCategoryEntry()" name="getCategoryEntry()">
+ getCategoryEntry()
+</h3>
+<p>
+ Get the value for the given category's entry.
+</p>
 <pre class="eval">string getCategoryEntry(
   in string aCategory,
   in string aEntry
 );
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>aCategory</code></dt>
- <dd>The category being queried. ("protocol")</dd>
- <dt><code>aEntry</code></dt>
- <dd>The entry being queried. ("http")</dd>
+ <dt>
+  <code>
+   aCategory
+  </code>
+ </dt>
+ <dd>
+  The category being queried. ("protocol")
+ </dd>
+ <dt>
+  <code>
+   aEntry
+  </code>
+ </dt>
+ <dd>
+  The entry being queried. ("http")
+ </dd>
 </dl>
-
-<h6 id="Return_value" name="Return_value">Return value</h6>
-
-<p>The value of the given category's entry. This pointer must be released using <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIMemory#free()">nsIMemory.free()</a></code> when it is no longer needed.</p>
-
-<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
-
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ The value of the given category's entry. This pointer must be released using
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemory">
+   nsIMemory.free()
+  </a>
+ </code>
+ when it is no longer needed.
+</p>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">
+ Exceptions thrown
+</h6>
 <dl>
- <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
- <dd>Indicates that either the category or entry is undefined.</dd>
+ <dt>
+  <code>
+   NS_ERROR_NOT_AVAILABLE
+  </code>
+ </dt>
+ <dd>
+  Indicates that either the category or entry is undefined.
+ </dd>
 </dl>
-
-<h2 id="Examples" name="Examples">Examples</h2>
-
-<h3 id="Print_out_a_list_of_all_categories">Print out a list of all categories</h3>
-
-<p>This snippet shows how to print out a list of all categories in C++.</p>
-
+<h2 id="Examples" name="Examples">
+ Examples
+</h2>
+<h3 id="Print_out_a_list_of_all_categories">
+ Print out a list of all categories
+</h3>
+<p>
+ This snippet shows how to print out a list of all categories in C++.
+</p>
 <pre class="brush: cpp">nsresult PrintAllCategories()
 {
   nsresult rv;
@@ -248,9 +480,9 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
   return NS_OK;
 }
 </pre>
-
-<p>This snippet shows how to print out a list of all categories in Javascript.</p>
-
+<p>
+ This snippet shows how to print out a list of all categories in Javascript.
+</p>
 <pre class="brush: js">var categoryManager = Components.classes["@mozilla.org/categorymanager;1"]
                                 .getService(Components.interfaces.nsICategoryManager);
 var enumerator = categoryManager.enumerateCategories();
@@ -264,11 +496,16 @@ categories.sort();
 var categoriesString = categories.join("\n");
 dump(categoriesString + "\n");
 </pre>
-
-<h3 id="Print_out_a_list_of_app-startup_entries">Print out a list of <code>app-startup</code> entries</h3>
-
-<p>This example prints out a list of entries of "app-startup" category.</p>
-
+<h3 id="Print_out_a_list_of_app-startup_entries">
+ Print out a list of
+ <code>
+  app-startup
+ </code>
+ entries
+</h3>
+<p>
+ This example prints out a list of entries of "app-startup" category.
+</p>
 <pre class="brush: js">var categoryManager = Components.classes["@mozilla.org/categorymanager;1"]
                                 .getService(Components.interfaces.nsICategoryManager);
 var enumerator = categoryManager.enumerateCategory("app-startup");
@@ -282,11 +519,12 @@ entries.sort();
 var entriesString = entries.join("\n");
 dump(entriesString + "\n");
 </pre>
-
-<h3 id="Remarks" name="Remarks">Disable currently loaded plugins by type</h3>
-
-<p>This snippet here shows how to disable plugins that are currently loaded for the file type of PDF. The second portion of this snippet disables plugins from loading in the future, it does not user the category manager but it is included for completness of the example.</p>
-
+<h3 id="Remarks" name="Remarks">
+ Disable currently loaded plugins by type
+</h3>
+<p>
+ This snippet here shows how to disable plugins that are currently loaded for the file type of PDF. The second portion of this snippet disables plugins from loading in the future, it does not user the category manager but it is included for completness of the example.
+</p>
 <pre class="brush: js">var CONTENT_TYPE = 'application/pdf';
 
 // Update the category manager in case the plugins are already loaded.
@@ -309,9 +547,11 @@ if (types.indexOf(CONTENT_TYPE) === -1) {
     types.push(CONTENT_TYPE);
 }
 Services.prefs.setCharPref(PREF_DISABLED_PLUGIN_TYPES, types.join(','));</pre>
-
-<h2 id="Remarks" name="Remarks">Remarks</h2>
-
-<p>Categories have a variety of uses throughout the Mozilla platform. They are often used to register lists of ContractIDs, corresponding to components that wish to be notified of various events by some subsystem.</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<h2 id="Remarks" name="Remarks">
+ Remarks
+</h2>
+<p>
+ Categories have a variety of uses throughout the Mozilla platform. They are often used to register lists of ContractIDs, corresponding to components that wish to be notified of various events by some subsystem.
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/ervumlens">ervumlens</a>, <a href="https://developer.mozilla.org/en-US/profiles/Noitidart">Noitidart</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Morac">Morac</a>, <a href="https://developer.mozilla.org/en-US/profiles/Zwol">Zwol</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/kokorozashi">kokorozashi</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ted_Mielczarek">Ted_Mielczarek</a>, <a href="https://developer.mozilla.org/en-US/profiles/DarinFisher">DarinFisher</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
 </html>

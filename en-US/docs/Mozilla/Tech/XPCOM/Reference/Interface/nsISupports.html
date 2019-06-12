@@ -9,84 +9,248 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsISupports</h1></div>
-<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsISupports.idl" rel="custom">xpcom/base/nsISupports.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-All XPCOM interfaces inherit this interface.
-</span>
-
-<div style="background: #eee; padding: 2px;">
-<span> </span>
-<span style="text-align: right; float: right;">Last changed in Gecko 1.0 </span></div>
-</div><p></p>
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<div class="content"><p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsISupports.idl" rel="custom">
+    xpcom/base/nsISupports.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  All XPCOM interfaces inherit this interface.
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  <span>
+  </span>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 1.0
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
 <table class="standard-table">
-  <tbody>
-    <tr>
-      <td><code>nsrefcnt <a href="#AddRef()">AddRef</a>();</code><span class="inlineIndicator notXPCOM notXPCOMInline" title="Only use this method if you REALLY know what you are doing!">Violates the XPCOM interface guidelines</span></td>
-    </tr>
-    <tr>
-      <td><code>void <a href="#QueryInterface()">QueryInterface</a>(in nsIIDRef uuid, [iid_is(uuid),retval] out nsQIResult result);</code></td>
-    </tr>
-    <tr>
-      <td><code>nsrefcnt <a href="#Release()">Release</a>();</code><span class="inlineIndicator notXPCOM notXPCOMInline" title="Only use this method if you REALLY know what you are doing!">Violates the XPCOM interface guidelines</span></td>
-    </tr>
-  </tbody>
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     nsrefcnt
+     <a href="#AddRef()">
+      AddRef
+     </a>
+     ();
+    </code>
+    <span class="inlineIndicator notXPCOM notXPCOMInline" title="Only use this method if you REALLY know what you are doing!">
+     Violates the XPCOM interface guidelines
+    </span>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     void
+     <a href="#QueryInterface()">
+      QueryInterface
+     </a>
+     (in nsIIDRef uuid, [iid_is(uuid),retval] out nsQIResult result);
+    </code>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     nsrefcnt
+     <a href="#Release()">
+      Release
+     </a>
+     ();
+    </code>
+    <span class="inlineIndicator notXPCOM notXPCOMInline" title="Only use this method if you REALLY know what you are doing!">
+     Violates the XPCOM interface guidelines
+    </span>
+   </td>
+  </tr>
+ </tbody>
 </table>
-<h2 id="Methods" name="Methods">Methods</h2>
-<p></p><div>
-  <span class="indicatorInHeadline notXPCOM notXPCOMMethod" title="Only use this method if you REALLY know what you are doing!">Violates the XPCOM interface guidelines</span>
-  <h3 id="AddRef()">AddRef()</h3>
-</div><p></p>
-<p>Notifies the object that an interface pointer has been duplicated.</p>
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<p>
+</p>
+<div>
+ <span class="indicatorInHeadline notXPCOM notXPCOMMethod" title="Only use this method if you REALLY know what you are doing!">
+  Violates the XPCOM interface guidelines
+ </span>
+ <h3 id="AddRef()">
+  AddRef()
+ </h3>
+</div>
+<p>
+</p>
+<p>
+ Notifies the object that an interface pointer has been duplicated.
+</p>
 <pre class="eval">nsrefcnt AddRef();
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-<p>None.</p>
-<h6 id="Return_value" name="Return_value">Return value</h6>
-<p>An integer value that is generally ignored.</p>
-<h3 id="QueryInterface()" name="QueryInterface()">QueryInterface()</h3>
-<p>The QueryInterface method provides runtime type discovery.</p>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
+<p>
+ None.
+</p>
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ An integer value that is generally ignored.
+</p>
+<h3 id="QueryInterface()" name="QueryInterface()">
+ QueryInterface()
+</h3>
+<p>
+ The QueryInterface method provides runtime type discovery.
+</p>
 <div class="note style-wrap">
-  <p><strong>Note:</strong> The interface pointer, <code>aResult</code>, returned by <code>QueryInterface</code> must be released by a call to <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports#Release()">Release()</a></code> when it is no longer needed. <code>QueryInterface</code> is a symmetric, transitive, and reflexive operator.</p>
+ <p>
+  <strong>
+   Note:
+  </strong>
+  The interface pointer,
+  <code>
+   aResult
+  </code>
+  , returned by
+  <code>
+   QueryInterface
+  </code>
+  must be released by a call to
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports#Release()">
+    Release()
+   </a>
+  </code>
+  when it is no longer needed.
+  <code>
+   QueryInterface
+  </code>
+  is a symmetric, transitive, and reflexive operator.
+ </p>
 </div>
 <pre class="eval">void QueryInterface(
   in nsIIDRef uuid,
   [iid_is(uuid),retval] out nsQIResult result
 );
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
-  <dt>
-    <code>uuid</code></dt>
-  <dd>
-    The <code>uuid</code> of the requested interface</dd>
-  <dt>
-    <code>result</code></dt>
-  <dd>
-    The resulting interface pointer.</dd>
+ <dt>
+  <code>
+   uuid
+  </code>
+ </dt>
+ <dd>
+  The
+  <code>
+   uuid
+  </code>
+  of the requested interface
+ </dd>
+ <dt>
+  <code>
+   result
+  </code>
+ </dt>
+ <dd>
+  The resulting interface pointer.
+ </dd>
 </dl>
-<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">
+ Exceptions thrown
+</h6>
 <dl>
-  <dt>
-    <code>NS_ERROR_NO_INTERFACE</code></dt>
-  <dd>
-    The requested interface is not available.</dd>
+ <dt>
+  <code>
+   NS_ERROR_NO_INTERFACE
+  </code>
+ </dt>
+ <dd>
+  The requested interface is not available.
+ </dd>
 </dl>
-<p></p><div>
-  <span class="indicatorInHeadline notXPCOM notXPCOMMethod" title="Only use this method if you REALLY know what you are doing!">Violates the XPCOM interface guidelines</span>
-  <h3 id="Release()">Release()</h3>
-</div><p></p>
-<p>Notifies the object that an interface pointer has been destroyed and any resources the object held on behalf of the client can be released.</p>
+<p>
+</p>
+<div>
+ <span class="indicatorInHeadline notXPCOM notXPCOMMethod" title="Only use this method if you REALLY know what you are doing!">
+  Violates the XPCOM interface guidelines
+ </span>
+ <h3 id="Release()">
+  Release()
+ </h3>
+</div>
+<p>
+</p>
+<p>
+ Notifies the object that an interface pointer has been destroyed and any resources the object held on behalf of the client can be released.
+</p>
 <pre class="eval">nsrefcnt Release();
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-<p>None.</p>
-<h6 id="Return_value" name="Return_value">Return value</h6>
-<p>An integer value that is generally ignored.</p>
-<h2 id="Remarks" name="Remarks">Remarks</h2>
-<p>The method descriptions above were taken from <a class="external" href="http://www.amazon.com/exec/obidos/ISBN%3D0201634465/donboxincA/104-9753080-0135163">Essential COM by Don Box</a>. The point of those descriptions is to highlight the fact that <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports#AddRef()">AddRef()</a></code> and <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports#Release()">Release()</a></code> do not necessarily correspond to incrementing and decrementing a counter, respectively, even though that is how they are usually implemented.</p>
-<p>On Win32 systems, <code>nsISupports</code> is ABI-compatible with Microsoft COM's <code>IUnknown</code> interface.</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
+<p>
+ None.
+</p>
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ An integer value that is generally ignored.
+</p>
+<h2 id="Remarks" name="Remarks">
+ Remarks
+</h2>
+<p>
+ The method descriptions above were taken from
+ <a class="external" href="http://www.amazon.com/exec/obidos/ISBN%3D0201634465/donboxincA/104-9753080-0135163">
+  Essential COM by Don Box
+ </a>
+ . The point of those descriptions is to highlight the fact that
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports#AddRef()">
+   AddRef()
+  </a>
+ </code>
+ and
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports#Release()">
+   Release()
+  </a>
+ </code>
+ do not necessarily correspond to incrementing and decrementing a counter, respectively, even though that is how they are usually implemented.
+</p>
+<p>
+ On Win32 systems,
+ <code>
+  nsISupports
+ </code>
+ is ABI-compatible with Microsoft COM's
+ <code>
+  IUnknown
+ </code>
+ interface.
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/mnoorenberghe">mnoorenberghe</a>, <a href="https://developer.mozilla.org/en-US/profiles/KyleHamilton">KyleHamilton</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/fhusson1">fhusson1</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/DarinFisher">DarinFisher</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
 </html>

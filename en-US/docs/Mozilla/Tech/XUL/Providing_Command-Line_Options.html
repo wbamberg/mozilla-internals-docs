@@ -9,40 +9,92 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XUL.html">XUL</a></nav><div class="content-heading"><h1>Providing Command-Line Options</h1></div>
-<div class="content"><p>Extensions and XUL applications can modify the way command line parameters are handled by writing a component that implements the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICommandLineHandler" title="">nsICommandLineHandler</a></code> interface and registering it in a category.</p>
-
+<div class="content"><p>
+ Extensions and XUL applications can modify the way command line parameters are handled by writing a component that implements the
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICommandLineHandler" title="">
+   nsICommandLineHandler
+  </a>
+ </code>
+ interface and registering it in a category.
+</p>
 <div class="note">
-<p>See also: <a href="/en-US/docs/XULRunner:CommandLine" title="/en-US/docs/XULRunner:CommandLine">XULRunner:CommandLine</a></p>
+ <p>
+  See also:
+  <a href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XULRunner/CommandLine" title="/en-US/docs/XULRunner:CommandLine">
+   XULRunner:CommandLine
+  </a>
+ </p>
 </div>
-
-<h2 id="Overview" name="Overview">Overview</h2>
-
-<p>The code below is an example of writing a JavaScript XPCOM component to handle command line parameters.</p>
-
-<p>You can learn more about how the command line is interpreted by looking at the documentation for the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICommandLine" title="">nsICommandLine</a></code> interface.</p>
-
-<h2 id="Sample_Code" name="Sample_Code">Example</h2>
-
-<p>The below example component implements two command line parameters:</p>
-
+<h2 id="Overview" name="Overview">
+ Overview
+</h2>
+<p>
+ The code below is an example of writing a JavaScript XPCOM component to handle command line parameters.
+</p>
+<p>
+ You can learn more about how the command line is interpreted by looking at the documentation for the
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsICommandLine" title="">
+   nsICommandLine
+  </a>
+ </code>
+ interface.
+</p>
+<h2 id="Sample_Code" name="Sample_Code">
+ Example
+</h2>
+<p>
+ The below example component implements two command line parameters:
+</p>
 <dl>
- <dt><code>firefox.exe -myapp</code></dt>
- <dd>Opens a chrome window for My Application.  </dd>
- <dt><code>firefox.exe -viewapp <var>url</var></code></dt>
- <dd>Opens a chrome window for My Application and passes it an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> object.</dd>
+ <dt>
+  <code>
+   firefox.exe -myapp
+  </code>
+ </dt>
+ <dd>
+  Opens a chrome window for My Application.
+ </dd>
+ <dt>
+  <code>
+   firefox.exe -viewapp
+   <var>
+    url
+   </var>
+  </code>
+ </dt>
+ <dd>
+  Opens a chrome window for My Application and passes it an
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">
+    nsIURI
+   </a>
+  </code>
+  object.
+ </dd>
 </dl>
-
-<h3 id="Using_the_example">Using the example</h3>
-
-<p>To use this sample code, save the <code>commandLine.js file</code> into the components directory and add the following lines to your <code>chrome.manifest</code> file:</p>
-
+<h3 id="Using_the_example">
+ Using the example
+</h3>
+<p>
+ To use this sample code, save the
+ <code>
+  commandLine.js file
+ </code>
+ into the components directory and add the following lines to your
+ <code>
+  chrome.manifest
+ </code>
+ file:
+</p>
 <pre>component {2991c315-b871-42cd-b33f-bfee4fcbf682} components/commandLine.js
 contract @mozilla.org/commandlinehandler/general-startup;1?type=myapp {2991c315-b871-42cd-b33f-bfee4fcbf682}
 category command-line-handler m-myapp @mozilla.org/commandlinehandler/general-startup;1?type=myapp
 </pre>
-
-<h3 id="The_JavaScript_code">The JavaScript code</h3>
-
+<h3 id="The_JavaScript_code">
+ The JavaScript code
+</h3>
 <pre class="brush: js">const Cc = Components.classes;
 const Ci = Components.interfaces;
 

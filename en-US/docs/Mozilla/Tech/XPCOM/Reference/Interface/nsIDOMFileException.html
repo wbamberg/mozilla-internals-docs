@@ -9,67 +9,165 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIDOMFileException</h1></div>
-<div class="content"><p> The <code>nsIDOMFileException</code> interface represents exceptions that can be raised by calls to the methods in the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile" title="">nsIDOMFile</a></code> interface.</p>
-
-<div class="note"><strong>Note:</strong> Gecko's implementation of this interface presently differs from the working draft of the <a class="external" href="http://dev.w3.org/2006/webapi/FileAPI/#dfn-FileException" title="http://dev.w3.org/2006/webapi/FileAPI/#dfn-FileException">File API specification</a>.</div>
-
-<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/content/base/public/nsIDOMFileException.idl" rel="custom">content/base/public/nsIDOMFileException.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-<i>Please add a summary to this article.</i>
-</span>
-
-<div style="background: #eee; padding: 2px;">
-<span> </span>
-<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
-</div><p></p>
-
-<h2 id="Attributes" name="Attributes">Attributes</h2>
-
+<div class="content"><p>
+ The
+ <code>
+  nsIDOMFileException
+ </code>
+ interface represents exceptions that can be raised by calls to the methods in the
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile" title="">
+   nsIDOMFile
+  </a>
+ </code>
+ interface.
+</p>
+<div class="note">
+ <strong>
+  Note:
+ </strong>
+ Gecko's implementation of this interface presently differs from the working draft of the
+ <a class="external" href="http://dev.w3.org/2006/webapi/FileAPI/#dfn-FileException" title="http://dev.w3.org/2006/webapi/FileAPI/#dfn-FileException">
+  File API specification
+ </a>
+ .
+</div>
+<p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/content/base/public/nsIDOMFileException.idl" rel="custom">
+    content/base/public/nsIDOMFileException.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  <i>
+   Please add a summary to this article.
+  </i>
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  <span>
+  </span>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 1.9 (Firefox 3)
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<h2 id="Attributes" name="Attributes">
+ Attributes
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td class="header">Attribute</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
+   <td class="header">
+    Attribute
+   </td>
+   <td class="header">
+    Type
+   </td>
+   <td class="header">
+    Description
+   </td>
   </tr>
   <tr>
-   <td><code>code</code></td>
-   <td><code>unsigned short</code></td>
-   <td>The error code describing the error condition that took place; see the <a href="#Constants">constants list</a> for details.</td>
+   <td>
+    <code>
+     code
+    </code>
+   </td>
+   <td>
+    <code>
+     unsigned short
+    </code>
+   </td>
+   <td>
+    The error code describing the error condition that took place; see the
+    <a href="#Constants">
+     constants list
+    </a>
+    for details.
+   </td>
   </tr>
  </tbody>
 </table>
-
-<h2 id="Constants" name="Constants">Constants</h2>
-
+<h2 id="Constants" name="Constants">
+ Constants
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td class="header">Constant</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
+   <td class="header">
+    Constant
+   </td>
+   <td class="header">
+    Value
+   </td>
+   <td class="header">
+    Description
+   </td>
   </tr>
   <tr>
-   <td><code>NOT_FOUND_ERR</code></td>
-   <td>0</td>
-   <td>The specified file wasn't found.</td>
+   <td>
+    <code>
+     NOT_FOUND_ERR
+    </code>
+   </td>
+   <td>
+    0
+   </td>
+   <td>
+    The specified file wasn't found.
+   </td>
   </tr>
   <tr>
-   <td><code>NOT_READABLE_ERR</code></td>
-   <td>1</td>
-   <td>The specified file wasn't readable.</td>
+   <td>
+    <code>
+     NOT_READABLE_ERR
+    </code>
+   </td>
+   <td>
+    1
+   </td>
+   <td>
+    The specified file wasn't readable.
+   </td>
   </tr>
  </tbody>
 </table>
-
-<h2 id="See_also" name="See_also">See also</h2>
-
+<h2 id="See_also" name="See_also">
+ See also
+</h2>
 <ul>
- <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile" title="">nsIDOMFile</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFileList" title="">nsIDOMFileList</a></code></li>
- <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFileReader" title="">nsIDOMFileReader</a></code></li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile" title="">
+    nsIDOMFile
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFileList" title="">
+    nsIDOMFileList
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFileReader" title="">
+    nsIDOMFileReader
+   </a>
+  </code>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Kohei">Kohei</a>.</p></div></body>
 </html>

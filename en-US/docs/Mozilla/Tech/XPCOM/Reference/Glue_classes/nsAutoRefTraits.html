@@ -9,16 +9,28 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Glue_classes.html">Glue_classes</a></nav><div class="content-heading"><h1>nsAutoRefTraits</h1></div>
-<div class="content"><p>nsAutoRefTraits&lt;T&gt; is a template class describing traits of resources held by objects of class <a class="internal" href="/En/NsAutoRef" title="En/NsAutoRef">nsAutoRef</a>&lt;T&gt; and/or nsCountedRef&lt;T&gt;.</p>
-<p>When the handle to the resource is a pointer to T the specialization may be derived from nsPointerRefTraits&lt;T&gt;, so that only definitions of the Release(T*) static method and possibly the AddRef(T*) static method need to be added. AddRef(T*) is necessary for nsCountedRef&lt;T&gt; but not for nsAutoRef&lt;T&gt;.</p>
-<p>For example:</p>
+<div class="content"><p>
+ nsAutoRefTraits&lt;T&gt; is a template class describing traits of resources held by objects of class
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRef" title="En/NsAutoRef">
+  nsAutoRef
+ </a>
+ &lt;T&gt; and/or nsCountedRef&lt;T&gt;.
+</p>
+<p>
+ When the handle to the resource is a pointer to T the specialization may be derived from nsPointerRefTraits&lt;T&gt;, so that only definitions of the Release(T*) static method and possibly the AddRef(T*) static method need to be added. AddRef(T*) is necessary for nsCountedRef&lt;T&gt; but not for nsAutoRef&lt;T&gt;.
+</p>
+<p>
+ For example:
+</p>
 <pre>  NS_SPECIALIZE_TEMPLATE
   class nsAutoRefTraits&lt;PRFileDesc&gt; : public nsPointerRefTraits&lt;PRFileDesc&gt;
   {
   public:
       static void Release(PRFileDesc *ptr) { PR_Close(ptr); }
   };</pre>
-<p>or</p>
+<p>
+ or
+</p>
 <pre>  NS_SPECIALIZE_TEMPLATE
   class nsAutoRefTraits&lt;FcPattern&gt; : public nsPointerRefTraits&lt;FcPattern&gt;
   {
@@ -27,8 +39,26 @@
       static void AddRef(FcPattern *ptr) { FcPatternReference(ptr); }
   };
 </pre>
-<p>nsAutoRefTraits is described in <code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsAutoRef.h" rel="custom">xpcom/base/nsAutoRef.h</a></code>.</p>
-<h3 id="See_Also">See Also</h3>
-<p><a class="internal" href="/En/NsAutoRef" title="En/NsAutoRef">nsAutoRef</a>, <a class="internal" href="/En/NsCountedRef" title="En/NsCountedRef">nsCountedRef</a> </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>
+ nsAutoRefTraits is described in
+ <code>
+  <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsAutoRef.h" rel="custom">
+   xpcom/base/nsAutoRef.h
+  </a>
+ </code>
+ .
+</p>
+<h3 id="See_Also">
+ See Also
+</h3>
+<p>
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRef" title="En/NsAutoRef">
+  nsAutoRef
+ </a>
+ ,
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsCountedRef" title="En/NsCountedRef">
+  nsCountedRef
+ </a>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
 </html>

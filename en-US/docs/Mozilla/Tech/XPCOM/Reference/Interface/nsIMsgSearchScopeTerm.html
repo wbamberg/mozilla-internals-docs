@@ -9,15 +9,43 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIMsgSearchScopeTerm</h1></div>
-<div class="content"><p> </p>
-<p>Defined in <strong><a class="external" href="http://mxr.mozilla.org/comm-central/source/">comm-central</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">mailnews</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">base</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">search</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">public</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchScopeTerm.idl">nsIMsgSearchScopeTerm.idl</a> </strong></p>
+<div class="content"><p>
+</p>
+<p>
+ Defined in
+ <strong>
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/">
+   comm-central
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">
+   mailnews
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">
+   base
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">
+   search
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">
+   public
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchScopeTerm.idl">
+   nsIMsgSearchScopeTerm.idl
+  </a>
+ </strong>
+</p>
 <pre>[scriptable, uuid(934672c3-9b8f-488a-935d-87b4023fa0be)]
 interface nsIMsgSearchScopeTerm : nsISupports 
 {
-  <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIInputStream" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a> getInputStream(in nsIMsgDBHdr aHdr);
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIInputStream">nsIInputStream</a> getInputStream(in nsIMsgDBHdr aHdr);
   void closeInputStream();
-  readonly attribute <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIMsgFolder" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIMsgFolder">nsIMsgFolder</a> folder;
-  readonly attribute <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIMsgSearchSession" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIMsgSearchSession">nsIMsgSearchSession</a> searchSession;
+  readonly attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMsgFolder" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIMsgFolder">nsIMsgFolder</a> folder;
+  readonly attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMsgSearchSession" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIMsgSearchSession">nsIMsgSearchSession</a> searchSession;
 };
 </pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000">RealRaven2000</a>.</p></div></body>

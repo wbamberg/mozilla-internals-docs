@@ -10,74 +10,159 @@
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../Toolkit_API.html">Toolkit_API</a>&raquo;<a href="../FUEL.html">FUEL</a></nav><div class="content-heading"><h1>fuelIWindow</h1></div>
 <div class="content"><div>
-<div class="warning">
-<p>FUEL is deprecated as of Firefox 40. Consider using the <a href="/Add-ons/SDK">Add-ons SDK</a> instead</p>
+ <div class="warning">
+  <p>
+   FUEL is deprecated as of Firefox 40. Consider using the
+   <a href="https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK">
+    Add-ons SDK
+   </a>
+   instead
+  </p>
+ </div>
 </div>
-</div>
-
-<p>The <a href="/en-US/docs/Toolkit_API/FUEL" title="Toolkit API/FUEL">FUEL</a> <code>Window</code> object describes a browser window.</p>
-
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
-
+<p>
+ The
+ <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL" title="Toolkit API/FUEL">
+  FUEL
+ </a>
+ <code>
+  Window
+ </code>
+ object describes a browser window.
+</p>
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>fuelIBrowserTab <a href="#open.28.29">open</a>(in nsIURI aURI)</code></td>
+   <td>
+    <code>
+     fuelIBrowserTab
+     <a href="#open.28.29">
+      open
+     </a>
+     (in nsIURI aURI)
+    </code>
+   </td>
   </tr>
  </tbody>
 </table>
-
-<h2 id="Attributes" name="Attributes">Attributes</h2>
-
+<h2 id="Attributes" name="Attributes">
+ Attributes
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td class="header">Attribute</td>
-   <td class="header">Type</td>
-   <td class="header">Description</td>
+   <td class="header">
+    Attribute
+   </td>
+   <td class="header">
+    Type
+   </td>
+   <td class="header">
+    Description
+   </td>
   </tr>
   <tr>
-   <td><code>tabs</code></td>
-   <td><code>readonly attribute nsIVariant</code></td>
-   <td>An array of browser tabs (<a href="/en-US/docs/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">fuelIBrowserTab</a>) within the browser window. This array is a snapshot of the opened tabs, changes to the array don't affect the tabs in the browser. To manipulate tabs, use the fuelIWindow.open() method described on this page or various methods on <a href="/en-US/docs/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">fuelIBrowserTab</a></td>
+   <td>
+    <code>
+     tabs
+    </code>
+   </td>
+   <td>
+    <code>
+     readonly attribute nsIVariant
+    </code>
+   </td>
+   <td>
+    An array of browser tabs (
+    <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">
+     fuelIBrowserTab
+    </a>
+    ) within the browser window. This array is a snapshot of the opened tabs, changes to the array don't affect the tabs in the browser. To manipulate tabs, use the fuelIWindow.open() method described on this page or various methods on
+    <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">
+     fuelIBrowserTab
+    </a>
+   </td>
   </tr>
   <tr>
-   <td><code>activeTab</code></td>
-   <td><code>readonly attribute <a href="/en-US/docs/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">fuelIBrowserTab</a></code></td>
-   <td>The currently-active tab within the browser window.</td>
+   <td>
+    <code>
+     activeTab
+    </code>
+   </td>
+   <td>
+    <code>
+     readonly attribute
+     <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIBrowserTab" title="FUEL/BrowserTab">
+      fuelIBrowserTab
+     </a>
+    </code>
+   </td>
+   <td>
+    The currently-active tab within the browser window.
+   </td>
   </tr>
   <tr>
-   <td><code>events</code></td>
-   <td><code>readonly attribute <a href="/en-US/docs/Toolkit_API/extIEvents" title="FUEL/Events">fuelIEvents</a></code></td>
-   <td>The events object for the browser window. supports: "TabOpen", "TabClose", "TabMove", "TabSelect"</td>
+   <td>
+    <code>
+     events
+    </code>
+   </td>
+   <td>
+    <code>
+     readonly attribute
+     <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIEvents" title="FUEL/Events">
+      fuelIEvents
+     </a>
+    </code>
+   </td>
+   <td>
+    The events object for the browser window. supports: "TabOpen", "TabClose", "TabMove", "TabSelect"
+   </td>
   </tr>
  </tbody>
 </table>
-
-<h2 id="Methods" name="Methods">Methods</h2>
-
-<h3 id="open.28.29" name="open.28.29">open()</h3>
-
-<p>Open a new browser tab, pointing to the specified URI.</p>
-
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<h3 id="open.28.29" name="open.28.29">
+ open()
+</h3>
+<p>
+ Open a new browser tab, pointing to the specified URI.
+</p>
 <pre>fuelIBrowserTab open(
   in nsIURI aURI
 );
 </pre>
-
-<h4 id="open-Parameters" name="open-Parameters">Parameters</h4>
-
+<h4 id="open-Parameters" name="open-Parameters">
+ Parameters
+</h4>
 <dl>
- <dt><code>aURI</code></dt>
- <dd>The URI to load in the new browser tab.</dd>
+ <dt>
+  <code>
+   aURI
+  </code>
+ </dt>
+ <dd>
+  The URI to load in the new browser tab.
+ </dd>
 </dl>
-
-<h2 id="Example">Example</h2>
-
-<p>This example sets up an event listener to watch for the "TabOpen" event, which is sent when a new tab is created, then opens a new window, loading the Mozilla web site into it. When the tab is created into which the Mozilla site is loaded, the <code>onTabOpen()</code> method in the example is called.</p>
-
-<p>This demonstrates several useful techniques, including how to create a new tab in a window as well as how to obtain a reference to a newly-opened tab.</p>
-
+<h2 id="Example">
+ Example
+</h2>
+<p>
+ This example sets up an event listener to watch for the "TabOpen" event, which is sent when a new tab is created, then opens a new window, loading the Mozilla web site into it. When the tab is created into which the Mozilla site is loaded, the
+ <code>
+  onTabOpen()
+ </code>
+ method in the example is called.
+</p>
+<p>
+ This demonstrates several useful techniques, including how to create a new tab in a window as well as how to obtain a reference to a newly-opened tab.
+</p>
 <pre>// Helper for making nsURI from string
 function url(spec) {
   var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(Components.interfaces.nsIIOService);
@@ -95,8 +180,9 @@ activeWin.events.addListener("TabOpen", onTabOpen);
 
 var browserTab = activeWin.open(url("http://mozilla.org"));
 </pre>
-
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also" name="See_also">
+ See also
+</h2>
 </div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/jsha">jsha</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/SylvainPasche">SylvainPasche</a>, <a href="https://developer.mozilla.org/en-US/profiles/MarkFinkle">MarkFinkle</a>, <a href="https://developer.mozilla.org/en-US/profiles/Aza">Aza</a>, <a href="https://developer.mozilla.org/en-US/profiles/Potappo">Potappo</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Gomita">Gomita</a>.</p></div></body>
 </html>

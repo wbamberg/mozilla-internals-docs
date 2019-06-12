@@ -9,12 +9,46 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Glue_classes.html">Glue_classes</a></nav><div class="content-heading"><h1>nsAutoRef</h1></div>
-<div class="content"><p>nsAutoRef&lt;T&gt; is a template class implementing an object that holds a handle to a resource that must be released, typically on destruction of the object.</p>
-<p>nsAutoRef has a role similar to nsAutoPtr and <a class="internal" href="/en/nsRefPtr" title="En/NsRefPtr">nsRefPtr</a> but does not require that the handle is a pointer to an object that was created with new or has AddRef() and Release() methods.  nsAutoRef is therefore useful for managing a reference to a foreign object.</p>
-<p>No copy constructor nor copy assignment operators are available, so the handle to the resource will be held until released on destruction of the nsAutoRef or until explicitly reset() or transferred through provided methods.</p>
-<p>In order to use nsAutoRef&lt;T&gt; for a class T associated with a particular resource type, the type of the handle to the resource and the method for releasing the resource must be provided for class T.  This is usually done by providing a specialization of <a class="internal" href="/En/NsAutoRefTraits" title="En/NsAutoRefTraits">nsAutoRefTraits</a>&lt;T&gt;.</p>
-<p>nsAutoRef is defined in <code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsAutoRef.h" rel="custom">xpcom/base/nsAutoRef.h</a></code>.</p>
-<h3 id="See_Also">See Also</h3>
-<p><a class="internal" href="/En/NsAutoRefTraits" title="En/NsAutoRefTraits">nsAutoRefTraits</a>, <a class="internal" href="/En/NsCountedRef" title="En/NsCountedRef">nsCountedRef</a></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<div class="content"><p>
+ nsAutoRef&lt;T&gt; is a template class implementing an object that holds a handle to a resource that must be released, typically on destruction of the object.
+</p>
+<p>
+ nsAutoRef has a role similar to nsAutoPtr and
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsRefPtr" title="En/NsRefPtr">
+  nsRefPtr
+ </a>
+ but does not require that the handle is a pointer to an object that was created with new or has AddRef() and Release() methods.  nsAutoRef is therefore useful for managing a reference to a foreign object.
+</p>
+<p>
+ No copy constructor nor copy assignment operators are available, so the handle to the resource will be held until released on destruction of the nsAutoRef or until explicitly reset() or transferred through provided methods.
+</p>
+<p>
+ In order to use nsAutoRef&lt;T&gt; for a class T associated with a particular resource type, the type of the handle to the resource and the method for releasing the resource must be provided for class T.  This is usually done by providing a specialization of
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRefTraits" title="En/NsAutoRefTraits">
+  nsAutoRefTraits
+ </a>
+ &lt;T&gt;.
+</p>
+<p>
+ nsAutoRef is defined in
+ <code>
+  <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsAutoRef.h" rel="custom">
+   xpcom/base/nsAutoRef.h
+  </a>
+ </code>
+ .
+</p>
+<h3 id="See_Also">
+ See Also
+</h3>
+<p>
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRefTraits" title="En/NsAutoRefTraits">
+  nsAutoRefTraits
+ </a>
+ ,
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsCountedRef" title="En/NsCountedRef">
+  nsCountedRef
+ </a>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
 </html>

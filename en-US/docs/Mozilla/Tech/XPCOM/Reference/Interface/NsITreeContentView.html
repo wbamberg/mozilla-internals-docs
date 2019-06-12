@@ -9,53 +9,232 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsITreeContentView</h1></div>
-<div class="content"><p>The <code>nsITreeContentView</code> interface is implemented by tree views that are backed by DOM content. It is typically reached by calling <code>QueryInterface</code> on a <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code>.</p>
-<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/layout/xul/base/src/tree/public/nsITreeContentView.idl" rel="custom">layout/xul/base/src/tree/public/nsITreeContentView.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-<i>Please add a summary to this article.</i>
-</span>
-
-<div style="background: #eee; padding: 2px;">
-<span> </span>
-<span style="text-align: right; float: right;">Last changed in Gecko 1.8.0 </span></div>
-</div><p></p>
-<p>Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
-
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
-<table class="standard-table"> <tbody> <tr> <td><code>long <a href="#getIndexOfItem()">getIndexOfItem</a>(in nsIDOMElement item);</code></td> </tr> <tr> <td><code>nsIDOMElement <a href="#getItemAtIndex()">getItemAtIndex</a>(in long index);</code></td> </tr> </tbody>
+<div class="content"><p>
+ The
+ <code>
+  nsITreeContentView
+ </code>
+ interface is implemented by tree views that are backed by DOM content. It is typically reached by calling
+ <code>
+  QueryInterface
+ </code>
+ on a
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">
+   nsITreeView
+  </a>
+ </code>
+ .
+</p>
+<p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/layout/xul/base/src/tree/public/nsITreeContentView.idl" rel="custom">
+    layout/xul/base/src/tree/public/nsITreeContentView.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  <i>
+   Please add a summary to this article.
+  </i>
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  <span>
+  </span>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 1.8.0
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<p>
+ Inherits from:
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">
+   nsISupports
+  </a>
+ </code>
+</p>
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     long
+     <a href="#getIndexOfItem()">
+      getIndexOfItem
+     </a>
+     (in nsIDOMElement item);
+    </code>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     nsIDOMElement
+     <a href="#getItemAtIndex()">
+      getItemAtIndex
+     </a>
+     (in long index);
+    </code>
+   </td>
+  </tr>
+ </tbody>
 </table>
-<h2 id="Attributes" name="Attributes">Attributes</h2>
-<table class="standard-table"> <tbody> <tr> <td class="header">Attribute</td> <td class="header">Type</td> <td class="header">Description</td> </tr> <tr> <td><code>root</code></td> <td><code><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMElement" title="">nsIDOMElement</a></code></code></td> <td>The element in the DOM which this view uses as root content. <strong>Read only.</strong> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)">Obsolete since Gecko 1.8</span></td> </tr> </tbody>
+<h2 id="Attributes" name="Attributes">
+ Attributes
+</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">
+    Attribute
+   </td>
+   <td class="header">
+    Type
+   </td>
+   <td class="header">
+    Description
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     root
+    </code>
+   </td>
+   <td>
+    <code>
+     <code>
+      <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMElement" title="">
+       nsIDOMElement
+      </a>
+     </code>
+    </code>
+   </td>
+   <td>
+    The element in the DOM which this view uses as root content.
+    <strong>
+     Read only.
+    </strong>
+    <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)">
+     Obsolete since Gecko 1.8
+    </span>
+   </td>
+  </tr>
+ </tbody>
 </table>
-<h2 id="Methods" name="Methods">Methods</h2>
-<h3 id="getIndexOfItem()" name="getIndexOfItem()">getIndexOfItem()</h3>
-<p>Retrieve the index associated with the specified content item.</p>
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<h3 id="getIndexOfItem()" name="getIndexOfItem()">
+ getIndexOfItem()
+</h3>
+<p>
+ Retrieve the index associated with the specified content item.
+</p>
 <pre class="eval">long getIndexOfItem(
   in nsIDOMElement item
 );
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-<dl> <dt><code>item</code></dt> <dd>A tree row for which to find the row index.</dd>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
+<dl>
+ <dt>
+  <code>
+   item
+  </code>
+ </dt>
+ <dd>
+  A tree row for which to find the row index.
+ </dd>
 </dl>
-<h6 id="Return_value" name="Return_value">Return value</h6>
-<p>A non-negative integer row index if the row was found within the tree. Returns -1 if the item was not found.</p>
-<h3 id="getItemAtIndex()" name="getItemAtIndex()">getItemAtIndex()</h3>
-<p>Retrieve the content item associated with the specified index.</p>
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ A non-negative integer row index if the row was found within the tree. Returns -1 if the item was not found.
+</p>
+<h3 id="getItemAtIndex()" name="getItemAtIndex()">
+ getItemAtIndex()
+</h3>
+<p>
+ Retrieve the content item associated with the specified index.
+</p>
 <pre class="eval">nsIDOMElement getItemAtIndex(
   in long index
 );
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-<dl> <dt><code>index</code></dt> <dd>The row index for which to get the item</dd>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
+<dl>
+ <dt>
+  <code>
+   index
+  </code>
+ </dt>
+ <dd>
+  The row index for which to get the item
+ </dd>
 </dl>
-<h6 id="Return_value" name="Return_value">Return value</h6>
-<p>The <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMElement" title="">nsIDOMElement</a></code> item.</p>
-<h2 id="Remarks" name="Remarks">Remarks</h2>
-<p>The <code>nsITreeContentView</code> interface only applies to trees with DOM element children, and does not apply to trees with <code>flags="dontbuildcontent"</code>.</p>
-<h2 id="See_also" name="See_also">See also</h2>
-<ul> <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">nsITreeView</a></code></li> <li><code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code></li>
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ The
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMElement" title="">
+   nsIDOMElement
+  </a>
+ </code>
+ item.
+</p>
+<h2 id="Remarks" name="Remarks">
+ Remarks
+</h2>
+<p>
+ The
+ <code>
+  nsITreeContentView
+ </code>
+ interface only applies to trees with DOM element children, and does not apply to trees with
+ <code>
+  flags="dontbuildcontent"
+ </code>
+ .
+</p>
+<h2 id="See_also" name="See_also">
+ See also
+</h2>
+<ul>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView" title="">
+    nsITreeView
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">
+    tree
+   </a>
+  </code>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mook">Mook</a>, <a href="https://developer.mozilla.org/en-US/profiles/textshell">textshell</a>.</p></div></body>
 </html>

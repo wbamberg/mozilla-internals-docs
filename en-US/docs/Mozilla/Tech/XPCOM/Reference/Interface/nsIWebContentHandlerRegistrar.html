@@ -9,35 +9,76 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIWebContentHandlerRegistrar</h1></div>
-<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpfe/appshell/public/nsIWebContentHandlerRegistrar.idl" rel="custom">xpfe/appshell/public/nsIWebContentHandlerRegistrar.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-Applications wishing to use web content handlers need to implement this interface. Typically they will prompt the user to confirm adding an entry to the local list.
-</span>
-
-<div style="background: #eee; padding: 2px;">
-Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
-<span style="text-align: right; float: right;">Last changed in Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5)</span></div>
-</div><p></p>
-
-<p>Implemented by <code>@mozilla.org/embeddor.implemented/web-content-handler-registrar;1</code> as a service:</p>
-
+<div class="content"><p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/xpfe/appshell/public/nsIWebContentHandlerRegistrar.idl" rel="custom">
+    xpfe/appshell/public/nsIWebContentHandlerRegistrar.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  Applications wishing to use web content handlers need to implement this interface. Typically they will prompt the user to confirm adding an entry to the local list.
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  Inherits from:
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">
+    nsISupports
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5)
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<p>
+ Implemented by
+ <code>
+  @mozilla.org/embeddor.implemented/web-content-handler-registrar;1
+ </code>
+ as a service:
+</p>
 <pre class="eval"><code><span class="kwd">var</span><span class="pln"> nsiwchr </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Cc</span><span class="pun">[</span><span class="str">"@mozilla.org/embeddor.implemented/web-content-handler-registrar;1"</span><span class="pun">]
                 .</span><span class="pln">getService</span><span class="pun">(</span><span class="typ">Ci</span><span class="pun">.</span><span class="pln">nsIWebContentHandlerRegistrar</span><span class="pun">);</span></code>
 </pre>
-
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
-
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
 <table class="standard-table" style="height: 59px; width: 966px;">
  <tbody>
   <tr>
   </tr>
   <tr>
-   <td><code>void <a href="#">registerContentHandler</a>(in DOMString mimeType, in DOMString uri, in DOMString title, in nsIDOMWindow contentWindow)</code></td>
+   <td>
+    <code>
+     void
+     <a href="#">
+      registerContentHandler
+     </a>
+     (in DOMString mimeType, in DOMString uri, in DOMString title, in nsIDOMWindow contentWindow)
+    </code>
+   </td>
   </tr>
   <tr>
-   <td><code>void <a href="#">registerProtocolHandler</a>(in DOMString protocol,in DOMString uri, in DOMString title, in nsIDOMWindow contentWindow)</code></td>
+   <td>
+    <code>
+     void
+     <a href="#">
+      registerProtocolHandler
+     </a>
+     (in DOMString protocol,in DOMString uri, in DOMString title, in nsIDOMWindow contentWindow)
+    </code>
+   </td>
   </tr>
   <tr>
   </tr>
@@ -65,13 +106,15 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
   </tr>
  </tbody>
 </table>
-
-<h2 id="Methods" name="Methods">Methods</h2>
-
-<h3 id="addListener()" name="addListener()">registerContentHandler</h3>
-
-<p>Summary of registerContentHandler</p>
-
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<h3 id="addListener()" name="addListener()">
+ registerContentHandler
+</h3>
+<p>
+ Summary of registerContentHandler
+</p>
 <pre class="eval">void registerContentHandler(
   in DOMString mimeType,
   in DOMString uri,
@@ -79,24 +122,49 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
   in nsIDOMWindow contentWindow
 );
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>mimeType</code></dt>
- <dd>The desired MIME type as a string</dd>
- <dt><code>uri</code></dt>
- <dd>The URI to the handler as a string.</dd>
- <dt><code>title</code></dt>
- <dd>The title of the handler presented to the user as a string.</dd>
- <dt><code>contentWindow</code></dt>
- <dd>The DOM content window from which the method has been called.</dd>
+ <dt>
+  <code>
+   mimeType
+  </code>
+ </dt>
+ <dd>
+  The desired MIME type as a string
+ </dd>
+ <dt>
+  <code>
+   uri
+  </code>
+ </dt>
+ <dd>
+  The URI to the handler as a string.
+ </dd>
+ <dt>
+  <code>
+   title
+  </code>
+ </dt>
+ <dd>
+  The title of the handler presented to the user as a string.
+ </dd>
+ <dt>
+  <code>
+   contentWindow
+  </code>
+ </dt>
+ <dd>
+  The DOM content window from which the method has been called.
+ </dd>
 </dl>
-
-<h3 id="addListener()" name="addListener()">registerProtocolHandler</h3>
-
-<p>Summary of registerProtocolHandler</p>
-
+<h3 id="addListener()" name="addListener()">
+ registerProtocolHandler
+</h3>
+<p>
+ Summary of registerProtocolHandler
+</p>
 <pre class="eval">void registerProtocolHandler(
   in DOMString protocol,
   in DOMString uri,
@@ -104,32 +172,88 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
   in nsIDOMWindow contentWindow
 );
 </pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>protocol</code></dt>
- <dd>The protocol the site wishes to handle, specified as a string.</dd>
- <dt><code>uri</code></dt>
- <dd>The URI to the handler as a string. You must include "<code>%s</code>" to indicate where to insert the escaped URI of the document to be handled. Otherwise NS_ERROR_DOM_SYNTAX_ERR will be thrown. This string must also be of either the <code>http </code>or <code>https </code>schemes.</dd>
- <dt><code>title</code></dt>
- <dd>The title of the handler presented to the user as a string.</dd>
- <dt><code>contentWindow</code></dt>
- <dd>The DOM content window from which the method has been called.</dd>
+ <dt>
+  <code>
+   protocol
+  </code>
+ </dt>
+ <dd>
+  The protocol the site wishes to handle, specified as a string.
+ </dd>
+ <dt>
+  <code>
+   uri
+  </code>
+ </dt>
+ <dd>
+  The URI to the handler as a string. You must include "
+  <code>
+   %s
+  </code>
+  " to indicate where to insert the escaped URI of the document to be handled. Otherwise NS_ERROR_DOM_SYNTAX_ERR will be thrown. This string must also be of either the
+  <code>
+   http
+  </code>
+  or
+  <code>
+   https
+  </code>
+  schemes.
+ </dd>
+ <dt>
+  <code>
+   title
+  </code>
+ </dt>
+ <dd>
+  The title of the handler presented to the user as a string.
+ </dd>
+ <dt>
+  <code>
+   contentWindow
+  </code>
+ </dt>
+ <dd>
+  The DOM content window from which the method has been called.
+ </dd>
 </dl>
-
 <div class="note">
-<p>Note: Script must execute from same domain as uri or else it will throw permission error. Can bypass this by opening<code> about:config</code> and setting preference of <code>gecko.handlerService.allowRegisterFromDifferentHost</code> to <code>true</code>.</p>
+ <p>
+  Note: Script must execute from same domain as uri or else it will throw permission error. Can bypass this by opening
+  <code>
+   about:config
+  </code>
+  and setting preference of
+  <code>
+   gecko.handlerService.allowRegisterFromDifferentHost
+  </code>
+  to
+  <code>
+   true
+  </code>
+  .
+ </p>
 </div>
-
-<h2 id="Examples" name="Examples">Examples</h2>
-
-<h3 id="Getting_most_recent_window" name="Getting_most_recent_window">Register a webmail service as <code>mailto</code> handler</h3>
-
-<p>The following code aims to add "Outlook.com Live Mail" to list of webservice handlers. In the image below "Gmail" and "Yahoo! Mail" already exist as webservice handlers.</p>
-
-<p><img alt='"Gmail" and "Yahoo! Mail" exist as webservice handlers. This example aims to add "Outlook.com Live Mail" to the list.' src="https://mdn.mozillademos.org/files/8237/how20to20use20hotmail_zpsb12baf06[1].png" style="height: 438px; width: 488px;"></p>
-
+<h2 id="Examples" name="Examples">
+ Examples
+</h2>
+<h3 id="Getting_most_recent_window" name="Getting_most_recent_window">
+ Register a webmail service as
+ <code>
+  mailto
+ </code>
+ handler
+</h3>
+<p>
+ The following code aims to add "Outlook.com Live Mail" to list of webservice handlers. In the image below "Gmail" and "Yahoo! Mail" already exist as webservice handlers.
+</p>
+<p>
+ <img alt='"Gmail" and "Yahoo! Mail" exist as webservice handlers. This example aims to add "Outlook.com Live Mail" to the list.' src="https://mdn.mozillademos.org/files/8237/how20to20use20hotmail_zpsb12baf06[1].png" style="height: 438px; width: 488px;"/>
+</p>
 <pre class="brush: js">Cu.import('resource://gre/modules/Services.jsm');
 
 var nsiwchr = Cc["@mozilla.org/embeddor.implemented/web-content-handler-registrar;1"]
@@ -180,18 +304,48 @@ if (!htmlContentWindow) {
 
 nsiwchr.registerProtocolHandler("mailto", registerUri, "Outlook.com Live Mail", htmlContentWindow);
 </pre>
-
-<p>In this example the <code>Services.wm.getEnumerator </code>was used to find a window that had the same host name (<code>contentWindow.location.hostname</code>) as the <code>uri </code>(<code>uri.host</code>) we are trying to add. If it does not find anything with host name of <code>mail.live.com</code> then it aborts. If the host names do not match, this error will be thrown in the Error Console.</p>
-
+<p>
+ In this example the
+ <code>
+  Services.wm.getEnumerator
+ </code>
+ was used to find a window that had the same host name (
+ <code>
+  contentWindow.location.hostname
+ </code>
+ ) as the
+ <code>
+  uri
+ </code>
+ (
+ <code>
+  uri.host
+ </code>
+ ) we are trying to add. If it does not find anything with host name of
+ <code>
+  mail.live.com
+ </code>
+ then it aborts. If the host names do not match, this error will be thrown in the Error Console.
+</p>
 <pre>Permission denied to add http://mail.live.com/secure/start?action=compose&amp;to=%s as a content or protocol handler'Permission denied to add http://mail.live.com/secure/start?action=compose&amp;to=%s as a content or protocol handler' when calling method: [nsIWebContentHandlerRegistrar::registerProtocolHandler]
 </pre>
-
-<p>If the host names do match then a confirmation like this will be seen:</p>
-
-<p><img alt='Confirmation message seen when contentWindow test passes for registerProtocolHandler. The location of the contentWindow is "http://mail.live.com/mail/postmaster.aspx" which matches that of "http://mail.live.com/secure/start?action=compose&amp;amp;amp;amp;to=%s" which is the 2nd argument passed to registerProtocolHandler.' src="https://mdn.mozillademos.org/files/8239/confirmation%20box%20for%20registerProtocolHandler%20from%20right%20contentWindow.png" style="height: 117px; width: 1115px;"></p>
-
-<p>This domain check can be bypassed by setting the preference of <code>gecko.handlerService.allowRegisterFromDifferentHost </code>to <code>true </code>as in this code here:</p>
-
+<p>
+ If the host names do match then a confirmation like this will be seen:
+</p>
+<p>
+ <img alt='Confirmation message seen when contentWindow test passes for registerProtocolHandler. The location of the contentWindow is "http://mail.live.com/mail/postmaster.aspx" which matches that of "http://mail.live.com/secure/start?action=compose&amp;amp;amp;amp;to=%s" which is the 2nd argument passed to registerProtocolHandler.' src="https://mdn.mozillademos.org/files/8239/confirmation%20box%20for%20registerProtocolHandler%20from%20right%20contentWindow.png" style="height: 117px; width: 1115px;"/>
+</p>
+<p>
+ This domain check can be bypassed by setting the preference of
+ <code>
+  gecko.handlerService.allowRegisterFromDifferentHost
+ </code>
+ to
+ <code>
+  true
+ </code>
+ as in this code here:
+</p>
 <pre class="brush: js">var {classes: Cc, interfaces: Ci, utils: Cu} = Components;
 Cu.import("resource://gre/modules/Services.jsm");
 var nsiwchr = Cc["@mozilla.org/embeddor.implemented/web-content-handler-registrar;1"]
@@ -210,21 +364,40 @@ if (!allowRegisterFromDifferentHost) {
   //it this variable is false, than we had set the pref to true obviously. so lets restore it back to false, which is the default value
   Services.prefs.clearUserPref('gecko.handlerService.allowRegisterFromDifferentHost');
 }</pre>
-
-<h3 id="Getting_most_recent_window" name="Getting_most_recent_window">Register a webmail service as <code>mailto</code> handler without contentWindow</h3>
-
-<p>Under construction. To take from:  http://mxr.mozilla.org/mozilla-release/source/browser/components/feeds/src/WebContentConverter.js#372 AND http://stackoverflow.com/questions/24900655/use-registerprotocolhandler-without-contentwindow</p>
-
+<h3 id="Getting_most_recent_window" name="Getting_most_recent_window">
+ Register a webmail service as
+ <code>
+  mailto
+ </code>
+ handler without contentWindow
+</h3>
+<p>
+ Under construction. To take from:  http://mxr.mozilla.org/mozilla-release/source/browser/components/feeds/src/WebContentConverter.js#372 AND http://stackoverflow.com/questions/24900655/use-registerprotocolhandler-without-contentwindow
+</p>
 <pre class="brush: js">place holder
 </pre>
-
-<h2 id="See_also" name="See_also">See also</h2>
-
+<h2 id="See_also" name="See_also">
+ See also
+</h2>
 <ul>
- <li>nsIWebContentSonverterService (under construction: page doesnt exist yet)</li>
- <li><a href="/en-US/docs/Web/API/navigator.registerProtocolHandler$edit">registerProtocolHandler from Non-Privelaged Scope</a></li>
- <li><a href="/en-US/docs/Web/API/Navigator.registerContentHandler">Web API Interfaces &gt; Navigator.registerContentHandler()</a></li>
- <li><a href="/en-US/docs/Web/API/navigator.registerProtocolHandler">Web API Interfaces &gt; Navigator.registerProtocolHandler()</a></li>
+ <li>
+  nsIWebContentSonverterService (under construction: page doesnt exist yet)
+ </li>
+ <li>
+  <a href="https://developer.mozilla.org/en-US/users/signin?next=/en-US/docs/Web/API/navigator.registerProtocolHandler%24edit">
+   registerProtocolHandler from Non-Privelaged Scope
+  </a>
+ </li>
+ <li>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerContentHandler">
+   Web API Interfaces &gt; Navigator.registerContentHandler()
+  </a>
+ </li>
+ <li>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler">
+   Web API Interfaces &gt; Navigator.registerProtocolHandler()
+  </a>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/wiwang">wiwang</a>, <a href="https://developer.mozilla.org/en-US/profiles/Noitidart">Noitidart</a>.</p></div></body>
 </html>

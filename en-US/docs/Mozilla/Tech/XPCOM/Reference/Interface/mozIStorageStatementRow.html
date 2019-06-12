@@ -9,15 +9,47 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>mozIStorageStatementRow</h1></div>
-<div class="content"><p>This interface has no defined properties, but has properties based on the name of the columns in the SQL result from the statement it was accessed off of.  For example, say you create a statement like so:</p>
+<div class="content"><p>
+ This interface has no defined properties, but has properties based on the name of the columns in the SQL result from the statement it was accessed off of.  For example, say you create a statement like so:
+</p>
 <pre class="brush: js"><span><span class="keyword">var</span><span> statement = dbConn.createStatement(</span><span class="string">"SELECT id, name FROM table_name"</span><span>);  </span></span></pre>
-<p>The object would have two properties, <code>id</code> and <code>name</code>, that can be used to get the value of the column after you have called <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageStatement#executeStep()">mozIStorageStatement.executeStep()</a></code> like so:</p>
+<p>
+ The object would have two properties,
+ <code>
+  id
+ </code>
+ and
+ <code>
+  name
+ </code>
+ , that can be used to get the value of the column after you have called
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement">
+   mozIStorageStatement.executeStep()
+  </a>
+ </code>
+ like so:
+</p>
 <pre class="brush: js">while (statement.executeStep()) {
   let id = statement.row.id;
   let name = statement.row.name;
 }</pre>
-<h3 id="See_also" name="See_also">See also</h3>
-<ul> <li><a href="/en/Storage" title="en/Storage">Storage</a></li> <li><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code></li>
+<h3 id="See_also" name="See_also">
+ See also
+</h3>
+<ul>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Storage" title="en/Storage">
+   Storage
+  </a>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">
+    mozIStorageStatement
+   </a>
+  </code>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/sdwilsh">sdwilsh</a>, <a href="https://developer.mozilla.org/en-US/profiles/Arehman4">Arehman4</a>.</p></div></body>
 </html>

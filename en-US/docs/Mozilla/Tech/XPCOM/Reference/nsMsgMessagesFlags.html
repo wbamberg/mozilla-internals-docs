@@ -9,126 +9,361 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XPCOM.html">XPCOM</a>&raquo;<a href="../Reference.html">Reference</a></nav><div class="content-heading"><h1>nsMsgMessageFlags</h1></div>
-<div class="content"><p>The <code>nsMsgMessageFlags</code> interface describes possible flags for messages. Equivalent flags are also defined in <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/public/nsMsgMessageFlags.h">nsMsgMessageFlags.h</a>.</p>
-
-<h2 id="Method_overview" name="Method_overview">Constants</h2>
-
+<div class="content"><p>
+ The
+ <code>
+  nsMsgMessageFlags
+ </code>
+ interface describes possible flags for messages. Equivalent flags are also defined in
+ <a class="external" href="http://mxr.mozilla.org/mozilla/source/mailnews/base/public/nsMsgMessageFlags.h">
+  nsMsgMessageFlags.h
+ </a>
+ .
+</p>
+<h2 id="Method_overview" name="Method_overview">
+ Constants
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td class="header">Name</td>
-   <td class="header">Value</td>
-   <td class="header">Description</td>
+   <td class="header">
+    Name
+   </td>
+   <td class="header">
+    Value
+   </td>
+   <td class="header">
+    Description
+   </td>
   </tr>
   <tr>
-   <td><code>Read</code></td>
-   <td><code>0x00000001</code></td>
-   <td>Indicates whether or not the message is read.</td>
+   <td>
+    <code>
+     Read
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000001
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message is read.
+   </td>
   </tr>
   <tr>
-   <td><code>Replied</code></td>
-   <td><code>0x00000002</code></td>
-   <td>Indicates whether or not the message has been replied to.</td>
+   <td>
+    <code>
+     Replied
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000002
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message has been replied to.
+   </td>
   </tr>
   <tr>
-   <td><code>Marked</code></td>
-   <td><code>0x00000004</code></td>
-   <td>Indicates whether or not the message has been flagged/starred</td>
+   <td>
+    <code>
+     Marked
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000004
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message has been flagged/starred
+   </td>
   </tr>
   <tr>
-   <td><code>Expunged</code></td>
-   <td><code>0x00000008</code></td>
-   <td>Indicates whether or not the message is deleted (but not compacted)</td>
+   <td>
+    <code>
+     Expunged
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000008
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message is deleted (but not compacted)
+   </td>
   </tr>
   <tr>
-   <td><code>HasRe</code></td>
-   <td><code>0x00000010</code></td>
-   <td>Indicates whether or not 'Re: ' should be added to the head of the subject to get the proper subject.</td>
+   <td>
+    <code>
+     HasRe
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000010
+    </code>
+   </td>
+   <td>
+    Indicates whether or not 'Re: ' should be added to the head of the subject to get the proper subject.
+   </td>
   </tr>
   <tr>
-   <td><code>Elided</code></td>
-   <td><code>0x00000020</code></td>
-   <td>Indicates whether or not the thread rooted at this message is open or closed in the UI.</td>
+   <td>
+    <code>
+     Elided
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000020
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the thread rooted at this message is open or closed in the UI.
+   </td>
   </tr>
   <tr>
-   <td><code>Offline</code></td>
-   <td><code>0x00000080</code></td>
-   <td>Indicates whether or not we have this message in the offline cache.</td>
+   <td>
+    <code>
+     Offline
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000080
+    </code>
+   </td>
+   <td>
+    Indicates whether or not we have this message in the offline cache.
+   </td>
   </tr>
   <tr>
-   <td><code>Watched</code></td>
-   <td><code>0x00000100</code></td>
-   <td>Indicates whether or not this thread is being watched.</td>
+   <td>
+    <code>
+     Watched
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000100
+    </code>
+   </td>
+   <td>
+    Indicates whether or not this thread is being watched.
+   </td>
   </tr>
   <tr>
-   <td><code>SenderAuthed</code></td>
-   <td><code>0x00000200</code></td>
-   <td> </td>
+   <td>
+    <code>
+     SenderAuthed
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000200
+    </code>
+   </td>
+   <td>
+   </td>
   </tr>
   <tr>
-   <td><code>Partial</code></td>
-   <td><code>0x00000400</code></td>
-   <td>Indicates whether or not the body we have is a complete message.</td>
+   <td>
+    <code>
+     Partial
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000400
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the body we have is a complete message.
+   </td>
   </tr>
   <tr>
-   <td><code>Queued</code></td>
-   <td><code>0x00000800</code></td>
-   <td>Indicates whether or not the message is queued to be delivered.</td>
+   <td>
+    <code>
+     Queued
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000800
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message is queued to be delivered.
+   </td>
   </tr>
   <tr>
-   <td><code>Forwarded</code></td>
-   <td><code>0x00001000</code></td>
-   <td>Indicates whether or not the message has been forwarded.</td>
+   <td>
+    <code>
+     Forwarded
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00001000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message has been forwarded.
+   </td>
   </tr>
   <tr>
-   <td><code>Priorities</code></td>
-   <td><code>0x0000E000</code></td>
-   <td>The set of bits that indicate the priority.</td>
+   <td>
+    <code>
+     Priorities
+    </code>
+   </td>
+   <td>
+    <code>
+     0x0000E000
+    </code>
+   </td>
+   <td>
+    The set of bits that indicate the priority.
+   </td>
   </tr>
   <tr>
-   <td><code>New</code></td>
-   <td><code>0x00010000</code></td>
-   <td>Indicates whether or not the message is new since the last time the folder was opened.</td>
+   <td>
+    <code>
+     New
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00010000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message is new since the last time the folder was opened.
+   </td>
   </tr>
   <tr>
-   <td><code>Ignored</code></td>
-   <td><code>0x00040000</code></td>
-   <td>Indicates whether or not the (sub-)thread has been ignored.</td>
+   <td>
+    <code>
+     Ignored
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00040000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the (sub-)thread has been ignored.
+   </td>
   </tr>
   <tr>
-   <td><code>ImapDeleted</code></td>
-   <td><code>0x00200000</code></td>
-   <td>Indicates whether or not the message has been deleted on the IMAP server</td>
+   <td>
+    <code>
+     ImapDeleted
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00200000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message has been deleted on the IMAP server
+   </td>
   </tr>
   <tr>
-   <td><code>MDNReportNeeded</code></td>
-   <td><code>0x00400000</code></td>
-   <td>Indicates whether or not a delivery receipt was requested.</td>
+   <td>
+    <code>
+     MDNReportNeeded
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00400000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not a delivery receipt was requested.
+   </td>
   </tr>
   <tr>
-   <td><code>MDNReportSent</code></td>
-   <td><code>0x00800000</code></td>
-   <td>Indicates whether or not a delivery receipt was sent.</td>
+   <td>
+    <code>
+     MDNReportSent
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00800000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not a delivery receipt was sent.
+   </td>
   </tr>
   <tr>
-   <td><code>Template</code></td>
-   <td><code>0x01000000</code></td>
-   <td>Indicates whether or not the message is a template.</td>
+   <td>
+    <code>
+     Template
+    </code>
+   </td>
+   <td>
+    <code>
+     0x01000000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message is a template.
+   </td>
   </tr>
   <tr>
-   <td><code>Attachment</code></td>
-   <td><code>0x10000000</code></td>
-   <td>Indicates whether or not the message has an attachment.</td>
+   <td>
+    <code>
+     Attachment
+    </code>
+   </td>
+   <td>
+    <code>
+     0x10000000
+    </code>
+   </td>
+   <td>
+    Indicates whether or not the message has an attachment.
+   </td>
   </tr>
   <tr>
-   <td><code>Labels</code></td>
-   <td><code>0x0E000000</code></td>
-   <td>The set of bits used to identify labels. Not returned in header.flags.</td>
+   <td>
+    <code>
+     Labels
+    </code>
+   </td>
+   <td>
+    <code>
+     0x0E000000
+    </code>
+   </td>
+   <td>
+    The set of bits used to identify labels. Not returned in header.flags.
+   </td>
   </tr>
   <tr>
-   <td><code>RuntimeOnly</code></td>
-   <td><code>0x00000020</code></td>
-   <td>Indicates the flags which are not emitted to the database.</td>
+   <td>
+    <code>
+     RuntimeOnly
+    </code>
+   </td>
+   <td>
+    <code>
+     0x00000020
+    </code>
+   </td>
+   <td>
+    Indicates the flags which are not emitted to the database.
+   </td>
   </tr>
  </tbody>
 </table></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>

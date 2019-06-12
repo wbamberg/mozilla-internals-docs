@@ -10,20 +10,79 @@
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Property.html">Property</a></nav><div class="content-heading"><h1>currentIndex</h1></div>
 <div class="content"><div class="noinclude">
-  <span class="breadcrumbs XULRefProp_breadcrumbs">« <a href="/en-US/docs/XUL_Reference" title="XUL_Reference">XUL Reference</a></span></div>
+ <span class="breadcrumbs XULRefProp_breadcrumbs">
+  «
+  <a href="/en-US/docs/Mozilla/Tech/XUL/XUL_Reference" title="XUL_Reference">
+   XUL Reference
+  </a>
+ </span>
+</div>
 <dl>
-  <dt>
-    <code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/currentIndex">currentIndex</a></span></code></dt>
-  <dd>
-    Type: <em>integer</em></dd>
-  <dd>
-    <p>Set to the row index of the tree caret in the <code><a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">tree</a></code>. For trees with focus, the caret's position is indicated by the focus ring, but unfocused trees won't show  a focus ring, naturally. For unfocused trees, the (undrawn) caret's position can still be obtained by this property. If the caret isn't present for any row (for example, because the tree has never been focused), the value will be <code>-1</code>.</p>
-    <p><strong>You cannot rely on this property to change or determine a tree selection</strong>, except for trees with <code><code id="a-seltype"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/seltype">seltype</a></code>="single"</code>. (All trees have <code>seltype="multiple"</code> by default.) To reliably change or determine a selection, instead use the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeSelection" title="">nsITreeSelection</a></code> interface methods available via <code>tree.view.selection</code>.</p>
-  </dd>
+ <dt>
+  <code>
+   <span>
+    <a href="/en-US/docs/Mozilla/Tech/XUL/Property/currentIndex">
+     currentIndex
+    </a>
+   </span>
+  </code>
+ </dt>
+ <dd>
+  Type:
+  <em>
+   integer
+  </em>
+ </dd>
+ <dd>
+  <p>
+   Set to the row index of the tree caret in the
+   <code>
+    <a href="/en-US/docs/Mozilla/Tech/XUL/tree" title="tree">
+     tree
+    </a>
+   </code>
+   . For trees with focus, the caret's position is indicated by the focus ring, but unfocused trees won't show  a focus ring, naturally. For unfocused trees, the (undrawn) caret's position can still be obtained by this property. If the caret isn't present for any row (for example, because the tree has never been focused), the value will be
+   <code>
+    -1
+   </code>
+   .
+  </p>
+  <p>
+   <strong>
+    You cannot rely on this property to change or determine a tree selection
+   </strong>
+   , except for trees with
+   <code>
+    <code id="a-seltype">
+     <a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/seltype">
+      seltype
+     </a>
+    </code>
+    ="single"
+   </code>
+   . (All trees have
+   <code>
+    seltype="multiple"
+   </code>
+   by default.) To reliably change or determine a selection, instead use the
+   <code>
+    <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeSelection" title="">
+     nsITreeSelection
+    </a>
+   </code>
+   interface methods available via
+   <code>
+    tree.view.selection
+   </code>
+   .
+  </p>
+ </dd>
 </dl>
 <div class="noinclude">
-  <h2 id="Example" name="Example">Example</h2>
-  <pre>// One way of retrieving the text of a cell.
+ <h2 id="Example" name="Example">
+  Example
+ </h2>
+ <pre>// One way of retrieving the text of a cell.
 &lt;script language ="javascript"&gt;
 function treeRowClicked(){
     var tree = document.getElementById("my-tree");
@@ -53,10 +112,20 @@ function treeRowClicked(){
   &lt;/treechildren&gt;
 &lt;/tree&gt;
 </pre>
-  <h2 id="See_also" name="See_also">See also</h2>
-  <ul>
-    <li><code><span><a href="https://developer.mozilla.org/en-US/docs/XUL/Property/listbox.currentIndex">listbox.currentIndex</a></span></code></li>
-  </ul>
+ <h2 id="See_also" name="See_also">
+  See also
+ </h2>
+ <ul>
+  <li>
+   <code>
+    <span>
+     <a href="/en-US/docs/Mozilla/Tech/XUL/Property/listbox.currentIndex">
+      listbox.currentIndex
+     </a>
+    </span>
+   </code>
+  </li>
+ </ul>
 </div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sevenspade">Sevenspade</a>, <a href="https://developer.mozilla.org/en-US/profiles/Marsf">Marsf</a>, <a href="https://developer.mozilla.org/en-US/profiles/MarkFinkle">MarkFinkle</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>, <a href="https://developer.mozilla.org/en-US/profiles/The%20Hunter">The Hunter</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
 </html>

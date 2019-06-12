@@ -9,8 +9,48 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Providing_Command-Line_Options.html">Providing_Command-Line_Options</a></nav><div class="content-heading"><h1>Notes</h1></div>
-<div class="content">
-<ol> <li>Implementing an nsICommandLineHandler on Windows may trigger a bug that causes an error message ("Windows cannot find the file specified") to be displayed when opening external links (like from a shortcut or from an external application). Deleting the "(Default)" values in the following registry keys will fix this:<br> <br> HKEY_CLASSES_ROOT\HTTP\shell\open\ddeexec<br> HKEY_CLASSES_ROOT\https\shell\open\ddeexec<br> <br> You can also do this from within your XPCOM component using <a class="internal" href="/En/Accessing%20the%20Windows%20Registry%20Using%20XPCOM" title="En/Accessing the Windows Registry Using XPCOM">Windows registry interface</a>.<br> Some more links on the matter: <ol> <li>A <a class="external" href="http://forums.mozillazine.org/viewtopic.php?p=581077#p581077" title="http://forums.mozillazine.org/viewtopic.php?p=581077#p581077">Mozillazine post</a>.</li> <li>A <a class="external" href="http://www.hanselman.com/blog/FixQuotGeneralFailurequotWhileLaunchingFireFoxURLsFromOutlook.aspx" title="http://www.hanselman.com/blog/FixQuotGeneralFailurequotWhileLaunchingFireFoxURLsFromOutlook.aspx">blog post</a>.<br> </li> </ol> </li>
+<div class="content"><ol>
+ <li>
+  Implementing an nsICommandLineHandler on Windows may trigger a bug that causes an error message ("Windows cannot find the file specified") to be displayed when opening external links (like from a shortcut or from an external application). Deleting the "(Default)" values in the following registry keys will fix this:
+  <br>
+   <br>
+    HKEY_CLASSES_ROOT\HTTP\shell\open\ddeexec
+    <br>
+     HKEY_CLASSES_ROOT\https\shell\open\ddeexec
+     <br>
+      <br>
+       You can also do this from within your XPCOM component using
+       <a class="internal" href="https://developer.mozilla.org/en-US/Accessing%20the%20Windows%20Registry%20Using%20XPCOM" title="En/Accessing the Windows Registry Using XPCOM">
+        Windows registry interface
+       </a>
+       .
+       <br>
+        Some more links on the matter:
+        <ol>
+         <li>
+          A
+          <a class="external" href="http://forums.mozillazine.org/viewtopic.php?p=581077#p581077" title="http://forums.mozillazine.org/viewtopic.php?p=581077#p581077">
+           Mozillazine post
+          </a>
+          .
+         </li>
+         <li>
+          A
+          <a class="external" href="http://www.hanselman.com/blog/FixQuotGeneralFailurequotWhileLaunchingFireFoxURLsFromOutlook.aspx" title="http://www.hanselman.com/blog/FixQuotGeneralFailurequotWhileLaunchingFireFoxURLsFromOutlook.aspx">
+           blog post
+          </a>
+          .
+          <br>
+          </br>
+         </li>
+        </ol>
+       </br>
+      </br>
+     </br>
+    </br>
+   </br>
+  </br>
+ </li>
 </ol></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>.</p></div></body>
 </html>

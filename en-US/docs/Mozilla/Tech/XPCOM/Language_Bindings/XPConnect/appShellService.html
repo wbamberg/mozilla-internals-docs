@@ -9,7 +9,8 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Language_Bindings.html">Language_Bindings</a>&raquo;<a href="../XPConnect.html">XPConnect</a></nav><div class="content-heading"><h1>appShellService</h1></div>
-<div class="content"><p>Quitting Mozilla:
+<div class="content"><p>
+ Quitting Mozilla:
 </p>
 <pre class="eval">var Cc = Components.classes;
 var Ci = Components.interfaces;
@@ -17,8 +18,18 @@ shell = Cc["@mozilla.org/appshell/appShellService;1"];
 shell = shell.getService(Ci.nsIAppShellService);
 shell.quit(3); // eForceQuit
 </pre>
-<p>Bam! There goes Mozilla.
-</p><p>Then again, there's a much easier way; One of the <a href="en/Xpcshell">xpcshell</a> <a class="external" href="http://www.mozilla.org/scriptable/XPCShell.html">extensions</a> is a quit function:
+<p>
+ Bam! There goes Mozilla.
+</p>
+<p>
+ Then again, there's a much easier way; One of the
+ <a href="en/Xpcshell">
+  xpcshell
+ </a>
+ <a class="external" href="http://www.mozilla.org/scriptable/XPCShell.html">
+  extensions
+ </a>
+ is a quit function:
 </p>
 <pre class="eval">quit(3)
 </pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>

@@ -9,12 +9,50 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Glue_classes.html">Glue_classes</a></nav><div class="content-heading"><h1>nsCountedRef</h1></div>
-<div class="content"><p>nsCountedRef&lt;T&gt; is a template class implementing an object that takes a strong reference to a reference-counted resource that must be released, typically on destruction of the object.</p>
-<p>nsCountedRef has a role similar to <a class="internal" href="/en/nsRefPtr" title="En/NsRefPtr">nsRefPtr</a> but does not require that the handle is a pointer to an object that has AddRef() and Release() methods. nsCountedRef is therefore useful for managing references to foreign objects.</p>
-<p>nsCountedRef&lt;T&gt; is derived from <a class="internal" href="/En/NsAutoRef" title="En/NsAutoRef">nsAutoRef</a>&lt;T&gt; and so inherits its methods. nsCountedRef differs from nsAutoRef in that nsCountedRef constructors add a reference to the resource, and in that nsCountedRef provides copy construction&lt; and assignment operators enabling more than one concurrent reference to the same resource.</p>
-<p>In order to use nsCountedRef&lt;T&gt; for a class T associated with a particular resource type, the type of the handle to the resource and the methods for referencing and releasing the resource must be provided for class T.  This is usually done by providing a specialization of <a class="internal" href="/En/NsAutoRefTraits" title="En/NsAutoRefTraits">nsAutoRefTraits</a>&lt;T&gt;.</p>
-<p>nsCountedRef&lt;T&gt; is defined in <code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsAutoRef.h" rel="custom">xpcom/base/nsAutoRef.h</a></code>.</p>
-<h3 id="See_Also">See Also</h3>
-<p><a class="internal" href="/En/NsAutoRef" title="En/NsAutoRef">nsAutoRef</a>, <a class="internal" href="/En/NsAutoRefTraits" title="En/NsAutoRefTraits">nsAutoRefTraits</a></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<div class="content"><p>
+ nsCountedRef&lt;T&gt; is a template class implementing an object that takes a strong reference to a reference-counted resource that must be released, typically on destruction of the object.
+</p>
+<p>
+ nsCountedRef has a role similar to
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsRefPtr" title="En/NsRefPtr">
+  nsRefPtr
+ </a>
+ but does not require that the handle is a pointer to an object that has AddRef() and Release() methods. nsCountedRef is therefore useful for managing references to foreign objects.
+</p>
+<p>
+ nsCountedRef&lt;T&gt; is derived from
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRef" title="En/NsAutoRef">
+  nsAutoRef
+ </a>
+ &lt;T&gt; and so inherits its methods. nsCountedRef differs from nsAutoRef in that nsCountedRef constructors add a reference to the resource, and in that nsCountedRef provides copy construction&lt; and assignment operators enabling more than one concurrent reference to the same resource.
+</p>
+<p>
+ In order to use nsCountedRef&lt;T&gt; for a class T associated with a particular resource type, the type of the handle to the resource and the methods for referencing and releasing the resource must be provided for class T.  This is usually done by providing a specialization of
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRefTraits" title="En/NsAutoRefTraits">
+  nsAutoRefTraits
+ </a>
+ &lt;T&gt;.
+</p>
+<p>
+ nsCountedRef&lt;T&gt; is defined in
+ <code>
+  <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsAutoRef.h" rel="custom">
+   xpcom/base/nsAutoRef.h
+  </a>
+ </code>
+ .
+</p>
+<h3 id="See_Also">
+ See Also
+</h3>
+<p>
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRef" title="En/NsAutoRef">
+  nsAutoRef
+ </a>
+ ,
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsAutoRefTraits" title="En/NsAutoRefTraits">
+  nsAutoRefTraits
+ </a>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
 </html>

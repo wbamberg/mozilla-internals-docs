@@ -10,10 +10,16 @@
 
   <body><nav class="breadcrumbs"><a href="../../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../../Tech.html">Tech</a>&raquo;<a href="../../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../../Reference.html">Reference</a>&raquo;<a href="../../Glue_classes.html">Glue_classes</a>&raquo;<a href="../nsEmbedCString.html">nsEmbedCString</a></nav><div class="content-heading"><h1>nsEmbedCString</h1></div>
 <div class="content"><p>
-« <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a>
+ «
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference">
+  XPCOM API Reference
+ </a>
 </p>
-<h3 id="Summary" name="Summary">Summary</h3>
-<p>Constructors for nsEmbedCString.
+<h3 id="Summary" name="Summary">
+ Summary
+</h3>
+<p>
+ Constructors for nsEmbedCString.
 </p>
 <pre class="eval">  nsEmbedCString();
 </pre>
@@ -21,34 +27,74 @@
    const self_type&amp; aString
  );
 </pre>
-<h3 id="Parameters" name="Parameters">Parameters</h3>
-<dl><dt>aString
-</dt><dd> [in] A nsEmbedCString to copy into this string. </dd></dl>
+<h3 id="Parameters" name="Parameters">
+ Parameters
+</h3>
+<dl>
+ <dt>
+  aString
+ </dt>
+ <dd>
+  [in] A nsEmbedCString to copy into this string.
+ </dd>
+</dl>
 <pre class="eval">  nsEmbedCString(
    const abstract_string_type&amp; aAbstractString
  );
 </pre>
-<h3 id="Parameters_2" name="Parameters_2">Parameters</h3>
-<dl><dt>aAbstractString
-</dt><dd> [in] A nsACString to copy into this string. </dd></dl>
+<h3 id="Parameters_2" name="Parameters_2">
+ Parameters
+</h3>
+<dl>
+ <dt>
+  aAbstractString
+ </dt>
+ <dd>
+  [in] A nsACString to copy into this string.
+ </dd>
+</dl>
 <pre class="eval"> explicit  nsEmbedCString(
    const abstract_string_type&amp; aAbstractString
  );
 </pre>
-<h3 id="Parameters_3" name="Parameters_3">Parameters</h3>
-<dl><dt>aAbstractString
-</dt><dd> [in] A nsACString to copy into this string. </dd></dl>
+<h3 id="Parameters_3" name="Parameters_3">
+ Parameters
+</h3>
+<dl>
+ <dt>
+  aAbstractString
+ </dt>
+ <dd>
+  [in] A nsACString to copy into this string.
+ </dd>
+</dl>
 <pre class="eval"> explicit  nsEmbedCString(
    const char_type* aData,
    size_type aDataLength = PR_UINT32_MAX
  );
 </pre>
-<h3 id="Parameters_4" name="Parameters_4">Parameters</h3>
-<dl><dt>aData
-</dt><dd> [in] A raw character array to copy into this string. </dd><dt>aDataLength
-</dt><dd> [in] The length of aData, measured in storage units. If equal to PR_UINT32_MAX, then aData is assumed to be null-terminated. Otherwise, aData need not be null terminated. </dd></dl>
-<h3 id="Remarks" name="Remarks">Remarks</h3>
-<p>The default constructor sets the string's internal buffer to point to a static empty (zero-length) buffer.
+<h3 id="Parameters_4" name="Parameters_4">
+ Parameters
+</h3>
+<dl>
+ <dt>
+  aData
+ </dt>
+ <dd>
+  [in] A raw character array to copy into this string.
+ </dd>
+ <dt>
+  aDataLength
+ </dt>
+ <dd>
+  [in] The length of aData, measured in storage units. If equal to PR_UINT32_MAX, then aData is assumed to be null-terminated. Otherwise, aData need not be null terminated.
+ </dd>
+</dl>
+<h3 id="Remarks" name="Remarks">
+ Remarks
+</h3>
+<p>
+ The default constructor sets the string's internal buffer to point to a static empty (zero-length) buffer.
 </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>.</p></div></body>
 </html>

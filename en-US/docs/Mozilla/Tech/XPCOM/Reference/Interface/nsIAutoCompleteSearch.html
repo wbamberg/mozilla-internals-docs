@@ -9,24 +9,91 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIAutoCompleteSearch</h1></div>
-<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/autocomplete/nsIAutoCompleteSearch.idl" rel="custom">toolkit/components/autocomplete/nsIAutoCompleteSearch.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-This interface is implemented by search providers to start and stop autocomplete.
-</span>
-
-<div style="background: #eee; padding: 2px;">
-Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
-<span style="text-align: right; float: right;">Last changed in Gecko 1.7 </span></div>
-</div><p></p>
-<p>Users call <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteSearch#startSearch()">startSearch()</a></code> and pass in an <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteObserver" title="">nsIAutoCompleteObserver</a></code> when the search starts. Results can be sent to the listener either synchronously or asynchronously, depending on the implementation.</p>
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
-<table class="standard-table"> <tbody> <tr> <td><code>void <a href="#startSearch()">startSearch</a>(in AString searchString, in AString searchParam, in nsIAutoCompleteResult previousResult, in nsIAutoCompleteObserver listener);</code></td> </tr> <tr> <td><code>void <a href="#stopSearch()">stopSearch</a>();</code></td> </tr> </tbody>
+<div class="content"><p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/autocomplete/nsIAutoCompleteSearch.idl" rel="custom">
+    toolkit/components/autocomplete/nsIAutoCompleteSearch.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  This interface is implemented by search providers to start and stop autocomplete.
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  Inherits from:
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">
+    nsISupports
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 1.7
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<p>
+ Users call
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteSearch#startSearch()">
+   startSearch()
+  </a>
+ </code>
+ and pass in an
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteObserver" title="">
+   nsIAutoCompleteObserver
+  </a>
+ </code>
+ when the search starts. Results can be sent to the listener either synchronously or asynchronously, depending on the implementation.
+</p>
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>
+    <code>
+     void
+     <a href="#startSearch()">
+      startSearch
+     </a>
+     (in AString searchString, in AString searchParam, in nsIAutoCompleteResult previousResult, in nsIAutoCompleteObserver listener);
+    </code>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <code>
+     void
+     <a href="#stopSearch()">
+      stopSearch
+     </a>
+     ();
+    </code>
+   </td>
+  </tr>
+ </tbody>
 </table>
-<h2 id="Methods" name="Methods">Methods</h2>
-<h3 id="startSearch()" name="startSearch()">startSearch()</h3>
-<p>Search for a given string and notify a listener (either synchronously or asynchronously) of the result.</p>
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<h3 id="startSearch()" name="startSearch()">
+ startSearch()
+</h3>
+<p>
+ Search for a given string and notify a listener (either synchronously or asynchronously) of the result.
+</p>
 <pre class="eval">void startSearch(
   in AString searchString,
   in AString searchParam,
@@ -34,14 +101,74 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
   in nsIAutoCompleteObserver listener
 );
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-<dl> <dt><code>searchString</code></dt> <dd>The string to search for.</dd> <dt><code>searchParam</code></dt> <dd>An extra parameter. <strong>Can be empty if not needed.</strong></dd> <dt><code>previousResult</code></dt> <dd>The previous <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteResult" title="">nsIAutoCompleteResult</a></code> to use for faster searching. <strong>Can be null.</strong></dd> <dt><code>listener</code></dt> <dd>An <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteObserver" title="">nsIAutoCompleteObserver</a></code> listener to notify when the search is complete.</dd>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
+<dl>
+ <dt>
+  <code>
+   searchString
+  </code>
+ </dt>
+ <dd>
+  The string to search for.
+ </dd>
+ <dt>
+  <code>
+   searchParam
+  </code>
+ </dt>
+ <dd>
+  An extra parameter.
+  <strong>
+   Can be empty if not needed.
+  </strong>
+ </dd>
+ <dt>
+  <code>
+   previousResult
+  </code>
+ </dt>
+ <dd>
+  The previous
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteResult" title="">
+    nsIAutoCompleteResult
+   </a>
+  </code>
+  to use for faster searching.
+  <strong>
+   Can be null.
+  </strong>
+ </dd>
+ <dt>
+  <code>
+   listener
+  </code>
+ </dt>
+ <dd>
+  An
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteObserver" title="">
+    nsIAutoCompleteObserver
+   </a>
+  </code>
+  listener to notify when the search is complete.
+ </dd>
 </dl>
-<h3 id="stopSearch()" name="stopSearch()">stopSearch()</h3>
-<p>Stop all searches that are in progress.</p>
+<h3 id="stopSearch()" name="stopSearch()">
+ stopSearch()
+</h3>
+<p>
+ Stop all searches that are in progress.
+</p>
 <pre class="eval">void stopSearch();
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-<p>None.</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
+<p>
+ None.
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/madarche">madarche</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/roel">roel</a>, <a href="https://developer.mozilla.org/en-US/profiles/Bzbarsky">Bzbarsky</a>, <a href="https://developer.mozilla.org/en-US/profiles/Wjjohnst">Wjjohnst</a>.</p></div></body>
 </html>

@@ -9,91 +9,194 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Tutorial.html">Tutorial</a></nav><div class="content-heading"><h1>Localization</h1></div>
-<div class="content"><p>XUL and XML provide entities which are a convenient way of allowing localization.</p>
-
-<h3 id="Entities" name="Entities">Entities</h3>
-
-<p>Many applications are built such that translating the interface into a different language is as simple as possible. Usually, a table of strings is created for each language. Instead of hard-coding text directly into an application, each piece of text is only a reference into the string table. <a href="/en/XML" title="en/XML">XML</a> provides entities which can be used for a similar purpose.</p>
-
-<p>You should already be familiar with entities if you have written <a href="/en/HTML" title="en/HTML">HTML</a>. The codes <code>&amp;lt;</code> and <code>&amp;gt;</code> are examples of entities which can be used to place less than and greater than signs into the text. XML has a syntax which allows you to declare custom entities. You can use these so that the entity is replaced with its value, which can be a string of text. Entities may be used whenever text occurs, including the values of attributes. The example below demonstrates the use of an entity in a button.</p>
-
+<div class="content"><p>
+ XUL and XML provide entities which are a convenient way of allowing localization.
+</p>
+<h3 id="Entities" name="Entities">
+ Entities
+</h3>
+<p>
+ Many applications are built such that translating the interface into a different language is as simple as possible. Usually, a table of strings is created for each language. Instead of hard-coding text directly into an application, each piece of text is only a reference into the string table.
+ <a href="https://developer.mozilla.org/en-US/docs/Web/XML" title="en/XML">
+  XML
+ </a>
+ provides entities which can be used for a similar purpose.
+</p>
+<p>
+ You should already be familiar with entities if you have written
+ <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="en/HTML">
+  HTML
+ </a>
+ . The codes
+ <code>
+  &amp;lt;
+ </code>
+ and
+ <code>
+  &amp;gt;
+ </code>
+ are examples of entities which can be used to place less than and greater than signs into the text. XML has a syntax which allows you to declare custom entities. You can use these so that the entity is replaced with its value, which can be a string of text. Entities may be used whenever text occurs, including the values of attributes. The example below demonstrates the use of an entity in a button.
+</p>
 <pre>&lt;button label="&amp;findLabel;"/&gt;
 </pre>
-
-<p>The text that will appear on the label will be the value that the entity <code>&amp;findLabel;</code> has. A file is created which contains the entity declarations for each supported language. In English, the <code>&amp;findLabel;</code> entity will probably be declared to have the text "Find".</p>
-
-<h3 id="DTD_Files" name="DTD_Files">DTD Files</h3>
-
-<p>Entities are declared in <em>Document Type Definition</em> (DTD) files. Files of this type are normally used to declare the syntax and semantics of a particular XML file, but they also let you declare entities. In the Mozilla chrome system, you will find DTD files located in the <code>locales</code> subdirectory. You would normally have one DTD file (with an extension <code>.dtd</code>) per XUL file.</p>
-
-<p>If you look in the chrome directory, you should see an archive for your language. (<code>en-US.jar</code> is the default for English.) You might have locale files in multiple languages, for example, US English (en-US) and French (fr). Inside these archives, you will find the files that hold the localized text for each window. The structure of the archives is very similar to the directory structure used for <a href="/en/XUL_Tutorial/Creating_a_Skin" title="en/XUL_Tutorial/Creating_a_Skin">skins</a>.</p>
-
-<p>Inside the archives, you would place the DTD files in which you declare entities. Typically, you will have one DTD file for each XUL file, usually with the same filename except with a <code>.dtd</code> extension. So, for the find files dialog, we will need a file called <code>findfile.dtd</code>.</p>
-
-<p>For non-installed chrome files, you can just put the DTD file in the same directory as the XUL file.</p>
-
-<div class="note"><strong>Note:</strong> You should encode DTD files as UTF-8 for non-ASCII characters. That is, you should save them in UTF-8 format (<a class="external" href="http://www.mozdev.org/notes/l10n/unicode/editors-en.html">without BOM</a>). For more information, see <a class="external" href="http://www.mozilla.org/projects/l10n/mlp_chrome.html#text">Mozilla Language Packs</a>.</div>
-
-<p>Once you have created a DTD file for your XUL, you will need to add a line to the XUL file which indicates that you want to use the DTD file. Otherwise, errors will occur as it won't be able to find the entities. To do this, add a line of the following form somewhere near the top of the XUL file:</p>
-
+<p>
+ The text that will appear on the label will be the value that the entity
+ <code>
+  &amp;findLabel;
+ </code>
+ has. A file is created which contains the entity declarations for each supported language. In English, the
+ <code>
+  &amp;findLabel;
+ </code>
+ entity will probably be declared to have the text "Find".
+</p>
+<h3 id="DTD_Files" name="DTD_Files">
+ DTD Files
+</h3>
+<p>
+ Entities are declared in
+ <em>
+  Document Type Definition
+ </em>
+ (DTD) files. Files of this type are normally used to declare the syntax and semantics of a particular XML file, but they also let you declare entities. In the Mozilla chrome system, you will find DTD files located in the
+ <code>
+  locales
+ </code>
+ subdirectory. You would normally have one DTD file (with an extension
+ <code>
+  .dtd
+ </code>
+ ) per XUL file.
+</p>
+<p>
+ If you look in the chrome directory, you should see an archive for your language. (
+ <code>
+  en-US.jar
+ </code>
+ is the default for English.) You might have locale files in multiple languages, for example, US English (en-US) and French (fr). Inside these archives, you will find the files that hold the localized text for each window. The structure of the archives is very similar to the directory structure used for
+ <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Creating_a_Skin" title="en/XUL_Tutorial/Creating_a_Skin">
+  skins
+ </a>
+ .
+</p>
+<p>
+ Inside the archives, you would place the DTD files in which you declare entities. Typically, you will have one DTD file for each XUL file, usually with the same filename except with a
+ <code>
+  .dtd
+ </code>
+ extension. So, for the find files dialog, we will need a file called
+ <code>
+  findfile.dtd
+ </code>
+ .
+</p>
+<p>
+ For non-installed chrome files, you can just put the DTD file in the same directory as the XUL file.
+</p>
+<div class="note">
+ <strong>
+  Note:
+ </strong>
+ You should encode DTD files as UTF-8 for non-ASCII characters. That is, you should save them in UTF-8 format (
+ <a class="external" href="http://www.mozdev.org/notes/l10n/unicode/editors-en.html">
+  without BOM
+ </a>
+ ). For more information, see
+ <a class="external" href="http://www.mozilla.org/projects/l10n/mlp_chrome.html#text">
+  Mozilla Language Packs
+ </a>
+ .
+</div>
+<p>
+ Once you have created a DTD file for your XUL, you will need to add a line to the XUL file which indicates that you want to use the DTD file. Otherwise, errors will occur as it won't be able to find the entities. To do this, add a line of the following form somewhere near the top of the XUL file:
+</p>
 <pre>&lt;!DOCTYPE window SYSTEM "chrome://findfile/locale/findfile.dtd"&gt;
 </pre>
-
-<p>This line specifies that the URL indicated is to be used as a DTD for the file. In this case, we have declared that we want to use the <code>findfile.dtd</code> DTD file. This line is typically placed just before the <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code> element.</p>
-
-<p>You also need to add the locale to the <a href="/en/Chrome_Registration#locale" title="en/Chrome_Registration#locale">chrome.manifest</a> file, for example:</p>
-
+<p>
+ This line specifies that the URL indicated is to be used as a DTD for the file. In this case, we have declared that we want to use the
+ <code>
+  findfile.dtd
+ </code>
+ DTD file. This line is typically placed just before the
+ <code>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/window" title="window">
+    window
+   </a>
+  </code>
+ </code>
+ element.
+</p>
+<p>
+ You also need to add the locale to the
+ <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration" title="en/Chrome_Registration#locale">
+  chrome.manifest
+ </a>
+ file, for example:
+</p>
 <pre class="eval">locale findfile en-US locale/
 </pre>
-
-<h3 id="Declaring_Entities" name="Declaring_Entities">Declaring Entities</h3>
-
-<p>The entities are declared using a simple syntax as shown below:</p>
-
+<h3 id="Declaring_Entities" name="Declaring_Entities">
+ Declaring Entities
+</h3>
+<p>
+ The entities are declared using a simple syntax as shown below:
+</p>
 <pre>&lt;!ENTITY findLabel "Find"&gt;
 </pre>
-
-<p>This example creates an entity with the name <code>findLabel</code> and the value "Find". This means that wherever the text "&amp;findLabel;" appears in the XUL file, it will be replaced with the text "Find". Note that entity declarations do not have a trailing slash at the end of them. In the DTD file for a different language, the text for that language will be used instead.</p>
-
+<p>
+ This example creates an entity with the name
+ <code>
+  findLabel
+ </code>
+ and the value "Find". This means that wherever the text "&amp;findLabel;" appears in the XUL file, it will be replaced with the text "Find". Note that entity declarations do not have a trailing slash at the end of them. In the DTD file for a different language, the text for that language will be used instead.
+</p>
 <pre class="eval"><strong>for Japanese:</strong>
 &lt;!ENTITY findLabel "検索"&gt;
 </pre>
-
-<p>For example, the following text:</p>
-
+<p>
+ For example, the following text:
+</p>
 <pre>&lt;description value="&amp;findLabel;"/&gt;
 </pre>
-
-<p>is translated as:</p>
-
+<p>
+ is translated as:
+</p>
 <pre class="eval"><strong>English version:</strong>
 &lt;description value="Find"/&gt;
 
 <strong>Japanese version:</strong>
 &lt;description value="検索"/&gt;
 </pre>
-
-<p>You would declare an entity for each label or string of text that you use in your interface. You should not have any directly displayed text in the XUL file at all.</p>
-
-<p>In addition to using entities for text labels, you should use them for any value that could be different in a different language. <a href="/en/XUL_Tutorial/Keyboard_Shortcuts" title="en/XUL_Tutorial/Keyboard_Shortcuts">Access keys and keyboard shortcuts </a> for example.</p>
-
+<p>
+ You would declare an entity for each label or string of text that you use in your interface. You should not have any directly displayed text in the XUL file at all.
+</p>
+<p>
+ In addition to using entities for text labels, you should use them for any value that could be different in a different language.
+ <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Keyboard_Shortcuts" title="en/XUL_Tutorial/Keyboard_Shortcuts">
+  Access keys and keyboard shortcuts
+ </a>
+ for example.
+</p>
 <pre class="eval"> <strong>XUL</strong>
  &lt;menuitem label="&amp;undo.label;" accesskey="&amp;undo.key;"/&gt;
  <strong>DTD</strong>
  &lt;!ENTITY undo.label "Undo"&gt;
  &lt;!ENTITY undo.key "u"&gt;
 </pre>
-
-<p>The example above uses two entities, one for the label on the Undo menu item and the second for the access key.</p>
-
-<p> </p>
-
+<p>
+ The example above uses two entities, one for the label on the Undo menu item and the second for the access key.
+</p>
+<p>
+</p>
 <div class="highlight">
-<h3 id="Changing_the_Find_Files_example" name="Changing_the_Find_Files_example">Changing the Find Files example</h3>
-
-<p>Let's take a look at how we would put all of this together by modifying the find files dialog so that it uses a DTD file for all of its text strings. The entire XUL file is shown below with the changes shown in red.</p>
-
-<pre class="eval">&lt;?xml version="1.0"?&gt;
+ <h3 id="Changing_the_Find_Files_example" name="Changing_the_Find_Files_example">
+  Changing the Find Files example
+ </h3>
+ <p>
+  Let's take a look at how we would put all of this together by modifying the find files dialog so that it uses a DTD file for all of its text strings. The entire XUL file is shown below with the changes shown in red.
+ </p>
+ <pre class="eval">&lt;?xml version="1.0"?&gt;
 
 &lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
 &lt;?xml-stylesheet href="findfile.css" type="text/css"?&gt;
@@ -253,18 +356,22 @@
 
 &lt;/window&gt;
 </pre>
-
-<p>Each text string has been replaced by an entity reference. A DTD file has been included near the beginning of the XUL file. Each entity that was added should be declared in the DTD file. The window will not be displayed if an entity is found in the XUL file that hasn't been declared.</p>
-
-<p>Note that the name of the entity is not important. In the example above, words in entities have been separated with periods. You don't have to do this. The entity names here follow similar conventions as the rest of the Mozilla code.</p>
-
-<p>You might notice that the text '2520 bytes' has been replaced by two entities. This is because the phrase structure may be different in another locale. For example, the number might need to appear before the equivalent of 'bytes' instead of after. Of course, this might need to be more complicated in order to display KB or MB as needed.</p>
-
-<p>The access keys and keyboard shortcuts have also been translated into entities because they will likely be different in a different locale.</p>
-
-<p>Next, the DTD file - findfile.dtd:</p>
-
-<pre>&lt;!ENTITY findWindow.title "Find Files"&gt;
+ <p>
+  Each text string has been replaced by an entity reference. A DTD file has been included near the beginning of the XUL file. Each entity that was added should be declared in the DTD file. The window will not be displayed if an entity is found in the XUL file that hasn't been declared.
+ </p>
+ <p>
+  Note that the name of the entity is not important. In the example above, words in entities have been separated with periods. You don't have to do this. The entity names here follow similar conventions as the rest of the Mozilla code.
+ </p>
+ <p>
+  You might notice that the text '2520 bytes' has been replaced by two entities. This is because the phrase structure may be different in another locale. For example, the number might need to appear before the equivalent of 'bytes' instead of after. Of course, this might need to be more complicated in order to display KB or MB as needed.
+ </p>
+ <p>
+  The access keys and keyboard shortcuts have also been translated into entities because they will likely be different in a different locale.
+ </p>
+ <p>
+  Next, the DTD file - findfile.dtd:
+ </p>
+ <pre>&lt;!ENTITY findWindow.title "Find Files"&gt;
 &lt;!ENTITY fileMenu.label "File"&gt;
 &lt;!ENTITY editMenu.label "Edit"&gt;
 &lt;!ENTITY fileMenu.accesskey "f"&gt;
@@ -305,22 +412,47 @@
 &lt;!ENTITY button.find "Find"&gt;
 &lt;!ENTITY button.cancel "Cancel"&gt;
 </pre>
-
-<p>Now, to add text for a new language all you need to do is create another DTD file. By using the chrome system to add the DTD file to a different locale, the same XUL file can be used in any language.</p>
-
-<p>Find files example so far: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-locale.xul.txt">Source</a></p>
+ <p>
+  Now, to add text for a new language all you need to do is create another DTD file. By using the chrome system to add the DTD file to a different locale, the same XUL file can be used in any language.
+ </p>
+ <p>
+  Find files example so far:
+  <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-locale.xul.txt">
+   Source
+  </a>
+ </p>
 </div>
-
-<p>Next, we'll look at <a href="/en/XUL_Tutorial/Property_Files" title="en/XUL_Tutorial/Property_Files">property files</a>.</p>
-
-<p></p><div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/XUL_Tutorial/Creating_a_Skin" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial/Property_Files">Next  »</a></p>
-</div><p></p>
-
-<h2 id="See_Also">See Also</h2>
-
+<p>
+ Next, we'll look at
+ <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Property_Files" title="en/XUL_Tutorial/Property_Files">
+  property files
+ </a>
+ .
+</p>
+<p>
+</p>
+<div class="prevnext" style="text-align: right;">
+ <p>
+  <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Creating_a_Skin" style="float: left;">
+   « Previous
+  </a>
+  <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Property_Files">
+   Next  »
+  </a>
+ </p>
+</div>
+<p>
+</p>
+<h2 id="See_Also">
+ See Also
+</h2>
 <ul>
- <li>How to localize html pages, xul files, and js/jsm files from bootstrapped add-ons: <a href="/en-US/Add-ons/Bootstrapped_extensions#Localization_%28L10n%29">Bootstrapped Extensions :: Localization (L10n)</a></li>
+ <li>
+  How to localize html pages, xul files, and js/jsm files from bootstrapped add-ons:
+  <a href="https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Bootstrapped_extensions">
+   Bootstrapped Extensions :: Localization (L10n)
+  </a>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, <a href="https://developer.mozilla.org/en-US/profiles/Noitidart">Noitidart</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/jbeatty">jbeatty</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/Chbok">Chbok</a>, <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, <a href="https://developer.mozilla.org/en-US/profiles/Jomel">Jomel</a>, <a href="https://developer.mozilla.org/en-US/profiles/J05ef">J05ef</a>, <a href="https://developer.mozilla.org/en-US/profiles/MarkFinkle">MarkFinkle</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>, <a href="https://developer.mozilla.org/en-US/profiles/Morishoji">Morishoji</a>, <a href="https://developer.mozilla.org/en-US/profiles/Prodizy">Prodizy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ricky">Ricky</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>, <a href="https://developer.mozilla.org/en-US/profiles/Jens.B">Jens.B</a>.</p></div></body>
 </html>

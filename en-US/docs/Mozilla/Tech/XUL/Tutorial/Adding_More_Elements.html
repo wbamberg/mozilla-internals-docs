@@ -10,12 +10,26 @@
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Tutorial.html">Tutorial</a></nav><div class="content-heading"><h1>Adding more elements</h1></div>
 <div class="content"><div>
-  <div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/XUL_Tutorial/Groupboxes" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial/Stacks_and_Decks">Next  »</a></p>
-</div></div>
-<p>We will conclude the discussion of boxes by adding some boxes to the find files dialog.</p>
-<h2 id="Adding_Elements_to_our_find_files_example" name="Adding_Elements_to_our_find_files_example">Adding Elements to our find files example</h2>
-<p>We will add some more elements to the find files dialog now. First, we will add the capability to search for other information such as the file size and date.</p>
+ <div class="prevnext" style="text-align: right;">
+  <p>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Groupboxes" style="float: left;">
+    « Previous
+   </a>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Stacks_and_Decks">
+    Next  »
+   </a>
+  </p>
+ </div>
+</div>
+<p>
+ We will conclude the discussion of boxes by adding some boxes to the find files dialog.
+</p>
+<h2 id="Adding_Elements_to_our_find_files_example" name="Adding_Elements_to_our_find_files_example">
+ Adding Elements to our find files example
+</h2>
+<p>
+ We will add some more elements to the find files dialog now. First, we will add the capability to search for other information such as the file size and date.
+</p>
 <pre class="brush:xml;highlight:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]">&lt;hbox&gt;
   &lt;menulist id="searchtype"&gt;
     &lt;menupopup&gt;
@@ -35,9 +49,22 @@
   &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
 &lt;/hbox&gt;</pre>
 <div class="float-right">
-  <img alt="Image:boxfinal1.png" class="internal" src="/@api/deki/files/567/=Boxfinal1.png"></div>
-<p>Two <a href="/en-US/docs/XUL_Tutorial/List_Controls#_Drop-down_Lists" title="XUL_Tutorial/List_Controls#_Drop-down_Lists">drop down boxes</a> have been added to the dialog. A <a href="/en-US/docs/XUL_Tutorial/Using_Spacers" title="XUL_Tutorial/Using_Spacers">spacer</a> has been added in between each element to separate them. These spacers have been given an explicit width of 10 pixels each. You will notice that if the window is resized, the textbox grows but the other components do not. You will also notice that the label was removed.</p>
-<p>If you resize the window vertically, the elements do not change size. This is because they are inside horizontal boxes. In might be more appropriate if the Find and Cancel buttons always stayed along the bottom of the window. This is easy to do by adding a spacer in between the two horizontal boxes.</p>
+ <img alt="Image:boxfinal1.png" class="internal" src="/@api/deki/files/567/=Boxfinal1.png"/>
+</div>
+<p>
+ Two
+ <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/List_Controls" title="XUL_Tutorial/List_Controls#_Drop-down_Lists">
+  drop down boxes
+ </a>
+ have been added to the dialog. A
+ <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Using_Spacers" title="XUL_Tutorial/Using_Spacers">
+  spacer
+ </a>
+ has been added in between each element to separate them. These spacers have been given an explicit width of 10 pixels each. You will notice that if the window is resized, the textbox grows but the other components do not. You will also notice that the label was removed.
+</p>
+<p>
+ If you resize the window vertically, the elements do not change size. This is because they are inside horizontal boxes. In might be more appropriate if the Find and Cancel buttons always stayed along the bottom of the window. This is easy to do by adding a spacer in between the two horizontal boxes.
+</p>
 <pre class="brush:xml;highlight:[1,21]">&lt;spacer style="height: 10px"/&gt;
 &lt;hbox&gt;
   &lt;menulist id="searchtype"&gt;
@@ -61,9 +88,41 @@
 &lt;spacer style="height: 10px" flex="1"/&gt;
 
 &lt;hbox&gt;</pre>
-<p>Now when the dialog is resized, the two buttons will move so that they are always along the bottom of the dialog. The first <code><a href="/en-US/docs/Mozilla/Tech/XUL/spacer" title="spacer">spacer</a></code> adds extra spacing in between the title label and the search criteria elements.</p>
-<p>It might look nicer if there was a border around the search criteria. There are two ways to do this. We could use the CSS <code>border</code> property or we could use the <code><code><a href="/en-US/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">groupbox</a></code></code> element. This first method would require that we set the style on the box itself. We will use the latter method, however. A <a href="/en-US/docs/XUL_Tutorial/Groupboxes" title="XUL_Tutorial/Groupboxes">groupbox</a> has the advantage that it draws a box with a nice beveled look, suitable for the current theme.</p>
-<p>Let us change the box into a <code>groupbox</code>:</p>
+<p>
+ Now when the dialog is resized, the two buttons will move so that they are always along the bottom of the dialog. The first
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XUL/spacer" title="spacer">
+   spacer
+  </a>
+ </code>
+ adds extra spacing in between the title label and the search criteria elements.
+</p>
+<p>
+ It might look nicer if there was a border around the search criteria. There are two ways to do this. We could use the CSS
+ <code>
+  border
+ </code>
+ property or we could use the
+ <code>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/groupbox" title="groupbox">
+    groupbox
+   </a>
+  </code>
+ </code>
+ element. This first method would require that we set the style on the box itself. We will use the latter method, however. A
+ <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Groupboxes" title="XUL_Tutorial/Groupboxes">
+  groupbox
+ </a>
+ has the advantage that it draws a box with a nice beveled look, suitable for the current theme.
+</p>
+<p>
+ Let us change the box into a
+ <code>
+  groupbox
+ </code>
+ :
+</p>
 <pre class="brush:xml;highlight:[1,2,9]">&lt;groupbox orient="horizontal"&gt;
   &lt;caption label="Search Criteria"/&gt;
   &lt;menulist id="searchtype"&gt;
@@ -74,14 +133,41 @@
   &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
 &lt;/groupbox&gt;</pre>
 <div class="float-right">
-  <img alt="Image:boxfinal2.png" class="internal" src="/@api/deki/files/568/=Boxfinal2.png"></div>
-<p>There are other cosmetic problems as well. We could also have the groupbox grow so that it extends vertically to the bottom of the box. Also, we could modify some of the margins so that the elements are positioned better.</p>
-<p>We will see more examples of the box model and some of its features as we continue to add elements throughout the tutorial.</p>
-<p>Find files example so far <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul.txt">Source</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul">View</a></p>
-<p>Next, we will look at how to <a href="/en-US/docs/XUL_Tutorial/Stacks_and_Decks" title="XUL_Tutorial/Stacks_and_Decks">create stacks</a>.</p>
+ <img alt="Image:boxfinal2.png" class="internal" src="/@api/deki/files/568/=Boxfinal2.png"/>
+</div>
+<p>
+ There are other cosmetic problems as well. We could also have the groupbox grow so that it extends vertically to the bottom of the box. Also, we could modify some of the margins so that the elements are positioned better.
+</p>
+<p>
+ We will see more examples of the box model and some of its features as we continue to add elements throughout the tutorial.
+</p>
+<p>
+ Find files example so far
+ <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul.txt">
+  Source
+ </a>
+ <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul">
+  View
+ </a>
+</p>
+<p>
+ Next, we will look at how to
+ <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Stacks_and_Decks" title="XUL_Tutorial/Stacks_and_Decks">
+  create stacks
+ </a>
+ .
+</p>
 <div>
-  <div class="prevnext" style="text-align: right;">
-    <p><a href="/en-US/docs/XUL_Tutorial/Groupboxes" style="float: left;">« Previous</a><a href="/en-US/docs/XUL_Tutorial/Stacks_and_Decks">Next  »</a></p>
-</div></div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+ <div class="prevnext" style="text-align: right;">
+  <p>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Groupboxes" style="float: left;">
+    « Previous
+   </a>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Stacks_and_Decks">
+    Next  »
+   </a>
+  </p>
+ </div>
+</div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/james_oh">james_oh</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/Chbok">Chbok</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Morishoji">Morishoji</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
 </html>

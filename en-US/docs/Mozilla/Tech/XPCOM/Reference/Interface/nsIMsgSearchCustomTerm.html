@@ -9,9 +9,40 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIMsgSearchCustomTerm</h1></div>
-<div class="content"><p>Defined in <strong><a class="external" href="http://mxr.mozilla.org/comm-central/source/">comm-central</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">mailnews</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">base</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">search</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">public</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchCustomTerm.idl">nsIMsgSearchCustomTerm.idl</a> </strong></p>
-<h3 id="Attributes">Attributes</h3>
-<h4 id="id">id</h4>
+<div class="content"><p>
+ Defined in
+ <strong>
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/">
+   comm-central
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">
+   mailnews
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">
+   base
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">
+   search
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">
+   public
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchCustomTerm.idl">
+   nsIMsgSearchCustomTerm.idl
+  </a>
+ </strong>
+</p>
+<h3 id="Attributes">
+ Attributes
+</h3>
+<h4 id="id">
+ id
+</h4>
 <pre class="brush: cpp">  /**
    * globally unique string to identify this search term.
    * recommended form: ExtensionName@example.com#TermName
@@ -22,16 +53,24 @@
    */
   readonly attribute ACString id;
 </pre>
-<h4 id="name">name</h4>
+<h4 id="name">
+ name
+</h4>
 <pre>  /// name to display in term list. This should be localized. */
   readonly attribute AString name;
 </pre>
-<h4 id="needsBody">needsBody</h4>
+<h4 id="needsBody">
+ needsBody
+</h4>
 <pre>  /// Does this term need the message body?
   readonly attribute boolean needsBody;
 </pre>
-<h3 id="Methods">Methods</h3>
-<h4 id="getEnabled">getEnabled</h4>
+<h3 id="Methods">
+ Methods
+</h3>
+<h4 id="getEnabled">
+ getEnabled
+</h4>
 <pre>/**
    * Is this custom term enabled?
    *
@@ -41,10 +80,12 @@
    *
    * @return               true if enabled
    */
-  boolean getEnabled(in <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope">nsMsgSearchScopeValue</a> scope,
-                     in <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a>    op);
+  boolean getEnabled(in <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchScope" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope">nsMsgSearchScopeValue</a> scope,
+                     in <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a>    op);
 </pre>
-<h4 id="getAvailable">getAvailable</h4>
+<h4 id="getAvailable">
+ getAvailable
+</h4>
 <pre>  /**
    * Is this custom term available?
    *
@@ -54,10 +95,12 @@
    *
    * @return               true if available
    */
-  boolean getAvailable(in <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope">nsMsgSearchScopeValue</a> scope,
-                       in <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a> op);
+  boolean getAvailable(in <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchScope" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope">nsMsgSearchScopeValue</a> scope,
+                       in <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a> op);
 </pre>
-<h4 id="getAvailableOperators">getAvailableOperators</h4>
+<h4 id="getAvailableOperators">
+ getAvailableOperators
+</h4>
 <pre>  /**
    * List the valid operators for this term.
    *
@@ -66,12 +109,14 @@
    *
    * @return               array of operators
    */
-  void getAvailableOperators(in <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope">nsMsgSearchScopeValue</a> scope,
+  void getAvailableOperators(in <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchScope" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchScope">nsMsgSearchScopeValue</a> scope,
                              out unsigned long        length,
                              [retval, array, size_is(length)]
-                             out <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a>   operators);
+                             out <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a>   operators);
 </pre>
-<h4 id="match">match</h4>
+<h4 id="match">
+ match
+</h4>
 <pre>  /**
    * Apply the custom search term to a message
     *
@@ -84,7 +129,7 @@
  
    boolean match(in nsIMsgDBHdr        msgHdr,
                  in AUTF8String        searchValue,
-                 in <a href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a> searchOp);
+                 in <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchOp" title="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsMsgSearchOp">nsMsgSearchOpValue</a> searchOp);
 </pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000">RealRaven2000</a>.</p></div></body>
 </html>

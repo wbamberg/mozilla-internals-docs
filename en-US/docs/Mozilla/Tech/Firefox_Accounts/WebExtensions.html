@@ -10,21 +10,42 @@
 
   <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../Firefox_Accounts.html">Firefox_Accounts</a></nav><div class="content-heading"><h1>Firefox Accounts WebExtensions</h1></div>
 <div class="content"><div class="warning">
-<p>This document is a work in progess draft</p>
+ <p>
+  This document is a work in progess draft
+ </p>
 </div>
-
-<p>This page will help you integrate your <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtension</a> with Firefox Accounts. Before beginning this process, make sure to read about the <a href="/en-US/docs/Mozilla/Tech/Firefox_Accounts/Introduction#OAuth_2.0_API">Firefox Accounts OAuth API</a>.  </p>
-
-<h2 id="FxA_Web_Extension_login_flow">FxA Web Extension login flow</h2>
-
-<p>Your WebExtension must register as a Firefox Accounts relier with a specific WebExtension redirect URL.</p>
-
-<p><a href="https://www.lucidchart.com/publicSegments/view/c83f8946-5bee-4fdd-bc77-22960c680356/image.jpeg"><img alt="" src="https://www.lucidchart.com/publicSegments/view/c83f8946-5bee-4fdd-bc77-22960c680356/image.jpeg"></a></p>
-
-<h2 id="Derived_encryption_keys">Derived encryption keys</h2>
-
-<p>Besides just getting the "Bearer Token" (as seen above), there is a plan to provide a way for reliers to fetch keys derived from user's FxA password. To get a derived key the relier can request a `"keys"` scope in the OAuth request. </p>
-
-<p><a href="https://www.lucidchart.com/publicSegments/view/35060c60-5714-4121-9c83-f7f6e38fd366/image.jpeg"><img alt="" src="https://www.lucidchart.com/publicSegments/view/35060c60-5714-4121-9c83-f7f6e38fd366/image.jpeg" style="height: 1295px; width: 1000px;"></a></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>
+ This page will help you integrate your
+ <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">
+  WebExtension
+ </a>
+ with Firefox Accounts. Before beginning this process, make sure to read about the
+ <a href="/en-US/docs/Mozilla/Tech/Firefox_Accounts/Introduction#OAuth_2.0_API">
+  Firefox Accounts OAuth API
+ </a>
+ .
+</p>
+<h2 id="FxA_Web_Extension_login_flow">
+ FxA Web Extension login flow
+</h2>
+<p>
+ Your WebExtension must register as a Firefox Accounts relier with a specific WebExtension redirect URL.
+</p>
+<p>
+ <a href="https://www.lucidchart.com/publicSegments/view/c83f8946-5bee-4fdd-bc77-22960c680356/image.jpeg">
+  <img alt="" src="https://www.lucidchart.com/publicSegments/view/c83f8946-5bee-4fdd-bc77-22960c680356/image.jpeg"/>
+ </a>
+</p>
+<h2 id="Derived_encryption_keys">
+ Derived encryption keys
+</h2>
+<p>
+ Besides just getting the "Bearer Token" (as seen above), there is a plan to provide a way for reliers to fetch keys derived from user's FxA password. To get a derived key the relier can request a `"keys"` scope in the OAuth request.
+</p>
+<p>
+ <a href="https://www.lucidchart.com/publicSegments/view/35060c60-5714-4121-9c83-f7f6e38fd366/image.jpeg">
+  <img alt="" src="https://www.lucidchart.com/publicSegments/view/35060c60-5714-4121-9c83-f7f6e38fd366/image.jpeg" style="height: 1295px; width: 1000px;"/>
+ </a>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
 </html>

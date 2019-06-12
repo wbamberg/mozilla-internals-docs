@@ -9,30 +9,62 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Language_Bindings.html">Language_Bindings</a>&raquo;<a href="../XPConnect.html">XPConnect</a></nav><div class="content-heading"><h1>Using components</h1></div>
-<div class="content"><p><a href="/en-US/docs/XPConnect">XPConnect</a> works transparently in Mozilla and <a href="/en-US/docs/XPConnect/xpcshell">xpcshell</a> to give you access to <a href="/en-US/docs/XPCOM">XPCOM</a> components.</p>
-<p>Commonly, we start our scripts like so:</p>
-<pre class="eval">var Cc = <a href="/en-US/docs/Components.classes">Components.classes</a>;
-var Ci = <a href="/en-US/docs/Components.interfaces">Components.interfaces</a>;
+<div class="content"><p>
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect">
+  XPConnect
+ </a>
+ works transparently in Mozilla and
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect/xpcshell">
+  xpcshell
+ </a>
+ to give you access to
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM">
+  XPCOM
+ </a>
+ components.
+</p>
+<p>
+ Commonly, we start our scripts like so:
+</p>
+<pre class="eval">var Cc = <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.classes">Components.classes</a>;
+var Ci = <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.interfaces">Components.interfaces</a>;
 </pre>
-<p>If we want to get a hold of a component, we then do something like:</p>
+<p>
+ If we want to get a hold of a component, we then do something like:
+</p>
 <pre class="eval">var rc = Cc["@mozilla.org/registry;1"];
 var rs = rc.getService(Ci.nsIRegistry);
 </pre>
 <hr>
-<p>See also:</p>
-<ul>
- <li><a href="/en-US/docs/XPConnect/xpcshell">xpcshell</a> -- how to get a command line interface to JavaScript</li>
-</ul>
-<h2 id="More_Info">More Info</h2>
-<p>As was already stated, it is common to start addon scripts like:</p>
-<pre class="eval">var Cc = <a href="/en-US/docs/Components.classes">Components.classes</a>;
-var Ci = <a href="/en-US/docs/Components.interfaces">Components.interfaces</a>;
+ <p>
+  See also:
+ </p>
+ <ul>
+  <li>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect/xpcshell">
+    xpcshell
+   </a>
+   -- how to get a command line interface to JavaScript
+  </li>
+ </ul>
+ <h2 id="More_Info">
+  More Info
+ </h2>
+ <p>
+  As was already stated, it is common to start addon scripts like:
+ </p>
+ <pre class="eval">var Cc = <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.classes">Components.classes</a>;
+var Ci = <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.interfaces">Components.interfaces</a>;
 </pre>
-<p>There is also another way to start, which is exactly equivalent to the above.</p>
-<pre class="eval">var {Cc: classes, Ci: interfaces} = Components;
+ <p>
+  There is also another way to start, which is exactly equivalent to the above.
+ </p>
+ <pre class="eval">var {Cc: classes, Ci: interfaces} = Components;
 </pre>
-<p>There are many more than just classes and interfaces.</p>
-<pre class="eval">var {
+ <p>
+  There are many more than just classes and interfaces.
+ </p>
+ <pre class="eval">var {
     Cu: utils,
     Ci: interfaces,
     Cc: classes,
@@ -42,8 +74,10 @@ var Ci = <a href="/en-US/docs/Components.interfaces">Components.interfaces</a>;
     Ce: Exception,
 } = Components;
 </pre>
-<p>Here is a full breakdown of what is contained in Components. Any of the below can be accessed by Components.BLAH (IE: Components.isSuccessCode)</p>
-<pre class="eval">utils=[object nsXPCComponents_Utils]
+ <p>
+  Here is a full breakdown of what is contained in Components. Any of the below can be accessed by Components.BLAH (IE: Components.isSuccessCode)
+ </p>
+ <pre class="eval">utils=[object nsXPCComponents_Utils]
 interfaces=[object nsXPCComponents_Interfaces]
 classes=[object nsXPCComponents_Classes]
 results=[object nsXPCComponents_Results]
@@ -75,6 +109,7 @@ canGetProperty=function canGetProperty() {
 canSetProperty=function canSetProperty() {
 [native code]
 }
-</pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+</pre>
+</hr></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Noitidart">Noitidart</a>, <a href="https://developer.mozilla.org/en-US/profiles/groovecoder">groovecoder</a>, <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, <a href="https://developer.mozilla.org/en-US/profiles/pictureaday">pictureaday</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/Jorend">Jorend</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/LionKimbro">LionKimbro</a>.</p></div></body>
 </html>

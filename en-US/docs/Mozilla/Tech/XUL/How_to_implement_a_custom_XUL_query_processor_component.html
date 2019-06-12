@@ -9,12 +9,33 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XUL.html">XUL</a></nav><div class="content-heading"><h1>How to implement a custom XUL query processor component</h1></div>
-<div class="content"><p>XUL supports templating to create a block of content from a datasource query. The <a href="en/XUL/Template_Guide"> XUL Template Guide</a> has lots of detailed information on using XUL templates. XUL provides template query processors for RDF, XML and SQL (<a href="en/Storage">mozStorage</a>). The templating system also supports building custom query processors. Custom query processors are XPCOM components, must implement the <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULTemplateQueryProcessor" title="">nsIXULTemplateQueryProcessor</a></code> interface and follow some conventions for when registering the component.</p>
-
-<p>In this example, we will create a simple <a href="en/How_to_Build_an_XPCOM_Component_in_Javascript"> JavaScript XPCOM component</a>. The component will hold a small array of JavaScript objects as its datasource. In practice, you would use your own custom source of data.</p>
-
-<p>Here is an example of what our XUL might look like when using a custom query processor:</p>
-
+<div class="content"><p>
+ XUL supports templating to create a block of content from a datasource query. The
+ <a href="en/XUL/Template_Guide">
+  XUL Template Guide
+ </a>
+ has lots of detailed information on using XUL templates. XUL provides template query processors for RDF, XML and SQL (
+ <a href="en/Storage">
+  mozStorage
+ </a>
+ ). The templating system also supports building custom query processors. Custom query processors are XPCOM components, must implement the
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULTemplateQueryProcessor" title="">
+   nsIXULTemplateQueryProcessor
+  </a>
+ </code>
+ interface and follow some conventions for when registering the component.
+</p>
+<p>
+ In this example, we will create a simple
+ <a href="en/How_to_Build_an_XPCOM_Component_in_Javascript">
+  JavaScript XPCOM component
+ </a>
+ . The component will hold a small array of JavaScript objects as its datasource. In practice, you would use your own custom source of data.
+</p>
+<p>
+ Here is an example of what our XUL might look like when using a custom query processor:
+</p>
 <pre>&lt;?xml version="1.0"?&gt;
 &lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
 &lt;window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
@@ -39,11 +60,32 @@
     &lt;/grid&gt;
 &lt;/window&gt;
 </pre>
-
-<p>A few things to note. We are not really using the <code>datasources</code> in our sample component, so we set it to a dummy value. An empty string would be ok too. The <code>querytype</code> is important. It is used to create an instance of our XPCOM object. The contract id of our XPCOM component should be of the form <code>"@mozilla.org/xul/xul-query-processor;1?name=xxx"</code>, where the <strong>xxx</strong> is the <code>querytype</code> used in the XUL template block.</p>
-
-<p>Here is our sample JavaScript XPCOM query processor:</p>
-
+<p>
+ A few things to note. We are not really using the
+ <code>
+  datasources
+ </code>
+ in our sample component, so we set it to a dummy value. An empty string would be ok too. The
+ <code>
+  querytype
+ </code>
+ is important. It is used to create an instance of our XPCOM object. The contract id of our XPCOM component should be of the form
+ <code>
+  "@mozilla.org/xul/xul-query-processor;1?name=xxx"
+ </code>
+ , where the
+ <strong>
+  xxx
+ </strong>
+ is the
+ <code>
+  querytype
+ </code>
+ used in the XUL template block.
+</p>
+<p>
+ Here is our sample JavaScript XPCOM query processor:
+</p>
 <pre>Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
 
 
@@ -186,15 +228,57 @@ function NSGetModule(compMgr, fileSpec) {
   return XPCOMUtils.generateModule(components);
 }
 </pre>
-
-<p>Our sample query processor is very simple. A few explanatory notes:</p>
-
+<p>
+ Our sample query processor is very simple. A few explanatory notes:
+</p>
 <ul>
- <li>We are using a the <code>getBindingFor</code> rather than <code>getBindingObjectFor</code> to simplify the code. The variable passed into <code>getBindingFor</code> still has the "?" prepended to it, so be sure to handle it appropriately.</li>
- <li>We are not handling any <code>datasources</code>, but instead hard code the datasource in the component. You could easily extend this sample to handle multiple datasources by checking the <code>datasources</code> value in <code>getDatasource</code> and <code>initializeForBuilding</code>.</li>
- <li>We do not make use of any <code>&lt;query/&gt;</code> or <code>&lt;rule/&gt;</code> elements in the XUL template block. These could be used to support filtering the datasource.</li>
+ <li>
+  We are using a the
+  <code>
+   getBindingFor
+  </code>
+  rather than
+  <code>
+   getBindingObjectFor
+  </code>
+  to simplify the code. The variable passed into
+  <code>
+   getBindingFor
+  </code>
+  still has the "?" prepended to it, so be sure to handle it appropriately.
+ </li>
+ <li>
+  We are not handling any
+  <code>
+   datasources
+  </code>
+  , but instead hard code the datasource in the component. You could easily extend this sample to handle multiple datasources by checking the
+  <code>
+   datasources
+  </code>
+  value in
+  <code>
+   getDatasource
+  </code>
+  and
+  <code>
+   initializeForBuilding
+  </code>
+  .
+ </li>
+ <li>
+  We do not make use of any
+  <code>
+   &lt;query/&gt;
+  </code>
+  or
+  <code>
+   &lt;rule/&gt;
+  </code>
+  elements in the XUL template block. These could be used to support filtering the datasource.
+ </li>
 </ul>
-
-<div class="noinclude"> </div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<div class="noinclude">
+</div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
 </html>

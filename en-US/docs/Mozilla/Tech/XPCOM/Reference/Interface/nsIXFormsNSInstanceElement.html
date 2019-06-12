@@ -9,34 +9,91 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIXFormsNSInstanceElement</h1></div>
-<div class="content"><p><code>nsIXFormsNSInstanceElement</code> is implemented by all <a href="/en/XForms" title="en/XForms">XForms</a> <code>&lt;instance/&gt;</code> elements, defining Mozilla extensions.</p>
-<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/extensions/xforms/nsIXFormsNSInstanceElement.idl" rel="custom">extensions/xforms/nsIXFormsNSInstanceElement.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-<i>Please add a summary to this article.</i>
-</span>
-
-<div style="background: #eee; padding: 2px;">
-<span> </span>
-<span style="text-align: right; float: right;">Last changed in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
-</div><p></p>
-<h3 id="Interface_Code" name="Interface_Code">Interface Code</h3>
+<div class="content"><p>
+ <code>
+  nsIXFormsNSInstanceElement
+ </code>
+ is implemented by all
+ <a href="https://developer.mozilla.org/en-US/docs/Archive/Web/XForms" title="en/XForms">
+  XForms
+ </a>
+ <code>
+  &lt;instance/&gt;
+ </code>
+ elements, defining Mozilla extensions.
+</p>
+<p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/extensions/xforms/nsIXFormsNSInstanceElement.idl" rel="custom">
+    extensions/xforms/nsIXFormsNSInstanceElement.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  <i>
+   Please add a summary to this article.
+  </i>
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  <span>
+  </span>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<h3 id="Interface_Code" name="Interface_Code">
+ Interface Code
+</h3>
 <pre>[scriptable, uuid(80669b92-8331-4f92-aaf8-06e80e6827b3)]
 interface nsIXFormsNSInstanceElement : nsISupports
 {
   nsIDOMDocument getInstanceDocument();
 };
 </pre>
-<h3 id="Methods" name="Methods">Methods</h3>
-<h4 id="getInstanceDocument" name="getInstanceDocument">getInstanceDocument</h4>
+<h3 id="Methods" name="Methods">
+ Methods
+</h3>
+<h4 id="getInstanceDocument" name="getInstanceDocument">
+ getInstanceDocument
+</h4>
 <pre class="eval"> nsIDOMDocument getInstanceDocument();
 </pre>
-<p><code>getInstanceDocument</code> returns a DOM Document that corresponds to the instance data associated with the instance element. Essentially it is just a shortcut to <a href="/en/XPCOM_Interface_Reference/nsIXFormsModelElement#getInstanceDocument" title="en/XPCOM_Interface_Reference/nsIXFormsModelElement#getInstanceDocument">nsIXFormsModelElement::getInstanceDocument()</a> for the given instance element.</p>
-<h3 id="Related_Interfaces" name="Related_Interfaces">Related Interfaces</h3>
-<ul> <li><a href="/en/XPCOM_Interface_Reference/nsIXFormsModelElement" title="en/XPCOM_Interface_Reference/nsIXFormsModelElement">nsIXFormsModelElement</a></li>
+<p>
+ <code>
+  getInstanceDocument
+ </code>
+ returns a DOM Document that corresponds to the instance data associated with the instance element. Essentially it is just a shortcut to
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXFormsModelElement" title="en/XPCOM_Interface_Reference/nsIXFormsModelElement#getInstanceDocument">
+  nsIXFormsModelElement::getInstanceDocument()
+ </a>
+ for the given instance element.
+</p>
+<h3 id="Related_Interfaces" name="Related_Interfaces">
+ Related Interfaces
+</h3>
+<ul>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXFormsModelElement" title="en/XPCOM_Interface_Reference/nsIXFormsModelElement">
+   nsIXFormsModelElement
+  </a>
+ </li>
 </ul>
-<h3 id="Example_Code" name="Example_Code">Example Code</h3>
-<p>None.</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<h3 id="Example_Code" name="Example_Code">
+ Example Code
+</h3>
+<p>
+ None.
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/LouCypher">LouCypher</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Beaufour">Beaufour</a>.</p></div></body>
 </html>

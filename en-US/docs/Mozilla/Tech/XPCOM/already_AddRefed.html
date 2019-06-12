@@ -9,16 +9,62 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XPCOM.html">XPCOM</a></nav><div class="content-heading"><h1>already_AddRefed</h1></div>
-<div class="content"><p>« <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a></p>
-
-<p><code>already_AddRefed</code> in association with <code><a href="/en-US/docs/NsCOMPtr">nsCOMPtr</a></code> allows you to assign in a pointer <strong>without</strong> <code>AddRef</code>ing it.</p>
-
-<p>You may want to use this as a return type from a function that has already produced an  <code>AddRef</code>ed pointer as a result. In fact, it is preferred to use <code>already_AddRefed</code> in this case over returning a raw pointer or <code>nsCOMPtr</code> (see the <a class="external" href="http://www.mozilla.org/projects/xpcom/nsCOMPtr.html#users_guide">nsCOMPtr user manual</a>).</p>
-
-<p>Defined in: <code><a href="https://dxr.mozilla.org/mozilla-central/source/mfbt/AlreadyAddRefed.h" rel="custom">mfbt/AlreadyAddRefed.h</a></code>.</p>
-
-<h3 id="Example" name="Example">Example</h3>
-
+<div class="content"><p>
+ «
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference">
+  XPCOM API Reference
+ </a>
+</p>
+<p>
+ <code>
+  already_AddRefed
+ </code>
+ in association with
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsCOMPtr">
+   nsCOMPtr
+  </a>
+ </code>
+ allows you to assign in a pointer
+ <strong>
+  without
+ </strong>
+ <code>
+  AddRef
+ </code>
+ ing it.
+</p>
+<p>
+ You may want to use this as a return type from a function that has already produced an
+ <code>
+  AddRef
+ </code>
+ ed pointer as a result. In fact, it is preferred to use
+ <code>
+  already_AddRefed
+ </code>
+ in this case over returning a raw pointer or
+ <code>
+  nsCOMPtr
+ </code>
+ (see the
+ <a class="external" href="http://www.mozilla.org/projects/xpcom/nsCOMPtr.html#users_guide">
+  nsCOMPtr user manual
+ </a>
+ ).
+</p>
+<p>
+ Defined in:
+ <code>
+  <a href="https://dxr.mozilla.org/mozilla-central/source/mfbt/AlreadyAddRefed.h" rel="custom">
+   mfbt/AlreadyAddRefed.h
+  </a>
+ </code>
+ .
+</p>
+<h3 id="Example" name="Example">
+ Example
+</h3>
 <pre class="brush: cpp">...
 already_AddRefed&lt;nsIFoo&gt; GetFoo() {
   nsIFoo* foo = mFoo;
@@ -38,9 +84,28 @@ already_AddRefed&lt;nsIFoo&gt; GetFoo() {
 // as it would do if GetFoo() returned a raw pointer.
 nsCOMPtr&lt;nsIFoo&gt; foo = GetFoo();
 </pre>
-
-<h3 id="See_also" name="See_also">See also</h3>
-
-<p><code><a href="/en-US/docs/NsCOMPtr">nsCOMPtr</a></code>, <code><a href="/en-US/docs/Getter_AddRefs">getterAddRefs()</a></code>, <code><a href="/en-US/docs/Dont_AddRef">dont_AddRef()</a>.</code></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<h3 id="See_also" name="See_also">
+ See also
+</h3>
+<p>
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Glue_classes/nsCOMPtr">
+   nsCOMPtr
+  </a>
+ </code>
+ ,
+ <code>
+  <a href="https://developer.mozilla.org/en-US/docs/Getter_AddRefs">
+   getterAddRefs()
+  </a>
+ </code>
+ ,
+ <code>
+  <a href="https://developer.mozilla.org/en-US/docs/Dont_AddRef">
+   dont_AddRef()
+  </a>
+  .
+ </code>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/PushpitaPikuDey">PushpitaPikuDey</a>, <a href="https://developer.mozilla.org/en-US/profiles/Seta00">Seta00</a>, <a href="https://developer.mozilla.org/en-US/profiles/gkeeley">gkeeley</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/gsvelto">gsvelto</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ms2ger">Ms2ger</a>, <a href="https://developer.mozilla.org/en-US/profiles/sheralwooden">sheralwooden</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>.</p></div></body>
 </html>

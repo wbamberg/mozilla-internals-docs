@@ -9,11 +9,1597 @@
   </head>
 
   <body><nav class="breadcrumbs"></nav><div class="content-heading"><h1>Mozilla</h1></div>
-<div class="content"><p>The articles below include content about downloading and building Mozilla code. In addition, you'll find helpful articles about how the code works, how to build add-ons for Mozilla applications and the like.</p>
-
-<p></p><div class="row topicpage-table">
-    <div class="section"><dl><dl><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Bird_s_Eye_View_of_the_Mozilla_Framework">A bird's-eye view of the Mozilla framework</a></dt><dd class="landingPageList">The purpose of this article is to provide a high-level technical overview of the architecture of the extensible, object-based Mozilla application framework.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Accessibility">Accessibility and Mozilla</a></dt><dd class="landingPageList"><a href="/en-US/docs/Accessibility" title="/en-US/docs/Accessibility">Accessibility</a> is the idea that software (among other things) should be designed to be usable and, as much as possible, convenient to use for people with disabilities. Mozilla strives to make its software accessible; the documents below cover the ways in which we do so.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Add-ons">Add-ons</a></dt><dd class="landingPageList">Add-ons allow developers to extend and modify the functionality of Firefox.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Adding_a_new_style_property">Adding a new CSS property</a></dt><dd class="landingPageList">This page describes how to add a new CSS property to the style system.  The style system is the part of the code in Gecko that is responsible for producing a computed value for every property for every element.  See <a href="https://wiki.mozilla.org/Gecko:Overview#Style_System" title="https://wiki.mozilla.org/Gecko:Overview#Style_System">the Gecko Overview</a> for more information about the style system.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Adding_a_new_event">Adding a new event</a></dt><dd class="landingPageList">This draft document covers how to add a new event to the Mozilla (Firefox) source code.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Adding_a_new_word_to_the_en-US_dictionary">Adding a new word to the en-US dictionary</a></dt><dd class="landingPageList">Occasionally bugs are filed pointing out situations where perfectly legitimate words are missing from the English spell check dictionary in Firefox. This article describes the process for adding a word to the dictionary.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Adding_phishing_protection_data_providers">Adding phishing protection data providers</a></dt><dd class="landingPageList">Phishing protection technology lets Firefox help protect users by comparing the URLs the user visits to a blacklist of known scam sites, and presenting a warning to the user when they visit a site on the list.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/An_introduction_to_hacking_Mozilla">An introduction to hacking Mozilla</a></dt><dd class="landingPageList">This guide introduces the Mozilla project and provides an overview for developers interested in contributing to or exploring the various parts of the codebase.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Android-specific_test_suites">Android-specific test suites</a></dt><dd class="landingPageList">There are several Android-specific test suites that run on the Firefox for Android codebase:</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/API_change_rules">API change rules</a></dt><dd class="landingPageList">Until further notice, the following rules govern API changes:</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Application_cache_implementation_overview">Application cache implementation overview</a></dt><dd class="landingPageList">This happens in nsHttpChannel::OpenCacheEntry(). All top level document loading (navigation) channels are set ChooseApplicationCache flag, which happens in nsDocShell::DoURILoad(). Channels having that flag set are searching for nsIApplicationCache object prior inspecting normal HTTP cache. nsIApplicationCacheService::ChooseApplicationCache is given the URL the channel is about to load. It synchronously returns an nsIApplicationCache object representing the most recent cache version from the most recent cache group containing the entry under the URL or a matching namespace.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Benchmarking">Benchmarking</a></dt><dd class="landingPageList">Debug builds (--enable-debug) and non-optimized builds (--disable-optimize) are <em>much</em> slower. Any performance metrics gathered by such builds are largely unrelated to what would be found in a release browser.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Browser_chrome_tests">Browser chrome tests</a></dt><dd class="landingPageList">The browser chrome test suite is an automated testing framework designed to allow testing of application chrome windows using JavaScript. It currently allows you to run JavaScript code in the same scope as the main Firefox browser window and report results using the same functions as the <a href="/en/Mochitest" title="en/Mochitest">Mochitest test framework</a>. As all tests, they won't work in a build with tests disabled (<code>--disable-tests</code>).</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Security">Browser security</a></dt><dd class="landingPageList">An important aspect of developing code for any browser, including Firefox, as well as any Web-oriented project, is its security. These articles provide important guides and references to ensuring the code you write is secure, including both design recommendations and testing guidelines.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Bugzilla">Bugzilla</a></dt><dd class="landingPageList"><a class="link-https" href="https://bugzilla.mozilla.org/">bugzilla.mozilla.org</a> (often abbreviated b.m.o) is Mozilla.org's bug-tracking system, a database for recording bugs and enhancement requests for Firefox, Thunderbird, SeaMonkey, Camino, and other mozilla.org projects.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Building_Mozilla">Building Mozilla</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Building_SpiderMonkey_with_UBSan">Building SpiderMonkey with UBSan</a></dt><dd class="landingPageList">1. <a href="https://developer.mozilla.org/en-US/docs/Building_Firefox_with_Address_Sanitizer#LLVM.2FClang" title="https://developer.mozilla.org/en-US/docs/Building_Firefox_with_Address_Sanitizer#LLVM.2FClang">Compile a recent version of LLVM &amp; Clang</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/C++_Portability_Guide">C++ portability guide</a></dt><dd class="landingPageList">This document has migrated to <a href="/en-US/docs/Mozilla/Using_CXX_in_Mozilla_code">Using C++ in Mozilla code</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Calendar">Calendar</a></dt><dd class="landingPageList">The Mozilla Calendar Project is a community driven project based on the Mozilla application architecture. The Project's heart is a calendaring backend based on libical. The <a class="external" href="http://www.mozilla.org/projects/calendar/lightning/" title="http://www.mozilla.org/projects/calendar/lightning/">Lightning extension</a> is built on top of this platform and provides integrated calendaring capabilities for Mozilla Messaging's Email client <a class="internal" href="/en/Thunderbird" title="En/Thunderbird">Thunderbird</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Chat_Core">Chat Core</a></dt><dd class="landingPageList">Chat Core is the shared code for instant messaging that is shared by <a href="/en-US/docs/Instantbird">Instantbird</a> and <a class="internal" href="/en/Thunderbird" title="en/Thunderbird">Thunderbird</a>. It provides a number of functions and capabilities, including:</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Choosing_the_right_memory_allocator">Choosing the right memory allocator</a></dt><dd class="landingPageList">There are a lot of different memory allocators in the Mozilla source tree. This article looks over some of them and tries to sort out which should be used under what circumstances.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Chrome_Registration">Chrome registration</a></dt><dd class="landingPageList"><a href="/en/Chrome" title="en/Chrome">Chrome</a> is the set of user interface elements of the application window that are outside the window's content area. Toolbars, menu bars, progress bars, and window title bars are all examples of elements that are typically part of the chrome.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/ChromeWorkers">ChromeWorkers and the Chrome worker loader</a></dt><dd class="landingPageList">To complement the open Web Worker functionality, Mozilla has introduced the <a href="/en-US/docs/Web/API/ChromeWorker" title="The documentation about this has not yet been written; please consider contributing!"><code>ChromeWorker</code></a> interface, which provides this capability within application chrome. That makes it available not only to the application itself, but also to add-ons.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Command_Line_Options">Command Line Options</a></dt><dd class="landingPageList">Command line options are used to specify various startup options for Mozilla applications.This page describes the commonly used options and how to use them. You can open the Command Line Interface by pressing Shift + F2.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Connect">Connect with Mozilla</a></dt><dd class="landingPageList">Enable, inspire and collaborate to make the Web the primary platform used to create experiences across all connected devices.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Continuous_integration">Continuous Integration</a></dt><dd class="landingPageList">When you push a commit to mozilla-central or a related repository, it initiates a large chain of builds and tests across multiple types of infrastructure.  This document will help you understand all the pieces that comprise Mozilla's continuous integration systems.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Cookies_in_Mozilla">Cookies in Mozilla</a></dt><dd class="landingPageList">Suggestions as to needed documentation can be directed to <a class="link-mailto" href="mailto:mconnor@myrealbox.com">Mike Connor</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Cookies_Preferences">Cookies Preferences in Mozilla</a></dt><dd class="landingPageList">These preferences apply to most Mozilla products (including Firefox and Seamonkey), however they are application-specific, so not all of them may apply to you. The default values given are for Firefox 3.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_a_Firefox_sidebar">Creating a Firefox sidebar</a></dt><dd class="landingPageList">Web publishers can offer visitors a <strong>Firefox sidebar</strong> to encourage their engagement. There are two ways to create a sidebar for Firefox users: the Social API and an extension. You can choose either depending on your needs and resources.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_a_language_pack">Creating a Language Pack</a></dt><dd class="landingPageList">To create a language pack, or a localization repack, you first need to go through the <a href="/en/Localization_Quick_Start_Guide#Initial_setup" title="https://developer.mozilla.org/en/Localization_Quick_Start_Guide#Initial_setup">initial setup</a> process.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_a_localized_Windows_installer_of_SeaMonkey">Creating a localized Windows installer of SeaMonkey</a></dt><dd class="landingPageList">Preamble: not all of the programs listed below are necessary. Some of them are simply the ones I use because I like them, while others are scripts that I've created to speed up the work. You can in every case choose the program you prefer to do some operations, and you can also decide not to use any of my scripts and manually enter all of the commands by hand. It's your choice!</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_a_login_manager_storage_module">Creating a Login Manager storage module</a></dt><dd class="landingPageList">The Login Manager manages and stores user passwords. Extensions can replace the built-in password storage with their own implementation. This can be useful if you want to integrate a gecko application's password management with an existing password management system, or use your own password storage format or database. So for example, on KDE is is desirable to fully employ the KDE wallet manager, rather than any secondary replacements of KDEwallet.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_a_spell_check_dictionary_add-on">Creating a spell check dictionary add-on</a></dt><dd class="landingPageList">This page describes how to package a Hunspell spell check dictionary as a Firefox add-on, or how to update your existing add-on, so that it can be installed, uninstalled and updated without a restart.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_JavaScript_callbacks_in_components">Creating JavaScript callbacks in components</a></dt><dd class="landingPageList"><a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> components use IDL to create interfaces. These interfaces are used to manipulate the component in C++ and JavaScript. A common pattern used with interfaces to create a bi-directional communication between two groups of code is the <a class="external" href="http://en.wikipedia.org/wiki/Observer_pattern">observer (or listener) pattern</a>. Basically, the component defines an observer (or listener) interface which is implemented by some external code and this implementation is passed to the component. The component can then call methods on the observer interface to signal the external code when predefined events occur. Here is a very simple example of the observer pattern:</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_Mercurial_User_Repositories">Creating Mercurial User Repositories</a></dt><dd class="landingPageList">When working with <a href="/en/Mercurial" title="en/Mercurial">Mercurial</a>, it is often nice to publish your changes on a server as a backup or so others can examine and work with them. If you have Level 1 <a class="link-https" href="https://www.mozilla.org/hacking/commit-access-policy/#Summary" title="https://www.mozilla.org/hacking/commit-access-policy/#Summary">commit access</a> or higher, then you should have an LDAP account which allows you to push to user repos in the <a class="link-https" href="https://hg.mozilla.org/users/" title="https://hg.mozilla.org/users/"><code>/users</code></a> directory of <code>hg.mozilla.org</code>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_MozSearch_plugins">Creating MozSearch plugins</a></dt><dd class="landingPageList">Firefox 2 uses a simplified form of the <a class="external" href="http://opensearch.org/">OpenSearch</a> format for storing search plugins. A MozSearch search plugin is an XML file that describes the search engine, its URL, and the parameters that need to be passed to that URL.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_reftest-based_unit_tests">Creating reftest-based unit tests</a></dt><dd class="landingPageList">The reftest harness compares the display of two Web pages. If the bitmaps resulting from displaying the two files in an 800x1000 window are identical, the test passes. If they differ, the test fails.  Or, alternatively, the conditions can be reversed (a != test rather than an == test). The power of the tool comes from the fact that there is more than one way to achieve any given visual effect in a browser. So, if the effect of complex markup is being tested, put that complex markup into a page and create another page that uses simple markup to achieve the same visual effect. Reftest will then compare them and verify whether they produce the same bitmap.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Creating_sandboxed_HTTP_connections">Creating Sandboxed HTTP Connections</a></dt><dd class="landingPageList">Starting with <a href="/en-US/docs/Gecko" title="Gecko">Gecko</a> 1.8.1 (<a href="/en-US/docs/Firefox_2_for_developers" title="Firefox_2_for_developers">Firefox 2</a>), it is possible to create sandboxed <a href="/en-US/docs/HTTP" title="HTTP">HTTP</a> connections which don't affect the user's cookies. This article will cover the basics of doing HTTP connections from XPCOM JavaScript, and should easily translate to C++ XPCOM.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Debugging">Debugging</a></dt><dd class="landingPageList">Debugging a project as large as Mozilla can be a daunting task. Fortunately, over the years, Mozilla developers have come up with not just technologies and features to help you debug code, but have devised tips and techniques that can help too. Also available are assorted tools that you can use when debugging.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Developer_guide">Developer guide</a></dt><dd class="landingPageList">There are lots of ways to contribute to the Mozilla project: coding, testing, improving the build process and tools, or contributing to the documentation. This guide provides information that will not only help you get started as a Mozilla contributor, but that you'll find useful to refer to even if you are already an experienced contributor.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Displaying_Place_information_using_views">Displaying Places information using views</a></dt><dd class="landingPageList">Views are one component of the Places <a class="external" href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" title="http://en.wikipedia.org/wiki/Model–view–controller">model-view-controller</a> design. Use them to display <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult" title="">nsINavHistoryResult</a></code> objects to the user. See <a class="internal" href="/en/Querying_Places" title="En/Querying Places">Querying Places</a> for information about obtaining and using <code>nsINavHistoryResult</code> objects, which this page assumes you are familiar with.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Errors">Error codes returned by Mozilla APIs</a></dt><dd class="landingPageList">The following tables list errors that can occur when calling various Mozilla APIs. Each error is listed by its name and an error code in parentheses. An error will typically be displayed on the error console, but can be captured using a try-catch block in JavaScript. These constants can be accessed through Components.results. For example, by using <code>Components.results.NS_ERROR_NOT_INITIALIZED</code></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Firefox">Firefox</a></dt><dd class="landingPageList">Here you can learn about how to contribute to the Firefox project and you will also find links to information about the construction of Firefox add-ons, using the developer tools in Firefox, and other topics.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox for Android</a></dt><dd class="landingPageList">For more and more people mobile devices are the primary way, or even the only way, to access the Web.<a class="link-https" href="https://www.mozilla.org/en-US/mobile/"> Firefox for Android</a> (codenamed Fennec) is an open, hackable, standards-based browser, just like the desktop Firefox.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Firefox_for_iOS">Firefox for iOS</a></dt><dd class="landingPageList">For more and more people mobile devices are the primary way, or even the only way, to access the Web.<a class="link-https" href="https://www.mozilla.org/en-US/mobile/"> Firefox for iOS</a> (codenamed Fennec like its Android counterpart) is an open, hackable, standards-based browser, just like the desktop Firefox.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Firefox_Operational_Information_Database:_SQLite">Firefox Operational Information Database: SQLite</a></dt><dd class="landingPageList">A large amount of operational information about websites visited and browser configuration is stored in relational databases in <a class="internal" href="/en/Storage" title="Talk:En/Storage">SQLite</a> used by Firefox. The <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5817" title="https://addons.mozilla.org/en-US/firefox/addon/5817">SQLite Manager add-on</a> allows convenient browsing of this information.  (Install the SQLite Mangager add-on, click Tools -&gt; SQLite Manager.  In the manager, select the database you want to explore in the '(Select Profile Database)' pulldown, click 'Go', select one of the tables listed in the left column and see the current contents of the database in the 'Browse &amp; Search' tab.)</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Firefox_OS_for_TV">Firefox OS for TV</a></dt><dd class="landingPageList"> Welcome to the landing page for Firefox OS for TV and connected devices. This is written for web developers who are interested in Firefox OS for TV current and future work, and developing web apps for TV. The articles linked below provide everything you need to build and run a Firefox OS TV simulator, get started writing apps and deploying them to TV, understand TV implementation and UX differences, and more.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Gecko">Gecko</a></dt><dd class="landingPageList"><strong>Gecko</strong> is the name of the layout engine developed by the Mozilla Project. It was originally named NGLayout. Gecko's function is to render web content, such as <a href="/en-US/docs/HTML">HTML</a>, <a href="/en-US/docs/CSS">CSS</a>, <a href="/en-US/docs/XUL">XUL</a>, <a href="/en-US/docs/JavaScript">JavaScript</a>, and render it on the user's screen or print it. In XUL-based applications Gecko also renders the application's user interface.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode">Gecko's "Almost Standards" Mode</a></dt><dd class="landingPageList">"Almost standards" rendering mode is exactly the same as "standards" mode in all details save one, where it works like "quirks" mode: the height calculations for line boxes and some of the inline elements in them.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Geckoview-Junit_Tests">Geckoview-Junit Tests</a></dt><dd class="landingPageList">The geckoview-junit tests are on-device Android junit tests written for geckoview.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Getting_from_Content_to_Layout">Getting from Content to Layout</a></dt><dd class="landingPageList">Gecko maintains two separate representations of a document in memory: the content tree and the frame tree.  Changes to a document originate in the content tree (from DOM modification by scripting, insertion of elements from the parser, etc.) and are propogated to the layout tree through magic that primarily resides in <a class=" external" href="http://mxr.mozilla.org/mozilla-central/source/layout/base/nsCSSFrameConstructor.cpp" title="http://mxr.mozilla.org/mozilla-central/source/layout/base/nsCSSFrameConstructor.cpp">http://mxr.mozilla.org/mozilla-central/source/layout/base/nsCSSFrameConstructor.cpp</a></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Git">Git</a></dt><dd class="landingPageList">The current official git mirror of the Firefox code base (also known as "gecko" or "mozilla-central") can be found at <a href="https://github.com/mozilla/gecko-dev">https://github.com/mozilla/gecko-dev</a>.  This repository contains all of the branches that are part of mainline development, including the train branches mozilla-central (nightly), mozilla-aurora (developer edition), mozilla-beta, and mozilla-release.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Hacking_with_Bonsai">Hacking with Bonsai</a></dt><dd class="landingPageList">Bonsai was originally created to solve the problem of tree instability. The original Navigator code base had large sections that were shared across multiple platforms. Many times, code checked in would compile or run on a handful of platforms. Also, with as many as 100 engineers, it was very difficult to determine what happened in the tree that caused the instability. Bonsai was created to solve these problems.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_Mozilla_determines_MIME_Types">How Mozilla determines MIME Types</a></dt><dd class="landingPageList">All data handling in Mozilla is based on the MIME type of the content. This means that every time an URI is loaded, Mozilla must find out its MIME type. The several ways how this happens are described in this document.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_test_harnesses_work">How test harnesses work</a></dt><dd class="landingPageList">Mozilla test harnesses are typically composed of a python runner that invokes Firefox, utilizes the browser to run tests, and reports the results. The python harness communicates with the browser by inserting an extension in the testing profile or uses marionette's wire protocol to drive the browser.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_to_add_a_build-time_test">How to add a build-time test</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_to_get_a_process_dump_with_Windows_Task_Manager">How to get a process dump with Windows Task Manager</a></dt><dd class="landingPageList">When tracking down the causes of process hangs, it is often helpful to obtain a process dump while the process is experiencing a hang.  This article describes how to get a process dump with Task Manager on Windows. (To get a process dump for Thunderbird or some other product, substitute the product name where ever you see Firefox in these instructions.)</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_to_get_a_stacktrace_for_a_bug_report">How to get a stacktrace for a bug report</a></dt><dd class="landingPageList">If you file a bug report in Bugzilla about a crash you should include a stacktrace (call stack) in your report. A stacktrace will tell Mozilla developers what crashed and provide a starting point for investigating its cause. This article describes how to use the Mozilla Crash Reporter (Breakpad) to get a crash ID, which our engineers can use to get a stacktrace, and alternative ways to get a stacktrace if you can't get a crash ID.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_to_get_a_stacktrace_with_WinDbg">How to get a stacktrace with WinDbg</a></dt><dd class="landingPageList">Sometimes you need to get a stacktrace (call stack) for a crash or hang but <a class="external" href="http://kb.mozillazine.org/Talkback">Talkback</a> or <a class="external" href="http://kb.mozillazine.org/Breakpad" title="http://kb.mozillazine.org/Breakpad">Breakpad</a> fail because it's a special crasher or a hang. This article describes how to get a stacktrace in those cases with WinDbg on Windows. (To get a stacktrace for Thunderbird or some other product, substitute the product name where ever you see Firefox in this instructions.)</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_to_implement_custom_autocomplete_search_component">How to implement a custom autocomplete search component</a></dt><dd class="landingPageList">The XUL <a href="/En/XUL/Textbox_(Toolkit_autocomplete)" title="en/XUL/textbox_(Firefox_autocomplete)">textbox</a> element supports an autocomplete mechanism that is used to create a textbox with a popup containing a list of possible completions for what the user has started to type. There are actually two autocomplete mechanisms:</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_to_investigate_Disconnect_failures">How to investigate Disconnect failures</a></dt><dd class="landingPageList">This article will guide you on how to investigate disconnect failures.  <a href="http://mozmill-daily.blargon7.com/#/functional/report/1039ea48a9d69a5a1cc4fd228c44e959">An example of such a failure</a></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/How_to_report_a_hung_Firefox">How to Report a Hung Firefox</a></dt><dd class="landingPageList">Is your Firefox not responding? Or are you regularly seeing the "Firefox is running but is not responding..." dialog? This usually means that something in Firefox is hung. This may be because of a code error within Firefox itself, such as a deadlock or infinite loop, or it may be caused by 3rd-party software such as a Firefox extension, antivirus software, or even malware or a virus on your computer.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/HTTP_cache">HTTP Cache</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/httpd.js">Httpd.js</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/IME_handling_guide">IME handling guide</a></dt><dd class="landingPageList">This document explains how Gecko handles IME.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Implementing_download_resuming">Implementing Download Resuming</a></dt><dd class="landingPageList">This document describes how an embedder or other Gecko/Necko-using application can implement download resuming.</dd></dl></dl></div>
-    <div class="section"><dl><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Implementing_Pontoon_in_a_Mozilla_website">Implementing Pontoon in a Mozilla project</a></dt><dd class="landingPageList"><a class="external" href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">Pontoon</a> is a web-based localization (l10n) tool used at Mozilla. It's a very simple and intuitive tool that requires little to no technical skill for localizers to use, which will decrease your time-to-publish for localized versions of your project. Here we'll discuss how you can use Pontoon with your Mozilla project.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Implementing_QueryInterface">Implementing QueryInterface</a></dt><dd class="landingPageList">This document describes the right way to write <code>QueryInterface()</code>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Infallible_memory_allocation">Infallible memory allocation</a></dt><dd class="landingPageList">There's ongoing work to implement <strong>infallible memory allocators</strong>. These are memory allocation routines that never return <code>null</code>; that is, they always successfully return the requested block of memory. This is in contrast to a traditional, fallible memory allocator that can return <code>null</code> indicating that the request failed.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Instantbird">Instantbird</a></dt><dd class="landingPageList"><strong>Instantbird </strong>is an instant messaging application with close ties to Mozilla. These pages document Instantbird and also provide links to documentation about the <a href="/en-US/docs/Chat_Core">Chat Core</a> backend which is also used in <a href="/en-US/docs/Mozilla/Thunderbird">Thunderbird</a>.<a href="/en-US/docs/Chat_Core">Chat Core</a></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Integrated_authentication">Integrated Authentication</a></dt><dd class="landingPageList">This entails support for the the Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) internet standard (<a class="external" href="https://tools.ietf.org/html/rfc2478" title="RFC 2478">RFC 2478</a>) to negotiate either Kerberos, NTLM, or other authentication protocols supported by the operating system.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Internationalized_domain_names_support_in_Mozilla">Internationalized Domain Names (IDN) Support in Mozilla Browsers</a></dt><dd class="landingPageList">Netscape 7.1 is the first commercial browser that has built-in support for Internationalized Domain Name under the new IETF RFC's established in 2003.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Introduction_to_Layout_in_Mozilla">Introduction to Layout in Mozilla</a></dt><dd class="landingPageList"> </dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/IPDL">IPC Protocol Definition Language (IPDL)</a></dt><dd class="landingPageList">IPDL, short for "IPC (Inter-process communication) Protocol Definition Language", is a Mozilla-specific language allowing C++ code to pass messages between processes or threads in an organized and secure way. All messages for multi-process plugins and tabs in Firefox are declared in the IPDL language.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/JavaScript_code_modules">JavaScript code modules</a></dt><dd class="landingPageList">JavaScript code modules let multiple privileged JavaScript scopes share code. For example, a module could be used by Firefox itself as well as by extensions, in order to avoid code duplication.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/JS_libraries">JavaScript libraries from Mozilla projects</a></dt><dd class="landingPageList">In addition to Firefox and other applications, Mozilla developers have created a number of useful JavaScript libraries you can use in your projects. Documentation for these libraries can be found here.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/JavaScript_Tips">JavaScript Tips</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/JavaScript-DOM_Prototypes_in_Mozilla">JavaScript-DOM Prototypes in Mozilla</a></dt><dd class="landingPageList">When a <a href="/en/DOM" title="en/DOM">DOM</a> node is accessed from <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a> in Mozilla, the native C++ DOM node is wrapped using <a href="/en/XPConnect" title="en/XPConnect">XPConnect</a> and the wrapper is exposed to JavaScript as the JavaScript representation of the DOM node. When XPConnect wraps a C++ object it will create a <code>JSObject</code> that is unique to this C++ object. In the case where the C++ object has class info (<a href="/en/nsIClassInfo" title="en/nsIClassInfo">nsIClassInfo</a>), the <code>JSObject</code> is a more or less empty <code>JSObject</code> which is not really that special. All the methods that are supposed to show up on this <code>JSObject</code> are actually not properties of the object itself, but rather properties of the prototype of the <code>JSObject</code> for the wrapper (unless the C++ object's class info has the flag <code>nsIXPCScriptable::DONT_SHARE_PROTOTYPE</code> set, but lets assume that's not the case here).</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/js-ctypes">js-ctypes</a></dt><dd class="landingPageList"><strong>js-ctypes</strong> allows application and extension code to call back and forth to native code written in C. C++ support is possible through <code>vtable </code>pointers see <a href="/en-US/docs/Mozilla/js-ctypes/Examples/Using_COM_from_js-ctypes">Using COM from js-ctypes</a>. For a discussion on extended C++ support see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=505907" title="Support C++ calling from JSctypes">bug 505907</a>. Other work made possible by js-ctypes is JNI, this is elaborated on in the <a href="/en-US/docs/Mozilla/JavaScript_code_modules/JNI.jsm">JNI.jsm</a> section and not the js-ctypes section due to the JSM abstracting away all of the js-ctypes. Unlike binary XPCOM components, it allows developers to ship a single binary for use with multiple versions of Firefox.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Localization">Localization at Mozilla</a></dt><dd class="landingPageList"><strong>Localization</strong> (L10n) is the process of translating software user interfaces from one language to another and adapting it to suit a foreign culture. These resources are for anyone with an interest in the technical aspects involved in localization.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Memory_Sanitizer">Memory Sanitizer</a></dt><dd class="landingPageList">Memory Sanitizer (MSan) is a fast detector used for uninitialized memory in C/C++ programs. It uses a compile-time instrumentation to ensure that all memory access at runtime uses only memory that has been initialized. Unlike most other sanitizers, MSan can easily cause false positives if not all libraries are instrumented. This happens because MSan is not able to observe memory initialization in uninstrumented libraries. More information on MSan can be found on <a class="external" href="https://github.com/google/sanitizers/wiki/MemorySanitizer" title="https://github.com/google/sanitizers/wiki/MemorySanitizer">the Memory Sanitizer wiki</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mercurial">Mercurial</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mobile">Mobile</a></dt><dd class="landingPageList">Firefox OS is an open source mobile operating system which uses Linux and Mozilla's Gecko engine to run a user interface and set of applications written entirely in HTML, CSS and JavaScript.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_development_strategies">Mozilla Development Strategies</a></dt><dd class="landingPageList">This article offers some strategies and suggestions to help developers stay productive.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_development_tools">Mozilla Development Tools</a></dt><dd class="landingPageList">This page lists the various development tools that we operate and/or maintain here at mozilla.org. Naturally, source code for all of these tools is also available. The tools needed to build Mozilla are described on the <a href="/en/Build_Documentation" title="en/Build_Documentation">build</a> page for your platform.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_DOM_Hacking">Mozilla DOM Hacking Guide</a></dt><dd class="landingPageList">Mozilla gives you the opportunity not only to <strong>use</strong> very powerful and complete DOM support, but also to <strong>work</strong> on a world-class implementation of one of the greatest Internet technologies ever created.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_external_string_guide">Mozilla external string guide</a></dt><dd class="landingPageList">The Mozilla codebase used to have a notion of "external" strings, which were the string classes visible to code outside of the Mozilla codebase (Extensions, XULRunner applications, and embedders). These classes were removed a long time ago. The only remaining string classes are the "internal" ones, which are documented <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Internal_strings">XPCOM Guide Internal strings</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/MFBT">Mozilla Framework Based on Templates (MFBT)</a></dt><dd class="landingPageList">The Mozilla Framework Based on Templates ("mfbt") is the central repository for macros, functions, and data structures used throughout Mozilla code, including in the JavaScript engine.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/MathML_Project">Mozilla MathML Project</a></dt><dd class="landingPageList">The Mozilla MathML project is Mozilla's project to build and enhance <a href="/en-US/docs/Web/MathML">MathML</a> support within Firefox and other Mozilla-based applications. For a quick overview, see the <a href="http://fred-wang.github.io/MozSummitMathML/index.html">slides for the innovation fairs at Mozilla Summit 2013</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_Port_Blocking">Mozilla Port Blocking</a></dt><dd class="landingPageList">On 08/15/2001, Cert issued a <a class="external" href="http://www.kb.cert.org/vuls/id/476267">Vulnerability Note VU#476267</a> for a "Cross-Protocol" scripting attack, known as the <a class="external" href="http://www.remote.org/jochen/sec/hfpa/">HTML Form Protocol Attack</a> which allowed sending arbitrary data to most TCP ports. A simple exploit of this hole allows an attacker to send forged unsigned mail through a mail server behind your firewall: A really nasty hole.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_project_presentations">Mozilla project presentations</a></dt><dd class="landingPageList">This article provides links to presentations covering various aspects of the Mozilla project.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Projects">Mozilla Projects</a></dt><dd class="landingPageList">Mozilla has a number of projects other than <a href="/en-US/docs/Mozilla/Firefox">Firefox</a> itself. Many of these are components of Firefox or are tools used to create Firefox, but may be used by other projects as well. Here you'll find links to documentation about these projects.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_on_GitHub">Mozilla projects on GitHub</a></dt><dd class="landingPageList">Although Mozilla's major, core projects are located on the Mozilla <a href="/en-US/docs/Mercurial">Mercurial</a> server, such as <a href="/en-US/docs/mozilla-central">mozilla-central</a>, there are a number of tools, services, and so forth whose code is hosted on <a href="https://github.com/">GitHub</a>. This article offers a quick guide to getting started with Mozilla code on GitHub as well as a list of many of the most interesting GitHub repositories containing Mozilla project code.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_quirks_mode_behavior">Mozilla Quirks Mode Behavior</a></dt><dd class="landingPageList">The following is a <em>rough</em>  list of the differences that exist between Mozilla's <a href="/en-US/docs/Quirks_Mode_and_Standards_Mode">standards mode and quirks mode</a> behavior.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_style_system">Mozilla Style System</a></dt><dd class="landingPageList">The Style System is the module of Mozilla's code responsible for the loading and parsing of <a href="en/CSS">CSS</a> style sheets, and the computation of <a href="en/CSS/computed_value">computed values</a> for all CSS properties. The handling of those computed values is the responsibility of other parts of the code.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_style_system_documentation">Mozilla Style System Documentation</a></dt><dd class="landingPageList">See also the <a class="external" href="http://www.mozilla.org/newlayout/doc/style-techtalk.html">style techtalk</a> for more complete although less detailed documentation.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_SVG_Project">Mozilla SVG Project</a></dt><dd class="landingPageList">Since you have come this far, you probably already know that SVG stands for Scalable Vector Graphics, and that it is an XML language for sophisticated 2-dimensional graphics. SVG is to graphics what XHTML is to text, MathML is to mathematical equations and CML is to the description of chemical molecules.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Tech">Mozilla technologies</a></dt><dd class="landingPageList">Mozilla has several technologies used as components of its projects. These are documented here.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_Web_Developer_FAQ">Mozilla Web Developer FAQ</a></dt><dd class="landingPageList">This document answers questions that Web authors ask frequently specifically in connection with Firefox and other Gecko-based browsers. There are links to more general Web authoring FAQs at the end of this document.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Mozilla_Web_Services_Security_Model">Mozilla Web Services Security Model</a></dt><dd class="landingPageList"></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Namespaces">Namespace</a></dt><dd class="landingPageList">Below, find links to articles about C++ classes Mozilla uses within various namespaces, primarily the <code>mozilla</code> namespace.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">omni.ja (formerly omni.jar)</a></dt><dd class="landingPageList">Firefox and Thunderbird achieve performance improvements by moving many of their internal parts from being standalone files or sets of JAR files into just one JAR file called <code>omni.ja</code>; this reduces the amount of I/O needed to load the application.  This article covers the contents of the archive and techniques for inspecting those contents.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Participating_in_the_Mozilla_project">Participating in the Mozilla project</a></dt><dd class="landingPageList">If you're interested in helping to fix bugs and otherwise work on the code behind the Mozilla platform, this is the place to find the documentation that will point you in the right direction.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Performance">Performance</a></dt><dd class="landingPageList">The articles linked to from here will help you improve performance, whether you're developing core Mozilla code or an add-on.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Phishing">Phishing: a short definition</a></dt><dd class="landingPageList">In 2014, the MSCI <a href="https://news.microsoft.com/en-sg/2014/02/11/microsoft-consumer-safety-index-reveals-impact-of-poor-online-safety-behaviours-in-singapore/">estimated</a> an annual global impact of phishing, and various forms of identity theft, to be as high as $5 billion USD. The impact has not improved much since.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Preferences">Preferences</a></dt><dd class="landingPageList">The preference system makes it possible to store data for Mozilla applications using a key/value pairing system. These articles provide information about how to use the preference system.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Productization_guide">Productization guide</a></dt><dd class="landingPageList"><strong>Productization</strong> is the choice of ''default'' search engines, content and protocol handlers, bookmarks, links to recommended sites on the in-product pages, etc. The web services that make up the productization of Mozilla software are often specific to a local market. For example, a search provider can deliver a very good quality of search results — but only in a specific country or language, and we have to take this into account when considering default search engines for a locale. Hence there is a need to customize the set of default web services on a per-locale basis in order to ensure a good user experience across all locales.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Profile_Manager">Profile Manager</a></dt><dd class="landingPageList">Firefox and other XULRunner applications store user settings and data in special folders, called <a class="external" href="http://support.mozilla.com/en-US/kb/Profiles" title="http://support.mozilla.com/en-US/kb/Profiles">profiles</a>.    Firefox provides a built-in applet to <a class="external" href="http://support.mozilla.com/en-US/kb/Managing%20profiles" title="http://support.mozilla.com/en-US/kb/Managing profiles">manage these profiles</a>, but it will eventually be going away (see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=214675" title="https://bugzilla.mozilla.org/show_bug.cgi?id=214675">bug 214675</a>), so a new standalone Profile Manager application has been created, which works with any XULRunner application, and has many features not found in Firefox's built-in version.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/QA">QA: Quality assurance at Mozilla</a></dt><dd class="landingPageList">Here you'll find articles and tools to help you gear up to join the QA team testing Firefox to ensure that each release is as good as it can be.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Redis_Tips">Redis Tips</a></dt><dd class="landingPageList">This document is a collection of some examples and tips for using redis, the open-source data structure server.  It is intended primarily for developers, and deliberately omits some topics that will be important in any redis deployment, like security and backups.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/SeaMonkey">SeaMonkey</a></dt><dd class="landingPageList"><strong>SeaMonkey </strong>is Mozilla's all in one internet suite. These pages document SeaMonkey's MailNews component and also provide links to documentation about the <a href="/en-US/docs/tag/MailNews" title="tag/MailNews">MailNews</a> backend which is also used in other projects such as <a href="http://wiki.mozilla.org/Penelope">Eudora/Penelope</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird">Thunderbird</a>, <a href="http://nkreeger.com/correo/">Correo</a>, etc.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Setting_up_an_update_server">Setting up an update server</a></dt><dd class="landingPageList">The goal of this document is to provide basic instructions on setting up your own update server.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Signing_Mozilla_apps_for_Mac_OS_X">Signing Mozilla apps for Mac OS X</a></dt><dd class="landingPageList">Mac OS X's Gatekeeper functionality prevents users from launching applications that haven't been code-signed, in order to help keep their computers secure. Firefox and Thunderbird releases are both signed before shipping; this article describes the process.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Supported_build_configurations">Supported build targets</a></dt><dd class="landingPageList">There are three tiers of supported Mozilla build targets at this time. These tiers represent the shared priorities of the Mozilla project.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Task_graph">Task graph</a></dt><dd class="landingPageList">After a change to the Gecko source code is pushed to version-control, jobs for that change appear on <a href="https://treeherder.mozilla.org/">Treeherder</a>. How does this work?</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Testing">Testing Mozilla code</a></dt><dd class="landingPageList">Testing your code is important! Before you can even get your code committed into the source tree, you have to test it, and larger patches have to have automated tests. These articles will help you master (and continue to excel at) testing Mozilla code.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/The_Mozilla_platform">The Mozilla platform</a></dt><dd class="landingPageList">The Mozilla project encompasses several technologies that, together, comprise the Mozilla platform. These links will direct you to documentation about each of these, as well as how to use the Mozilla platform to build your own projects.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Rust">The Rust programming language</a></dt><dd class="landingPageList"> <a href="https://www.rust-lang.org/">Rust</a> is a new open-source systems programming language created by Mozilla and a community of volunteers, designed to help developers create fast, secure applications which take full advantage of the powerful features of modern multi-core processors. It prevents segmentation faults and guarantees thread safety, all with an easy-to-learn syntax.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Thunderbird">Thunderbird</a></dt><dd class="landingPageList"><a href="https://www.thunderbird.net/">Thunderbird</a> is a mail/messaging application managed and developed by the <a href="https://wiki.mozilla.org/Thunderbird:Home">Thunderbird community</a>. These pages document Thunderbird and the <a href="/en-US/docs/tag/MailNews" title="tag/MailNews">MailNews</a> backend which is also used in other projects such as <a href="http://www.seamonkey-project.org/">Seamonkey</a> and <a href="http://postbox-inc.com/">Postbox</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Toolkit_version_format">Toolkit version format</a></dt><dd class="landingPageList">This document is a reference for the version format, as used in Firefox 1.5 (<a href="/en/XULRunner" title="en/XULRunner">XULRunner</a> 1.8) and later. This format is used by the Extension Manager, Software Update, and other parts of the platform. Versions in at least the following places must conform to this format:</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Using_CXX_in_Mozilla_code">Using C++   in Mozilla code</a></dt><dd class="landingPageList">Mozilla code only uses a subset of C++. Runtime type information (RTTI) is disabled, as it tends to cause a very large increase in codesize. This means that <code>dynamic_cast</code>, <code>typeid()</code> and <code>&lt;typeinfo&gt;</code> cannot be used in Mozilla code. Also disabled are exceptions; do not use <code>try</code>/<code>catch</code> or throw any exceptions. Libraries that throw exceptions may be used if you are willing to have the throw instead be treated as an abort.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Using_JS_in_Mozilla_code">Using JS in Mozilla code</a></dt><dd class="landingPageList"><strong>JS language features that are implemented in the Mozilla JS engine are ordinarily safe to use in Mozilla code.</strong></dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Using_Mozilla_code_in_other_projects">Using Mozilla code in other projects</a></dt><dd class="landingPageList">There are several ways you can use Mozilla code in your own project.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Using_popup_notifications">Using popup notifications</a></dt><dd class="landingPageList">Popup notifications, also known as "doorhanger notifications", are presented to notify the user of something that's important but may not need immediate attention. These non-modal notifications let the user make decisions when they have a moment to do so, instead of being forced to deal with them at possibly inconvenient times. For example, this popup notification is displayed when a web site requests geolocation information:</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/RAII_classes">Using RAII classes in Mozilla</a></dt><dd class="landingPageList"><a class="external" href="http://en.wikipedia.org/wiki/RAII" title="http://en.wikipedia.org/wiki/RAII">RAII</a> classes are useful when two operations (e.g., Lock/Unlock, AddRef/Release, PushState/PopState) must be paired.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Using_tab-modal_prompts">Using tab-modal prompts</a></dt><dd class="landingPageList">Prior to Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), prompts (that is, alerts and other modal prompts) were <strong>window modal</strong>. That is, when an alert occurred, it blocked the user interface on all tabs in the window until the user dismissed the prompt.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Using_the_Mozilla_source_server">Using the Mozilla source server</a></dt><dd class="landingPageList">Using the Mozilla source server is now even more feature-packed. The nightly debug builds are now also Source Indexed so that by following a couple of simple steps you can also have the source code served to you for debugging without a local build</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Using_the_Mozilla_symbol_server">Using the Mozilla symbol server</a></dt><dd class="landingPageList">The Mozilla project runs a symbol server for trunk Firefox nightly and release builds on Windows. Symbols are available for at least 30 previous days worth of nightly builds, and Firefox releases from 2.0.0.4. This allows debugging of those builds without forcing all users to download large debugging files. The server functions like <a class="external" href="http://support.microsoft.com/kb/311503">Microsoft's symbol server</a> so the documentation there can be useful.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a></dt><dd class="landingPageList">The <a class="external" href="https://heycam.github.io/webidl/">WebIDL</a> bindings are generated at build time based on two things: the actual WebIDL file and a configuration file that lists some metadata about how the WebIDL should be reflected into Gecko-internal code.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Working_with_windows_in_chrome_code">Working with windows in chrome code</a></dt><dd class="landingPageList">This article describes working with multiple windows in Mozilla chrome code (<a href="/en-US/docs/XUL" title="XUL">XUL</a> applications and <a href="/en-US/docs/Extensions" title="Extensions">Extensions</a>). It contains tips and example code on opening new windows, finding an already opened window, and passing data between different windows.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/XMLHttpRequest_changes_for_Gecko_1.8">XMLHttpRequest changes for Gecko1.8</a></dt><dd class="landingPageList">This document describes some of the changes that have been made to <a href="en/Gecko">Gecko</a>'s <a href="en/XMLHttpRequest">XMLHttpRequest</a> implementation since version 1.7 (i.e., the version of Gecko that shipped with Firefox 1.0). These changes only apply to XUL extensions and XUL applications. They do not apply to web applications.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/XPI">XPI</a></dt><dd class="landingPageList"><strong>Cross-Platform Installer Module (XPI)</strong> is a ZIP file used to install packages, utilizing the <a href="/en/XPInstall" title="en/XPInstall">XPInstall</a> technology. XPI modules (so called "<a href="/en/Bundles" title="en/Bundles">Bundles</a>") are employed to install a wide variety of software, including <a href="/en/Plugins" title="en/Plugins">Plugins</a>, <a href="/en/Extensions" title="en/Extensions">Extensions</a>, <a href="/en/Themes" title="en/Themes">Themes</a>, and <a class="external" href="http://www.mozilla.com/thunderbird/dictionaries.html">Thunderbird dictionaries</a>.</dd><dt class="landingPageList"><a href="/en-US/docs/Mozilla/Zombie_compartments">Zombie compartments</a></dt><dd class="landingPageList">This page tells you how to detect and avoid <em>zombie compartments</em>, which are a particular kind of memory leak.  They can be caused by bugs in Firefox itself, or by bugs in Firefox add-ons.</dd></dl></div>
-    </div><p></p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<div class="content"><p>
+ The articles below include content about downloading and building Mozilla code. In addition, you'll find helpful articles about how the code works, how to build add-ons for Mozilla applications and the like.
+</p>
+<p>
+</p>
+<div class="row topicpage-table">
+ <div class="section">
+  <dl>
+   <dl>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Bird_s_Eye_View_of_the_Mozilla_Framework">
+      A bird's-eye view of the Mozilla framework
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The purpose of this article is to provide a high-level technical overview of the architecture of the extensible, object-based Mozilla application framework.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Accessibility">
+      Accessibility and Mozilla
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" title="/en-US/docs/Accessibility">
+      Accessibility
+     </a>
+     is the idea that software (among other things) should be designed to be usable and, as much as possible, convenient to use for people with disabilities. Mozilla strives to make its software accessible; the documents below cover the ways in which we do so.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">
+      Add-ons
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Add-ons allow developers to extend and modify the functionality of Firefox.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Adding_a_new_style_property">
+      Adding a new CSS property
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This page describes how to add a new CSS property to the style system.  The style system is the part of the code in Gecko that is responsible for producing a computed value for every property for every element.  See
+     <a href="https://wiki.mozilla.org/Gecko:Overview#Style_System" title="https://wiki.mozilla.org/Gecko:Overview#Style_System">
+      the Gecko Overview
+     </a>
+     for more information about the style system.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Adding_a_new_event">
+      Adding a new event
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This draft document covers how to add a new event to the Mozilla (Firefox) source code.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Adding_a_new_word_to_the_en-US_dictionary">
+      Adding a new word to the en-US dictionary
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Occasionally bugs are filed pointing out situations where perfectly legitimate words are missing from the English spell check dictionary in Firefox. This article describes the process for adding a word to the dictionary.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Adding_phishing_protection_data_providers">
+      Adding phishing protection data providers
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Phishing protection technology lets Firefox help protect users by comparing the URLs the user visits to a blacklist of known scam sites, and presenting a warning to the user when they visit a site on the list.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/An_introduction_to_hacking_Mozilla">
+      An introduction to hacking Mozilla
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This guide introduces the Mozilla project and provides an overview for developers interested in contributing to or exploring the various parts of the codebase.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Android-specific_test_suites">
+      Android-specific test suites
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     There are several Android-specific test suites that run on the Firefox for Android codebase:
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/API_change_rules">
+      API change rules
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Until further notice, the following rules govern API changes:
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Application_cache_implementation_overview">
+      Application cache implementation overview
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This happens in nsHttpChannel::OpenCacheEntry(). All top level document loading (navigation) channels are set ChooseApplicationCache flag, which happens in nsDocShell::DoURILoad(). Channels having that flag set are searching for nsIApplicationCache object prior inspecting normal HTTP cache. nsIApplicationCacheService::ChooseApplicationCache is given the URL the channel is about to load. It synchronously returns an nsIApplicationCache object representing the most recent cache version from the most recent cache group containing the entry under the URL or a matching namespace.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Benchmarking">
+      Benchmarking
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Debug builds (--enable-debug) and non-optimized builds (--disable-optimize) are
+     <em>
+      much
+     </em>
+     slower. Any performance metrics gathered by such builds are largely unrelated to what would be found in a release browser.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Browser_chrome_tests">
+      Browser chrome tests
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The browser chrome test suite is an automated testing framework designed to allow testing of application chrome windows using JavaScript. It currently allows you to run JavaScript code in the same scope as the main Firefox browser window and report results using the same functions as the
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Mochitest" title="en/Mochitest">
+      Mochitest test framework
+     </a>
+     . As all tests, they won't work in a build with tests disabled (
+     <code>
+      --disable-tests
+     </code>
+     ).
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Security">
+      Browser security
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     An important aspect of developing code for any browser, including Firefox, as well as any Web-oriented project, is its security. These articles provide important guides and references to ensuring the code you write is secure, including both design recommendations and testing guidelines.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Bugzilla">
+      Bugzilla
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     <a class="link-https" href="https://bugzilla.mozilla.org/">
+      bugzilla.mozilla.org
+     </a>
+     (often abbreviated b.m.o) is Mozilla.org's bug-tracking system, a database for recording bugs and enhancement requests for Firefox, Thunderbird, SeaMonkey, Camino, and other mozilla.org projects.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Building_Mozilla">
+      Building Mozilla
+     </a>
+    </dt>
+    <dd class="landingPageList">
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Building_SpiderMonkey_with_UBSan">
+      Building SpiderMonkey with UBSan
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     1.
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Testing/Firefox_and_Address_Sanitizer" title="https://developer.mozilla.org/en-US/docs/Building_Firefox_with_Address_Sanitizer#LLVM.2FClang">
+      Compile a recent version of LLVM &amp; Clang
+     </a>
+     .
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/C++_Portability_Guide">
+      C++ portability guide
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This document has migrated to
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_CXX_in_Mozilla_code">
+      Using C++ in Mozilla code
+     </a>
+     .
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Calendar">
+      Calendar
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The Mozilla Calendar Project is a community driven project based on the Mozilla application architecture. The Project's heart is a calendaring backend based on libical. The
+     <a class="external" href="http://www.mozilla.org/projects/calendar/lightning/" title="http://www.mozilla.org/projects/calendar/lightning/">
+      Lightning extension
+     </a>
+     is built on top of this platform and provides integrated calendaring capabilities for Mozilla Messaging's Email client
+     <a class="internal" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird" title="En/Thunderbird">
+      Thunderbird
+     </a>
+     .
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Chat_Core">
+      Chat Core
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Chat Core is the shared code for instant messaging that is shared by
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Instantbird">
+      Instantbird
+     </a>
+     and
+     <a class="internal" href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird" title="en/Thunderbird">
+      Thunderbird
+     </a>
+     . It provides a number of functions and capabilities, including:
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Choosing_the_right_memory_allocator">
+      Choosing the right memory allocator
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     There are a lot of different memory allocators in the Mozilla source tree. This article looks over some of them and tries to sort out which should be used under what circumstances.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration">
+      Chrome registration
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Glossary/Chrome" title="en/Chrome">
+      Chrome
+     </a>
+     is the set of user interface elements of the application window that are outside the window's content area. Toolbars, menu bars, progress bars, and window title bars are all examples of elements that are typically part of the chrome.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/ChromeWorkers">
+      ChromeWorkers and the Chrome worker loader
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     To complement the open Web Worker functionality, Mozilla has introduced the
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Chrome/API/ChromeWorker" title="The documentation about this has not yet been written; please consider contributing!">
+      <code>
+       ChromeWorker
+      </code>
+     </a>
+     interface, which provides this capability within application chrome. That makes it available not only to the application itself, but also to add-ons.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options">
+      Command Line Options
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Command line options are used to specify various startup options for Mozilla applications.This page describes the commonly used options and how to use them. You can open the Command Line Interface by pressing Shift + F2.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Connect">
+      Connect with Mozilla
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Enable, inspire and collaborate to make the Web the primary platform used to create experiences across all connected devices.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Continuous_integration">
+      Continuous Integration
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     When you push a commit to mozilla-central or a related repository, it initiates a large chain of builds and tests across multiple types of infrastructure.  This document will help you understand all the pieces that comprise Mozilla's continuous integration systems.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Cookies_in_Mozilla">
+      Cookies in Mozilla
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Suggestions as to needed documentation can be directed to
+     <a class="link-mailto" href="mailto:mconnor@myrealbox.com">
+      Mike Connor
+     </a>
+     .
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Cookies_Preferences">
+      Cookies Preferences in Mozilla
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     These preferences apply to most Mozilla products (including Firefox and Seamonkey), however they are application-specific, so not all of them may apply to you. The default values given are for Firefox 3.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_a_Firefox_sidebar">
+      Creating a Firefox sidebar
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Web publishers can offer visitors a
+     <strong>
+      Firefox sidebar
+     </strong>
+     to encourage their engagement. There are two ways to create a sidebar for Firefox users: the Social API and an extension. You can choose either depending on your needs and resources.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_a_language_pack">
+      Creating a Language Pack
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     To create a language pack, or a localization repack, you first need to go through the
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Quick_start_guide" title="https://developer.mozilla.org/en/Localization_Quick_Start_Guide#Initial_setup">
+      initial setup
+     </a>
+     process.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_a_localized_Windows_installer_of_SeaMonkey">
+      Creating a localized Windows installer of SeaMonkey
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Preamble: not all of the programs listed below are necessary. Some of them are simply the ones I use because I like them, while others are scripts that I've created to speed up the work. You can in every case choose the program you prefer to do some operations, and you can also decide not to use any of my scripts and manually enter all of the commands by hand. It's your choice!
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_a_login_manager_storage_module">
+      Creating a Login Manager storage module
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The Login Manager manages and stores user passwords. Extensions can replace the built-in password storage with their own implementation. This can be useful if you want to integrate a gecko application's password management with an existing password management system, or use your own password storage format or database. So for example, on KDE is is desirable to fully employ the KDE wallet manager, rather than any secondary replacements of KDEwallet.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_a_spell_check_dictionary_add-on">
+      Creating a spell check dictionary add-on
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This page describes how to package a Hunspell spell check dictionary as a Firefox add-on, or how to update your existing add-on, so that it can be installed, uninstalled and updated without a restart.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_JavaScript_callbacks_in_components">
+      Creating JavaScript callbacks in components
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     <a href="/en-US/docs/Mozilla/Tech/XPCOM" title="en/XPCOM">
+      XPCOM
+     </a>
+     components use IDL to create interfaces. These interfaces are used to manipulate the component in C++ and JavaScript. A common pattern used with interfaces to create a bi-directional communication between two groups of code is the
+     <a class="external" href="http://en.wikipedia.org/wiki/Observer_pattern">
+      observer (or listener) pattern
+     </a>
+     . Basically, the component defines an observer (or listener) interface which is implemented by some external code and this implementation is passed to the component. The component can then call methods on the observer interface to signal the external code when predefined events occur. Here is a very simple example of the observer pattern:
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_Mercurial_User_Repositories">
+      Creating Mercurial User Repositories
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     When working with
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mercurial" title="en/Mercurial">
+      Mercurial
+     </a>
+     , it is often nice to publish your changes on a server as a backup or so others can examine and work with them. If you have Level 1
+     <a class="link-https" href="https://www.mozilla.org/hacking/commit-access-policy/#Summary" title="https://www.mozilla.org/hacking/commit-access-policy/#Summary">
+      commit access
+     </a>
+     or higher, then you should have an LDAP account which allows you to push to user repos in the
+     <a class="link-https" href="https://hg.mozilla.org/users/" title="https://hg.mozilla.org/users/">
+      <code>
+       /users
+      </code>
+     </a>
+     directory of
+     <code>
+      hg.mozilla.org
+     </code>
+     .
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_MozSearch_plugins">
+      Creating MozSearch plugins
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Firefox 2 uses a simplified form of the
+     <a class="external" href="http://opensearch.org/">
+      OpenSearch
+     </a>
+     format for storing search plugins. A MozSearch search plugin is an XML file that describes the search engine, its URL, and the parameters that need to be passed to that URL.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_reftest-based_unit_tests">
+      Creating reftest-based unit tests
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The reftest harness compares the display of two Web pages. If the bitmaps resulting from displaying the two files in an 800x1000 window are identical, the test passes. If they differ, the test fails.  Or, alternatively, the conditions can be reversed (a != test rather than an == test). The power of the tool comes from the fact that there is more than one way to achieve any given visual effect in a browser. So, if the effect of complex markup is being tested, put that complex markup into a page and create another page that uses simple markup to achieve the same visual effect. Reftest will then compare them and verify whether they produce the same bitmap.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Creating_sandboxed_HTTP_connections">
+      Creating Sandboxed HTTP Connections
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Starting with
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko" title="Gecko">
+      Gecko
+     </a>
+     1.8.1 (
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/2" title="Firefox_2_for_developers">
+      Firefox 2
+     </a>
+     ), it is possible to create sandboxed
+     <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" title="HTTP">
+      HTTP
+     </a>
+     connections which don't affect the user's cookies. This article will cover the basics of doing HTTP connections from XPCOM JavaScript, and should easily translate to C++ XPCOM.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Debugging">
+      Debugging
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Debugging a project as large as Mozilla can be a daunting task. Fortunately, over the years, Mozilla developers have come up with not just technologies and features to help you debug code, but have devised tips and techniques that can help too. Also available are assorted tools that you can use when debugging.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide">
+      Developer guide
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     There are lots of ways to contribute to the Mozilla project: coding, testing, improving the build process and tools, or contributing to the documentation. This guide provides information that will not only help you get started as a Mozilla contributor, but that you'll find useful to refer to even if you are already an experienced contributor.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Displaying_Place_information_using_views">
+      Displaying Places information using views
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Views are one component of the Places
+     <a class="external" href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" title="http://en.wikipedia.org/wiki/Model–view–controller">
+      model-view-controller
+     </a>
+     design. Use them to display
+     <code>
+      <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult" title="">
+       nsINavHistoryResult
+      </a>
+     </code>
+     objects to the user. See
+     <a class="internal" href="/en-US/docs/Mozilla/Tech/Places/Querying" title="En/Querying Places">
+      Querying Places
+     </a>
+     for information about obtaining and using
+     <code>
+      nsINavHistoryResult
+     </code>
+     objects, which this page assumes you are familiar with.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Errors">
+      Error codes returned by Mozilla APIs
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The following tables list errors that can occur when calling various Mozilla APIs. Each error is listed by its name and an error code in parentheses. An error will typically be displayed on the error console, but can be captured using a try-catch block in JavaScript. These constants can be accessed through Components.results. For example, by using
+     <code>
+      Components.results.NS_ERROR_NOT_INITIALIZED
+     </code>
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">
+      Firefox
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Here you can learn about how to contribute to the Firefox project and you will also find links to information about the construction of Firefox add-ons, using the developer tools in Firefox, and other topics.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_Android">
+      Firefox for Android
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     For more and more people mobile devices are the primary way, or even the only way, to access the Web.
+     <a class="link-https" href="https://www.mozilla.org/en-US/mobile/">
+      Firefox for Android
+     </a>
+     (codenamed Fennec) is an open, hackable, standards-based browser, just like the desktop Firefox.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_for_iOS">
+      Firefox for iOS
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     For more and more people mobile devices are the primary way, or even the only way, to access the Web.
+     <a class="link-https" href="https://www.mozilla.org/en-US/mobile/">
+      Firefox for iOS
+     </a>
+     (codenamed Fennec like its Android counterpart) is an open, hackable, standards-based browser, just like the desktop Firefox.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_Operational_Information_Database:_SQLite">
+      Firefox Operational Information Database: SQLite
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     A large amount of operational information about websites visited and browser configuration is stored in relational databases in
+     <a class="internal" href="/en-US/docs/Mozilla/Tech/XPCOM/Storage" title="Talk:En/Storage">
+      SQLite
+     </a>
+     used by Firefox. The
+     <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5817" title="https://addons.mozilla.org/en-US/firefox/addon/5817">
+      SQLite Manager add-on
+     </a>
+     allows convenient browsing of this information.  (Install the SQLite Mangager add-on, click Tools -&gt; SQLite Manager.  In the manager, select the database you want to explore in the '(Select Profile Database)' pulldown, click 'Go', select one of the tables listed in the left column and see the current contents of the database in the 'Browse &amp; Search' tab.)
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS_for_TV">
+      Firefox OS for TV
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Welcome to the landing page for Firefox OS for TV and connected devices. This is written for web developers who are interested in Firefox OS for TV current and future work, and developing web apps for TV. The articles linked below provide everything you need to build and run a Firefox OS TV simulator, get started writing apps and deploying them to TV, understand TV implementation and UX differences, and more.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko">
+      Gecko
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     <strong>
+      Gecko
+     </strong>
+     is the name of the layout engine developed by the Mozilla Project. It was originally named NGLayout. Gecko's function is to render web content, such as
+     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+      HTML
+     </a>
+     ,
+     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+      CSS
+     </a>
+     ,
+     <a href="/en-US/docs/Mozilla/Tech/XUL">
+      XUL
+     </a>
+     ,
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+      JavaScript
+     </a>
+     , and render it on the user's screen or print it. In XUL-based applications Gecko also renders the application's user interface.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko_Almost_Standards_Mode">
+      Gecko's "Almost Standards" Mode
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     "Almost standards" rendering mode is exactly the same as "standards" mode in all details save one, where it works like "quirks" mode: the height calculations for line boxes and some of the inline elements in them.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Geckoview-Junit_Tests">
+      Geckoview-Junit Tests
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The geckoview-junit tests are on-device Android junit tests written for geckoview.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Getting_from_Content_to_Layout">
+      Getting from Content to Layout
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Gecko maintains two separate representations of a document in memory: the content tree and the frame tree.  Changes to a document originate in the content tree (from DOM modification by scripting, insertion of elements from the parser, etc.) and are propogated to the layout tree through magic that primarily resides in
+     <a class=" external" href="http://mxr.mozilla.org/mozilla-central/source/layout/base/nsCSSFrameConstructor.cpp" title="http://mxr.mozilla.org/mozilla-central/source/layout/base/nsCSSFrameConstructor.cpp">
+      http://mxr.mozilla.org/mozilla-central/source/layout/base/nsCSSFrameConstructor.cpp
+     </a>
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Git">
+      Git
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The current official git mirror of the Firefox code base (also known as "gecko" or "mozilla-central") can be found at
+     <a href="https://github.com/mozilla/gecko-dev">
+      https://github.com/mozilla/gecko-dev
+     </a>
+     .  This repository contains all of the branches that are part of mainline development, including the train branches mozilla-central (nightly), mozilla-aurora (developer edition), mozilla-beta, and mozilla-release.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Hacking_with_Bonsai">
+      Hacking with Bonsai
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Bonsai was originally created to solve the problem of tree instability. The original Navigator code base had large sections that were shared across multiple platforms. Many times, code checked in would compile or run on a handful of platforms. Also, with as many as 100 engineers, it was very difficult to determine what happened in the tree that caused the instability. Bonsai was created to solve these problems.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_Mozilla_determines_MIME_Types">
+      How Mozilla determines MIME Types
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     All data handling in Mozilla is based on the MIME type of the content. This means that every time an URI is loaded, Mozilla must find out its MIME type. The several ways how this happens are described in this document.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_test_harnesses_work">
+      How test harnesses work
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Mozilla test harnesses are typically composed of a python runner that invokes Firefox, utilizes the browser to run tests, and reports the results. The python harness communicates with the browser by inserting an extension in the testing profile or uses marionette's wire protocol to drive the browser.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_to_add_a_build-time_test">
+      How to add a build-time test
+     </a>
+    </dt>
+    <dd class="landingPageList">
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_to_get_a_process_dump_with_Windows_Task_Manager">
+      How to get a process dump with Windows Task Manager
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     When tracking down the causes of process hangs, it is often helpful to obtain a process dump while the process is experiencing a hang.  This article describes how to get a process dump with Task Manager on Windows. (To get a process dump for Thunderbird or some other product, substitute the product name where ever you see Firefox in these instructions.)
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_to_get_a_stacktrace_for_a_bug_report">
+      How to get a stacktrace for a bug report
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     If you file a bug report in Bugzilla about a crash you should include a stacktrace (call stack) in your report. A stacktrace will tell Mozilla developers what crashed and provide a starting point for investigating its cause. This article describes how to use the Mozilla Crash Reporter (Breakpad) to get a crash ID, which our engineers can use to get a stacktrace, and alternative ways to get a stacktrace if you can't get a crash ID.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_to_get_a_stacktrace_with_WinDbg">
+      How to get a stacktrace with WinDbg
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Sometimes you need to get a stacktrace (call stack) for a crash or hang but
+     <a class="external" href="http://kb.mozillazine.org/Talkback">
+      Talkback
+     </a>
+     or
+     <a class="external" href="http://kb.mozillazine.org/Breakpad" title="http://kb.mozillazine.org/Breakpad">
+      Breakpad
+     </a>
+     fail because it's a special crasher or a hang. This article describes how to get a stacktrace in those cases with WinDbg on Windows. (To get a stacktrace for Thunderbird or some other product, substitute the product name where ever you see Firefox in this instructions.)
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_to_implement_custom_autocomplete_search_component">
+      How to implement a custom autocomplete search component
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     The XUL
+     <a href="/en-US/docs/Mozilla/Tech/XUL/Textbox_(Toolkit_autocomplete)" title="en/XUL/textbox_(Firefox_autocomplete)">
+      textbox
+     </a>
+     element supports an autocomplete mechanism that is used to create a textbox with a popup containing a list of possible completions for what the user has started to type. There are actually two autocomplete mechanisms:
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_to_investigate_Disconnect_failures">
+      How to investigate Disconnect failures
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This article will guide you on how to investigate disconnect failures.
+     <a href="http://mozmill-daily.blargon7.com/#/functional/report/1039ea48a9d69a5a1cc4fd228c44e959">
+      An example of such a failure
+     </a>
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/How_to_report_a_hung_Firefox">
+      How to Report a Hung Firefox
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     Is your Firefox not responding? Or are you regularly seeing the "Firefox is running but is not responding..." dialog? This usually means that something in Firefox is hung. This may be because of a code error within Firefox itself, such as a deadlock or infinite loop, or it may be caused by 3rd-party software such as a Firefox extension, antivirus software, or even malware or a virus on your computer.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/HTTP_cache">
+      HTTP Cache
+     </a>
+    </dt>
+    <dd class="landingPageList">
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/httpd.js">
+      Httpd.js
+     </a>
+    </dt>
+    <dd class="landingPageList">
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/IME_handling_guide">
+      IME handling guide
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This document explains how Gecko handles IME.
+    </dd>
+    <dt class="landingPageList">
+     <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Implementing_download_resuming">
+      Implementing Download Resuming
+     </a>
+    </dt>
+    <dd class="landingPageList">
+     This document describes how an embedder or other Gecko/Necko-using application can implement download resuming.
+    </dd>
+   </dl>
+  </dl>
+ </div>
+ <div class="section">
+  <dl>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Implementing_Pontoon_in_a_Mozilla_website">
+     Implementing Pontoon in a Mozilla project
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <a class="external" href="https://pontoon.mozilla.org" title="https://pontoon.mozilla.org">
+     Pontoon
+    </a>
+    is a web-based localization (l10n) tool used at Mozilla. It's a very simple and intuitive tool that requires little to no technical skill for localizers to use, which will decrease your time-to-publish for localized versions of your project. Here we'll discuss how you can use Pontoon with your Mozilla project.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Implementing_QueryInterface">
+     Implementing QueryInterface
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This document describes the right way to write
+    <code>
+     QueryInterface()
+    </code>
+    .
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Infallible_memory_allocation">
+     Infallible memory allocation
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    There's ongoing work to implement
+    <strong>
+     infallible memory allocators
+    </strong>
+    . These are memory allocation routines that never return
+    <code>
+     null
+    </code>
+    ; that is, they always successfully return the requested block of memory. This is in contrast to a traditional, fallible memory allocator that can return
+    <code>
+     null
+    </code>
+    indicating that the request failed.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Instantbird">
+     Instantbird
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <strong>
+     Instantbird
+    </strong>
+    is an instant messaging application with close ties to Mozilla. These pages document Instantbird and also provide links to documentation about the
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Chat_Core">
+     Chat Core
+    </a>
+    backend which is also used in
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird">
+     Thunderbird
+    </a>
+    .
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Chat_Core">
+     Chat Core
+    </a>
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Integrated_authentication">
+     Integrated Authentication
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This entails support for the the Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) internet standard (
+    <a class="external" href="https://tools.ietf.org/html/rfc2478" title="RFC 2478">
+     RFC 2478
+    </a>
+    ) to negotiate either Kerberos, NTLM, or other authentication protocols supported by the operating system.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Internationalized_domain_names_support_in_Mozilla">
+     Internationalized Domain Names (IDN) Support in Mozilla Browsers
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Netscape 7.1 is the first commercial browser that has built-in support for Internationalized Domain Name under the new IETF RFC's established in 2003.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Introduction_to_Layout_in_Mozilla">
+     Introduction to Layout in Mozilla
+    </a>
+   </dt>
+   <dd class="landingPageList">
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/IPDL">
+     IPC Protocol Definition Language (IPDL)
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    IPDL, short for "IPC (Inter-process communication) Protocol Definition Language", is a Mozilla-specific language allowing C++ code to pass messages between processes or threads in an organized and secure way. All messages for multi-process plugins and tabs in Firefox are declared in the IPDL language.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules">
+     JavaScript code modules
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    JavaScript code modules let multiple privileged JavaScript scopes share code. For example, a module could be used by Firefox itself as well as by extensions, in order to avoid code duplication.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JS_libraries">
+     JavaScript libraries from Mozilla projects
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    In addition to Firefox and other applications, Mozilla developers have created a number of useful JavaScript libraries you can use in your projects. Documentation for these libraries can be found here.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_Tips">
+     JavaScript Tips
+    </a>
+   </dt>
+   <dd class="landingPageList">
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript-DOM_Prototypes_in_Mozilla">
+     JavaScript-DOM Prototypes in Mozilla
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    When a
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="en/DOM">
+     DOM
+    </a>
+    node is accessed from
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="en/JavaScript">
+     JavaScript
+    </a>
+    in Mozilla, the native C++ DOM node is wrapped using
+    <a href="/en-US/docs/Mozilla/Tech/XPCOM/Language_bindings/XPConnect" title="en/XPConnect">
+     XPConnect
+    </a>
+    and the wrapper is exposed to JavaScript as the JavaScript representation of the DOM node. When XPConnect wraps a C++ object it will create a
+    <code>
+     JSObject
+    </code>
+    that is unique to this C++ object. In the case where the C++ object has class info (
+    <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIClassInfo" title="en/nsIClassInfo">
+     nsIClassInfo
+    </a>
+    ), the
+    <code>
+     JSObject
+    </code>
+    is a more or less empty
+    <code>
+     JSObject
+    </code>
+    which is not really that special. All the methods that are supposed to show up on this
+    <code>
+     JSObject
+    </code>
+    are actually not properties of the object itself, but rather properties of the prototype of the
+    <code>
+     JSObject
+    </code>
+    for the wrapper (unless the C++ object's class info has the flag
+    <code>
+     nsIXPCScriptable::DONT_SHARE_PROTOTYPE
+    </code>
+    set, but lets assume that's not the case here).
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes">
+     js-ctypes
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <strong>
+     js-ctypes
+    </strong>
+    allows application and extension code to call back and forth to native code written in C. C++ support is possible through
+    <code>
+     vtable
+    </code>
+    pointers see
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Examples/Using_COM_from_js-ctypes">
+     Using COM from js-ctypes
+    </a>
+    . For a discussion on extended C++ support see
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=505907" title="Support C++ calling from JSctypes">
+     bug 505907
+    </a>
+    . Other work made possible by js-ctypes is JNI, this is elaborated on in the
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/JNI.jsm">
+     JNI.jsm
+    </a>
+    section and not the js-ctypes section due to the JSM abstracting away all of the js-ctypes. Unlike binary XPCOM components, it allows developers to ship a single binary for use with multiple versions of Firefox.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Localization">
+     Localization at Mozilla
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <strong>
+     Localization
+    </strong>
+    (L10n) is the process of translating software user interfaces from one language to another and adapting it to suit a foreign culture. These resources are for anyone with an interest in the technical aspects involved in localization.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Memory_Sanitizer">
+     Memory Sanitizer
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Memory Sanitizer (MSan) is a fast detector used for uninitialized memory in C/C++ programs. It uses a compile-time instrumentation to ensure that all memory access at runtime uses only memory that has been initialized. Unlike most other sanitizers, MSan can easily cause false positives if not all libraries are instrumented. This happens because MSan is not able to observe memory initialization in uninstrumented libraries. More information on MSan can be found on
+    <a class="external" href="https://github.com/google/sanitizers/wiki/MemorySanitizer" title="https://github.com/google/sanitizers/wiki/MemorySanitizer">
+     the Memory Sanitizer wiki
+    </a>
+    .
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mercurial">
+     Mercurial
+    </a>
+   </dt>
+   <dd class="landingPageList">
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile">
+     Mobile
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Firefox OS is an open source mobile operating system which uses Linux and Mozilla's Gecko engine to run a user interface and set of applications written entirely in HTML, CSS and JavaScript.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_development_strategies">
+     Mozilla Development Strategies
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This article offers some strategies and suggestions to help developers stay productive.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_development_tools">
+     Mozilla Development Tools
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This page lists the various development tools that we operate and/or maintain here at mozilla.org. Naturally, source code for all of these tools is also available. The tools needed to build Mozilla are described on the
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions" title="en/Build_Documentation">
+     build
+    </a>
+    page for your platform.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_DOM_Hacking">
+     Mozilla DOM Hacking Guide
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Mozilla gives you the opportunity not only to
+    <strong>
+     use
+    </strong>
+    very powerful and complete DOM support, but also to
+    <strong>
+     work
+    </strong>
+    on a world-class implementation of one of the greatest Internet technologies ever created.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_external_string_guide">
+     Mozilla external string guide
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The Mozilla codebase used to have a notion of "external" strings, which were the string classes visible to code outside of the Mozilla codebase (Extensions, XULRunner applications, and embedders). These classes were removed a long time ago. The only remaining string classes are the "internal" ones, which are documented
+    <a href="/en-US/docs/Mozilla/Tech/XPCOM/Guide/Internal_strings">
+     XPCOM Guide Internal strings
+    </a>
+    .
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MFBT">
+     Mozilla Framework Based on Templates (MFBT)
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The Mozilla Framework Based on Templates ("mfbt") is the central repository for macros, functions, and data structures used throughout Mozilla code, including in the JavaScript engine.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project">
+     Mozilla MathML Project
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The Mozilla MathML project is Mozilla's project to build and enhance
+    <a href="https://developer.mozilla.org/en-US/docs/Web/MathML">
+     MathML
+    </a>
+    support within Firefox and other Mozilla-based applications. For a quick overview, see the
+    <a href="http://fred-wang.github.io/MozSummitMathML/index.html">
+     slides for the innovation fairs at Mozilla Summit 2013
+    </a>
+    .
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_Port_Blocking">
+     Mozilla Port Blocking
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    On 08/15/2001, Cert issued a
+    <a class="external" href="http://www.kb.cert.org/vuls/id/476267">
+     Vulnerability Note VU#476267
+    </a>
+    for a "Cross-Protocol" scripting attack, known as the
+    <a class="external" href="http://www.remote.org/jochen/sec/hfpa/">
+     HTML Form Protocol Attack
+    </a>
+    which allowed sending arbitrary data to most TCP ports. A simple exploit of this hole allows an attacker to send forged unsigned mail through a mail server behind your firewall: A really nasty hole.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_project_presentations">
+     Mozilla project presentations
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This article provides links to presentations covering various aspects of the Mozilla project.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects">
+     Mozilla Projects
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Mozilla has a number of projects other than
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">
+     Firefox
+    </a>
+    itself. Many of these are components of Firefox or are tools used to create Firefox, but may be used by other projects as well. Here you'll find links to documentation about these projects.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_on_GitHub">
+     Mozilla projects on GitHub
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Although Mozilla's major, core projects are located on the Mozilla
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mercurial">
+     Mercurial
+    </a>
+    server, such as
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/mozilla-central">
+     mozilla-central
+    </a>
+    , there are a number of tools, services, and so forth whose code is hosted on
+    <a href="https://github.com/">
+     GitHub
+    </a>
+    . This article offers a quick guide to getting started with Mozilla code on GitHub as well as a list of many of the most interesting GitHub repositories containing Mozilla project code.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_quirks_mode_behavior">
+     Mozilla Quirks Mode Behavior
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The following is a
+    <em>
+     rough
+    </em>
+    list of the differences that exist between Mozilla's
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">
+     standards mode and quirks mode
+    </a>
+    behavior.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_style_system">
+     Mozilla Style System
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The Style System is the module of Mozilla's code responsible for the loading and parsing of
+    <a href="en/CSS">
+     CSS
+    </a>
+    style sheets, and the computation of
+    <a href="en/CSS/computed_value">
+     computed values
+    </a>
+    for all CSS properties. The handling of those computed values is the responsibility of other parts of the code.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_style_system_documentation">
+     Mozilla Style System Documentation
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    See also the
+    <a class="external" href="http://www.mozilla.org/newlayout/doc/style-techtalk.html">
+     style techtalk
+    </a>
+    for more complete although less detailed documentation.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_SVG_Project">
+     Mozilla SVG Project
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Since you have come this far, you probably already know that SVG stands for Scalable Vector Graphics, and that it is an XML language for sophisticated 2-dimensional graphics. SVG is to graphics what XHTML is to text, MathML is to mathematical equations and CML is to the description of chemical molecules.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech">
+     Mozilla technologies
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Mozilla has several technologies used as components of its projects. These are documented here.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_Web_Developer_FAQ">
+     Mozilla Web Developer FAQ
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This document answers questions that Web authors ask frequently specifically in connection with Firefox and other Gecko-based browsers. There are links to more general Web authoring FAQs at the end of this document.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_Web_Services_Security_Model">
+     Mozilla Web Services Security Model
+    </a>
+   </dt>
+   <dd class="landingPageList">
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Namespaces">
+     Namespace
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Below, find links to articles about C++ classes Mozilla uses within various namespaces, primarily the
+    <code>
+     mozilla
+    </code>
+    namespace.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/About_omni.ja_(formerly_omni.jar)">
+     omni.ja (formerly omni.jar)
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Firefox and Thunderbird achieve performance improvements by moving many of their internal parts from being standalone files or sets of JAR files into just one JAR file called
+    <code>
+     omni.ja
+    </code>
+    ; this reduces the amount of I/O needed to load the application.  This article covers the contents of the archive and techniques for inspecting those contents.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Participating_in_the_Mozilla_project">
+     Participating in the Mozilla project
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    If you're interested in helping to fix bugs and otherwise work on the code behind the Mozilla platform, this is the place to find the documentation that will point you in the right direction.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance">
+     Performance
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The articles linked to from here will help you improve performance, whether you're developing core Mozilla code or an add-on.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Phishing">
+     Phishing: a short definition
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    In 2014, the MSCI
+    <a href="https://news.microsoft.com/en-sg/2014/02/11/microsoft-consumer-safety-index-reveals-impact-of-poor-online-safety-behaviours-in-singapore/">
+     estimated
+    </a>
+    an annual global impact of phishing, and various forms of identity theft, to be as high as $5 billion USD. The impact has not improved much since.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Preferences">
+     Preferences
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The preference system makes it possible to store data for Mozilla applications using a key/value pairing system. These articles provide information about how to use the preference system.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Productization_guide">
+     Productization guide
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <strong>
+     Productization
+    </strong>
+    is the choice of ''default'' search engines, content and protocol handlers, bookmarks, links to recommended sites on the in-product pages, etc. The web services that make up the productization of Mozilla software are often specific to a local market. For example, a search provider can deliver a very good quality of search results — but only in a specific country or language, and we have to take this into account when considering default search engines for a locale. Hence there is a need to customize the set of default web services on a per-locale basis in order to ensure a good user experience across all locales.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Profile_Manager">
+     Profile Manager
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Firefox and other XULRunner applications store user settings and data in special folders, called
+    <a class="external" href="http://support.mozilla.com/en-US/kb/Profiles" title="http://support.mozilla.com/en-US/kb/Profiles">
+     profiles
+    </a>
+    .    Firefox provides a built-in applet to
+    <a class="external" href="http://support.mozilla.com/en-US/kb/Managing%20profiles" title="http://support.mozilla.com/en-US/kb/Managing profiles">
+     manage these profiles
+    </a>
+    , but it will eventually be going away (see
+    <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=214675" title="https://bugzilla.mozilla.org/show_bug.cgi?id=214675">
+     bug 214675
+    </a>
+    ), so a new standalone Profile Manager application has been created, which works with any XULRunner application, and has many features not found in Firefox's built-in version.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/QA">
+     QA: Quality assurance at Mozilla
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Here you'll find articles and tools to help you gear up to join the QA team testing Firefox to ensure that each release is as good as it can be.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Redis_Tips">
+     Redis Tips
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This document is a collection of some examples and tips for using redis, the open-source data structure server.  It is intended primarily for developers, and deliberately omits some topics that will be important in any redis deployment, like security and backups.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/SeaMonkey">
+     SeaMonkey
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <strong>
+     SeaMonkey
+    </strong>
+    is Mozilla's all in one internet suite. These pages document SeaMonkey's MailNews component and also provide links to documentation about the
+    <a href="https://developer.mozilla.org/en-US/docs/tag/MailNews" title="tag/MailNews">
+     MailNews
+    </a>
+    backend which is also used in other projects such as
+    <a href="http://wiki.mozilla.org/Penelope">
+     Eudora/Penelope
+    </a>
+    ,
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird">
+     Thunderbird
+    </a>
+    ,
+    <a href="http://nkreeger.com/correo/">
+     Correo
+    </a>
+    , etc.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Setting_up_an_update_server">
+     Setting up an update server
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The goal of this document is to provide basic instructions on setting up your own update server.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Signing_Mozilla_apps_for_Mac_OS_X">
+     Signing Mozilla apps for Mac OS X
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Mac OS X's Gatekeeper functionality prevents users from launching applications that haven't been code-signed, in order to help keep their computers secure. Firefox and Thunderbird releases are both signed before shipping; this article describes the process.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Supported_build_configurations">
+     Supported build targets
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    There are three tiers of supported Mozilla build targets at this time. These tiers represent the shared priorities of the Mozilla project.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Task_graph">
+     Task graph
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    After a change to the Gecko source code is pushed to version-control, jobs for that change appear on
+    <a href="https://treeherder.mozilla.org/">
+     Treeherder
+    </a>
+    . How does this work?
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Testing">
+     Testing Mozilla code
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Testing your code is important! Before you can even get your code committed into the source tree, you have to test it, and larger patches have to have automated tests. These articles will help you master (and continue to excel at) testing Mozilla code.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/The_Mozilla_platform">
+     The Mozilla platform
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The Mozilla project encompasses several technologies that, together, comprise the Mozilla platform. These links will direct you to documentation about each of these, as well as how to use the Mozilla platform to build your own projects.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Rust">
+     The Rust programming language
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <a href="https://www.rust-lang.org/">
+     Rust
+    </a>
+    is a new open-source systems programming language created by Mozilla and a community of volunteers, designed to help developers create fast, secure applications which take full advantage of the powerful features of modern multi-core processors. It prevents segmentation faults and guarantees thread safety, all with an easy-to-learn syntax.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird">
+     Thunderbird
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <a href="https://www.thunderbird.net/">
+     Thunderbird
+    </a>
+    is a mail/messaging application managed and developed by the
+    <a href="https://wiki.mozilla.org/Thunderbird:Home">
+     Thunderbird community
+    </a>
+    . These pages document Thunderbird and the
+    <a href="https://developer.mozilla.org/en-US/docs/tag/MailNews" title="tag/MailNews">
+     MailNews
+    </a>
+    backend which is also used in other projects such as
+    <a href="http://www.seamonkey-project.org/">
+     Seamonkey
+    </a>
+    and
+    <a href="http://postbox-inc.com/">
+     Postbox
+    </a>
+    .
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Toolkit_version_format">
+     Toolkit version format
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This document is a reference for the version format, as used in Firefox 1.5 (
+    <a href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XULRunner" title="en/XULRunner">
+     XULRunner
+    </a>
+    1.8) and later. This format is used by the Extension Manager, Software Update, and other parts of the platform. Versions in at least the following places must conform to this format:
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_CXX_in_Mozilla_code">
+     Using C++   in Mozilla code
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Mozilla code only uses a subset of C++. Runtime type information (RTTI) is disabled, as it tends to cause a very large increase in codesize. This means that
+    <code>
+     dynamic_cast
+    </code>
+    ,
+    <code>
+     typeid()
+    </code>
+    and
+    <code>
+     &lt;typeinfo&gt;
+    </code>
+    cannot be used in Mozilla code. Also disabled are exceptions; do not use
+    <code>
+     try
+    </code>
+    /
+    <code>
+     catch
+    </code>
+    or throw any exceptions. Libraries that throw exceptions may be used if you are willing to have the throw instead be treated as an abort.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_JS_in_Mozilla_code">
+     Using JS in Mozilla code
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <strong>
+     JS language features that are implemented in the Mozilla JS engine are ordinarily safe to use in Mozilla code.
+    </strong>
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_Mozilla_code_in_other_projects">
+     Using Mozilla code in other projects
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    There are several ways you can use Mozilla code in your own project.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_popup_notifications">
+     Using popup notifications
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Popup notifications, also known as "doorhanger notifications", are presented to notify the user of something that's important but may not need immediate attention. These non-modal notifications let the user make decisions when they have a moment to do so, instead of being forced to deal with them at possibly inconvenient times. For example, this popup notification is displayed when a web site requests geolocation information:
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/RAII_classes">
+     Using RAII classes in Mozilla
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <a class="external" href="http://en.wikipedia.org/wiki/RAII" title="http://en.wikipedia.org/wiki/RAII">
+     RAII
+    </a>
+    classes are useful when two operations (e.g., Lock/Unlock, AddRef/Release, PushState/PopState) must be paired.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_tab-modal_prompts">
+     Using tab-modal prompts
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Prior to Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), prompts (that is, alerts and other modal prompts) were
+    <strong>
+     window modal
+    </strong>
+    . That is, when an alert occurred, it blocked the user interface on all tabs in the window until the user dismissed the prompt.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_the_Mozilla_source_server">
+     Using the Mozilla source server
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    Using the Mozilla source server is now even more feature-packed. The nightly debug builds are now also Source Indexed so that by following a couple of simple steps you can also have the source code served to you for debugging without a local build
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Using_the_Mozilla_symbol_server">
+     Using the Mozilla symbol server
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The Mozilla project runs a symbol server for trunk Firefox nightly and release builds on Windows. Symbols are available for at least 30 previous days worth of nightly builds, and Firefox releases from 2.0.0.4. This allows debugging of those builds without forcing all users to download large debugging files. The server functions like
+    <a class="external" href="http://support.microsoft.com/kb/311503">
+     Microsoft's symbol server
+    </a>
+    so the documentation there can be useful.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings">
+     WebIDL bindings
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    The
+    <a class="external" href="https://heycam.github.io/webidl/">
+     WebIDL
+    </a>
+    bindings are generated at build time based on two things: the actual WebIDL file and a configuration file that lists some metadata about how the WebIDL should be reflected into Gecko-internal code.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Working_with_windows_in_chrome_code">
+     Working with windows in chrome code
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This article describes working with multiple windows in Mozilla chrome code (
+    <a href="/en-US/docs/Mozilla/Tech/XUL" title="XUL">
+     XUL
+    </a>
+    applications and
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons" title="Extensions">
+     Extensions
+    </a>
+    ). It contains tips and example code on opening new windows, finding an already opened window, and passing data between different windows.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/XMLHttpRequest_changes_for_Gecko_1.8">
+     XMLHttpRequest changes for Gecko1.8
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This document describes some of the changes that have been made to
+    <a href="en/Gecko">
+     Gecko
+    </a>
+    's
+    <a href="en/XMLHttpRequest">
+     XMLHttpRequest
+    </a>
+    implementation since version 1.7 (i.e., the version of Gecko that shipped with Firefox 1.0). These changes only apply to XUL extensions and XUL applications. They do not apply to web applications.
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/XPI">
+     XPI
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    <strong>
+     Cross-Platform Installer Module (XPI)
+    </strong>
+    is a ZIP file used to install packages, utilizing the
+    <a href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XPInstall" title="en/XPInstall">
+     XPInstall
+    </a>
+    technology. XPI modules (so called "
+    <a href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Bundles" title="en/Bundles">
+     Bundles
+    </a>
+    ") are employed to install a wide variety of software, including
+    <a href="https://developer.mozilla.org/en-US/docs/Plugins" title="en/Plugins">
+     Plugins
+    </a>
+    ,
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons" title="en/Extensions">
+     Extensions
+    </a>
+    ,
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes" title="en/Themes">
+     Themes
+    </a>
+    , and
+    <a class="external" href="http://www.mozilla.com/thunderbird/dictionaries.html">
+     Thunderbird dictionaries
+    </a>
+    .
+   </dd>
+   <dt class="landingPageList">
+    <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Zombie_compartments">
+     Zombie compartments
+    </a>
+   </dt>
+   <dd class="landingPageList">
+    This page tells you how to detect and avoid
+    <em>
+     zombie compartments
+    </em>
+    , which are a particular kind of memory leak.  They can be caused by bugs in Firefox itself, or by bugs in Firefox add-ons.
+   </dd>
+  </dl>
+ </div>
+</div>
+<p>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/alispivak">alispivak</a>, <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, <a href="https://developer.mozilla.org/en-US/profiles/AnthonyMaton">AnthonyMaton</a>, <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/dkocho4">dkocho4</a>, <a href="https://developer.mozilla.org/en-US/profiles/Bonners">Bonners</a>, <a href="https://developer.mozilla.org/en-US/profiles/jsx">jsx</a>, <a href="https://developer.mozilla.org/en-US/profiles/jswisher">jswisher</a>, <a href="https://developer.mozilla.org/en-US/profiles/jdc2018">jdc2018</a>, <a href="https://developer.mozilla.org/en-US/profiles/mnowy41">mnowy41</a>, <a href="https://developer.mozilla.org/en-US/profiles/akhilbatra898">akhilbatra898</a>, <a href="https://developer.mozilla.org/en-US/profiles/malina">malina</a>, <a href="https://developer.mozilla.org/en-US/profiles/818v..">818v..</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/beyang">beyang</a>, <a href="https://developer.mozilla.org/en-US/profiles/Alejandro_Blanco">Alejandro_Blanco</a>, <a href="https://developer.mozilla.org/en-US/profiles/patr37">patr37</a>, <a href="https://developer.mozilla.org/en-US/profiles/h.shaibani7">h.shaibani7</a>, <a href="https://developer.mozilla.org/en-US/profiles/sajjadRthur">sajjadRthur</a>, <a href="https://developer.mozilla.org/en-US/profiles/evilpie">evilpie</a>, <a href="https://developer.mozilla.org/en-US/profiles/DavidWalsh">DavidWalsh</a>, <a href="https://developer.mozilla.org/en-US/profiles/ethertank">ethertank</a>, <a href="https://developer.mozilla.org/en-US/profiles/ziyunfei">ziyunfei</a>.</p></div></body>
 </html>

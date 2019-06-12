@@ -9,38 +9,72 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>nsIVersionComparator</h1></div>
-<div class="content"><p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsIVersionComparator.idl" rel="custom">xpcom/base/nsIVersionComparator.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-This interface is used to compare version strings.
-</span>
-
-  <div style="height: 42px; position: relative; padding: 2px; width: auto;">
-
-  <div style="top: 22px; font-size: 11px; position: absolute;">1.0</div>
-  
-  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">66</div>
-  
-  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 5.714285714285714%;"></div>
-  
-<div style="height: 8px; top: 16px; left: 5.714285714285714%; background: #00dd00; position: absolute; width: 94.28571428571429%;" title="Introduced in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)"></div>
-
-<div style="top: 0px; font-size: 11px; position: absolute; left: 5.714285714285714%;">Introduced</div>
-<div style="top: 22px; font-size: 11px; position: absolute; left: 5.714285714285714%;">Gecko 1.8</div>
-
+<div class="content"><p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/xpcom/base/nsIVersionComparator.idl" rel="custom">
+    xpcom/base/nsIVersionComparator.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  This interface is used to compare version strings.
+ </span>
+ <div style="height: 42px; position: relative; padding: 2px; width: auto;">
+  <div style="top: 22px; font-size: 11px; position: absolute;">
+   1.0
+  </div>
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 0px; text-align: right; float: right; width: 100%;">
+   66
+  </div>
+  <div style="height: 8px; top: 16px; background: #dd0000; left: 0px; position: absolute; width: 5.714285714285714%;">
+  </div>
+  <div style="height: 8px; top: 16px; left: 5.714285714285714%; background: #00dd00; position: absolute; width: 94.28571428571429%;" title="Introduced in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)">
+  </div>
+  <div style="top: 0px; font-size: 11px; position: absolute; left: 5.714285714285714%;">
+   Introduced
+  </div>
+  <div style="top: 22px; font-size: 11px; position: absolute; left: 5.714285714285714%;">
+   Gecko 1.8
+  </div>
+ </div>
+ <div style="background: #eee; padding: 2px;">
+  Inherits from:
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">
+    nsISupports
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)
+  </span>
+ </div>
 </div>
-
-<div style="background: #eee; padding: 2px;">
-Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
-<span style="text-align: right; float: right;">Last changed in Gecko 1.8 (Firefox 1.5 / Thunderbird 1.5 / SeaMonkey 1.0)</span></div>
-</div><p></p>
-<p>Version strings are dot-separated sequences of version-parts. A version-part consists of up to four parts, all of which are optional:<br>
+<p>
+</p>
+<p>
+ Version strings are dot-separated sequences of version-parts. A version-part consists of up to four parts, all of which are optional:
  <br>
- &lt;number-a&gt;&lt;string-b&gt;&lt;number-c&gt;&lt;string-d (everything else)&gt;<br>
- <br>
- A version-part may also consist of a single asterisk "*" which indicates * "infinity". Numbers are base-10, and are zero if left out. Strings are compared bytewise.<br>
- For additional backwards compatibility, if "string-b" is "+" then "number-a" is incremented by 1 and "string-b" becomes "pre".</p>
+  <br>
+   &lt;number-a&gt;&lt;string-b&gt;&lt;number-c&gt;&lt;string-d (everything else)&gt;
+   <br>
+    <br>
+     A version-part may also consist of a single asterisk "*" which indicates * "infinity". Numbers are base-10, and are zero if left out. Strings are compared bytewise.
+     <br>
+      For additional backwards compatibility, if "string-b" is "+" then "number-a" is incremented by 1 and "string-b" becomes "pre".
+     </br>
+    </br>
+   </br>
+  </br>
+ </br>
+</p>
 <pre>1.0pre1
   &lt; 1.0pre2 
     &lt; 1.0 == 1.0.0 == 1.0.0.0
@@ -49,45 +83,107 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
           &lt; 1.1pre1
             &lt; 1.1pre10a
               &lt; 1.1pre10</pre>
-<p>Implemented by: <code>@mozilla.org/xpcom/version-comparator;1</code>. The service can be accessed directly via <code>Services.vc</code> after loading <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm"><code>Services.jsm</code></a> or with the following code:</p>
+<p>
+ Implemented by:
+ <code>
+  @mozilla.org/xpcom/version-comparator;1
+ </code>
+ . The service can be accessed directly via
+ <code>
+  Services.vc
+ </code>
+ after loading
+ <a href="https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm">
+  <code>
+   Services.jsm
+  </code>
+ </a>
+ or with the following code:
+</p>
 <pre class="brush: js">var versionComparator = Components.classes["@mozilla.org/xpcom/version-comparator;1"]
                                   .getService(Components.interfaces.nsIVersionComparator);
 </pre>
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>long <a href="#compare()">compare</a>(in ACString A, in ACString B);</code></td>
+   <td>
+    <code>
+     long
+     <a href="#compare()">
+      compare
+     </a>
+     (in ACString A, in ACString B);
+    </code>
+   </td>
   </tr>
  </tbody>
 </table>
-<h2 id="Methods" name="Methods">Methods</h2>
-<h3 id="compare()" name="compare()">compare()</h3>
-<p>Compare two version strings.</p>
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<h3 id="compare()" name="compare()">
+ compare()
+</h3>
+<p>
+ Compare two version strings.
+</p>
 <pre class="eval">long compare(
   in ACString A,
   in ACString B
 );
 </pre>
-<h6 id="Parameters" name="Parameters">Parameters</h6>
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
  <dt>
-  <code>A</code></dt>
+  <code>
+   A
+  </code>
+ </dt>
  <dd>
-  The first version.</dd>
+  The first version.
+ </dd>
  <dt>
-  <code>B</code></dt>
+  <code>
+   B
+  </code>
+ </dt>
  <dd>
-  The second version.</dd>
+  The second version.
+ </dd>
 </dl>
-<h6 id="Return_value" name="Return_value">Return value</h6>
-<p>If <code>A</code> and <code>B</code> are two version being compared, and the return value</p>
+<h6 id="Return_value" name="Return_value">
+ Return value
+</h6>
+<p>
+ If
+ <code>
+  A
+ </code>
+ and
+ <code>
+  B
+ </code>
+ are two version being compared, and the return value
+</p>
 <ul>
- <li>is smaller than 0, then A &lt; B</li>
- <li>equals 0 then Version, then A==B</li>
- <li>is bigger than 0, then A &gt; B</li>
+ <li>
+  is smaller than 0, then A &lt; B
+ </li>
+ <li>
+  equals 0 then Version, then A==B
+ </li>
+ <li>
+  is bigger than 0, then A &gt; B
+ </li>
 </ul>
-<h2 id="Example" name="Example">Example</h2>
+<h2 id="Example" name="Example">
+ Example
+</h2>
 <pre class="brush: js">function compareVersions(a,b) {
  var x = Services.vc.compare(a,b);
  if(x == 0)
@@ -98,8 +194,15 @@ Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface
 }
 dump(compareVersions("1.0pre", "1.0"));
 </pre>
-<h2 id="Example" name="Example">Example - Compare current browser version</h2>
-<p>This example here uses nsIXULAppInfo component to get the version of the browser that the code is running in. See here: <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULAppInfo">nsIXULAppInfo</a></p>
+<h2 id="Example" name="Example">
+ Example - Compare current browser version
+</h2>
+<p>
+ This example here uses nsIXULAppInfo component to get the version of the browser that the code is running in. See here:
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXULAppInfo">
+  nsIXULAppInfo
+ </a>
+</p>
 <pre class="brush: js"><span class="nowiki">Components.utils.import("resource://gre/modules/Services.jsm");
 var curentBrowserVersion = </span><code>Services.appinfo.platformVersion; //example: '31.*'
 
@@ -118,9 +221,15 @@ if (compareResult == -1) {
 }
 
 </pre>
-<h2 id="See_also" name="See_also">See also</h2>
+<h2 id="See_also" name="See_also">
+ See also
+</h2>
 <ul>
- <li><a href="/en/Toolkit_version_format" title="en/Toolkit_version_format">Toolkit version format</a></li>
+ <li>
+  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Toolkit_version_format" title="en/Toolkit_version_format">
+   Toolkit version format
+  </a>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Noitidart">Noitidart</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/kmaglione">kmaglione</a>, <a href="https://developer.mozilla.org/en-US/profiles/mnoorenberghe">mnoorenberghe</a>, <a href="https://developer.mozilla.org/en-US/profiles/trevorh">trevorh</a>, <a href="https://developer.mozilla.org/en-US/profiles/Smi">Smi</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>.</p></div></body>
 </html>

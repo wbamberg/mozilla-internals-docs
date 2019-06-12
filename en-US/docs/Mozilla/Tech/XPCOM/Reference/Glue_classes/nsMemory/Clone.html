@@ -10,25 +10,60 @@
 
   <body><nav class="breadcrumbs"><a href="../../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../../Tech.html">Tech</a>&raquo;<a href="../../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../../Reference.html">Reference</a>&raquo;<a href="../../Glue_classes.html">Glue_classes</a>&raquo;<a href="../nsMemory.html">nsMemory</a></nav><div class="content-heading"><h1>Clone</h1></div>
 <div class="content"><p>
-« <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a>
+ «
+ <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference">
+  XPCOM API Reference
+ </a>
 </p>
-<h3 id="Summary" name="Summary">Summary</h3>
-<p>The Clone function creates a copy of an existing memory block up to the size specified.
+<h3 id="Summary" name="Summary">
+ Summary
+</h3>
+<p>
+ The Clone function creates a copy of an existing memory block up to the size specified.
 </p>
 <pre class="eval"> static void* Clone(
    const void* aPtr,
    size_t aSize
  );
 </pre>
-<h3 id="Parameters" name="Parameters">Parameters</h3>
-<dl><dt>aPtr
-</dt><dd> [in] The address of the memory block to copy. This must be non-null. </dd><dt>aSize
-</dt><dd> [in] Specifies the new size in bytes of the block of memory to allocate. The buffer at aPtr must be at least aSize bytes in length. </dd></dl>
-<h3 id="Return_Values" name="Return_Values">Return Values</h3>
-<p>This function returns nsnull if the memory allocation fails. Otherwise, it returns a pointer to the newly allocated buffer. The result must be freed with a call to <code><a href="en/NsMemory/Free">nsMemory::Free</a></code> when it is no longer needed.
+<h3 id="Parameters" name="Parameters">
+ Parameters
+</h3>
+<dl>
+ <dt>
+  aPtr
+ </dt>
+ <dd>
+  [in] The address of the memory block to copy. This must be non-null.
+ </dd>
+ <dt>
+  aSize
+ </dt>
+ <dd>
+  [in] Specifies the new size in bytes of the block of memory to allocate. The buffer at aPtr must be at least aSize bytes in length.
+ </dd>
+</dl>
+<h3 id="Return_Values" name="Return_Values">
+ Return Values
+</h3>
+<p>
+ This function returns nsnull if the memory allocation fails. Otherwise, it returns a pointer to the newly allocated buffer. The result must be freed with a call to
+ <code>
+  <a href="en/NsMemory/Free">
+   nsMemory::Free
+  </a>
+ </code>
+ when it is no longer needed.
 </p>
-<h3 id="See_Also" name="See_Also">See Also</h3>
-<p><code><a href="en/NsMemory/Free">nsMemory::Free</a></code>
+<h3 id="See_Also" name="See_Also">
+ See Also
+</h3>
+<p>
+ <code>
+  <a href="en/NsMemory/Free">
+   nsMemory::Free
+  </a>
+ </code>
 </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>.</p></div></body>
 </html>

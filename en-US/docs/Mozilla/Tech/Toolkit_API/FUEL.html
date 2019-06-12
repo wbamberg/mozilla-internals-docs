@@ -10,48 +10,159 @@
 
   <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../Toolkit_API.html">Toolkit_API</a></nav><div class="content-heading"><h1>FUEL</h1></div>
 <div class="content"><div class="warning">
-<p>FUEL is deprecated as of Firefox 40 and <strong>removed as of Firefox 47</strong>. Consider using the <a href="/Add-ons/SDK">Add-ons SDK</a> instead</p>
+ <p>
+  FUEL is deprecated as of Firefox 40 and
+  <strong>
+   removed as of Firefox 47
+  </strong>
+  . Consider using the
+  <a href="https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Add-on_SDK">
+   Add-ons SDK
+  </a>
+  instead
+ </p>
 </div>
-
-<p> FUEL is a JavaScript library designed to help developers build extensions using terminology and interfaces that are familiar to them. FUEL is new in Firefox 3.</p>
-
-<p>FUEL is about making it easier for extension developers to be productive, by minimizing some of the XPCOM formality and adding some "modern" JavaScript ideas. We want to start with areas that will provide the most benefit.</p>
-
-<p>FUEL has a <code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/browser/fuel/public/fuelIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mozilla/browser/fuel/public/fuelIApplication.idl">fuelIApplication</a> </span></code> interface that implements all the functions of <code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl">extIApplication</a></span></code>. The library has also been implemented in Thunderbird ("<a class="internal" href="/en/Toolkit_API/STEEL" title="en/Toolkit_API/STEEL">STEEL</a>") and in SeaMonkey ("<a class="internal" href="/en/Toolkit_API/SMILE" title="en/SeaMonkey/SMILE">SMILE</a>").</p>
-
-<h3 id="Objects" name="Objects">Objects</h3>
-
-<h4 id="extIApplication_Objects">extIApplication Objects</h4>
-
+<p>
+ FUEL is a JavaScript library designed to help developers build extensions using terminology and interfaces that are familiar to them. FUEL is new in Firefox 3.
+</p>
+<p>
+ FUEL is about making it easier for extension developers to be productive, by minimizing some of the XPCOM formality and adding some "modern" JavaScript ideas. We want to start with areas that will provide the most benefit.
+</p>
+<p>
+ FUEL has a
+ <code>
+  <span class="lang lang-en">
+   <a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/browser/fuel/public/fuelIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mozilla/browser/fuel/public/fuelIApplication.idl">
+    fuelIApplication
+   </a>
+  </span>
+ </code>
+ interface that implements all the functions of
+ <code>
+  <span class="lang lang-en">
+   <a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl">
+    extIApplication
+   </a>
+  </span>
+ </code>
+ . The library has also been implemented in Thunderbird ("
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/STEEL" title="en/Toolkit_API/STEEL">
+  STEEL
+ </a>
+ ") and in SeaMonkey ("
+ <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/SMILE" title="en/SeaMonkey/SMILE">
+  SMILE
+ </a>
+ ").
+</p>
+<h3 id="Objects" name="Objects">
+ Objects
+</h3>
+<h4 id="extIApplication_Objects">
+ extIApplication Objects
+</h4>
 <ul>
- <li><a class="internal" href="/en/Toolkit_API/extIApplication" title="en/Toolkit API/extIApplication">extIApplication</a></li>
- <li><a href="/en/Toolkit_API/extIConsole" title="en/Toolkit API/extIConsole">extIConsole</a></li>
- <li><a href="/en/Toolkit_API/extIEventItem" title="en/Toolkit API/extIEventItem">extIEventItem</a></li>
- <li><a href="/en/Toolkit_API/extIEventListener" title="en/Toolkit API/extIEventListener">extIEventListener</a></li>
- <li><a href="/en/Toolkit_API/extIEvents" title="en/Toolkit API/extIEvents">extIEvents</a></li>
- <li><a href="/en/Toolkit_API/extIExtension" title="en/Toolkit API/extIExtension">extIExtension</a></li>
- <li><a href="/en/Toolkit_API/extIExtensions" title="en/Toolkit API/extIExtensions">extIExtensions</a></li>
- <li><a href="/en/Toolkit_API/extIPreference" title="en/Toolkit API/extIPreference">extIPreference</a></li>
- <li><a href="/en/Toolkit_API/extIPreferenceBranch" title="en/Toolkit API/extIPreferenceBranch">extIPreferenceBranch</a></li>
- <li><a href="/en/Toolkit_API/extISessionStorage" title="en/Toolkit API/extISessionStorage">extISessionStorage</a></li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIApplication" title="en/Toolkit API/extIApplication">
+   extIApplication
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIConsole" title="en/Toolkit API/extIConsole">
+   extIConsole
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIEventItem" title="en/Toolkit API/extIEventItem">
+   extIEventItem
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIEventListener" title="en/Toolkit API/extIEventListener">
+   extIEventListener
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIEvents" title="en/Toolkit API/extIEvents">
+   extIEvents
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIExtension" title="en/Toolkit API/extIExtension">
+   extIExtension
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIExtensions" title="en/Toolkit API/extIExtensions">
+   extIExtensions
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIPreference" title="en/Toolkit API/extIPreference">
+   extIPreference
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIPreferenceBranch" title="en/Toolkit API/extIPreferenceBranch">
+   extIPreferenceBranch
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extISessionStorage" title="en/Toolkit API/extISessionStorage">
+   extISessionStorage
+  </a>
+ </li>
 </ul>
-
-<h4 id="fuelIApplication_Objects">fuelIApplication Objects</h4>
-
+<h4 id="fuelIApplication_Objects">
+ fuelIApplication Objects
+</h4>
 <ul>
- <li><a class="internal" href="/en/Toolkit_API/FUEL/fuelIAnnotations" title="en/Toolkit API/FUEL/fuelIAnnotations">fuelIAnnotations</a></li>
- <li><a class="internal" href="/en/Toolkit_API/FUEL/fuelIApplication" title="en/Toolkit API/FUEL/fuelIApplication">fuelIApplication</a></li>
- <li><a class="internal" href="/en/Toolkit_API/FUEL/fuelIBookmark" title="en/Toolkit API/FUEL/fuelIBookmark">fuelIBookmark</a></li>
- <li><a class="internal" href="/en/Toolkit_API/FUEL/fuelIBookmarkFolder" title="en/Toolkit API/FUEL/fuelIBookmarkFolder">fuelIBookmarkFolder</a></li>
- <li><a class="internal" href="/en/Toolkit_API/FUEL/fuelIBookmarkRoots" title="en/Toolkit API/FUEL/fuelIBookmarkRoots">fuelIBookmarkRoots</a></li>
- <li><a class="internal" href="/en/Toolkit_API/FUEL/fuelIBrowserTab" title="en/Toolkit API/FUEL/fuelIBrowserTab">fuelIBrowserTab</a></li>
- <li><a class="internal" href="/en/Toolkit_API/FUEL/fuelIWindow" title="en/Toolkit API/FUEL/fuelIWindow">fuelIWindow</a></li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIAnnotations" title="en/Toolkit API/FUEL/fuelIAnnotations">
+   fuelIAnnotations
+  </a>
+ </li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIApplication" title="en/Toolkit API/FUEL/fuelIApplication">
+   fuelIApplication
+  </a>
+ </li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIBookmark" title="en/Toolkit API/FUEL/fuelIBookmark">
+   fuelIBookmark
+  </a>
+ </li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIBookmarkFolder" title="en/Toolkit API/FUEL/fuelIBookmarkFolder">
+   fuelIBookmarkFolder
+  </a>
+ </li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIBookmarkRoots" title="en/Toolkit API/FUEL/fuelIBookmarkRoots">
+   fuelIBookmarkRoots
+  </a>
+ </li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIBrowserTab" title="en/Toolkit API/FUEL/fuelIBrowserTab">
+   fuelIBrowserTab
+  </a>
+ </li>
+ <li>
+  <a class="internal" href="/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL/fuelIWindow" title="en/Toolkit API/FUEL/fuelIWindow">
+   fuelIWindow
+  </a>
+ </li>
 </ul>
-
-<h3 id="XPCOM" name="XPCOM">XPCOM</h3>
-
-<p>Although the FUEL <a href="/en/Toolkit_API/extIApplication" title="en/FUEL/Application"> Application</a> object is preloaded into XUL scripts, it is not preloaded into JavaScript XPCOM code. The object needs to be accessed like any other XPCOM service:</p>
-
+<h3 id="XPCOM" name="XPCOM">
+ XPCOM
+</h3>
+<p>
+ Although the FUEL
+ <a href="/en-US/docs/Mozilla/Tech/Toolkit_API/extIApplication" title="en/FUEL/Application">
+  Application
+ </a>
+ object is preloaded into XUL scripts, it is not preloaded into JavaScript XPCOM code. The object needs to be accessed like any other XPCOM service:
+</p>
 <pre>var Application = Components.classes["@mozilla.org/fuel/application;1"].getService(Components.interfaces.fuelIApplication);
 </pre></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, <a href="https://developer.mozilla.org/en-US/profiles/Croydon">Croydon</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mak77">Mak77</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Strugee">Strugee</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mook_sb">Mook_sb</a>, <a href="https://developer.mozilla.org/en-US/profiles/jenzed">jenzed</a>, <a href="https://developer.mozilla.org/en-US/profiles/MarkFinkle">MarkFinkle</a>, <a href="https://developer.mozilla.org/en-US/profiles/Potappo">Potappo</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Kohei">Kohei</a>.</p></div></body>

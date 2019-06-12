@@ -9,72 +9,173 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../Tech.html">Tech</a>&raquo;<a href="../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../Reference.html">Reference</a>&raquo;<a href="../Interface.html">Interface</a></nav><div class="content-heading"><h1>mozIStorageAggregateFunction</h1></div>
-<div class="content"><p>This is an interface that must be implemented by consumers.  It allows consumers to add  aggregate functions that are available to SQL queries and triggers.  An aggregate function is a function that returns one value from a series of values.  There are a <a class="external" href="http://www.sqlite.org/lang_aggfunc.html" title="http://www.sqlite.org/lang_corefunc.html">number of already defined aggregate functions provided by SQLite</a>.  Objects implementing this interface can be registered with <code><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIStorageConnection#createAggregateFunction()">mozIStorageConnection.createAggregateFunction()</a></code>.</p>
-
-<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
-<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozIStorageAggregateFunction.idl" rel="custom">storage/public/mozIStorageAggregateFunction.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
-<span style="padding: 4px 2px;">
-
-<i>Please add a summary to this article.</i>
-</span>
-
-<div style="background: #eee; padding: 2px;">
-<span> </span>
-<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
-</div><p></p>
-
-<p>Inherits from: <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
-
-<h2 id="Method_overview" name="Method_overview">Method overview</h2>
-
+<div class="content"><p>
+ This is an interface that must be implemented by consumers.  It allows consumers to add  aggregate functions that are available to SQL queries and triggers.  An aggregate function is a function that returns one value from a series of values.  There are a
+ <a class="external" href="http://www.sqlite.org/lang_aggfunc.html" title="http://www.sqlite.org/lang_corefunc.html">
+  number of already defined aggregate functions provided by SQLite
+ </a>
+ .  Objects implementing this interface can be registered with
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection">
+   mozIStorageConnection.createAggregateFunction()
+  </a>
+ </code>
+ .
+</p>
+<p>
+</p>
+<div style="border: solid #ddd 2px; margin-bottom: 12px;">
+ <div style="background: #eee; padding: 2px;">
+  <code>
+   <a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozIStorageAggregateFunction.idl" rel="custom">
+    storage/public/mozIStorageAggregateFunction.idl
+   </a>
+  </code>
+  <span style="text-align: right; float: right;">
+   <a href="https://developer.mozilla.org/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">
+    Scriptable
+   </a>
+  </span>
+ </div>
+ <span style="padding: 4px 2px;">
+  <i>
+   Please add a summary to this article.
+  </i>
+ </span>
+ <div style="background: #eee; padding: 2px;">
+  <span>
+  </span>
+  <span style="text-align: right; float: right;">
+   Last changed in Gecko 1.9 (Firefox 3)
+  </span>
+ </div>
+</div>
+<p>
+</p>
+<p>
+ Inherits from:
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">
+   nsISupports
+  </a>
+ </code>
+</p>
+<h2 id="Method_overview" name="Method_overview">
+ Method overview
+</h2>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>void <a href="#onStep()">onStep</a>(in <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">mozIStorageValueArray</a></code> aFunctionArguments);</code></td>
+   <td>
+    <code>
+     void
+     <a href="#onStep()">
+      onStep
+     </a>
+     (in
+     <code>
+      <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">
+       mozIStorageValueArray
+      </a>
+     </code>
+     aFunctionArguments);
+    </code>
+   </td>
   </tr>
   <tr>
-   <td><code><code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIVariant" title="">nsIVariant</a></code> <a href="#onFinal()">onFinal</a>();</code></td>
+   <td>
+    <code>
+     <code>
+      <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIVariant" title="">
+       nsIVariant
+      </a>
+     </code>
+     <a href="#onFinal()">
+      onFinal
+     </a>
+     ();
+    </code>
+   </td>
   </tr>
  </tbody>
 </table>
-
-<h2 id="Methods" name="Methods">Methods</h2>
-
-<h3 id="onStep()" name="onStep()">onStep()</h3>
-
-<p>This is called for each row of results returned by the query.  The implementation should store or perform some work to prepare to return a value.</p>
-
-<p>{{ Storage:threadsafety_callback_warning() }}</p>
-
+<h2 id="Methods" name="Methods">
+ Methods
+</h2>
+<h3 id="onStep()" name="onStep()">
+ onStep()
+</h3>
+<p>
+ This is called for each row of results returned by the query.  The implementation should store or perform some work to prepare to return a value.
+</p>
+<p>
+ {{ Storage:threadsafety_callback_warning() }}
+</p>
 <pre class="eval">void onStep(
   in mozIStorageValueArray aFunctionArguments
 );</pre>
-
-<h6 id="Parameters" name="Parameters">Parameters</h6>
-
+<h6 id="Parameters" name="Parameters">
+ Parameters
+</h6>
 <dl>
- <dt><code>aFunctionArguments</code></dt>
- <dd>A <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">mozIStorageValueArray</a></code> holding the arguments passed in to the function.</dd>
+ <dt>
+  <code>
+   aFunctionArguments
+  </code>
+ </dt>
+ <dd>
+  A
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageValueArray" title="">
+    mozIStorageValueArray
+   </a>
+  </code>
+  holding the arguments passed in to the function.
+ </dd>
 </dl>
-
-<h3 id="onFinal()" name="onFinal()">onFinal()</h3>
-
-<p>This is called after all results have been obtained and notified via <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageAggregateFunction" title="">mozIStorageAggregateFunction</a></code>.  The implementation should finish its calculations on the data, and return a result.</p>
-
-<p>{{ Storage:threadsafety_callback_warning() }}</p>
-
+<h3 id="onFinal()" name="onFinal()">
+ onFinal()
+</h3>
+<p>
+ This is called after all results have been obtained and notified via
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageAggregateFunction" title="">
+   mozIStorageAggregateFunction
+  </a>
+ </code>
+ .  The implementation should finish its calculations on the data, and return a result.
+</p>
+<p>
+ {{ Storage:threadsafety_callback_warning() }}
+</p>
 <pre class="eval">nsIVariant onFinal()</pre>
-
-<h6 id="Return" name="Return">Return value</h6>
-
-<p>An <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIVariant" title="">nsIVariant</a></code> this is the return value of the function.</p>
-
-<h2 id="Sample_Code">Sample Code</h2>
-
-<p>Both of the following code samples assume that the variable dbConn is an opened <code><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">mozIStorageConnection</a></code>.</p>
-
-<h3 id="JavaScript">JavaScript</h3>
-
+<h6 id="Return" name="Return">
+ Return value
+</h6>
+<p>
+ An
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIVariant" title="">
+   nsIVariant
+  </a>
+ </code>
+ this is the return value of the function.
+</p>
+<h2 id="Sample_Code">
+ Sample Code
+</h2>
+<p>
+ Both of the following code samples assume that the variable dbConn is an opened
+ <code>
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection" title="">
+   mozIStorageConnection
+  </a>
+ </code>
+ .
+</p>
+<h3 id="JavaScript">
+ JavaScript
+</h3>
 <pre class="brush: js">// First, create our object that will represent our function.
 var standardDeviationFunc = {
   _numbers: [],
@@ -111,9 +212,9 @@ finally {
   stmt.reset();
 }
 </pre>
-
-<h3 id="C">C++</h3>
-
+<h3 id="C">
+ C++
+</h3>
 <pre class="brush: cpp">// First, create our class that will represent our function.
 class standardDeviationFunc : public mozIStorageAggregateFunction
 {
@@ -180,7 +281,7 @@ while (NS_SUCCEEDED(stmt-&gt;ExecuteStep(&amp;hasMore)) &amp;&amp; hasMore) {
   // handle the results
 }
 </pre>
-
-<p> </p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/tirein">tirein</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mrinal.kant">Mrinal.kant</a>, <a href="https://developer.mozilla.org/en-US/profiles/sdwilsh">sdwilsh</a>.</p></div></body>
 </html>

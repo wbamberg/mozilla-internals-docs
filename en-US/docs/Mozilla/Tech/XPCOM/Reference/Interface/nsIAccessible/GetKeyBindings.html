@@ -9,27 +9,75 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../../Tech.html">Tech</a>&raquo;<a href="../../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../../Reference.html">Reference</a>&raquo;<a href="../../Interface.html">Interface</a>&raquo;<a href="../nsIAccessible.html">nsIAccessible</a></nav><div class="content-heading"><h1>GetKeyBindings</h1></div>
-<div class="content">
-<div style="background-color: rgb(255, 255, 255); font-family: Verdana,Tahoma,sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: 1.7; color: rgb(37, 34, 29);">
-<p style="margin: 0px 0px 1.7em; padding: 0px;"><a href="/en-US/docs/NsIAccessible#getKeyBindings()">« nsIAccessible Page</a></p>
-<h3 id="Summary" name="Summary">Summary</h3>
-<p style="margin: 0px 0px 1.7em; padding: 0px;">This method provides array of localized string of global keyboard accelerator for the given action index supported by accessible.</p>
-<pre class="eval" style="border: 1px solid rgb(223, 236, 241); margin: 0px 0px 1.7em; padding: 10px; overflow: auto; font-family: 'Courier New','Andale Mono',monospace; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; color: rgb(37, 34, 29);">  <a href="/en/nsIDOMDOMStringList" title="nsIDOMDOMStringList">nsIDOMDOMStringList</a> getKeyBindings(
+<div class="content"><div style="background-color: rgb(255, 255, 255); font-family: Verdana,Tahoma,sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: 1.7; color: rgb(37, 34, 29);">
+ <p style="margin: 0px 0px 1.7em; padding: 0px;">
+  <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAccessible">
+   « nsIAccessible Page
+  </a>
+ </p>
+ <h3 id="Summary" name="Summary">
+  Summary
+ </h3>
+ <p style="margin: 0px 0px 1.7em; padding: 0px;">
+  This method provides array of localized string of global keyboard accelerator for the given action index supported by accessible.
+ </p>
+ <pre class="eval" style="border: 1px solid rgb(223, 236, 241); margin: 0px 0px 1.7em; padding: 10px; overflow: auto; font-family: 'Courier New','Andale Mono',monospace; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; color: rgb(37, 34, 29);">  <a href="https://developer.mozilla.org/en-US/nsIDOMDOMStringList" title="nsIDOMDOMStringList">nsIDOMDOMStringList</a> getKeyBindings(
     in PRUint8 aActionIndex
   );
 </pre>
-<h3 id="Parameters" name="Parameters">Parameters</h3>
-<dl style="margin: 0px 0px 1.7em; padding: 0px;"><dt style="font-style: normal; font-weight: bold;">aActionIndex</dt><dd style="margin-left: 0px; margin-bottom: 0.5em; padding-left: 15px;">[in] Index of the given action.</dd></dl><dl style="margin: 0px 0px 1.7em; padding: 0px;">
-<h3 id="Return_Values" name="Return_Values">Return Values</h3>
-<p style="margin: 0px 0px 1.7em; padding: 0px;">Returns array of localized string of global keyboard accelerator.</p>
-</dl></div>
-<h3 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h3>
-<dl><dt>NS_ERROR_INVALID_ARG </dt><dd> The given index doesn't correspond to default action (not zero).<br>
-</dd></dl>
-<h3 id="Parameters" name="Parameters">Remark</h3>
-<p>Key bindings are supported for default action only.</p>
-<h3 id="Remarks" name="Remarks">See Also</h3>
-<ul> <li><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIAccessible#defaultKeyBinding">nsIAccessible.defaultKeyBinding</a></li> <li><a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIAccessible#keyboardShortcut">nsIAccessible.keyboardShortcut</a></li>
+ <h3 id="Parameters" name="Parameters">
+  Parameters
+ </h3>
+ <dl style="margin: 0px 0px 1.7em; padding: 0px;">
+  <dt style="font-style: normal; font-weight: bold;">
+   aActionIndex
+  </dt>
+  <dd style="margin-left: 0px; margin-bottom: 0.5em; padding-left: 15px;">
+   [in] Index of the given action.
+  </dd>
+ </dl>
+ <dl style="margin: 0px 0px 1.7em; padding: 0px;">
+  <h3 id="Return_Values" name="Return_Values">
+   Return Values
+  </h3>
+  <p style="margin: 0px 0px 1.7em; padding: 0px;">
+   Returns array of localized string of global keyboard accelerator.
+  </p>
+ </dl>
+</div>
+<h3 id="Exceptions_thrown" name="Exceptions_thrown">
+ Exceptions thrown
+</h3>
+<dl>
+ <dt>
+  NS_ERROR_INVALID_ARG
+ </dt>
+ <dd>
+  The given index doesn't correspond to default action (not zero).
+  <br>
+  </br>
+ </dd>
+</dl>
+<h3 id="Parameters" name="Parameters">
+ Remark
+</h3>
+<p>
+ Key bindings are supported for default action only.
+</p>
+<h3 id="Remarks" name="Remarks">
+ See Also
+</h3>
+<ul>
+ <li>
+  <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIAccessible#defaultKeyBinding">
+   nsIAccessible.defaultKeyBinding
+  </a>
+ </li>
+ <li>
+  <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIAccessible#keyboardShortcut">
+   nsIAccessible.keyboardShortcut
+  </a>
+ </li>
 </ul></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>.</p></div></body>
 </html>

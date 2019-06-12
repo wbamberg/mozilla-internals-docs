@@ -9,18 +9,43 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XUL.html">XUL</a>&raquo;<a href="../Attribute.html">Attribute</a></nav><div class="content-heading"><h1>oninput</h1></div>
-<div class="content"><div class="noinclude"><span class="breadcrumbs xulRefAttr_breadcrumbs">« <a href="/en-US/docs/XUL/XUL_Reference">XUL Reference home</a></span></div>
-
+<div class="content"><div class="noinclude">
+ <span class="breadcrumbs xulRefAttr_breadcrumbs">
+  «
+  <a href="/en-US/docs/Mozilla/Tech/XUL/XUL_Reference">
+   XUL Reference home
+  </a>
+ </span>
+</div>
 <dl>
- <dt><code id="a-oninput"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/oninput">oninput</a></code></dt>
- <dd>Type: <em>script code</em></dd>
- <dd>This event is sent when a user enters text in a <code><a href="/en-US/docs/Mozilla/Tech/XUL/textbox" title="textbox">textbox</a></code>. This event is only called when the text displayed would change, thus it is not called when the user presses non-displayable keys.</dd>
+ <dt>
+  <code id="a-oninput">
+   <a href="/en-US/docs/Mozilla/Tech/XUL/Attribute/oninput">
+    oninput
+   </a>
+  </code>
+ </dt>
+ <dd>
+  Type:
+  <em>
+   script code
+  </em>
+ </dd>
+ <dd>
+  This event is sent when a user enters text in a
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XUL/textbox" title="textbox">
+    textbox
+   </a>
+  </code>
+  . This event is only called when the text displayed would change, thus it is not called when the user presses non-displayable keys.
+ </dd>
 </dl>
-
 <div class="noinclude">
-<h3 id="Example" name="Example">Example</h3>
-
-<pre>&lt;!-- This sets the label's text to the textbox value on each keystroke. --&gt;
+ <h3 id="Example" name="Example">
+  Example
+ </h3>
+ <pre>&lt;!-- This sets the label's text to the textbox value on each keystroke. --&gt;
 &lt;script language="javascript"&gt;
 function setLabel(txtBox){
 	document.getElementById('lbl').value = txtBox.value;
@@ -29,8 +54,13 @@ function setLabel(txtBox){
 &lt;label id="lbl"/&gt;
 &lt;textbox oninput="setLabel(this);"/&gt;
 </pre>
-
-<p>This is similar to the <a href="/en/DOM/element.onkeypress" title="en/DOM/element.onkeypress">onkeypress</a> event used in HTML documents.</p>
+ <p>
+  This is similar to the
+  <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onkeypress" title="en/DOM/element.onkeypress">
+   onkeypress
+  </a>
+  event used in HTML documents.
+ </p>
 </div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/SphinxKnight">SphinxKnight</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/Marsf">Marsf</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, <a href="https://developer.mozilla.org/en-US/profiles/Bedi">Bedi</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmash">Pmash</a>, <a href="https://developer.mozilla.org/en-US/profiles/Enn">Enn</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>.</p></div></body>
 </html>

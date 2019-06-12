@@ -9,29 +9,56 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../Tech.html">Tech</a>&raquo;<a href="../../XPCOM.html">XPCOM</a>&raquo;<a href="../Reference.html">Reference</a></nav><div class="content-heading"><h1>nsIMsgSearchValue</h1></div>
-<div class="content"><p>Defined in <strong><a class="external" href="http://mxr.mozilla.org/comm-central/source/">comm-central</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">mailnews</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">base</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">search</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">public</a>/ <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchValue.idl">nsIMsgSearchValue.idl</a> </strong></p>
+<div class="content"><p>
+ Defined in
+ <strong>
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/">
+   comm-central
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/">
+   mailnews
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/">
+   base
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/">
+   search
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/">
+   public
+  </a>
+  /
+  <a class="external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/search/public/nsIMsgSearchValue.idl">
+   nsIMsgSearchValue.idl
+  </a>
+ </strong>
+</p>
 <pre class="eval">#include "nsMsgSearchCore.idl"
 
-interface <a href="/nsIMsgFolder" title="nsIMsgFolder">nsIMsgFolder</a>;
+interface <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMsgFolder" title="nsIMsgFolder">nsIMsgFolder</a>;
 
 [scriptable, uuid(783758a0-cdb5-11dc-95ff-0800200c9a66)]
-interface <a href="/nsIMsgSearchValue" title="nsIMsgSearchValue">nsIMsgSearchValue</a> : <a href="/en/XPCOM_Interface_Reference/nsISupports" title="nsISupports">nsISupports</a> {
+interface <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/msIMsgSearchValue" title="nsIMsgSearchValue">nsIMsgSearchValue</a> : <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="nsISupports">nsISupports</a> {
     // type of object
-    attribute <a href="/en/XPCOM_Interface_Reference/nsMsgSearchAttribValue" title="nsMsgSearchAttribValue">nsMsgSearchAttribValue</a> attrib;
+    attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgSearchAttrib" title="nsMsgSearchAttribValue">nsMsgSearchAttribValue</a> attrib;
 
     // accessing these will throw an exception if the above
     // attribute does not match the type!
     attribute AString str;
-    attribute <a href="/nsMsgPriorityValue" title="nsMsgPriorityValue">nsMsgPriorityValue</a> priority;
+    attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgPriorityValue" title="nsMsgPriorityValue">nsMsgPriorityValue</a> priority;
     attribute PRTime date;
-     // see <a href="/en/nsMsgMessageFlags" title="nsMsgMessageFlags">nsMsgMessageFlags.idl</a> and <a href="/nsMsgFolderFlags.idl" title="nsMsgFolderFlags.idl">nsMsgFolderFlags.idl</a>
+     // see <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/nsMsgMessagesFlags" title="nsMsgMessageFlags">nsMsgMessageFlags.idl</a> and <a href="https://developer.mozilla.org/nsMsgFolderFlags.idl" title="nsMsgFolderFlags.idl">nsMsgFolderFlags.idl</a>
     attribute unsigned long status;
     attribute unsigned long size;
-    attribute <a href="/en/XPCOM_Interface_Reference/nsMsgKey" title="nsIMsgDatabase">nsMsgKey </a>msgKey;
+    attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgKey" title="nsIMsgDatabase">nsMsgKey </a>msgKey;
     attribute long age; // in days
-    attribute <a href="/en/XPCOM_Interface_Reference/nsIMsgFolder" title="nsIMsgFolder">nsIMsgFolder</a> folder;
-    attribute <a href="/nsMsgLabelValue" title="nsMsgLabelValue">nsMsgLabelValue</a> label;
-    attribute <a href="/nsMsgJunkStatus" title="nsMsgJunkStatus">nsMsgJunkStatus</a> junkStatus;
+    attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMsgFolder" title="nsIMsgFolder">nsIMsgFolder</a> folder;
+    attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgLabelValue" title="nsMsgLabelValue">nsMsgLabelValue</a> label;
+    attribute <a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsMsgJunkStatus" title="nsMsgJunkStatus">nsMsgJunkStatus</a> junkStatus;
     /*
      * junkPercent is set by the message filter plugin, and is approximately
      *             proportional to the probability that a message is junk.

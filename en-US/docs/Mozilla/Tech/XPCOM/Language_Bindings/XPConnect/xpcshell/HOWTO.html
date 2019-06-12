@@ -9,11 +9,21 @@
   </head>
 
   <body><nav class="breadcrumbs"><a href="../../../../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../../../../Tech.html">Tech</a>&raquo;<a href="../../../../XPCOM.html">XPCOM</a>&raquo;<a href="../../../Language_Bindings.html">Language_Bindings</a>&raquo;<a href="../../XPConnect.html">XPConnect</a>&raquo;<a href="../xpcshell.html">xpcshell</a></nav><div class="content-heading"><h1>HOWTO</h1></div>
-<div class="content"><h2 id="Async_network_requests">Async network requests</h2>
-<p>Problem</p>
-<p>You want to make network requests or do other asynchronous work in xpcshell. However, when you start your script, it exits immediately, before the network request returns.</p>
-<p>Solution</p>
-<p>1. Put the following at the end of your script:</p>
+<div class="content"><h2 id="Async_network_requests">
+ Async network requests
+</h2>
+<p>
+ Problem
+</p>
+<p>
+ You want to make network requests or do other asynchronous work in xpcshell. However, when you start your script, it exits immediately, before the network request returns.
+</p>
+<p>
+ Solution
+</p>
+<p>
+ 1. Put the following at the end of your script:
+</p>
 <pre>// Do async processing
 // From &lt;https://developer.mozilla.org/en/XPConnect/xpcshell/HOWTO&gt;
 print("Doing async work");
@@ -27,29 +37,61 @@ while (!gScriptDone)
 while (mainThread.hasPendingEvents())
   mainThread.processNextEvent(true);
 </pre>
-<p>2. In <strong>all</strong> callbacks where your script is finished, i.e. both success and error callbacks, put:</p>
+<p>
+ 2. In
+ <strong>
+  all
+ </strong>
+ callbacks where your script is finished, i.e. both success and error callbacks, put:
+</p>
 <pre>gScriptDone = true;</pre>
-<p>If you forget some condition where your script should exit but you don't add this statement, your script will hang (busy wait).</p>
-<p>This is of course a massive, ugly hack prone to error, but this is what the xpcshell test harness does. There should really be a better solution in xpcshell.</p>
-<h2 id="Using_JS_modules_and_non-UI_JavaScript_chrome_files">Using JS modules and non-UI JavaScript chrome files</h2>
-<p>Problem</p>
-<p>You want to write a JavaScript file, and run it in xpcshell. The file uses JS modules. Maybe it even uses JavaScript files from chrome:// URLs.</p>
-<p>E.g., you use:</p>
+<p>
+ If you forget some condition where your script should exit but you don't add this statement, your script will hang (busy wait).
+</p>
+<p>
+ This is of course a massive, ugly hack prone to error, but this is what the xpcshell test harness does. There should really be a better solution in xpcshell.
+</p>
+<h2 id="Using_JS_modules_and_non-UI_JavaScript_chrome_files">
+ Using JS modules and non-UI JavaScript chrome files
+</h2>
+<p>
+ Problem
+</p>
+<p>
+ You want to write a JavaScript file, and run it in xpcshell. The file uses JS modules. Maybe it even uses JavaScript files from chrome:// URLs.
+</p>
+<p>
+ E.g., you use:
+</p>
 <pre class="bz_comment_text" id="comment_text_0">Components.utils.import("resource://app/modules/gloda/log4moz.js");
 </pre>
-<p>However, you get (for that particular line, which is the first import):</p>
+<p>
+ However, you get (for that particular line, which is the first import):
+</p>
 <pre class="bz_comment_text" id="comment_text_0">uncaught exception: [Exception... "Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) 
 [nsIXPCComponents_Utils.import]"  nsresult: "0x80040111 (NS_ERROR_NOT_AVAILABLE)"  location: "JS frame ::
 file.js :: &lt;TOP_LEVEL&gt; :: line 12"  data: no]
 </pre>
-<p> </p>
-<p>Solution 1</p>
-<pre><code>var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"]<br>   .getService(Components.interfaces.mozIJSSubScriptLoader);</code>
+<p>
+</p>
+<p>
+ Solution 1
+</p>
+<pre><code>var loader = Components.classes["@mozilla.org/moz/jssubscript-loader;1"]<br>   .getService(Components.interfaces.mozIJSSubScriptLoader);</br></code>
 <code>loader.loadSubScript("chrome://myall/content/file.jsm");</code>
 </pre>
-<p>See:  <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/test/unit/test_autoconfigUtils.js#54" rel="freelink">http://mxr.mozilla.org/comm-central/...figUtils.js#54</a></p>
-<p>Solution 2</p>
-<p>Append the following at the top of your JS file which you want to run in xpcshell</p>
+<p>
+ See:
+ <a class=" external" href="http://mxr.mozilla.org/comm-central/source/mailnews/base/test/unit/test_autoconfigUtils.js#54" rel="freelink">
+  http://mxr.mozilla.org/comm-central/...figUtils.js#54
+ </a>
+</p>
+<p>
+ Solution 2
+</p>
+<p>
+ Append the following at the top of your JS file which you want to run in xpcshell
+</p>
 <pre class="bz_comment_text" id="comment_text_0">{
   // &lt;https://developer.mozilla.org/en/XPConnect/xpcshell/HOWTO&gt;
   // &lt;https://bugzilla.mozilla.org/show_bug.cgi?id=546628&gt;
@@ -72,6 +114,11 @@ file.js :: &lt;TOP_LEVEL&gt; :: line 12"  data: no]
         .getService(Ci.nsIChromeRegistry);
   cr.checkForNewChrome();
 }</pre>
-<p><a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=546628" title="https://bugzilla.mozilla.org/show_bug.cgi?id=546628">Bug 546628</a> would make this unnecessary.</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>
+ <a class=" link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=546628" title="https://bugzilla.mozilla.org/show_bug.cgi?id=546628">
+  Bug 546628
+ </a>
+ would make this unnecessary.
+</p></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
 <p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>.</p></div></body>
 </html>
