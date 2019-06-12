@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/zilla-slab.css"/>
+    <link rel="stylesheet" href="/css/page.css"/>
+    <title>XBL 1.0 Reference</title>
+  </head>
+
+  <body><nav class="breadcrumbs"><a href="../../../Mozilla.html">Mozilla</a>&raquo;<a href="../../Tech.html">Tech</a>&raquo;<a href="../XBL.html">XBL</a></nav><div class="content-heading"><h1>XBL 1.0 Reference</h1></div>
+<div class="content"><p>
+</p>
+<h2 id="Abstract" name="Abstract">
+ Abstract
+</h2>
+<p>
+ This document describes Extensible Binding Language (
+ <a href="/en-US/docs/Mozilla/Tech/XBL" title="en/XBL">
+  XBL
+ </a>
+ ) 1.0 as implemented in
+ <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko" title="en/Gecko">
+  Gecko
+ </a>
+ browsers.
+</p>
+<p>
+ Extensible Binding Language is a
+ <a href="https://developer.mozilla.org/en-US/docs/Web/XML" title="en/XML">
+  XML
+ </a>
+ -based markup language to implement reusable components (
+ <em>
+  bindings
+ </em>
+ ) that can be bound to elements in other documents. The element with a binding specified, called the
+ <em>
+  bound element
+ </em>
+ , acquires the new behavior specified by the binding. Bindings can be bound to elements using Cascading Style Sheets (
+ <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="en/CSS">
+  CSS
+ </a>
+ ) or
+ <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="en/DOM">
+  DOM
+ </a>
+ . One element can be bound to several bindings at once.
+</p>
+<p>
+ Functionally bindings should be correlated with
+ <a class="external" href="http://msdn.microsoft.com/workshop/components/htc/reference/htcref.asp">
+  Behaviors
+ </a>
+ and
+ <a class="external" href="http://msdn.microsoft.com/workshop/author/behaviors/overview/viewlink_ovw.asp">
+  Viewlink
+ </a>
+ but being implemented as one integrated XML solution.
+</p>
+<p>
+ Bindings can contain event handlers that are registered on the bound element, an implementation of new methods and properties that become accessible from the bound element, and anonymous content that is inserted around the bound element.
+</p>
+<div class="note">
+ <p>
+  There are numerous adjustments in the current implementation in comparison of
+  <a class="external" href="http://www.w3.org/TR/xbl/">
+   earlier XBL proposals
+  </a>
+  , and not all of them are reflected yet in this document. The documentation process is still in progress: please keep it in your mind while using the provided information.
+ </p>
+</div>
+<h2 id="XBL_Elements" name="XBL_Elements">
+ <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+  XBL Elements
+ </a>
+</h2>
+<p>
+ XBL 1.0 elements are in the
+ <code>
+  <span class="nowiki">
+   http://www.mozilla.org/xbl
+  </span>
+ </code>
+ namespace.
+</p>
+<ul>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    bindings
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    binding
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    content
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    children
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    implementation
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    constructor
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    destructor
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    field
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    property
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    getter
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    setter
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    method
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    parameter
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    body
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    handlers
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    handler
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    resources
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    stylesheet
+   </a>
+  </code>
+ </li>
+ <li>
+  <code>
+   <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements">
+    image
+   </a>
+  </code>
+ </li>
+</ul>
+<h2 id="Binding_Attachment_and_Detachment" name="Binding_Attachment_and_Detachment">
+ <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">
+  Binding Attachment and Detachment
+ </a>
+</h2>
+<ul>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">
+   Attachment using CSS
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">
+   Attachment using element.style property
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">
+   &lt;constructor&gt; call
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">
+   &lt;destructor&gt; call
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">
+   Binding Documents
+  </a>
+ </li>
+</ul>
+<h2 id="DOM_Interfaces" name="DOM_Interfaces">
+ <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/DOM_Interfaces" title="en/XBL/XBL_1.0_Reference/DOM_Interfaces">
+  DOM Interfaces
+ </a>
+</h2>
+<ul>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/DOM_Interfaces" title="en/XBL/XBL 1.0 Reference/DOM Interfaces#The nsIDOMDocumentXBL Interface">
+   The nsIDOMDocumentXBL Interface
+  </a>
+ </li>
+</ul>
+<h2 id="Anonymous_Content" name="Anonymous_Content">
+ <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+  Anonymous Content
+ </a>
+</h2>
+<ul>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+   Introduction
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+   Scoping and Access Using the DOM
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+   Content Generation
+  </a>
+  <ul>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     Rules for Generation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+   Attribute Forwarding
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+   Insertion Points
+  </a>
+  <ul>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     &lt;children&gt;
+    </a>
+   </li>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     Handling DOM Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+   Event Flow and Targeting
+  </a>
+  <ul>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     Flow and Targeting Across Scopes
+    </a>
+   </li>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     Focus and Blur Events
+    </a>
+   </li>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     Mouseover and Mouseout Events
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+   Anonymous Content and CSS
+  </a>
+  <ul>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     Selectors and Scopes
+    </a>
+   </li>
+   <li>
+    <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content">
+     Binding Stylesheets
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<h2 id="Binding_Implementations" name="Binding_Implementations">
+ <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Implementations">
+  Binding Implementations
+ </a>
+</h2>
+<ul>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Implementations">
+   Introduction
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Implementations">
+   Methods
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Implementations">
+   Properties
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Binding_Implementations">
+   Inheritance of Implementations
+  </a>
+ </li>
+</ul>
+<h2 id="Event_Handlers" name="Event_Handlers">
+ <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Event_Handlers">
+  Event Handlers
+ </a>
+</h2>
+<h2 id="Example_-_Sticky_Notes" name="Example_-_Sticky_Notes">
+ <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Example_Sticky_Notes">
+  Example - Sticky Notes
+ </a>
+</h2>
+<p>
+ Updated and adjusted for the current Firefox implementation.
+</p>
+<div class="note">
+ <p>
+  This example is targeted to demonstrate the XBL usage rather than to be a practically useful application. For this reason it contains many comments and some blocks could be avoided in a more compact solution yet used here for demonstration purposes.
+ </p>
+</div>
+<ul>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Example_Sticky_Notes">
+   notes.html
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Example_Sticky_Notes">
+   notes.xml
+  </a>
+ </li>
+ <li>
+  <a href="/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Example_Sticky_Notes">
+   notes.css
+  </a>
+ </li>
+</ul>
+<p>
+ <a class="external" href="http://www.cogjam.com/external/xbl/notes.html">
+  View this example
+ </a>
+</p>
+<p>
+ <br>
+  <span class="comment">
+   <a class="external" href="http://www.nskom.com/external/xbl/notes.zip" title="http://www.nskom.com/external/xbl/notes.zip">
+    Download all files (.zip archive)
+   </a>
+   need to ask to adjust the server - it gives "Access denied" for zip files (?)
+  </span>
+ </br>
+</p>
+<h2 id="References" name="References">
+ References
+</h2>
+<ul>
+ <li>
+  <a class="external" href="http://www.w3.org/TR/xbl/">
+   Initial XBL 1.0 proposal submitted as a Note to W3C
+  </a>
+  (does not reflect Mozilla implementation, nor future plans)
+ </li>
+ <li>
+  <a class="external" href="http://www.mozilla.org/projects/xbl/xbl2.html">
+   XBL 2.0 Project
+  </a>
+ </li>
+</ul>
+<div class="originaldocinfo">
+ <h2 id="Original_Document_Information" name="Original_Document_Information">
+  Original Document Information
+ </h2>
+ <ul>
+  <li>
+   Last Updated Date: April 24, 2006
+  </li>
+ </ul>
+</div></div><div id="footer"><hr/><p>This page was originally written for <a href="https://developer.mozilla.org">developer.mozilla.org</a> and is used here under the <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike license</a> (CC-BY-SA).</p>
+<p>Original contributors to this page: <a href="https://developer.mozilla.org/en-US/profiles/mdnwebdocs-bot">mdnwebdocs-bot</a>, <a href="https://developer.mozilla.org/en-US/profiles/jonathanKingston">jonathanKingston</a>, <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, <a href="https://developer.mozilla.org/en-US/profiles/MattBrubeck">MattBrubeck</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sevenspade">Sevenspade</a>, <a href="https://developer.mozilla.org/en-US/profiles/LJR">LJR</a>, <a href="https://developer.mozilla.org/en-US/profiles/Grantrules">Grantrules</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mgjbot">Mgjbot</a>, <a href="https://developer.mozilla.org/en-US/profiles/RyanFlint">RyanFlint</a>, <a href="https://developer.mozilla.org/en-US/profiles/Bzbarsky">Bzbarsky</a>, <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, <a href="https://developer.mozilla.org/en-US/profiles/CN">CN</a>, <a href="https://developer.mozilla.org/en-US/profiles/V%20K">V K</a>, <a href="https://developer.mozilla.org/en-US/profiles/Mw22">Mw22</a>, <a href="https://developer.mozilla.org/en-US/profiles/NickolayBot">NickolayBot</a>, <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>, <a href="https://developer.mozilla.org/en-US/profiles/Andreas%20Wuest">Andreas Wuest</a>, <a href="https://developer.mozilla.org/en-US/profiles/Pmsyyz">Pmsyyz</a>, <a href="https://developer.mozilla.org/en-US/profiles/Tservo">Tservo</a>.</p></div></body>
+</html>
